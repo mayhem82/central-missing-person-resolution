@@ -6,6 +6,7 @@ on:
       - 'scripts/snapshot_sources.js'
       - 'scripts/ingest_setu.js'
       - 'data/source-manifest.json'
+      - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
   schedule:
     - cron: '17 * * * *'
@@ -19,19 +20,23 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Snapshot authoritative sources
+      - name: Snapshot national authoritative sources
         run: node scripts/snapshot_sources.js
         continue-on-error: true
-      - name: Build Setu incident dataset and source diff
+      - name: Build national affected-person dataset and source diff
         run: node scripts/ingest_setu.js
-      - name: Commit changed snapshots and normalized data
+      - name: Validate evidence model
+        run: npm run validate
+      - name: Run tests
+        run: npm test
+      - name: Commit changed snapshots and normalized national data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json
+          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/records.json
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
           else
-            git commit -m 'source-watch: snapshot and normalize current incident data'
+            git commit -m 'source-watch: refresh national Nepal disaster data'
             git push
           fi
