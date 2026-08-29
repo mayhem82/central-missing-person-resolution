@@ -1,12 +1,13 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-08-29T22:16:17.010Z",
+  "generated_at": "2026-08-29T23:21:08.700Z",
   "scope": "international-cohort-index",
   "rules": [
     "Cohort claims are source claims, not canonical unique-person totals.",
     "Never sum overlapping nationality, operator, location or aggregate cohorts without reconciliation.",
-    "Person-level membership is only included where a source record explicitly carries the relevant field.",
+    "Person-level cohort filters use explicit record membership or an explicit source-cohort assignment, never free-text inference.",
     "Nationality and country-of-residence/connection are distinct.",
+    "Australian-cohort records are assigned to Country connection — Australia unless citizenship is explicitly stated.",
     "A later source claim does not erase an earlier claim; chronology is preserved."
   ],
   "nationality_count": 24,
@@ -389,43 +390,25 @@
   "person_level_membership": {
     "nationality": {},
     "connection": {
-      "Sydney resident": [
+      "Australia": [
+        "AU-CLAIM-001",
+        "AU-CLAIM-002",
         "AU-CLAIM-003",
         "AU-CLAIM-004",
         "AU-CLAIM-005",
         "AU-CLAIM-006",
         "AU-CLAIM-007",
         "AU-CLAIM-008",
-        "AU-CLAIM-018"
-      ],
-      "Kellyville, Sydney resident": [
-        "AU-CLAIM-016"
-      ],
-      "Western Sydney resident": [
-        "AU-CLAIM-001",
-        "AU-CLAIM-002"
-      ],
-      "Brisbane resident; Royal Australian Air Force member": [
-        "AU-CLAIM-013"
-      ],
-      "Australian tour-group member": [
+        "AU-CLAIM-009",
+        "AU-CLAIM-010",
         "AU-CLAIM-011",
-        "AU-CLAIM-012"
-      ],
-      "Australian": [
-        "AU-CLAIM-015"
-      ],
-      "Sydney resident; University of Newcastle medical student": [
-        "AU-CLAIM-009"
-      ],
-      "Sydney resident; medical student": [
-        "AU-CLAIM-010"
-      ],
-      "Brisbane resident for four years; New Zealand citizen": [
-        "AU-CLAIM-014"
-      ],
-      "Australian woman": [
-        "AU-CLAIM-017"
+        "AU-CLAIM-012",
+        "AU-CLAIM-013",
+        "AU-CLAIM-014",
+        "AU-CLAIM-015",
+        "AU-CLAIM-016",
+        "AU-CLAIM-017",
+        "AU-CLAIM-018"
       ]
     },
     "operator": {

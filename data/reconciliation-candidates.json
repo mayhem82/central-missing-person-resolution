@@ -1,12 +1,12 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-08-29T22:16:17.180Z",
+  "generated_at": "2026-08-29T23:21:08.883Z",
   "rules": {
     "name_only_never_confirms": true,
     "automatic_merge": false,
     "automatic_death_match": false
   },
-  "candidate_link_count": 6,
+  "candidate_link_count": 7,
   "body_review_candidate_count": 17,
   "identity_links": [
     {
@@ -80,6 +80,22 @@
     },
     {
       "id": "LINK-000006",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "PUBLIC-SUMAN-TAMANG-KAVRE-0001",
+      "right_record_id": "SETU-7711A5624E3840",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME"
+      ],
+      "conflicts": [
+        "LOCATION_CONFLICT",
+        "STATUS_CONFLICT"
+      ],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000007",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "left_record_id": "DAO-MAKWANPUR-B12-SERIAL-50",
       "right_record_id": "FAMILY-SUMAN-TAMANG-0001",

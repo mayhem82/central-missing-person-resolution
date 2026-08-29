@@ -1,10 +1,17 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "scope": "national",
-  "generated_at": "2026-08-29T22:16:16.827Z",
-  "record_count": 1756,
+  "dataset_version": "SW-26",
+  "generated_at": "2026-08-29T23:21:08.508Z",
+  "source_watch_run_id": "33280708454",
+  "source_watch_run_number": "26",
+  "source_watch_run_attempt": "1",
+  "trigger_commit_sha": "4390b6ff2fb15d3a00e9b471420eaf8a29b4c548",
+  "repository": "mayhem82/central-missing-person-resolution",
+  "history_url": "https://github.com/mayhem82/central-missing-person-resolution/commits/main",
+  "record_count": 1757,
   "source_counts": {
-    "CURATED": 3,
+    "CURATED": 4,
     "AUSTRALIAN_PUBLIC_COHORT": 18,
     "NDRRMA_SETU": 1731,
     "OPMCM_RESCUE_PORTAL": 0,
@@ -17,7 +24,7 @@
     "DAO_PARSA_BHADRA13_MISSING": 0
   },
   "status_counts": {
-    "MISSING": 1296,
+    "MISSING": 1297,
     "FOUND_DEAD": 20,
     "RESCUED": 151,
     "FOUND_SAFE": 261,
@@ -272,6 +279,14 @@
       "record_ids": [
         "SETU-5A9254342E8FDD",
         "SETU-EFF7DE75C39B41"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
+    {
+      "normalized_name": "suman tamang",
+      "record_ids": [
+        "PUBLIC-SUMAN-TAMANG-KAVRE-0001",
+        "SETU-7711A5624E3840"
       ],
       "warning": "Same/similar source-record name is not proof of same person."
     },
@@ -7847,6 +7862,20 @@
       "detail": "DAO Udayapur · Aug 28, 2026"
     },
     {
+      "id": "PUBLIC-SUMAN-TAMANG-KAVRE-0001",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "source": "PUBLIC_DISASTER_COMPILATION",
+      "source_type": "PUBLIC_SOCIAL_DERIVED",
+      "name": "Suman Tamang",
+      "status": "MISSING",
+      "district": "Kavrepalanchowk",
+      "location": "Tibet and Rasuwa border",
+      "last_contact": "2026-08-26 approximately 10:00",
+      "detail": "Public disaster compilation lists a Suman Tamang from Kavrepalanchowk, last known at the Tibet-Rasuwa border around 10:00 on 26 August. This is an independent source claim and must not be merged with the Hetauda-6/Chowghada subject by name alone. Public contact number withheld from this record.",
+      "source_url": "https://eturbonews.com/nepal-flood-disaster-updated-list-of-missing-foreign-tourists-and-visitors/",
+      "identity_state": "UNRESOLVED_SAME_NAME_CANDIDATE"
+    },
+    {
       "id": "SETU-7711A5624E3840",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -7871,6 +7900,7 @@
       "id": "DAO-MAKWANPUR-B12-SERIAL-50",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "DAO_MAKWANPUR_BHADRA12",
+      "source_type": "GOVERNMENT_OFFICIAL",
       "name": "Suman Tamang / सुमन तामाङ",
       "status": "OUT_OF_CONTACT",
       "district": "Makwanpur",
@@ -7884,12 +7914,13 @@
       "id": "FAMILY-SUMAN-TAMANG-0001",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "FAMILY_COMMUNITY_REPORT",
+      "source_type": "FAMILY_SOCIAL_MEDIA",
       "name": "Suman Tamang / सुमन तामाङ",
       "status": "OUT_OF_CONTACT",
       "district": "Makwanpur",
       "municipality": "Hetauda Sub-Metropolitan City",
       "location": "Hetauda-6, Chowghada, Makwanpur",
-      "detail": "Family/public appeal reports out of contact after the Rasuwa flood. Private family contact numbers withheld from public live view. Identity unresolved against official candidates.",
+      "detail": "Family/public social-media appeal reports out of contact after the Rasuwa flood. Private family contact numbers withheld from public live view. Identity unresolved against official candidates.",
       "source_url": "",
       "identity_state": "UNRESOLVED"
     },
@@ -7897,6 +7928,7 @@
       "id": "DAO-MAKWANPUR-B12-SERIAL-62",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "DAO_MAKWANPUR_BHADRA12",
+      "source_type": "GOVERNMENT_OFFICIAL",
       "name": "Suman Thing Lama / सुमन थिङ लामा",
       "age": 32,
       "status": "OUT_OF_CONTACT",
