@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="np">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>     पहिचान नखुलेका शवहरू
+</title>
+    <link rel = "icon" href ="https://udb.nepalpolice.gov.np/assets/image/nepalpolice.png"
+          type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link href="https://udb.nepalpolice.gov.np/assets/nepali.datepicker.v4.0.8/css/nepali.datepicker.v4.0.8.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://udb.nepalpolice.gov.np/css/style.css">
+    <meta name="csrf-token" content="LuDhp9VIXkOICNZtxrbiJkIa0p81oOKTg9Srwi1q">
+
+
+<script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.1/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
+</head>
+<body>
+<div id="app-wrapper">
+<style>
+    .nav-link.active {
+        border-bottom: 2px solid orange;
+            font-weight: 600;
+    }
+
+@media (max-width: 992px) {
+    .header-btn {
+        padding: 6px 10px !important;
+        font-size: 0.95rem;
+        background-color: rgba(255,255,255,0.18) !important;
+        border-radius: 4px;
+        margin: 2px 0;
+    }
+}
+</style>
+<div class="">
+    <div class="py-2" style="background-color: #004163">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-4">
+                    <div class="text-white text-center text-lg-start flex-nowrap">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="ps-2"> प्रहरी कन्ट्रोल :</span>
+                        <span class="ps-2">१०० ,</span>
+                        <span class="ps-2"> टोल फ्री नं.: </span>
+                        <span class="ps-2">१६६००१४१५१६</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="d-flex flex-lg-nowrap flex-wrap justify-content-lg-end justify-content-center align-items-center gap-3">
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://udb.nepalpolice.gov.np/lang/np"
+                            class="text-decoration-none text-warning fw-bold">
+                        नेपाली
+                        </a>
+
+                        <a href="https://udb.nepalpolice.gov.np/lang/en"
+                        class="position-relative d-inline-block rounded-pill bg-secondary"
+                        style="width: 46px; height: 24px;"
+                        title="Switch Language">
+
+                            <span class="position-absolute bg-white rounded-circle shadow-sm"
+                                style="width: 18px; height: 18px; top: 3px; transition: left 0.15s ease-in-out;
+                                        left: 3px;">
+                            </span>
+                        </a>
+
+                        <a href="https://udb.nepalpolice.gov.np/lang/en"
+                            class="text-decoration-none text-white">
+                            English
+                        </a>
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://udb.nepalpolice.gov.np/toggle-bandwidth" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            न्यून व्यान्डविथ
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                                <button onclick="invertColor()" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                        <i class="fa fa-adjust me-1"></i>
+                        Invert
+                    </button>
+
+                        <button onclick="changeFont('decrease')" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            A-
+                        </button>
+                        <button onclick="changeFont('original')" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            A
+                        </button>
+                            <button onclick="changeFont('increase')" class="btn btn-sm btn-link text-warning text-decoration-none p-0 fw-bold header-btn">
+                            A+
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                                <a href="https://www.facebook.com/NepalPolicePHQ/"
+                                class="text-white"
+                                target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/nepalpolice/"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="https://twitter.com/policenp?lang=en"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCMkrAY5yFo5eQ1SCj9aV28w"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #1e7fb2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="https://udb.nepalpolice.gov.np/main">
+                <img class="" src="https://udb.nepalpolice.gov.np/assets/image/nepalpolice.png" alt="Your Company" style="width:70px"/>
+                <div class="ms-3 text-white">
+                    <small class=" font-semibold">अपराध अनुसन्धान विभाग</small> <br>
+                    <small class=" text-sm font-light">&quot;वस्तुनिष्ठ अपराध अनुसन्धान, मानव अधिकारको सम्मान&quot;</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto px-5">
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/main"
+                           class="nav-link text-white ">
+                            गृहपृष्ठ
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/dead-bodies-lists"
+                           class="nav-link text-white ">
+                            पहिचान नखुलेका शवहरू
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/missing"
+                           class="nav-link text-white ">
+                            हराएका व्यक्तिहरू
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/found"
+                           class="nav-link text-white ">
+                            अलपत्र भेटिएका व्यक्तिहरु
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/disaster"
+                           class="nav-link text-white " style="color: yellow !important;">
+                        रसुवा जिल्लामा आएको बाढीसंग सम्बन्धित पहिचान नखुलेका शवहरूको विवरण
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
+
+<header>
+
+</header>
+    <div class="bg-light border-top border-bottom">
+    <div class="container py-3">
+
+        <nav aria-label="breadcrumb">
+
+            <ol class="breadcrumb mb-0 small">
+
+                                    
+                        
+                        <li class="breadcrumb-item">
+
+                            <a href="https://udb.nepalpolice.gov.np/main"
+                               class="text-primary text-decoration-none fw-medium">
+
+                                                                    <i class="fa fa-home me-1"></i>
+                                
+                                गृहपृष्ठ
+                            </a>
+                        </li>
+                                                                                
+                        <li class="breadcrumb-item active fw-semibold text-dark"
+                            aria-current="page">
+                            रसुवा जिल्लामा आएको बाढीसंग सम्बन्धित पहिचान नखुलेका शवहरूको विवरण
+                        </li>
+                                                </ol>
+        </nav>
+    </div>
+</div>
+<main id="site-main">
+    <div class="container">
+        <div class="row m-1" style="background: lightgray">
+            <h5 class="fw-bold pb-2 text-center mt-3">रसुवा जिल्लामा आएको बाढीसंग सम्बन्धित पहिचान नखुलेका शवहरूको विवरण</h5>
+        </div>
+        <div class="rounded-md">
+            <div class="">
+                <table class="table table-striped table-bordered">
+                    <thead class="bg-slate-200">
+                    <tr class="border">
+                        <th class="text-center">क्र.सं.</th>
+                        <th class="text-center">फोटो</th>
+                        <th colspan="2" class="text-center">विवरण</th>
+                    </tr>
+                    </thead>
+                    <tbody class="border">
+                                                                                        <tr class=" ">
+                            <th class="text-center"> १</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2572"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2572">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १:००                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="जिल्ला चितवन"
+                                                                style="cursor: pointer;">
+                                                                जिल्ला चितवन
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2572">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> २</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2571"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2571">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>अन्य</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १:३०                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="जिल्ला चितवन"
+                                                                style="cursor: pointer;">
+                                                                जिल्ला चितवन
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2571">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ३</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2570"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2570">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>अन्य</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १:३०                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="जिल्ला चितवन"
+                                                                style="cursor: pointer;">
+                                                                जिल्ला चितवन
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2570">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ४</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2569"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2569">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>अन्य</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०९:११                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2569">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ५</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2568"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2568">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०९:०९                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2568">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ६</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2567"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2567">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०९:००                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2567">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ७</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2566"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2566">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>अन्य</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:२३                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2566">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ८</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2565"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2565">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:१५                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2565">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ९</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2564"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2564">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:१४                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2564">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १०</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2563"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2563">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:१०                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको ।"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको ।
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2563">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> ११</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2561"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2561">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:००                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2561">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १२</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2560"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2560">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                            
+                                                                                <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>महिला</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    लुम्बिनी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पश्चिम,
+                                                                                                                            बर्दघाट नगरपालिका-
+                                                                                                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-28
+                                        </span>
+                                        
+                                         / ०८:००                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="भारतको महारगंज अस्पतालमा रहेको"
+                                                                style="cursor: pointer;">
+                                                                भारतको महारगंज अस्पतालमा रहेको
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2560">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १३</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2555"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2555">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>40,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>45
+                                                                                     </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            मध्यविन्दु नगरपालिका-
+                                                                                                                            १५,
+                                                                                                                    </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / बिहान १५;३० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="मध्यबिन्दु प्रादेशिल अस्पताल डण्डा"
+                                                                style="cursor: pointer;">
+                                                                मध्यबिन्दु प्रादेशिल अस्पताल डण्डा
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2555">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १४</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2553"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2553">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>35,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>40
+                                                                                     </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            कावासोती नगरपालिका-
+                                                                                                                            ११,
+                                                                                                                    </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १३:४० गते                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="मध्यबिन्दु प्रादेशिक अस्इपताल डण्डा"
+                                                                style="cursor: pointer;">
+                                                                मध्यबिन्दु प्रादेशिक अस्इपताल डण्डा
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2553">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १५</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2551"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2551">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                                                        <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>अन्य</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            कावासोती नगरपालिका-
+                                                                                                                            १२,
+                                                                                                                            घोसरघाट स्थित
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १४:१० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="मध्यबिन्दु प्रादेशि अस्पताल डण्डा"
+                                                                style="cursor: pointer;">
+                                                                मध्यबिन्दु प्रादेशि अस्पताल डण्डा
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2551">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १६</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2550"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2550">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>10,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>11
+                                                                                     </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            कावासोती नगरपालिका-
+                                                                                                                            १२,
+                                                                                                                            घोसरघाट स्थित
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १४:०० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="मध्यबिन्दु प्रादेशिक अस्पताल डण्डा नप(पूर्व)"
+                                                                style="cursor: pointer;">
+                                                                मध्यबिन्दु प्रादेशिक अस्पताल डण्डा नप(पूर्व)
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2550">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १७</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2548"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2548">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>40,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>45
+                                                                                     </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            गैंडाकोट नगरपालिका-
+                                                                                                                            १३,
+                                                                                                                            सिख्रौली
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १४:०० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="गैडाकोट नगर अस्पताल"
+                                                                style="cursor: pointer;">
+                                                                गैडाकोट नगर अस्पताल
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2548">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १८</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2546"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2546">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                        <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            गैंडाकोट नगरपालिका-
+                                                                                                                            ७,
+                                                                                                                            गैरी
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / १३:०० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="गैडाकोट नगर अस्पताल"
+                                                                style="cursor: pointer;">
+                                                                गैडाकोट नगर अस्पताल
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2546">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> १९</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2542"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2542">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                        <span class="ms-4">
+                                                                                                                                 </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            गैंडाकोट नगरपालिका-
+                                                                                                                            २,
+                                                                                                                            बोटेटोल
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / बिहान ११;३० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="गैडाकोट नगर आस्पताल"
+                                                                style="cursor: pointer;">
+                                                                गैडाकोट नगर आस्पताल
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2542">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                                                    <tr class=" ">
+                            <th class="text-center"> २०</th>
+                            <td>
+                                <div class="avatar d-flex justify-content-center align-items-center">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                        <a class="home-avatar-link"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2540"
+                                           target="_blank"
+                                           style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
+
+                                            <img loading="lazy"
+                                                 style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2540">
+
+                                            <span style="text-align: center; margin-top: 5px;">[View]</span>
+                                        </a>
+
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="position-relative"
+                                    style="background:#fff8f8; border:2px solid #dc3545; border-left:5px solid #dc3545; border-radius:5px; padding:10px 10px 5px 10px; width:100%; box-sizing:border-box; margin:0;">
+
+                                                                            <span style="position:absolute; top:5px; right:5px; z-index:10; background:#dc3545; color:#fff; padding:3px 8px; border-radius:3px; font-size:11px; font-weight:bold; line-height:16px;">
+                                                            रसुवा विपद्को शव
+                                                        </span>
+                                    
+                                    <li class="mb-2 list-group-item">
+                                        <b class="font-bold ">नाम:-</b>
+                                        नखुलेको
+                                                                                    
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>40,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>45
+                                                                                     </span>
+                                                                                    <span>
+                                                <b class="font-bold">लिङ्ग:-</b>
+                                                                                                    <span>पुरुष</span>
+                                                                                            </span>
+                                        
+                                    </li>
+
+
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
+                                                                                    गण्डकी प्रदेश,
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            गैंडाकोट नगरपालिका-
+                                                                                                                            १,
+                                                                                                                            आदर्श टोल
+                                                                            </li>
+                                    <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
+                                                                                    <span class="convert_date">
+                                            2026-08-29
+                                        </span>
+                                        
+                                         / बिहान १०;३० बजे                                     </li>
+
+                                    <li class="mb-2 list-group-item">
+                                                        <b class="font-bold">हाल शव राखेको स्थान:-</b>
+
+                                                                                                                    <span data-toggle="tooltip"
+                                                                data-placement="top"
+                                                                title="गैडाकोट नगर अस्पताल"
+                                                                style="cursor: pointer;">
+                                                                गैडाकोट नगर अस्पताल
+                                                            </span>
+                                                                                                            </li>
+
+                                </ul>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2540">विवरण हेर्नुहोस्</a>
+                            </td>
+                        </tr>
+                                                    
+
+                                        </tbody>
+                </table>
+
+                <div class="col-md-12 mb-3">
+        <div class="row d-flex">
+            <div class="col-md-6">
+                <span>Showing 1 out of 50 Pages</span>
+            </div>
+            <div class="col-md-6 pagination-controls"> <!-- Use 'ml-auto' to align to the right -->
+                                    <span class="btn btn-secondary btn-sm ml-2 disabled">&laquo; अघिल्लो</span>
+                
+                
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=1">1</a>
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=2">2</a>
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=3">3</a>
+                
+                                    <span class="ml-2">...</span>
+                    <a class="btn btn-secondary btn-sm ml-2" href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=50">50</a>
+                
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=2"
+                       id="next">अर्को &raquo;</a>
+                                
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer id="site-footer">
+<div class="py-3" style="background-color: #164163">
+    <div class="container">
+        <div class="row">
+            <div class="text-white col-sm-4 col-xl-3">
+                <ul class="list footer-list" style="list-style: none">
+                    <h5><u>सम्पर्कको लागि</u></h5>
+                    <li>
+                        नेपाल प्रहरी प्रधान कार्यालय
+                    </li>
+                    <li>
+                        अपराध अनुसन्धान विभाग
+                    </li>
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-map-marker"></i> &nbsp;
+                            नक्साल, काठमाण्डौ (7MV7P87H+VC)
+                        </span>
+
+                    </li>
+
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-phone"></i> &nbsp;
+                            ०१-४४१२७४८
+                        </span>
+
+                    </li>
+
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-envelope"></i> &nbsp;
+                            cicu@nepalpolice.gov.np
+                        </span>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="text-white col-sm-4 col-xl-3">
+                <!-- Contact information here -->
+            </div>
+            <div class="text-white col-sm-4 col-xl-3 text-center m-5">
+                <p class="visitor-count">
+                </p>
+            </div>
+
+            <style>
+                .visitor-count {
+                    font-size: 24px;
+                    color: #3498db; /* Calm blue color, you can adjust as needed */
+                }
+
+                .badge-lg {
+                    font-size: 28px;
+                    padding: 10px 20px;
+                    background-color: #e0e9f0; /* Light gray background color */
+                    color: #3498db; /* Match the font color */
+                }
+            </style>
+
+
+        </div>
+        <hr style="color: white">
+        <div class="row">
+            <div class="col-lg-4">
+                <span class="text-white ps-3"> © 2026 - नेपाल प्रहरी । सर्वाधिकार सुरक्षित </span>
+            </div>
+            <div class="col-lg-4">
+
+                
+                
+                
+                
+                
+                
+            </div>
+            <div class="col-lg-4">
+                <span class="text-white ps-3 pull-right"><i class="fa fa-users"></i> &nbsp;पृष्ठ भ्रमण : 
+                    <span class="badge badge-primary" style="font-size: 18px;">
+                    ७४०४८६
+                    </span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+
+<script src="https://udb.nepalpolice.gov.np/assets/nepali.datepicker.v4.0.8/js/nepali.datepicker.v4.0.8.min.js"
+        type="text/javascript"></script>
+<script src="https://udb.nepalpolice.gov.np/js/accessibility.js"></script>
+
+<script>
+    function Bs2Ad(source_id, dest_id) {
+        var est_date = $(`#${source_id}`).val();
+        var strArray = est_date.split("-");
+        var converted_date = NepaliFunctions.BS2AD({
+            year: strArray[0],
+            month: strArray[1],
+            day: strArray[2]
+        })
+        $(`#${dest_id}`).val(`${converted_date.year}-${converted_date.month}-${converted_date.day}`);
+        console.log(`#${dest_id}`)
+    }
+
+    function Ad2Bs(source_id) {
+        var est_date = $(`#${source_id}`).val() != "" ? $(`#${source_id}`).val() : $(`#${source_id}`).text();
+        return Ad2Bs_convert(est_date);
+    }
+
+    function Ad2Bs_convert(est_date) {
+        if (est_date) {
+            var strArray = est_date.split("-");
+            var converted_date = NepaliFunctions.AD2BS({
+                year: strArray[0],
+                month: strArray[1],
+                day: strArray[2]
+            })
+            return `${converted_date.year}-${converted_date.month}-${converted_date.day}`;
+        } else {
+            return null;
+        }
+    }
+</script>
+</footer>
+</div>
+    <script>
+
+        // Create the overlay element
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        // Append the overlay to the body
+        document.body.appendChild(overlay);
+
+        // Display the Swal pop-up with custom class
+        Swal.fire({
+            title: '<strong class="red bright-popup">सावधान !!</strong>', // Add the "bright-popup" class
+            html: 'यस पृष्ठमा तपाईलाई विचलित पार्न सक्ने तस्विरहरु हुनसक्छ ।',
+            imageUrl: 'https://udb.nepalpolice.gov.np/images/danger.png',
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            showConfirmButton: true,
+            padding: '1em',
+        }).then((result) => {
+            // After the Swal pop-up is closed, remove the overlay
+            document.body.removeChild(overlay);
+        });
+
+        $(document).ready(function () {
+            $('.convert_date').each(function (index, ele) {
+                var convert_date = $(ele).text();
+                var strArray = convert_date.split("-");
+                console.log(strArray)
+                var converted_date = NepaliFunctions.AD2BS({
+                    year: strArray[0],
+                    month: strArray[1],
+                    day: strArray[2]
+                })
+                $(ele).text(`${converted_date.year}-${converted_date.month}-${converted_date.day}`)
+            });
+
+        });
+
+        $(document).ready(function () {
+
+            var pradesh_id = $('#pradesh_id').val();
+
+            function getDisByPradesh() {
+                var district_option = '<option value="">जिल्लाको आधारमा खोज्नुहोस</option>';
+                $('#district_id').prop('disabled', true);
+                var flag = "";
+                $.ajax({
+                    url: "https://udb.nepalpolice.gov.np/get-district/" + pradesh_id,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $.each(data, function (key, value) {
+                            flag = (district_id == value.id) ? "selected='selected'" : "";
+                            district_option += `<option value="${value.id}" ${flag}> ${value.nepali_name}</option>`;
+                        });
+                        var select_group = $('#district_id');
+                        select_group.empty().append(district_option);
+                        $('#district_id').prop('disabled', false);
+                    },
+                });
+            }
+
+            $('#pradesh_id').change(function () {
+                pradesh_id = $('#pradesh_id').val();
+                getDisByPradesh();
+            });
+
+            if(pradesh_id > 0){
+                var district_id = 
+                getDisByPradesh();
+            }
+        });
+
+
+        $('#date_fromNP').nepaliDatePicker({
+            ndpMonth: true,
+            ndpYear: true,
+            onChange: function () {
+                Bs2Ad('date_fromNP', 'date_from')
+            }
+        });
+        $('#date_toNP').nepaliDatePicker({
+            ndpMonth: true,
+            ndpYear: true,
+            onChange: function () {
+                Bs2Ad('date_toNP', 'date_to')
+            }
+        });
+    </script>
+</body>
+</html>

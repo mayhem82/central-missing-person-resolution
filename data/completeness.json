@@ -1,0 +1,152 @@
+{
+  "incident_id": "NEPAL-2026-08-26-FLOOD",
+  "generated_at": "2026-08-29T21:21:38.007Z",
+  "complete": false,
+  "blocking_gap_count": 1,
+  "blocking_gap_ids": [
+    "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
+  ],
+  "counts": {
+    "live_source_records": 1736,
+    "unidentified_body_records": 20,
+    "identity_review_candidates": 1,
+    "body_review_candidates": 7
+  },
+  "checks": [
+    {
+      "id": "SETU_CURRENT",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "source_id": "SETU",
+        "critical": true,
+        "role": "affected-person register",
+        "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
+        "retrieved_at": "2026-08-29T21:20:18.712Z",
+        "http_status": 200,
+        "sha256": "1f8399aec955ff22db57c004873dcc6be5232e630e2334c88dcbe036202d2c92",
+        "bytes": 1904262,
+        "changed": false,
+        "error": null,
+        "transport": "fetch",
+        "tls_verification": "verified",
+        "pages": 18,
+        "page_failures": []
+      }
+    },
+    {
+      "id": "POLICE_MISSING_CURRENT",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "snapshot": {
+          "source_id": "POLICE_MISSING",
+          "critical": true,
+          "role": "missing-person register",
+          "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
+          "retrieved_at": "2026-08-29T21:20:27.440Z",
+          "http_status": 200,
+          "sha256": "525e0108e4dfae085021b8e296bd4820bdc76dfdfccc2e045a61af7096753cdf",
+          "bytes": 103481,
+          "changed": true,
+          "error": null,
+          "transport": "curl-insecure-fallback",
+          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
+          "pages": 1,
+          "page_failures": []
+        },
+        "records": 2,
+        "stale": false
+      }
+    },
+    {
+      "id": "POLICE_FOUND_CURRENT",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "snapshot": {
+          "source_id": "POLICE_FOUND",
+          "critical": true,
+          "role": "found-person register",
+          "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
+          "retrieved_at": "2026-08-29T21:20:46.343Z",
+          "http_status": 200,
+          "sha256": "b00d7319eadb35a30be1b17a22944c2c0a769d4a9cb0214b30ed501b17aac144",
+          "bytes": 94226,
+          "changed": true,
+          "error": null,
+          "transport": "curl-insecure-fallback",
+          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
+          "pages": 1,
+          "page_failures": []
+        },
+        "records": 0,
+        "stale": false
+      }
+    },
+    {
+      "id": "POLICE_DISASTER_BODIES_CURRENT",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "snapshot": {
+          "source_id": "POLICE_DISASTER_BODIES",
+          "critical": true,
+          "role": "disaster unidentified-body register",
+          "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
+          "retrieved_at": "2026-08-29T21:21:02.944Z",
+          "http_status": 200,
+          "sha256": "49040e043ed40b6875f09de30809e6e3b2f15cc48d842ccd1c88b9ff42193680",
+          "bytes": 142757,
+          "changed": true,
+          "error": null,
+          "transport": "curl-insecure-fallback",
+          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
+          "pages": 1,
+          "page_failures": []
+        },
+        "records": 20,
+        "stale": false
+      }
+    },
+    {
+      "id": "NATIONAL_LIVE_DATA_NONEMPTY",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "record_count": 1736
+      }
+    },
+    {
+      "id": "RECONCILIATION_QUEUE_GENERATED",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "identity_candidates": 1,
+        "body_review_candidates": 7
+      }
+    },
+    {
+      "id": "NO_AUTOMATIC_DEATH_MATCH",
+      "pass": true,
+      "blocking": true,
+      "detail": {
+        "name_only_never_confirms": true,
+        "automatic_merge": false,
+        "automatic_death_match": false
+      }
+    },
+    {
+      "id": "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED",
+      "pass": false,
+      "blocking": true,
+      "detail": "document(8).pdf must be extracted and row-diffed against Bhadra 12 before this passes"
+    },
+    {
+      "id": "SOURCE_COVERAGE_REVIEWED",
+      "pass": false,
+      "blocking": false,
+      "detail": "District/local authority, hospital/rescue, foreign-national and downstream recovery-source coverage still requires explicit closure review."
+    }
+  ]
+}

@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="np">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>     हराएका व्यक्तिहरू
+</title>
+    <link rel = "icon" href ="https://udb.nepalpolice.gov.np/assets/image/nepalpolice.png"
+          type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link href="https://udb.nepalpolice.gov.np/assets/nepali.datepicker.v4.0.8/css/nepali.datepicker.v4.0.8.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://udb.nepalpolice.gov.np/css/style.css">
+    <meta name="csrf-token" content="XQPFkjuwJdioMhKoizPmuStMgwkLgiToYbyqrHQL">
+
+
+<script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.1/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
+</head>
+<body>
+<div id="app-wrapper">
+<style>
+    .nav-link.active {
+        border-bottom: 2px solid orange;
+            font-weight: 600;
+    }
+
+@media (max-width: 992px) {
+    .header-btn {
+        padding: 6px 10px !important;
+        font-size: 0.95rem;
+        background-color: rgba(255,255,255,0.18) !important;
+        border-radius: 4px;
+        margin: 2px 0;
+    }
+}
+</style>
+<div class="">
+    <div class="py-2" style="background-color: #004163">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-4">
+                    <div class="text-white text-center text-lg-start flex-nowrap">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span class="ps-2"> प्रहरी कन्ट्रोल :</span>
+                        <span class="ps-2">१०० ,</span>
+                        <span class="ps-2"> टोल फ्री नं.: </span>
+                        <span class="ps-2">१६६००१४१५१६</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="d-flex flex-lg-nowrap flex-wrap justify-content-lg-end justify-content-center align-items-center gap-3">
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://udb.nepalpolice.gov.np/lang/np"
+                            class="text-decoration-none text-warning fw-bold">
+                        नेपाली
+                        </a>
+
+                        <a href="https://udb.nepalpolice.gov.np/lang/en"
+                        class="position-relative d-inline-block rounded-pill bg-secondary"
+                        style="width: 46px; height: 24px;"
+                        title="Switch Language">
+
+                            <span class="position-absolute bg-white rounded-circle shadow-sm"
+                                style="width: 18px; height: 18px; top: 3px; transition: left 0.15s ease-in-out;
+                                        left: 3px;">
+                            </span>
+                        </a>
+
+                        <a href="https://udb.nepalpolice.gov.np/lang/en"
+                            class="text-decoration-none text-white">
+                            English
+                        </a>
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://udb.nepalpolice.gov.np/toggle-bandwidth" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            न्यून व्यान्डविथ
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                                <button onclick="invertColor()" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                        <i class="fa fa-adjust me-1"></i>
+                        Invert
+                    </button>
+
+                        <button onclick="changeFont('decrease')" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            A-
+                        </button>
+                        <button onclick="changeFont('original')" class="btn btn-sm btn-link text-white text-decoration-none p-0 header-btn">
+                            A
+                        </button>
+                            <button onclick="changeFont('increase')" class="btn btn-sm btn-link text-warning text-decoration-none p-0 fw-bold header-btn">
+                            A+
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                                <a href="https://www.facebook.com/NepalPolicePHQ/"
+                                class="text-white"
+                                target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/nepalpolice/"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="https://twitter.com/policenp?lang=en"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCMkrAY5yFo5eQ1SCj9aV28w"
+                            class="text-white"
+                            target="_blank">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #1e7fb2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="https://udb.nepalpolice.gov.np/main">
+                <img class="" src="https://udb.nepalpolice.gov.np/assets/image/nepalpolice.png" alt="Your Company" style="width:70px"/>
+                <div class="ms-3 text-white">
+                    <small class=" font-semibold">अपराध अनुसन्धान विभाग</small> <br>
+                    <small class=" text-sm font-light">&quot;वस्तुनिष्ठ अपराध अनुसन्धान, मानव अधिकारको सम्मान&quot;</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto px-5">
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/main"
+                           class="nav-link text-white ">
+                            गृहपृष्ठ
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/dead-bodies-lists"
+                           class="nav-link text-white ">
+                            पहिचान नखुलेका शवहरू
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/missing"
+                           class="nav-link text-white active">
+                            हराएका व्यक्तिहरू
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/found"
+                           class="nav-link text-white ">
+                            अलपत्र भेटिएका व्यक्तिहरु
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a href="https://udb.nepalpolice.gov.np/disaster"
+                           class="nav-link text-white " style="color: yellow !important;">
+                        रसुवा जिल्लामा आएको बाढीसंग सम्बन्धित पहिचान नखुलेका शवहरूको विवरण
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
+
+<header>
+
+</header>
+    <div class="bg-light border-top border-bottom">
+    <div class="container py-3">
+
+        <nav aria-label="breadcrumb">
+
+            <ol class="breadcrumb mb-0 small">
+
+                                    
+                        
+                        <li class="breadcrumb-item">
+
+                            <a href="https://udb.nepalpolice.gov.np/main"
+                               class="text-primary text-decoration-none fw-medium">
+
+                                                                    <i class="fa fa-home me-1"></i>
+                                
+                                गृहपृष्ठ
+                            </a>
+                        </li>
+                                                                                
+                        <li class="breadcrumb-item active fw-semibold text-dark"
+                            aria-current="page">
+                            हराएका व्यक्तिहरू
+                        </li>
+                                                </ol>
+        </nav>
+    </div>
+</div>
+<main id="site-main">
+    <div class="container">
+        <div class=" my-5 rounded-md shadow-md">
+            <form action="https://udb.nepalpolice.gov.np/missing" method="GET">
+                <div class="row p-3 bg-light rounded-3 shadow-sm border">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <input
+                            type="text"
+                            name="value"
+                            value=""
+                            placeholder="नामको आधारमा खोज्नुहोस्"                            
+                            class="form-control"
+                        />
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        
+                        
+                        
+                        
+                        
+                        
+                        <select class="form-select select2" style="width:100%;" id="gender" name="gender"><option selected="selected" value="">लिङ्गको आधारमा खोज्नुहोस्</option><option value="male">Male</option><option value="female">Female</option><option value="other">other</option></select>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        
+
+                        <select id="pradesh_id" name="province_id" class="form-select">
+                            <option value="" disabled selected>प्रदेशको आधारमा खोज्नुहोस्</option>
+                                                            <option
+                                     value="1">कोशी प्रदेश</option>
+                                                            <option
+                                     value="2">मधेश प्रदेश</option>
+                                                            <option
+                                     value="3">बागमती प्रदेश</option>
+                                                            <option
+                                     value="4">गण्डकी प्रदेश</option>
+                                                            <option
+                                     value="5">लुम्बिनी प्रदेश</option>
+                                                            <option
+                                     value="6">कर्णाली प्रदेश</option>
+                                                            <option
+                                     value="7">सुदूरपश्चिम प्रदेश</option>
+                                                    </select>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <select id="district_id" name="district_id" class="form-select">
+                            <option value="" disabled selected>जिल्लाको आधारमा खोज्नुहोस्</option>
+                            
+                            
+                            
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <input class="form-control" id="date_fromNP" placeholder="मिति देखि" autocomplete="off" name="date_fromNP" type="text">
+                        <input type="hidden" name="date_from" id="date_from">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <input class="form-control" id="date_toNP" placeholder="मिति सम्म" autocomplete="off" name="date_toNP" type="text">
+                        <input type="hidden" name="date_to" id="date_to">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                        <button class="btn btn-primary py-2 px-4 rounded-md text-white text-sm">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            खोज्नुहोस्
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row m-1" style="background-color: lightgray">
+            <h5 class="fw-bold pb-2 text-center mt-3">हराएका व्यक्तिहरु को विवरण</h5>
+        </div>
+        <div class="rounded-md">
+            <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center">क्र.सं.</th>
+                        <th class="text-center">फोटो</th>
+                        <th colspan="2" class="text-center">विवरण</th>
+                </tr>
+                </thead>
+                <tbody>
+                                                <tr class=" ">
+                    <th class="text-center"> १</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35491">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                खुशी
+                                                                    
+                                                                                                    कुमारी
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>13,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>13
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,यमुनामाई गाउँपालिका
+                                                                                                    - 3
+                                                                                                    राजपुर तिलसी
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,यमुनामाई गाउँपालिका
+                                                                                                    - 3
+                                                                                                    राजपुर तुलसी
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-17</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35491">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> २</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35490">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                आषिश
+                                                                    
+                                                                                                    उराव
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>29,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                    ,सुनसरी
+                                                                                                    ,बराह नगरपालिका
+                                                                                                    - 8
+                                                                                                    गल्फडिया
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,रसुवा
+                                                                                                    ,गोसाईंकुण्ड गाउँपालिका
+                                                                                                    - 8
+                                                                                                    नभएको
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-26</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35490">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ३</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35489">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                समिर
+                                                                    
+                                                                                                    आलम
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>12,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>12
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,वृन्दावन नगरपालिका
+                                                                                                    - 3
+                                                                                                    पिप्रा
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,नुवाकोट
+                                                                                                    ,विदुर नगरपालिका
+                                                                                                    - 3
+                                                                                                    बेतराउती
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-26</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35489">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ४</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35483">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                काजल
+                                                                    कुमारी
+                                                                                                    मुखिया
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>13,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>13
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,बौधीमाई नगरपालिका
+                                                                                                    - 4
+                                                                                                    ईनरबारी
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,बौधीमाई नगरपालिका
+                                                                                                    - 4
+                                                                                                    ईनरबारी
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-20</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35483">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ५</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35479">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                मजवुन
+                                                                    
+                                                                                                    नेसा
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>19,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>19
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,देवाही गोनाही नगरपालिका
+                                                                                                    - 2
+                                                                                                    लक्ष्मिनिया
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,देवाही गोनाही नगरपालिका
+                                                                                                    - 2
+                                                                                                    लक्ष्मिनिया
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-12</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35479">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ६</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35477">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                उत्तम
+                                                                    
+                                                                                                    राई
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>27,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                    ,सुनसरी
+                                                                                                    ,ईटहरी उपमहानगरपालिका
+                                                                                                    - २०
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - २०
+                                                                                                    एयरपोर्ट
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-11-19</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35477">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ७</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35476">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                प्रवजन
+                                                                    
+                                                                                                    के.सी
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>23,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    बागमती प्रदेश
+                                                                                                    ,काभ्रे
+                                                                                                    ,पनौती नगरपालिका
+                                                                                                    - ५
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ५
+                                                                                                    एयरपोर्ट
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-11-27</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35476">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ८</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35472">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                तोफेल
+                                                                    आलम
+                                                                                                    साह
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>23,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,धनुषा
+                                                                                                    ,मिथिला विहारी नगरपालिका
+                                                                                                    - १०
+                                                                                                    बिहारी
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - १०
+                                                                                                    पिंगलास्थान
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-11</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35472">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ९</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35471">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                लाखमान
+                                                                    
+                                                                                                    राई
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>83,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                    ,सुनसरी
+                                                                                                    ,धरान उपमहानगरपालिका
+                                                                                                    - ८
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ८
+                                                                                                    सम्भुमार्क
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-16</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35471">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १०</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35470">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                राम
+                                                                    प्रसाद
+                                                                                                    राई
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>26,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                                                                                    - ४
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                                                                                    - ४
+                                                                                                    भिसेन गोला
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35470">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> ११</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35469">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                रोक्साना
+                                                                    
+                                                                                                    खातुन
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>25,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>25
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,यमुनामाई गाउँपालिका
+                                                                                                    - 4
+                                                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,यमुनामाई गाउँपालिका
+                                                                                                    - 4
+                                                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-07-31</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35469">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १२</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35466">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                सन्जिब
+                                                                    
+                                                                                                    तामाङ
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>14,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    बागमती प्रदेश
+                                                                                                    ,रामेछाप
+                                                                                                    ,गोकुलगङ्गा गाउँपालिका
+                                                                                                    - २
+                                                                                                    गंगा
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - २
+                                                                                                    गौरीघाट
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-11</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35466">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १३</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35465">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                सुसान्त
+                                                                    
+                                                                                                    चौधरी
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>16,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,सिरहा
+                                                                                                    ,लहान नगरपालिका
+                                                                                                    - ३
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ३
+                                                                                                    सिनामङगल
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-08</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35465">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १४</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35464">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                साजिया
+                                                                    
+                                                                                                    खातुन
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>25,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>25
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,गढीमाई नगरपालिका
+                                                                                                    - 3
+                                                                                                    लक्ष्मिपुर
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,बौधीमाई नगरपालिका
+                                                                                                    - 3
+                                                                                                    
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-13</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35464">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १५</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35463">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                अशोक
+                                                                    
+                                                                                                    टमटा
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>35,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    सुदूरपश्चिम प्रदेश
+                                                                                                    ,बैतडि
+                                                                                                    ,दशरथचन्द नगरपालिका
+                                                                                                    - ५
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ५
+                                                                                                    एयरपोर्ट
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-05</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35463">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १६</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35462">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                रोदन
+                                                                    
+                                                                                                    लिम्बु
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>14,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                    ,तेह्थुम
+                                                                                                    ,आठराई गाउँपालिका
+                                                                                                    - ५
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ५
+                                                                                                    एयरपोर्ट
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-05</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35462">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १७</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35461">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                आनन्द
+                                                                    कुमार
+                                                                                                    महतो
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>17,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>17
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,चन्द्रपुर नगरपालिका
+                                                                                                    - 4
+                                                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,चन्द्रपुर नगरपालिका
+                                                                                                    - 4
+                                                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-06-18</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35461">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १८</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35459">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                रोहन
+                                                                    
+                                                                                                    लिम्बु
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>12,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>पुरुष</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    कोशी प्रदेश
+                                                                                                    ,तेह्थुम
+                                                                                                    ,आठराई गाउँपालिका
+                                                                                                    - ३
+                                                                                                    नखुलेको
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    बागमती प्रदेश
+                                                                                                    ,काठमाण्डौ
+                                                                                                    ,काठमाण्डौं महानगरपालिका
+                                                                                                    - ३
+                                                                                                    चाबहिल
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2025-12-05</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35459">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> १९</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35458">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                राजनन्दनी
+                                                                    
+                                                                                                    कुमारी
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>13,
+
+                                                                                                                    <b class="font-bold">अन्दाजी उमेर:-</b>13
+                                                                    </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,मौलापुर नगरपालिका
+                                                                                                    - 8
+                                                                                                    सोनरनिया
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    मधेश प्रदेश
+                                                                                                    ,रौतहट
+                                                                                                    ,मौलापुर नगरपालिका
+                                                                                                    - 8
+                                                                                                    सोनरनिया
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-17</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35458">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                <tr class=" ">
+                    <th class="text-center"> २०</th>
+                    <td class="text-center">
+                        <div class="avatar">
+                                                            <img class="avatar" loading="lazy" src="https://udb.nepalpolice.gov.np/missing/photo/35457">
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="mb-2 list-group-item">
+                                <b class="font-bold ">नाम:-</b>
+                                अमिरा
+                                                                    
+                                                                                                    ठगुन्ना
+                                                                <span class="ms-4">
+                                                                            <b class="font-bold">उमेर:-</b>28,
+
+                                                                                                        </span>
+                                                                    <span>
+                                    <b class="font-bold">लिङ्ग:-</b>
+                                                                                 <span>महिला</span>
+                                                                        </span>
+                                
+                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको व्यक्तिको ठेगाना:-</b>
+                                                                    सुदूरपश्चिम प्रदेश
+                                                                                                    ,दार्चुला
+                                                                                                    ,नौगाड गाउँपालिका
+                                                                                                    - ४
+                                                                                                    धनसरा
+                                                            </li>
+
+                            <li class="mb-2 list-group-item"><b class="font-bold">हराएको ठेगाना:-</b>
+
+                                                                    सुदूरपश्चिम प्रदेश
+                                                                                                    ,दार्चुला
+                                                                                                    ,नौगाड गाउँपालिका
+                                                                                                                                    
+                                
+                            </li>
+                            <li class="mb-2 list-group-item">
+                                                                    <span class="pull-right "><strong>हराएको मिति :</strong> <span class="convert_date">2026-08-26</span></span>
+                                                            </li>
+
+                        </ul>
+                    </td>
+                    <td class="p-3 border">
+                        <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/missing/35457">विवरण हेर्नुहोस्</a>
+                    </td>
+                </tr>
+                    
+                                </tbody>
+            </table>
+
+            <div class="col-md-12 mb-3">
+        <div class="row d-flex">
+            <div class="col-md-6">
+                <span>Showing 1 out of 466 Pages</span>
+            </div>
+            <div class="col-md-6 pagination-controls"> <!-- Use 'ml-auto' to align to the right -->
+                                    <span class="btn btn-secondary btn-sm ml-2 disabled">&laquo; अघिल्लो</span>
+                
+                
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/missing?&amp;count=9304&amp;page=1">1</a>
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/missing?&amp;count=9304&amp;page=2">2</a>
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/missing?&amp;count=9304&amp;page=3">3</a>
+                
+                                    <span class="ml-2">...</span>
+                    <a class="btn btn-secondary btn-sm ml-2" href="https://udb.nepalpolice.gov.np/missing?&amp;count=9304&amp;page=466">466</a>
+                
+                                    <a class="btn btn-secondary btn-sm ml-2"
+                       href="https://udb.nepalpolice.gov.np/missing?&amp;count=9304&amp;page=2"
+                       id="next">अर्को &raquo;</a>
+                                
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</main>
+<footer id="site-footer">
+<div class="py-3" style="background-color: #164163">
+    <div class="container">
+        <div class="row">
+            <div class="text-white col-sm-4 col-xl-3">
+                <ul class="list footer-list" style="list-style: none">
+                    <h5><u>सम्पर्कको लागि</u></h5>
+                    <li>
+                        नेपाल प्रहरी प्रधान कार्यालय
+                    </li>
+                    <li>
+                        अपराध अनुसन्धान विभाग
+                    </li>
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-map-marker"></i> &nbsp;
+                            नक्साल, काठमाण्डौ (7MV7P87H+VC)
+                        </span>
+
+                    </li>
+
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-phone"></i> &nbsp;
+                            ०१-४४१२७४८
+                        </span>
+
+                    </li>
+
+
+                    <li>
+                        <span class="text-white">
+                            <i class="fa fa-envelope"></i> &nbsp;
+                            cicu@nepalpolice.gov.np
+                        </span>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="text-white col-sm-4 col-xl-3">
+                <!-- Contact information here -->
+            </div>
+            <div class="text-white col-sm-4 col-xl-3 text-center m-5">
+                <p class="visitor-count">
+                </p>
+            </div>
+
+            <style>
+                .visitor-count {
+                    font-size: 24px;
+                    color: #3498db; /* Calm blue color, you can adjust as needed */
+                }
+
+                .badge-lg {
+                    font-size: 28px;
+                    padding: 10px 20px;
+                    background-color: #e0e9f0; /* Light gray background color */
+                    color: #3498db; /* Match the font color */
+                }
+            </style>
+
+
+        </div>
+        <hr style="color: white">
+        <div class="row">
+            <div class="col-lg-4">
+                <span class="text-white ps-3"> © 2026 - नेपाल प्रहरी । सर्वाधिकार सुरक्षित </span>
+            </div>
+            <div class="col-lg-4">
+
+                
+                
+                
+                
+                
+                
+            </div>
+            <div class="col-lg-4">
+                <span class="text-white ps-3 pull-right"><i class="fa fa-users"></i> &nbsp;पृष्ठ भ्रमण : 
+                    <span class="badge badge-primary" style="font-size: 18px;">
+                    ७४०४८४
+                    </span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+
+<script src="https://udb.nepalpolice.gov.np/assets/nepali.datepicker.v4.0.8/js/nepali.datepicker.v4.0.8.min.js"
+        type="text/javascript"></script>
+<script src="https://udb.nepalpolice.gov.np/js/accessibility.js"></script>
+
+<script>
+    function Bs2Ad(source_id, dest_id) {
+        var est_date = $(`#${source_id}`).val();
+        var strArray = est_date.split("-");
+        var converted_date = NepaliFunctions.BS2AD({
+            year: strArray[0],
+            month: strArray[1],
+            day: strArray[2]
+        })
+        $(`#${dest_id}`).val(`${converted_date.year}-${converted_date.month}-${converted_date.day}`);
+        console.log(`#${dest_id}`)
+    }
+
+    function Ad2Bs(source_id) {
+        var est_date = $(`#${source_id}`).val() != "" ? $(`#${source_id}`).val() : $(`#${source_id}`).text();
+        return Ad2Bs_convert(est_date);
+    }
+
+    function Ad2Bs_convert(est_date) {
+        if (est_date) {
+            var strArray = est_date.split("-");
+            var converted_date = NepaliFunctions.AD2BS({
+                year: strArray[0],
+                month: strArray[1],
+                day: strArray[2]
+            })
+            return `${converted_date.year}-${converted_date.month}-${converted_date.day}`;
+        } else {
+            return null;
+        }
+    }
+</script>
+</footer>
+</div>
+<script>
+
+    $(document).ready(function () {
+        $('.convert_date').each(function (index, ele) {
+            var convert_date = $(ele).text();
+            var strArray = convert_date.split("-");
+            console.log(strArray)
+            var converted_date = NepaliFunctions.AD2BS({
+                year: strArray[0],
+                month: strArray[1],
+                day: strArray[2]
+            })
+            $(ele).text(`${converted_date.year}-${converted_date.month}-${converted_date.day}`)
+        });
+
+    });
+
+    $(document).ready(function () {
+
+        var pradesh_id = $('#pradesh_id').val();
+
+        function getDisByPradesh() {
+            var district_option = '<option value="">जिल्लाको आधारमा खोज्नुहोस</option>';
+            $('#district_id').prop('disabled', true);
+            var flag = "";
+            $.ajax({
+                url: "https://udb.nepalpolice.gov.np/get-district/" + pradesh_id,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    $.each(data, function (key, value) {
+                        flag = (district_id == value.id) ? "selected='selected'" : "";
+                        district_option += `<option value="${value.id}" ${flag}> ${value.nepali_name}</option>`;
+                    });
+                    var select_group = $('#district_id');
+                    select_group.empty().append(district_option);
+                    $('#district_id').prop('disabled', false);
+                },
+            });
+        }
+
+        $('#pradesh_id').change(function () {
+            pradesh_id = $('#pradesh_id').val();
+            getDisByPradesh();
+        });
+
+        if(pradesh_id > 0){
+            var district_id = 
+            getDisByPradesh();
+        }
+    });
+
+ $('#date_fromNP').nepaliDatePicker({
+    ndpMonth: true,
+    ndpYear: true,
+    onChange: function(){
+        Bs2Ad('date_fromNP','date_from')
+    }
+});
+$('#date_toNP').nepaliDatePicker({
+    ndpMonth: true,
+    ndpYear: true,
+    onChange: function(){
+        Bs2Ad('date_toNP','date_to')
+    }
+});
+</script>
+</body>
+</html>
