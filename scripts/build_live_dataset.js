@@ -2,6 +2,7 @@ const fs=require('fs');
 const INCIDENT='NEPAL-2026-08-26-FLOOD';
 function read(path){try{return JSON.parse(fs.readFileSync(path,'utf8')).records||[]}catch{return[]}}
 const sets=[
+  ['CURATED','data/manual-records.json'],
   ['NDRRMA_SETU','data/setu-latest.json'],
   ['NEPAL_POLICE_MISSING','data/police-missing-latest.json'],
   ['NEPAL_POLICE_FOUND','data/police-found-latest.json']
