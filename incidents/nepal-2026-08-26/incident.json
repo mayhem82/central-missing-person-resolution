@@ -1,0 +1,26 @@
+{
+  "incident_id":"NEPAL-2026-08-26-FLOOD",
+  "name":"Nepal 26 August 2026 Flood Disaster",
+  "date":"2026-08-26",
+  "country":"Nepal",
+  "scope":"national",
+  "origin_zone":["Rasuwa","Bhote Koshi","Trishuli river corridor"],
+  "confirmed_affected_districts":["Rasuwa","Nuwakot","Dhading","Chitwan","Gorkha","Tanahun"],
+  "downstream_recovery_districts_observed_in_police_records":["Nawalparasi East","Nawalparasi West"],
+  "affected_municipalities_declared_by_government":15,
+  "source_basis":[
+    "WHO Nepal emergency overview",
+    "Nepal Police missing/found/unidentified-body registers",
+    "NDRRMA Setu affected-person register",
+    "District Administration Office updates"
+  ],
+  "model":"one national incident with event zones, immutable source records, identity relationships, reviewed person clusters and append-only status events",
+  "rules":[
+    "source record is not automatically a unique person",
+    "no name-only merge",
+    "removal from a list is not proof of resolution",
+    "death is never inferred from age, sex or geography alone",
+    "unidentified-body records remain separate until hard evidence supports identity",
+    "all consequential identity/status conclusions require provenance and human review"
+  ]
+}
