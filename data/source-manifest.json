@@ -3,10 +3,10 @@
   "scope":"national",
   "sources":[
     {"id":"SETU","url":"https://setu.ndrrma.gov.np/admin/recordlist.php","kind":"HTML","critical":true,"pagination":"discover_all","role":"affected-person register"},
-    {"id":"POLICE_MISSING","url":"https://udb.nepalpolice.gov.np/missing","kind":"HTML","critical":true,"pagination":"discover_all","role":"missing-person register"},
-    {"id":"POLICE_FOUND","url":"https://udb.nepalpolice.gov.np/found","kind":"HTML","critical":true,"pagination":"discover_all","role":"found-person register"},
-    {"id":"POLICE_DISASTER_BODIES","url":"https://udb.nepalpolice.gov.np/disaster","kind":"HTML","critical":true,"pagination":"discover_all","role":"disaster unidentified-body register"},
-    {"id":"POLICE_ALL_BODIES","url":"https://udb.nepalpolice.gov.np/dead-bodies-lists","kind":"HTML","critical":false,"pagination":"discover_all","role":"general unidentified-body cross-check"},
+    {"id":"POLICE_MISSING","url":"https://udb.nepalpolice.gov.np/missing?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"missing-person register","note":"large page size requested to reduce crawl latency; person rows are incident-filtered before live ingestion"},
+    {"id":"POLICE_FOUND","url":"https://udb.nepalpolice.gov.np/found?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"found-person register","note":"large page size requested to reduce crawl latency; person rows are incident-filtered before live ingestion"},
+    {"id":"POLICE_DISASTER_BODIES","url":"https://udb.nepalpolice.gov.np/disaster?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"disaster unidentified-body register"},
+    {"id":"POLICE_ALL_BODIES","url":"https://udb.nepalpolice.gov.np/dead-bodies-lists?count=1000&page=1","kind":"HTML","critical":false,"pagination":"discover_all","role":"general unidentified-body cross-check"},
     {"id":"DAO_MAKWANPUR_BHADRA13","url":"https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-sama-bna-thha-makava-napa-ra-ja-l-l-apada-ta-ma-ta-bha-tha-ra","kind":"HTML","critical":true,"pagination":"none","role":"district update"},
     {"id":"WHO_NEPAL_RASUWA_2026","url":"https://www.who.int/nepal/emergencies/2026-rasuwa-flash-floods","kind":"HTML","critical":true,"pagination":"none","role":"national geographic and health-impact scope"},
     {"id":"WHO_STATEMENT_2026_08_26","url":"https://www.who.int/nepal/news/detail/26-08-2026-who-nepal-statement-on-rasuwa-floods","kind":"HTML","critical":false,"pagination":"none","role":"health-response chronology"}
