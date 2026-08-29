@@ -4,8 +4,14 @@ function read(path){try{return JSON.parse(fs.readFileSync(path,'utf8')).records|
 const sets=[
   ['CURATED','data/manual-records.json'],
   ['NDRRMA_SETU','data/setu-latest.json'],
+  ['OPMCM_RESCUE_PORTAL','data/opmcm-latest.json'],
   ['NEPAL_POLICE_MISSING','data/police-missing-latest.json'],
-  ['NEPAL_POLICE_FOUND','data/police-found-latest.json']
+  ['NEPAL_POLICE_FOUND','data/police-found-latest.json'],
+  ['DAO_RASUWA_FLOOD_HUB','data/dao-rasuwa-latest.json'],
+  ['DAO_RASUWA_BHADRA12_NOTICE','data/dao-rasuwa-bhadra12-latest.json'],
+  ['DAO_MAKWANPUR_BHADRA13','data/dao-makwanpur-bhadra13-latest.json'],
+  ['DAO_BANKE_MISSING','data/dao-banke-latest.json'],
+  ['DAO_PARSA_BHADRA13_MISSING','data/dao-parsa-bhadra13-latest.json']
 ];
 let records=[];const source_counts={};
 for(const [source,file] of sets){const rows=read(file);source_counts[source]=rows.length;for(const r of rows)records.push({...r,incident_id:INCIDENT,source:r.source||source});}
