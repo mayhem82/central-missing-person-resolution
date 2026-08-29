@@ -45,7 +45,7 @@ jobs:
       - name: Parse additional official source streams
         run: node scripts/ingest_additional_sources.js
         continue-on-error: true
-      - name: Build unified national live dataset
+      - name: Build unified national live dataset and version metadata
         run: node scripts/build_live_dataset.js
       - name: Build international nationality and travel cohort index
         run: npm run build:cohorts
@@ -63,10 +63,10 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/opmcm-latest.json data/dao-rasuwa-latest.json data/dao-rasuwa-bhadra12-latest.json data/dao-makwanpur-bhadra13-latest.json data/dao-banke-latest.json data/dao-parsa-bhadra13-latest.json data/records.json data/unidentified-bodies.json data/reconciliation-candidates.json data/completeness.json data/cohort-index.json data/interchange
+          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/opmcm-latest.json data/dao-rasuwa-latest.json data/dao-rasuwa-bhadra12-latest.json data/dao-makwanpur-bhadra13-latest.json data/dao-banke-latest.json data/dao-parsa-bhadra13-latest.json data/records.json data/unidentified-bodies.json data/update-meta.json data/reconciliation-candidates.json data/completeness.json data/cohort-index.json data/interchange
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
           else
-            git commit -m 'source-watch: refresh unified national Nepal disaster data'
+            git commit -m "source-watch: refresh dataset ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}"
             git push
           fi
