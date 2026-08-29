@@ -7,6 +7,7 @@ on:
       - 'scripts/ingest_setu.js'
       - 'scripts/ingest_police.js'
       - 'scripts/build_live_dataset.js'
+      - 'scripts/reconcile_candidates.js'
       - 'data/source-manifest.json'
       - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
@@ -32,6 +33,8 @@ jobs:
         continue-on-error: true
       - name: Build unified national live dataset
         run: node scripts/build_live_dataset.js
+      - name: Build deterministic reconciliation review queue
+        run: node scripts/reconcile_candidates.js
       - name: Validate evidence model
         run: npm run validate
       - name: Run tests
@@ -40,7 +43,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/records.json data/unidentified-bodies.json
+          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/records.json data/unidentified-bodies.json data/reconciliation-candidates.json
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
           else
