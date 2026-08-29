@@ -8,12 +8,14 @@ on:
       - 'scripts/ingest_police.js'
       - 'scripts/ingest_additional_sources.js'
       - 'scripts/build_live_dataset.js'
+      - 'scripts/build_cohort_index.js'
       - 'scripts/reconcile_candidates.js'
       - 'scripts/assess_completeness.js'
       - 'scripts/export_pfif.js'
       - 'data/source-manifest.json'
       - 'data/publication-policy.json'
       - 'data/australian-cohort.json'
+      - 'data/international-cohorts.json'
       - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
   schedule:
@@ -45,6 +47,8 @@ jobs:
         continue-on-error: true
       - name: Build unified national live dataset
         run: node scripts/build_live_dataset.js
+      - name: Build international nationality and travel cohort index
+        run: npm run build:cohorts
       - name: Build deterministic reconciliation review queue
         run: node scripts/reconcile_candidates.js
       - name: Assess national incident completeness
@@ -59,7 +63,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/opmcm-latest.json data/dao-rasuwa-latest.json data/dao-rasuwa-bhadra12-latest.json data/dao-makwanpur-bhadra13-latest.json data/dao-banke-latest.json data/dao-parsa-bhadra13-latest.json data/records.json data/unidentified-bodies.json data/reconciliation-candidates.json data/completeness.json data/interchange
+          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/opmcm-latest.json data/dao-rasuwa-latest.json data/dao-rasuwa-bhadra12-latest.json data/dao-makwanpur-bhadra13-latest.json data/dao-banke-latest.json data/dao-parsa-bhadra13-latest.json data/records.json data/unidentified-bodies.json data/reconciliation-candidates.json data/completeness.json data/cohort-index.json data/interchange
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
           else
