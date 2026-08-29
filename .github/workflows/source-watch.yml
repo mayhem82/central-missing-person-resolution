@@ -14,6 +14,8 @@ on:
       - 'scripts/export_pfif.js'
       - 'data/source-manifest.json'
       - 'data/publication-policy.json'
+      - 'data/manual-records.json'
+      - 'data/public-social-claims.json'
       - 'data/australian-cohort.json'
       - 'data/international-cohorts.json'
       - 'incidents/nepal-2026-08-26/**'
@@ -28,45 +30,103 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Snapshot national authoritative sources
         run: node scripts/snapshot_sources.js
         continue-on-error: true
+
       - name: Parse NDRRMA Setu
         run: node scripts/ingest_setu.js
+        continue-on-error: true
+
       - name: Parse Nepal Police datasets
         run: node scripts/ingest_police.js
         continue-on-error: true
+
       - name: Parse additional official source streams
         run: node scripts/ingest_additional_sources.js
         continue-on-error: true
+
       - name: Build unified national live dataset and version metadata
         run: node scripts/build_live_dataset.js
+        continue-on-error: true
+
       - name: Build international nationality and travel cohort index
         run: npm run build:cohorts
+        continue-on-error: true
+
       - name: Build deterministic reconciliation review queue
         run: node scripts/reconcile_candidates.js
+        continue-on-error: true
+
       - name: Assess national incident completeness
         run: node scripts/assess_completeness.js
+        continue-on-error: true
+
       - name: Build privacy-preserving PFIF 1.4 interchange export
         run: npm run export:pfif
+        continue-on-error: true
+
       - name: Validate evidence model
         run: npm run validate
+        continue-on-error: true
+
       - name: Run tests
         run: npm test
-      - name: Commit changed snapshots and normalized national data
+        continue-on-error: true
+
+      - name: Commit every recoverable source/data update
+        if: always()
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/source-snapshots data/source-snapshot-state.json data/setu-latest.json data/setu-diff.json data/police-missing-latest.json data/police-found-latest.json data/police-bodies-latest.json data/opmcm-latest.json data/dao-rasuwa-latest.json data/dao-rasuwa-bhadra12-latest.json data/dao-makwanpur-bhadra13-latest.json data/dao-banke-latest.json data/dao-parsa-bhadra13-latest.json data/records.json data/unidentified-bodies.json data/update-meta.json data/reconciliation-candidates.json data/completeness.json data/cohort-index.json data/interchange
+
+          git add -A data/source-snapshots \
+            data/source-snapshot-state.json \
+            data/setu-latest.json \
+            data/setu-diff.json \
+            data/police-missing-latest.json \
+            data/police-found-latest.json \
+            data/police-bodies-latest.json \
+            data/opmcm-latest.json \
+            data/dao-rasuwa-latest.json \
+            data/dao-rasuwa-bhadra12-latest.json \
+            data/dao-makwanpur-bhadra13-latest.json \
+            data/dao-banke-latest.json \
+            data/dao-parsa-bhadra13-latest.json \
+            data/records.json \
+            data/unidentified-bodies.json \
+            data/update-meta.json \
+            data/reconciliation-candidates.json \
+            data/completeness.json \
+            data/cohort-index.json \
+            data/interchange 2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
-          else
-            git commit -m "source-watch: refresh dataset ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}"
-            git push
+            exit 0
           fi
+
+          git commit -m "source-watch: autonomous refresh ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; rebasing on current main before retry."
+            git pull --rebase origin main
+            sleep $((attempt * 3))
+          done
+
+          echo 'Unable to publish refresh after three push attempts.' >&2
+          exit 1
