@@ -1,0 +1,21 @@
+{
+  "run_id": "RUN-010",
+  "incident_id": "NEPAL-RASUWA-2026",
+  "run_date": "2026-08-30",
+  "focus": "Detect authoritative post-list updates and preserve them before person-level reconciliation.",
+  "observations": [
+    "DAO Makwanpur now has a newer Rasuwa incident update dated 2083-05-13.",
+    "The attached artifact is document(8).pdf, 637.75 KB.",
+    "This supersedes the prior assumption that no newer general Makwanpur incident/status notice was visible after the Bhadra 12 list.",
+    "The new update must be treated as a separate immutable source snapshot, not as a replacement for the earlier lists.",
+    "No Suman-specific or cohort-wide status change is asserted until the binary is extracted and row-level changes are established."
+  ],
+  "evidence_added": ["EVID-032", "EVID-033"],
+  "next_search": [
+    "Retrieve and extract document(8).pdf.",
+    "Recover document(6).pdf and document(7)(4).pdf binaries.",
+    "Diff all three DAO artifacts row-by-row.",
+    "Classify additions, removals and changed fields without interpreting removal as resolution by default.",
+    "Reconcile resulting records against Nepal Police missing and found datasets."
+  ]
+}
