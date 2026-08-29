@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "default_publication_state": "PUBLIC_MINIMISED",
+  "states": {
+    "PUBLIC_MINIMISED": {
+      "allow": ["id", "name", "age", "sex", "status", "district", "municipality", "locality", "source", "source_url", "detail", "date", "incident_id"],
+      "deny_patterns": ["phone", "email", "exact_home_address", "government_id", "passport", "medical_detail", "family_contact"],
+      "requires_human_review": false
+    },
+    "PUBLIC_WITH_CONSENT": {
+      "allow": ["approved_contact", "approved_photo"],
+      "requires": ["consent_basis", "consent_recorded_at", "approved_by"],
+      "requires_human_review": true
+    },
+    "RESTRICTED_INVESTIGATOR": {
+      "allow_sensitive": true,
+      "requires_human_review": true,
+      "public_export": false
+    },
+    "WITHHELD": {
+      "public_export": false
+    }
+  },
+  "rules": [
+    "Collect and process only for missing-person resolution, family-link restoration, disaster response and auditability.",
+    "Public publication must be necessary for a defined humanitarian purpose and use the minimum fields required.",
+    "Family-supplied contact details are withheld unless explicit publication consent is documented.",
+    "Sensitive health, identity-document and exact-address data are never included in public interoperability exports.",
+    "A source publishing personal data does not automatically authorise republication of all fields.",
+    "Death or consequential identity conclusions require human review and are never created by interoperability export logic.",
+    "Withdrawal or correction requests do not erase immutable source evidence; they change publication/access state while preserving the audit trail."
+  ]
+}
