@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rescued & Missing Persons - Rasuwa Flood</title>
+<link rel="icon" type="image/png" href="img/fab.png">
+<link rel="apple-touch-icon" href="img/fab.png">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif;
+         background:#eef1f4; color:#1a2027; font-size:15px; line-height:1.45; }
+  .wrap { max-width:1080px; margin:0 auto; padding:14px; }
+  .head { background:linear-gradient(135deg,#b71c1c,#e53935); color:#fff; border-radius:16px;
+          padding:16px 18px; margin-bottom:14px; display:flex; align-items:center; gap:14px; }
+  .head-logo { width:46px; height:46px; border-radius:10px; background:#fff; padding:5px; flex:0 0 auto; }
+  .head h1 { margin:0; font-size:19px; }
+  .head p { margin:2px 0 0; font-size:13px; opacity:.9; }
+  .bar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+  .bar form { display:flex; gap:8px; flex:1; min-width:220px; }
+  .bar input[type=text] { flex:1; padding:10px 12px; font-size:15px; border:1.5px solid #cfd6dd; border-radius:11px; background:#fff; }
+  .bar .btn { padding:10px 16px; font-size:14px; font-weight:700; border:none; border-radius:11px; background:#e53935; color:#fff; cursor:pointer; }
+  .bar .btn.clear { background:#fff; color:#6b7680; border:1.5px solid #cfd6dd; text-decoration:none; display:inline-flex; align-items:center; }
+  .count { font-size:13px; color:#6b7680; font-weight:700; margin-left:auto; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
+  .rl { background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,.06); padding:14px; cursor:pointer;
+        border:1px solid #eef1f4; transition:transform .08s ease, box-shadow .08s ease; }
+  .rl:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }
+  .rl-top { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .rl-name { font-weight:800; font-size:16px; }
+  .rl-ag { color:#6b7680; font-size:13px; margin-top:1px; }
+  .rl-loc { color:#6b7680; font-size:13px; margin:8px 0 6px; }
+  .rl-foot { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .pill { display:inline-block; padding:3px 11px; border-radius:20px; font-size:12.5px; font-weight:800; white-space:nowrap; }
+  .src { background:#E3F2FD; color:#1565C0; font-size:11.5px; font-weight:700; padding:2px 9px; border-radius:16px; }
+  .when { color:#8a95a0; font-size:12px; margin-left:auto; }
+  .empty { grid-column:1/-1; background:#fff; border-radius:14px; padding:40px 16px; text-align:center; color:#6b7680; }
+
+  .pager { display:flex; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; margin:18px 0 4px; }
+  .pager a, .pager span { min-width:36px; height:36px; padding:0 10px; display:inline-flex; align-items:center; justify-content:center;
+        border-radius:10px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid #d7dde3; background:#fff; color:#33475b; }
+  .pager a:hover { border-color:#e53935; color:#e53935; }
+  .pager .cur { background:#e53935; border-color:#e53935; color:#fff; }
+  .pager .dis { opacity:.4; pointer-events:none; }
+  .pager .dots { border:none; background:none; }
+
+  /* modal */
+  .ov { position:fixed; inset:0; background:rgba(20,26,33,.55); display:none; align-items:flex-end; justify-content:center; z-index:50; padding:0; overflow-y:auto; }
+  .ov.show { display:flex; }
+  .sheet { background:#fff; width:100%; max-width:520px; border-radius:18px 18px 0 0; margin-top:auto; overflow:hidden; animation:up .2s ease; }
+  @media (min-width:560px){ .ov { align-items:center; padding:16px; } .sheet { border-radius:18px; margin-top:0; } }
+  @keyframes up { from { transform:translateY(30px); opacity:.6; } to { transform:translateY(0); opacity:1; } }
+  .sh-head { background:#fff; padding:16px 18px 10px; border-bottom:1px solid #eef1f4; display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .sh-head h2 { margin:0; font-size:19px; } .sh-head .loc { color:#6b7680; font-size:13px; margin-top:2px; }
+  .x { border:none; background:#f2f4f7; width:34px; height:34px; border-radius:50%; font-size:20px; cursor:pointer; color:#6b7680; flex:0 0 auto; }
+  .sh-body { padding:14px 18px 20px; }
+  .call { display:flex; align-items:center; gap:12px; background:#fdecea; border:1px solid #f3c1bd; border-radius:12px; padding:12px 14px; margin-bottom:12px; text-decoration:none; }
+  .call .ph { font-weight:800; font-size:18px; color:#b71c1c; } .call .who { font-size:12.5px; color:#8a5a56; }
+  .call .go { margin-left:auto; background:#e53935; color:#fff; border-radius:10px; padding:8px 14px; font-weight:700; font-size:14px; }
+  .row { display:flex; padding:9px 0; border-bottom:1px solid #f2f4f7; gap:12px; }
+  .row:last-child { border-bottom:none; }
+  .row .k { flex:0 0 110px; color:#8a95a0; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; padding-top:2px; }
+  .row .v { flex:1; font-size:14.5px; }
+  .vbadge { display:inline-block; padding:2px 9px; border-radius:16px; font-size:12px; font-weight:800; }
+  .foot { text-align:center; color:#8a95a0; font-size:12.5px; margin:18px 0 6px; }
+  .foot a { color:#1565C0; text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <img src="img/fab.png" alt="SETU" class="head-logo">
+      <div>
+        <h1>Rescued & Missing Persons - Rasuwa Flood</h1>
+        <p>Tap a person to see full details</p>
+      </div>
+    </div>
+
+    <div class="bar">
+      <form method="get" action="recordlist.php">
+        <input type="text" name="q" value="" placeholder="Search name, district, contact...">
+        <button class="btn" type="submit">Search</button>
+              </form>
+    </div>
+
+    <div class="grid">
+              <div class="rl" data-i="0">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">rajendra rimal</div>
+              <div class="rl-ag">Age 60 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Around gosaekunda</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="1">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rajkumar thapa Magar</div>
+              <div class="rl-ag">Age 58 years · Male</div>
+            </div>
+            <span class="pill" style="background:#ECEFF1; color:#37474F;">Found - Dead</span>          </div>
+          <div class="rl-loc">Upper hydro 3b, pairebesi, kaideltar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="2">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Raju Shrestha</div>
+              <div class="rl-ag">Age 50 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Colony Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="3">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rakesh Kumar Yadav</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Rasuwa Gosaikund</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="4">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">rakesh kumar yadav</div>
+              <div class="rl-ag">Age 22 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Jaleshwor Municipality 9 parikauli</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="5">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Raman Lal Shrestha</div>
+              <div class="rl-ag">Age 37 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Unidentified</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="6">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">ram bahadur bista</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">चौरजहारी-१३</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="7">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ram bdr thapa Magar</div>
+              <div class="rl-ag">Age 54 years · Male</div>
+            </div>
+            <span class="pill" style="background:#ECEFF1; color:#37474F;">Found - Dead</span>          </div>
+          <div class="rl-loc">Upper hydro 3b, pairebesi, kaideltar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="8">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ramesh Pariyar</div>
+              <div class="rl-ag">Age 43 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Devighat , Bidur- 3, Nuwakot</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="9">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ramhari Dahal</div>
+              <div class="rl-ag">Age 43 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="10">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ramhari Dahal</div>
+              <div class="rl-ag">Age 43 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="11">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">RAMIT GUBAJU</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Timmure mathi jungle</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 26, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="12">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">RAMKAJI PAHARI</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Trishuli mailung hattibesi</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="13">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rannaga Sawai</div>
+              <div class="rl-ag">Age 68 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="14">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ratna Kumar</div>
+              <div class="rl-ag">Age 65 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="15">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ravi Bishwokarma</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Bidur  nagar palika 1</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="16">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Ravi Shankar Sharma</div>
+              <div class="rl-ag">Age 51 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Delhi &amp; Kolkata India &amp; Pasikot Kathmandu</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="17">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rena Shrestha</div>
+              <div class="rl-ag">Age 48 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Colony Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="18">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">RENGIN  TAMANG</div>
+              <div class="rl-ag">Age 50 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Shyafrubesi</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 26, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="19">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rihana Munakami</div>
+              <div class="rl-ag">Age 12 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Devighat , Bidur- 3, Nuwakot</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="20">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">rishav raj maruti</div>
+              <div class="rl-ag">Age 36 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Delhi &amp; Kolkata India &amp; Pasikot Kathmandu</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="21">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Rishi Rai</div>
+              <div class="rl-ag">Age 28 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Mandredhunga ward no 6</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="22">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Riyanshi Rai</div>
+              <div class="rl-ag">Age 3 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Mandredhunga ward no 6</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="23">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Robit sah</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Shree nath gan rasuwa office of army’s camp</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="24">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">ROSHAN BISTA</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Rasuwa ,216 MW Power House , Mailung Hydropower Area</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 26, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="25">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Roshan Tamang</div>
+              <div class="rl-ag">Age 31 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="26">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sabita Ghimire</div>
+              <div class="rl-ag">Age 35 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="27">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sabita Rijal</div>
+              <div class="rl-ag">Age 27 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="28">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sabya Munakami</div>
+              <div class="rl-ag">Age 2 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Devighat , Bidur- 3, Nuwakot</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="29">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sachin yadav</div>
+              <div class="rl-ag">Age 24 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Chilime Hub station</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="30">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sahadev phuyal</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Way to gosaikunda.. near simle</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="31">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Samjhana Poudel</div>
+              <div class="rl-ag">Age 34 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="32">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Samridhi Rai</div>
+              <div class="rl-ag">Age 6 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Mandredhunga ward no 6</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="33">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sanat rimal</div>
+              <div class="rl-ag">Age 55 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Around gosaekunda</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="34">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sanjay Tamang</div>
+              <div class="rl-ag">Age 13 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Manegau/kispang-5</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="35">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Santa maya Tamang</div>
+              <div class="rl-ag">Age 85 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Rasuwa, Goljung, Syabrubesi</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="36">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sarad Bhikchu</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Thunka Dada , Trisuli Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="37">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sarans  pandey</div>
+              <div class="rl-ag">Age 30 years</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Sunirse Guest House</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="38">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Saraswati</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">गोसाईकुण्ड</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="39">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sarina Shrestha</div>
+              <div class="rl-ag">Age 46 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Colony Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="40">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Satyai Dhakham</div>
+              <div class="rl-ag">Age 47 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="41">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Seshan Tamang</div>
+              <div class="rl-ag">Age 31 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="42">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Shanta maya tamang</div>
+              <div class="rl-ag">Age 85 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Goljung</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="43">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">shantang rai</div>
+              <div class="rl-ag">Age 27 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Sunirse Guest House</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="44">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Shanti kumari ghale</div>
+              <div class="rl-ag">Age 50 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Goljung</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="45">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Shanti Kumari Ghale</div>
+              <div class="rl-ag">Age 50 years</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Rasuwa, Goljung, Syabrubesi</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="46">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Shanti Pradhan</div>
+              <div class="rl-ag">Age 60 years</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Colony Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="47">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Shyam shrestha</div>
+              <div class="rl-ag">Age 54 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">lauribina pass</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="48">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Simaranjan</div>
+              <div class="rl-ag">Age 46 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="49">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sita Giri</div>
+              <div class="rl-ag">Age 35 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Shanti colony ( trsuli hydropower colony, near shanti bazzar of 3A power plant )</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="50">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sita Giri</div>
+              <div class="rl-ag">Age 40 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Shantibazar, Trishuli</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="51">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sita Giri</div>
+              <div class="rl-ag">Age 40 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Shantibazar, Trishuli</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="52">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">SIta Shrestha</div>
+              <div class="rl-ag">Age 25 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Devighat , Bidur- 3, Nuwakot</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="53">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sivraj kc</div>
+              <div class="rl-ag">Age 34 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Chilime Hub station</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="54">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">smriti pathak</div>
+              <div class="rl-ag">Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Shantibazar, Trishuli</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="55">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sneha Shrestha</div>
+              <div class="rl-ag">Age 22 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Colony Bazar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="56">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Some Tamang</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="57">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Some Tamang</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="58">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sonam Wadi Tamang</div>
+              <div class="rl-ag">Age 57 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="59">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sonam Waiba</div>
+              <div class="rl-ag">Age 57 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="60">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sonia Tamang</div>
+              <div class="rl-ag">Age 18 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="61">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">subash silwal</div>
+              <div class="rl-ag">Age 40 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Unidentified</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="62">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Subas Malla</div>
+              <div class="rl-ag">Age 8 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="63">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Subodh Sharma</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Gosaikund way</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 26, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="64">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">subodh sharma</div>
+              <div class="rl-ag">Age 33 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Gosaikund way</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="65">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sudeep ghale</div>
+              <div class="rl-ag">Age 40 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Delhi &amp; Kolkata India &amp; Pasikot Kathmandu</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="66">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sudha Amgain</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Heading toward gosaikunda.. dont know location</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="67">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sujata kaudel</div>
+              <div class="rl-ag">Age 42 years · Female</div>
+            </div>
+            <span class="pill" style="background:#ECEFF1; color:#37474F;">Found - Dead</span>          </div>
+          <div class="rl-loc">Palungtar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="68">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sukurani Tamang</div>
+              <div class="rl-ag">Age 36 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="69">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">suman kafle</div>
+              <div class="rl-ag">Age 33 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Gosaikund way</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="70">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Suman Kafle</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Gosaikund way</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 26, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="71">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sunchaura Shahi</div>
+              <div class="rl-ag">Age 23 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="72">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">sunil bhusal</div>
+              <div class="rl-ag">Age 26 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Dhunche rasuwa</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="73">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sunil chaudhary</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Rasuwa langtang hydropower</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="74">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sunil kumar tamang</div>
+              <div class="rl-ag">Age 50 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Goljung</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="75">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Sunil Tamang</div>
+              <div class="rl-ag">Age 47 years</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Rasuwa, Goljung, Syabrubesi</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="76">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">surendra subedi</div>
+              <div class="rl-ag"></div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="77">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">surendra thapa magar</div>
+              <div class="rl-ag">Age 27 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">रसुवा</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="78">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Surya Narayan Rai</div>
+              <div class="rl-ag">Age 5 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Mandredhunga ward no 6</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="79">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Susma Rai</div>
+              <div class="rl-ag">Age 25 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Mandredhunga ward no 6</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="80">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Suwa Malla</div>
+              <div class="rl-ag">Age 31 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="81">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Taehoon Yum</div>
+              <div class="rl-ag">Age 57 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Korean Nationals</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="82">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Taeyoon Kia</div>
+              <div class="rl-ag">Age 41 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+          <div class="rl-loc">Korean Nationals</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="83">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tak Bahadur Khadka</div>
+              <div class="rl-ag">Age 59 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">गाडीबाट झरी पैदल यात्रा सुरु गरेको</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="84">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tanding Tamang</div>
+              <div class="rl-ag">Age 44 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FFF3E0; color:#E65100;">Found - Injured</span>          </div>
+          <div class="rl-loc">Briddim village Gosaikunda-3</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="85">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">tanka nath mudhbhari</div>
+              <div class="rl-ag">Age 65 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Belkotgadhi-3, Nuwakot</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="86">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tasi Ting Ruk Tamang</div>
+              <div class="rl-ag">Age 73 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="87">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">tej pariyar</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Rasuwa uper mailung hydropower</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="88">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Jangmu</div>
+              <div class="rl-ag">Age 70 years · Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="89">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Lama</div>
+              <div class="rl-ag">Age 63 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="90">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Lama</div>
+              <div class="rl-ag">Age 66 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="91">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Sinang Dorje</div>
+              <div class="rl-ag">Age 65 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="92">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Tamang</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="93">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzing Tamang</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="94">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tenzin Semen Dorje</div>
+              <div class="rl-ag">Age 36 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="95">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Thakur thapa magar</div>
+              <div class="rl-ag">Age 57 years · Male</div>
+            </div>
+            <span class="pill" style="background:#ECEFF1; color:#37474F;">Found - Dead</span>          </div>
+          <div class="rl-loc">Upper hydro 3b, pairebesi, kaideltar</div>          <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="96">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Thiruma Bhalan</div>
+              <div class="rl-ag">Age 62 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="97">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tian Yu</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="98">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">Tikanath Poudel</div>
+              <div class="rl-ag">Age 41 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Rescued</span>          </div>
+                    <div class="rl-foot">
+            <span class="src">Setu App</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+          </div>
+
+          <div class="pager">
+        <a class="" href="recordlist.php?page=16">&laquo;</a>
+        <a href="recordlist.php?page=1">1</a><span class="dots">…</span>                  <a href="recordlist.php?page=15">15</a>                  <a href="recordlist.php?page=16">16</a>                  <span class="cur">17</span>                  <a href="recordlist.php?page=18">18</a>                        <a class="" href="recordlist.php?page=18">&raquo;</a>
+      </div>
+    
+    <div class="foot"><a href="https://setu.ndrrma.gov.np/">&#8592; Back to Home</a><br>Setu Rapid - Government of Nepal</div>
+  </div>
+
+  <!-- Detail modal -->
+  <div class="ov" id="ov">
+    <div class="sheet">
+      <div class="sh-head">
+        <div><h2 id="mName">Person</h2><div class="loc" id="mLoc"></div></div>
+        <button class="x" id="mClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="sh-body" id="mBody"></div>
+    </div>
+  </div>
+
+<script>
+  var REC = [{"name":"rajendra rimal","gender":"Male","age":60,"loc":"Around gosaekunda","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"+977 9845897327","reporter":"Prahalad prasad Rimal","repcon":"+977 9845897327","details":"Phone switched off we don’t know what was happen unable to connect with family so please looking for help","when":"Aug 27, 2026","time":"6:17 AM"},{"name":"Rajkumar thapa Magar","gender":"Male","age":58,"loc":"Upper hydro 3b, pairebesi, kaideltar","status":"Found - Dead","st":{"bg":"#ECEFF1","fg":"#37474F"},"source":"Setu App","verified":true,"contact":"9749841638","reporter":"Shushil Magar","repcon":"9749841638","details":"10 gate dekhi harayako aaily samma","when":"Aug 29, 2026","time":"10:13 AM"},{"name":"Raju Shrestha","gender":"Male","age":50,"loc":"Colony Bazar","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841549607","reporter":"Raju Shrestha","repcon":"9841549607","details":"We are facing food and water shortage. We request government to rescue us or provide food and water.","when":"Aug 28, 2026","time":"1:37 PM"},{"name":"Rakesh Kumar Yadav","gender":"Male","age":35,"loc":"Rasuwa Gosaikund","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9817850015","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9817850015","details":"Source: MoHA district disaster update, Missing List SN 561.\nReported as: Rakesh Kumar Yadav\nContact from source list: 9817850015, 9840943862\nReported total missing: 2","when":"Aug 28, 2026","time":"12:13 AM"},{"name":"rakesh kumar yadav","gender":"Male","age":22,"loc":"Jaleshwor Municipality 9 parikauli","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9714240825","reporter":"Dipesh Kumar Yadav","repcon":"9714240825","details":"","when":"Aug 27, 2026","time":"8:58 AM"},{"name":"Raman Lal Shrestha","gender":"Male","age":37,"loc":"Unidentified","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9803786315","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9803786315","details":"Source: MoHA district disaster update, Missing List SN 46.\nReported as: Raman Lal Shrestha\nContact from source list: 9803786315, 9840174737\nReported total missing: 1\nNo location appears anywhere in the source record for this report; the address is unidentified.","when":"Aug 27, 2026","time":"11:15 PM"},{"name":"ram bahadur bista","gender":"","age":null,"loc":"चौरजहारी-१३","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"986-3280754","reporter":"राम बहादुर बिष्ट","repcon":"986-3280754","details":"missing in rasuwa flood, working in hydropower in sino hydro company has been missing","when":"Aug 27, 2026","time":"9:57 AM"},{"name":"Ram bdr thapa Magar","gender":"Male","age":54,"loc":"Upper hydro 3b, pairebesi, kaideltar","status":"Found - Dead","st":{"bg":"#ECEFF1","fg":"#37474F"},"source":"Setu App","verified":true,"contact":"9749841638","reporter":"Shushil Magar","repcon":"9749841638","details":"10 gate dekhi harayako aaily samma","when":"Aug 29, 2026","time":"10:13 AM"},{"name":"Ramesh Pariyar","gender":"Male","age":43,"loc":"Devighat , Bidur- 3, Nuwakot","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9823363537/9768521721","reporter":"Suman Munakami","repcon":"9823363537/9768521721","details":"Stuck on the other side of river.","when":"Aug 27, 2026","time":"6:36 PM"},{"name":"Ramhari Dahal","gender":"Male","age":43,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Ramhari Dahal","gender":"Male","age":43,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"RAMIT GUBAJU","gender":"Male","age":35,"loc":"Timmure mathi jungle","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9866445175","reporter":"सुमन श्रेष्ठ","repcon":"9866445175","details":"सम्पर्कमै रहेको अहिले मोबाईल अफ भएको छ,माथी जङ्गल तिर गएको छ भन्ने खबर छ उद्दारको लागि सहयोग गरिदिनुहोला","when":"Aug 26, 2026","time":"11:01 PM"},{"name":"RAMKAJI PAHARI","gender":"Male","age":null,"loc":"Trishuli mailung hattibesi","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9803509271","reporter":"Puja pahari","repcon":"9803509271","details":"Please rescue then  ilthey are contract less since yesterday 4 pm","when":"Aug 27, 2026","time":"7:18 AM"},{"name":"Rannaga Sawai","gender":"Male","age":68,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Indian Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Indian Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Ratna Kumar","gender":"Male","age":65,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Indian Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Indian Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Ravi Bishwokarma","gender":"","age":null,"loc":"Bidur  nagar palika 1","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9843718768","reporter":"Sharmila Bishwokarma","repcon":"9843718768","details":"","when":"Aug 28, 2026","time":"5:19 AM"},{"name":"Ravi Shankar Sharma","gender":"Male","age":51,"loc":"Delhi & Kolkata India & Pasikot Kathmandu","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851334909","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9851334909","details":"Source: MoHA district disaster update, Missing List SN 799.\nReported as: Manjit Malla pradhananga\nContact from source list: 9851334909\nReported total missing: 5","when":"Aug 28, 2026","time":"12:40 AM"},{"name":"Rena Shrestha","gender":"Female","age":48,"loc":"Colony Bazar","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841549607","reporter":"Raju Shrestha","repcon":"9841549607","details":"We are facing food and water shortage. We request government to rescue us or provide food and water.","when":"Aug 28, 2026","time":"1:37 PM"},{"name":"RENGIN  TAMANG","gender":"Male","age":50,"loc":"Shyafrubesi","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851403778","reporter":"Kilamu sherpa","repcon":"9851403778","details":"Rescue","when":"Aug 26, 2026","time":"10:38 PM"},{"name":"Rihana Munakami","gender":"Female","age":12,"loc":"Devighat , Bidur- 3, Nuwakot","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9823363537/9768521721","reporter":"Suman Munakami","repcon":"9823363537/9768521721","details":"Stuck on the other side of river.","when":"Aug 27, 2026","time":"6:36 PM"},{"name":"rishav raj maruti","gender":"Male","age":36,"loc":"Delhi & Kolkata India & Pasikot Kathmandu","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851334909","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9851334909","details":"Source: MoHA district disaster update, Missing List SN 799.\nReported as: Manjit Malla pradhananga\nContact from source list: 9851334909\nReported total missing: 5","when":"Aug 28, 2026","time":"12:40 AM"},{"name":"Rishi Rai","gender":"Male","age":28,"loc":"Mandredhunga ward no 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9860189224","reporter":"Jayanti rai","repcon":"9860189224","details":"Trapped, food water, rescue, shelter","when":"Aug 27, 2026","time":"10:19 PM"},{"name":"Riyanshi Rai","gender":"Female","age":3,"loc":"Mandredhunga ward no 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9860189224","reporter":"Jayanti rai","repcon":"9860189224","details":"Trapped, food water, rescue, shelter","when":"Aug 27, 2026","time":"10:19 PM"},{"name":"Robit sah","gender":"Male","age":null,"loc":"Shree nath gan rasuwa office of army’s camp","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9713856652","reporter":"Santosh sah","repcon":"9713856652","details":"He didn’t contact with anyone after flooding","when":"Aug 27, 2026","time":"2:28 PM"},{"name":"ROSHAN BISTA","gender":"Male","age":null,"loc":"Rasuwa ,216 MW Power House , Mailung Hydropower Area","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841051096","reporter":"Roshan Bista","repcon":"9841051096","details":"Trapped need rescue","when":"Aug 26, 2026","time":"7:13 PM"},{"name":"Roshan Tamang","gender":"Male","age":31,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sabita Ghimire","gender":"Female","age":35,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sabita Rijal","gender":"Female","age":27,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sabya Munakami","gender":"Female","age":2,"loc":"Devighat , Bidur- 3, Nuwakot","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9823363537/9768521721","reporter":"Suman Munakami","repcon":"9823363537/9768521721","details":"Stuck on the other side of river.","when":"Aug 27, 2026","time":"6:36 PM"},{"name":"sachin yadav","gender":"Male","age":24,"loc":"Chilime Hub station","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"+977 9862933160","reporter":"Deepak Deo","repcon":"+977 9862933160","details":"He is my brother working in chilime Hydropower hub station Rasuwa. He have not been able to get in contact with him since yesterday.Don't know his whereabouts. Please help us find him 🙏🙏","when":"Aug 27, 2026","time":"12:40 PM"},{"name":"Sahadev phuyal","gender":"","age":null,"loc":"Way to gosaikunda.. near simle","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9818813704","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9818813704","details":"Source: MoHA district disaster update, Missing List SN 258.\nReported as: Sahadev phuyal\nContact from source list: 9818813704\nReported total missing: 5","when":"Aug 27, 2026","time":"11:39 PM"},{"name":"Samjhana Poudel","gender":"Female","age":34,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Samridhi Rai","gender":"Female","age":6,"loc":"Mandredhunga ward no 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9860189224","reporter":"Jayanti rai","repcon":"9860189224","details":"Trapped, food water, rescue, shelter","when":"Aug 27, 2026","time":"10:19 PM"},{"name":"sanat rimal","gender":"Male","age":55,"loc":"Around gosaekunda","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"+977 9845897327","reporter":"Prahalad prasad Rimal","repcon":"+977 9845897327","details":"Phone switched off we don’t know what was happen unable to connect with family so please looking for help","when":"Aug 27, 2026","time":"6:17 AM"},{"name":"Sanjay Tamang","gender":"Male","age":13,"loc":"Manegau/kispang-5","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9803280121","reporter":"Shraddha Tamang","repcon":"9803280121","details":"Rescue of uttargaya school students group with caretaker","when":"Aug 27, 2026","time":"3:33 PM"},{"name":"Santa maya Tamang","gender":"Female","age":85,"loc":"Rasuwa, Goljung, Syabrubesi","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9806973010","reporter":"Biplove Basnet","repcon":"9806973010","details":"Medical","when":"Aug 28, 2026","time":"10:24 PM"},{"name":"Sarad Bhikchu","gender":"","age":null,"loc":"Thunka Dada , Trisuli Bazar","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9745299847","reporter":"Bishal Shakya","repcon":"9745299847","details":"Trishuli Colony bazar bhanda mathi fasiraheko","when":"Aug 28, 2026","time":"1:32 PM"},{"name":"sarans  pandey","gender":"","age":30,"loc":"Sunirse Guest House","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9840875988","reporter":"Iswor Maharjan","repcon":"9840875988","details":"Trapped in Langtang Treak","when":"Aug 27, 2026","time":"1:45 PM"},{"name":"Saraswati","gender":"","age":null,"loc":"गोसाईकुण्ड","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9863184444","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9863184444","details":"Source: MoHA district disaster update, Missing List SN 118.\nReported as: अन्सु कार्की {९८६३१८४४४४} गोसाइकुण्डा घुम्ना गएको दिदिदाजु कृष्ण सरसवती अधिकारीलाई फोन नलागेको ९८६९१२४५३०\nContact from source list: 9863184444, 9869124530\nReported total missing: 1\nAddress not stated in the source; \"गोसाईकुण्ड\" was taken from the wording of the report above.","when":"Aug 27, 2026","time":"11:23 PM"},{"name":"Sarina Shrestha","gender":"Male","age":46,"loc":"Colony Bazar","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841549607","reporter":"Raju Shrestha","repcon":"9841549607","details":"We are facing food and water shortage. We request government to rescue us or provide food and water.","when":"Aug 28, 2026","time":"1:37 PM"},{"name":"Satyai Dhakham","gender":"Female","age":47,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Indian Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Indian Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Seshan Tamang","gender":"Male","age":31,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Shanta maya tamang","gender":"Female","age":85,"loc":"Goljung","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9862100782","reporter":"Surakshya Tamanh","repcon":"9862100782","details":"Please help me. My family has gone to Goljung for a safe place, but due to the flood, their situation is extremely critical right now. My grandmother is seriously ill and her condition is getting worse. I have tried contacting different rescue teams through texts and calls, but I’m not getting any response.\r\n\r\nPlease, if anyone knows whom I should contact or where I can request a helicopter rescue/evacuation, please let me know. We urgently need a helicopter to get my grandmother and my family to safety. This is a serious emergency. Please help us or connect me with someone who can arrange a helicopter rescue. 🙏\r\ncontact no :9862100782","when":"Aug 28, 2026","time":"2:41 PM"},{"name":"shantang rai","gender":"Male","age":27,"loc":"Sunirse Guest House","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9840875988","reporter":"Iswor Maharjan","repcon":"9840875988","details":"Trapped in Langtang Treak","when":"Aug 27, 2026","time":"1:45 PM"},{"name":"Shanti kumari ghale","gender":"Female","age":50,"loc":"Goljung","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9862100782","reporter":"Surakshya Tamanh","repcon":"9862100782","details":"Please help me. My family has gone to Goljung for a safe place, but due to the flood, their situation is extremely critical right now. My grandmother is seriously ill and her condition is getting worse. I have tried contacting different rescue teams through texts and calls, but I’m not getting any response.\r\n\r\nPlease, if anyone knows whom I should contact or where I can request a helicopter rescue/evacuation, please let me know. We urgently need a helicopter to get my grandmother and my family to safety. This is a serious emergency. Please help us or connect me with someone who can arrange a helicopter rescue. 🙏\r\ncontact no :9862100782","when":"Aug 28, 2026","time":"2:41 PM"},{"name":"Shanti Kumari Ghale","gender":"","age":50,"loc":"Rasuwa, Goljung, Syabrubesi","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9806973010","reporter":"Biplove Basnet","repcon":"9806973010","details":"Medical","when":"Aug 28, 2026","time":"10:24 PM"},{"name":"Shanti Pradhan","gender":"","age":60,"loc":"Colony Bazar","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851070489","reporter":"Nabindra Man Pradhan","repcon":"9851070489","details":"Helicopter Rescue as soon as possible","when":"Aug 28, 2026","time":"1:33 PM"},{"name":"Shyam shrestha","gender":"Male","age":54,"loc":"lauribina pass","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9742893802","reporter":"Samika Neupane","repcon":"9742893802","details":"Please rescue him fast","when":"Aug 28, 2026","time":"4:17 PM"},{"name":"Simaranjan","gender":"Female","age":46,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Indian Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Indian Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sita Giri","gender":"Female","age":35,"loc":"Shanti colony ( trsuli hydropower colony, near shanti bazzar of 3A power plant )","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9845435113","reporter":"ADITYA YADAV","repcon":"9845435113","details":"Rescue","when":"Aug 27, 2026","time":"9:19 AM"},{"name":"Sita Giri","gender":"Female","age":40,"loc":"Shantibazar, Trishuli","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851278361","reporter":"Suman Shrestha","repcon":"9851278361","details":"Just received a call from 9843574871","when":"Aug 27, 2026","time":"9:05 PM"},{"name":"Sita Giri","gender":"Female","age":40,"loc":"Shantibazar, Trishuli","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851278361","reporter":"Suman Shrestha","repcon":"9851278361","details":"Just received a call from 9843574871","when":"Aug 27, 2026","time":"9:10 PM"},{"name":"SIta Shrestha","gender":"Female","age":25,"loc":"Devighat , Bidur- 3, Nuwakot","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9823363537/9768521721","reporter":"Suman Munakami","repcon":"9823363537/9768521721","details":"Stuck on the other side of river.","when":"Aug 27, 2026","time":"6:36 PM"},{"name":"sivraj kc","gender":"Male","age":34,"loc":"Chilime Hub station","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"+977 9862933160","reporter":"Deepak Deo","repcon":"+977 9862933160","details":"He is my brother working in chilime Hydropower hub station Rasuwa. He have not been able to get in contact with him since yesterday.Don't know his whereabouts. Please help us find him 🙏🙏","when":"Aug 27, 2026","time":"12:40 PM"},{"name":"smriti pathak","gender":"Female","age":null,"loc":"Shantibazar, Trishuli","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851278361","reporter":"Suman Shrestha","repcon":"9851278361","details":"Just received a call from 9843574871","when":"Aug 27, 2026","time":"9:05 PM"},{"name":"Sneha Shrestha","gender":"Female","age":22,"loc":"Colony Bazar","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841549607","reporter":"Raju Shrestha","repcon":"9841549607","details":"We are facing food and water shortage. We request government to rescue us or provide food and water.","when":"Aug 28, 2026","time":"1:37 PM"},{"name":"Some Tamang","gender":"Male","age":29,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Some Tamang","gender":"Male","age":29,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sonam Wadi Tamang","gender":"Male","age":57,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sonam Waiba","gender":"Male","age":57,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Sonia Tamang","gender":"Female","age":18,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"subash silwal","gender":"Male","age":40,"loc":"Unidentified","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851127756","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9851127756","details":"Source: MoHA district disaster update, Missing List SN 449.\nReported as: subash silwal\nContact from source list: 9851127756\nReported total missing: 1\nNo location appears anywhere in the source record for this report; the address is unidentified.","when":"Aug 28, 2026","time":"12:01 AM"},{"name":"Subas Malla","gender":"Male","age":8,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Subodh Sharma","gender":"Male","age":null,"loc":"Gosaikund way","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9845187678","reporter":"Uddhab Gupta","repcon":"9845187678","details":"🚨 गोसाइँकुण्डमा ३ जना सम्पर्कविहीन, तत्काल उद्धारको अपिल\r\n\r\nगोसाइँकुण्ड गएका सुमन काफ्ले, मौसम खनाल र सुबोध शर्मा आज दिउँसो करिब २ बजेदेखि सम्पर्कमा आउनुभएको छैन। उहाँहरू उच्च उचाइको क्षेत्रमा हुनुहुन्छ। त्यसबेला अवस्था सुरक्षित नै रहेको जानकारी थियो, तर लामो समयदेखि सम्पर्कविहीन भएकाले चिन्ता बढेको छ।\r\n\r\nसम्बन्धित सुरक्षा निकाय, स्थानीय प्रशासन तथा उद्धार टोलीलाई तत्काल खोज तथा उद्धार कार्य अघि बढाइदिन हार्दिक अपिल गर्दछु।\r\n\r\nसम्पर्कविहीन व्यक्तिहरूको विवरण:\r\nसुमन काफ्ले — +977 9801084489,9849652554\r\nमौसम खनाल — 9803349319\r\nसुबोध शर्मा — 9813816890\r\n\r\nआवश्यक थप विवरण पनि उपलब्ध गराउन सकिन्छ। कृपया उद्धार कार्यलाई उच्च प्राथमिकतामा राखिदिनुहुन अनुरोध गर्दछु।\r\n\r\nसम्बोधन:\r\nउद्धब गुप्ता\r\nअध्यक्ष, YouTV Nepal","when":"Aug 26, 2026","time":"11:36 PM"},{"name":"subodh sharma","gender":"Male","age":33,"loc":"Gosaikund way","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9845187678","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9845187678","details":"Source: MoHA district disaster update, Missing List SN 814.\nReported as: Uddhab Gupta\nContact from source list: 9845187678\nReported total missing: 3","when":"Aug 28, 2026","time":"12:42 AM"},{"name":"sudeep ghale","gender":"Male","age":40,"loc":"Delhi & Kolkata India & Pasikot Kathmandu","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851334909","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9851334909","details":"Source: MoHA district disaster update, Missing List SN 799.\nReported as: Manjit Malla pradhananga\nContact from source list: 9851334909\nReported total missing: 5","when":"Aug 28, 2026","time":"12:40 AM"},{"name":"Sudha Amgain","gender":"","age":null,"loc":"Heading toward gosaikunda.. dont know location","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9849629228","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9849629228","details":"Source: MoHA district disaster update, Missing List SN 687.\nReported as: Sudha Amgain and TrithaRaj Amgain\nContact from source list: 9849629228\nReported total missing: 2","when":"Aug 28, 2026","time":"12:28 AM"},{"name":"sujata kaudel","gender":"Female","age":42,"loc":"Palungtar","status":"Found - Dead","st":{"bg":"#ECEFF1","fg":"#37474F"},"source":"Setu App","verified":true,"contact":"9843874854","reporter":"Rajendra Chhetri","repcon":"9843874854","details":"Need to find her. She is missing since yesterday on the way to gosaikunda. She was on bus with 38 people. She is among 32 missing people.","when":"Aug 27, 2026","time":"3:08 PM"},{"name":"Sukurani Tamang","gender":"Female","age":36,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"suman kafle","gender":"Male","age":33,"loc":"Gosaikund way","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9845187678","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9845187678","details":"Source: MoHA district disaster update, Missing List SN 814.\nReported as: Uddhab Gupta\nContact from source list: 9845187678\nReported total missing: 3","when":"Aug 28, 2026","time":"12:42 AM"},{"name":"Suman Kafle","gender":"Male","age":null,"loc":"Gosaikund way","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9845187678","reporter":"Uddhab Gupta","repcon":"9845187678","details":"🚨 गोसाइँकुण्डमा ३ जना सम्पर्कविहीन, तत्काल उद्धारको अपिल\r\n\r\nगोसाइँकुण्ड गएका सुमन काफ्ले, मौसम खनाल र सुबोध शर्मा आज दिउँसो करिब २ बजेदेखि सम्पर्कमा आउनुभएको छैन। उहाँहरू उच्च उचाइको क्षेत्रमा हुनुहुन्छ। त्यसबेला अवस्था सुरक्षित नै रहेको जानकारी थियो, तर लामो समयदेखि सम्पर्कविहीन भएकाले चिन्ता बढेको छ।\r\n\r\nसम्बन्धित सुरक्षा निकाय, स्थानीय प्रशासन तथा उद्धार टोलीलाई तत्काल खोज तथा उद्धार कार्य अघि बढाइदिन हार्दिक अपिल गर्दछु।\r\n\r\nसम्पर्कविहीन व्यक्तिहरूको विवरण:\r\nसुमन काफ्ले — +977 9801084489,9849652554\r\nमौसम खनाल — 9803349319\r\nसुबोध शर्मा — 9813816890\r\n\r\nआवश्यक थप विवरण पनि उपलब्ध गराउन सकिन्छ। कृपया उद्धार कार्यलाई उच्च प्राथमिकतामा राखिदिनुहुन अनुरोध गर्दछु।\r\n\r\nसम्बोधन:\r\nउद्धब गुप्ता\r\nअध्यक्ष, YouTV Nepal","when":"Aug 26, 2026","time":"11:36 PM"},{"name":"Sunchaura Shahi","gender":"Female","age":23,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"sunil bhusal","gender":"Male","age":26,"loc":"Dhunche rasuwa","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9828303960","reporter":"Sneha Gahatraj","repcon":"9828303960","details":"They are trapped there on their way to gosaikunda","when":"Aug 27, 2026","time":"8:10 AM"},{"name":"Sunil chaudhary","gender":"","age":null,"loc":"Rasuwa langtang hydropower","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9802266801","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9802266801","details":"Source: MoHA district disaster update, Missing List SN 895.\nReported as: Sunil chaudhary\nContact from source list: 9802266801\nReported total missing: 7","when":"Aug 28, 2026","time":"12:51 AM"},{"name":"Sunil kumar tamang","gender":"Male","age":50,"loc":"Goljung","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9862100782","reporter":"Surakshya Tamanh","repcon":"9862100782","details":"Please help me. My family has gone to Goljung for a safe place, but due to the flood, their situation is extremely critical right now. My grandmother is seriously ill and her condition is getting worse. I have tried contacting different rescue teams through texts and calls, but I’m not getting any response.\r\n\r\nPlease, if anyone knows whom I should contact or where I can request a helicopter rescue/evacuation, please let me know. We urgently need a helicopter to get my grandmother and my family to safety. This is a serious emergency. Please help us or connect me with someone who can arrange a helicopter rescue. 🙏\r\ncontact no :9862100782","when":"Aug 28, 2026","time":"2:41 PM"},{"name":"Sunil Tamang","gender":"","age":47,"loc":"Rasuwa, Goljung, Syabrubesi","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9806973010","reporter":"Biplove Basnet","repcon":"9806973010","details":"Medical","when":"Aug 28, 2026","time":"10:24 PM"},{"name":"surendra subedi","gender":"","age":null,"loc":"","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851006342","reporter":"Saroj adhikari","repcon":"9851006342","details":"","when":"Aug 28, 2026","time":"1:07 AM"},{"name":"surendra thapa magar","gender":"Male","age":27,"loc":"रसुवा","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9865480587","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9865480587","details":"Source: PMO Rasuwa rescue request REQ-000029.\nRequest: उत्तरगया-४ पैरेबेसी — ३ जना (बेहोस आमासहित) उद्धार पर्खाइमा\nDetail: परिवारको बियोगले बेहोस अवस्थाकी आमासहित ३ जना जीवित; खाना–पानी नरहेको; फोन नलागेको। जानकारी: [सम्पर्क सुरक्षित]\nUrgency: CRITICAL\nProblem type: FLOOD\nReporting for: OTHER_PERSON\nStatus: OPEN\nLogged (UTC): 2026-08-27T08:43:13.286Z\nAffected per source: 1\nNOTE: the wording above mentions 3 people, more than the 1 recorded in the source's Affected field.","when":"Aug 28, 2026","time":"12:11 PM"},{"name":"Surya Narayan Rai","gender":"Male","age":5,"loc":"Mandredhunga ward no 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9860189224","reporter":"Jayanti rai","repcon":"9860189224","details":"Trapped, food water, rescue, shelter","when":"Aug 27, 2026","time":"10:19 PM"},{"name":"Susma Rai","gender":"Female","age":25,"loc":"Mandredhunga ward no 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9860189224","reporter":"Jayanti rai","repcon":"9860189224","details":"Trapped, food water, rescue, shelter","when":"Aug 27, 2026","time":"10:19 PM"},{"name":"Suwa Malla","gender":"Female","age":31,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Taehoon Yum","gender":"Male","age":57,"loc":"Korean Nationals","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851114937","reporter":"NDRRMA","repcon":"9851114937","details":"","when":"Aug 27, 2026","time":"4:12 PM"},{"name":"Taeyoon Kia","gender":"Male","age":41,"loc":"Korean Nationals","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9851114937","reporter":"NDRRMA","repcon":"9851114937","details":"","when":"Aug 27, 2026","time":"4:12 PM"},{"name":"Tak Bahadur Khadka","gender":"Male","age":59,"loc":"गाडीबाट झरी पैदल यात्रा सुरु गरेको","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9812910749","reporter":"(Voluntarily added by Bibek Subedi)","repcon":"9812910749","details":"Source: MoHA district disaster update, Missing List SN 577.\nReported as: जमुना खत्री\nContact from source list: 9812910749\nReported total missing: 2","when":"Aug 28, 2026","time":"12:15 AM"},{"name":"Tanding Tamang","gender":"Male","age":44,"loc":"Briddim village Gosaikunda-3","status":"Found - Injured","st":{"bg":"#FFF3E0","fg":"#E65100"},"source":"Setu App","verified":true,"contact":"9861864223","reporter":"Dawa Tamang","repcon":"9861864223","details":"","when":"Aug 29, 2026","time":"6:39 PM"},{"name":"tanka nath mudhbhari","gender":"Male","age":65,"loc":"Belkotgadhi-3, Nuwakot","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9841322710","reporter":"Naba Raj Neupane","repcon":"9841322710","details":"Rajendra Mudbhari 9851130273, Tanknath Mudbhari 9843465150, Lila Kumari Mudbhari 9808704774 & Dipak Ghimire 981076705.They are now about to return Kathmandu from Gosaikunda but they don't have food/water/shelter. And also they need easy way to return back to Kathmandu. Please Help Them.","when":"Aug 27, 2026","time":"11:16 AM"},{"name":"Tasi Ting Ruk Tamang","gender":"Male","age":73,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"tej pariyar","gender":"Male","age":20,"loc":"Rasuwa uper mailung hydropower","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"9801160563","reporter":"Elim darji","repcon":"9801160563","details":"","when":"Aug 27, 2026","time":"9:51 AM"},{"name":"Tenzing Jangmu","gender":"Female","age":70,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzing Lama","gender":"Male","age":63,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzing Lama","gender":"Male","age":66,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzing Sinang Dorje","gender":"Male","age":65,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzing Tamang","gender":"Male","age":20,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzing Tamang","gender":"Male","age":20,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tenzin Semen Dorje","gender":"Male","age":36,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Thakur thapa magar","gender":"Male","age":57,"loc":"Upper hydro 3b, pairebesi, kaideltar","status":"Found - Dead","st":{"bg":"#ECEFF1","fg":"#37474F"},"source":"Setu App","verified":true,"contact":"9749841638","reporter":"Shushil Magar","repcon":"9749841638","details":"10 gate dekhi harayako aaily samma","when":"Aug 29, 2026","time":"10:13 AM"},{"name":"Thiruma Bhalan","gender":"Male","age":62,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Indian Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Indian Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tian Yu","gender":"Male","age":35,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Chinese Nationals","repcon":"","details":"Evacuated Persons List 2083-05-11 - Chinese Nationals","when":"Aug 27, 2026","time":"6:41 PM"},{"name":"Tikanath Poudel","gender":"Male","age":41,"loc":"","status":"Rescued","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"Setu App","verified":true,"contact":"","reporter":"Nepali Nationals (General List)","repcon":"","details":"Evacuated Persons List 2083-05-11 - Nepali Nationals (General List)","when":"Aug 27, 2026","time":"6:41 PM"}];
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  var ov = document.getElementById('ov');
+  function rowHtml(k, v){ return v ? '<div class="row"><div class="k">'+esc(k)+'</div><div class="v">'+v+'</div></div>' : ''; }
+
+  function openRec(i){
+    var r = REC[i]; if(!r) return;
+    document.getElementById('mName').textContent = r.name || 'Person';
+    var ag = (r.age!=null?('Age '+r.age+' years'):'') + ((r.age!=null&&r.gender)?' · ':'') + (r.gender||'');
+    document.getElementById('mLoc').textContent = ag;
+    var b = '';
+    if (r.contact) {
+      b += '<a class="call" href="tel:'+esc(r.contact)+'"><div><div class="ph">'+esc(r.contact)+'</div><div class="who">Person contact</div></div><span class="go">Call</span></a>';
+    }
+    if (r.status) b += '<div style="margin:0 0 8px;"><span class="pill" style="background:'+r.st.bg+';color:'+r.st.fg+';">'+esc(r.status)+'</span></div>';
+    b += rowHtml('Location', esc(r.loc || '-'));
+    b += rowHtml('Source', esc(r.source || '-') + ' &nbsp; <span class="vbadge" style="background:'+(r.verified?'#E8F5E9':'#FFF3E0')+';color:'+(r.verified?'#2E7D32':'#EF6C00')+';">'+(r.verified?'Verified':'Unverified')+'</span>');
+    if (r.reporter) {
+      b += rowHtml('Reporter', esc(r.reporter));
+    }
+    if (r.details) b += rowHtml('Details', esc(r.details));
+    b += rowHtml('Recorded', esc((r.when||'') + (r.time?(' · '+r.time):'')));
+    document.getElementById('mBody').innerHTML = b;
+    ov.classList.add('show'); document.body.style.overflow = 'hidden';
+  }
+  function closeRec(){ ov.classList.remove('show'); document.body.style.overflow = ''; }
+
+  document.querySelectorAll('.rl').forEach(function(c){ c.addEventListener('click', function(){ openRec(parseInt(c.dataset.i, 10)); }); });
+  document.getElementById('mClose').addEventListener('click', closeRec);
+  ov.addEventListener('click', function(e){ if (e.target === ov) closeRec(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeRec(); });
+</script>
+</body>
+</html>

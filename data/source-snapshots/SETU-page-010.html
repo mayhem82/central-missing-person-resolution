@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rescued & Missing Persons - Rasuwa Flood</title>
+<link rel="icon" type="image/png" href="img/fab.png">
+<link rel="apple-touch-icon" href="img/fab.png">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif;
+         background:#eef1f4; color:#1a2027; font-size:15px; line-height:1.45; }
+  .wrap { max-width:1080px; margin:0 auto; padding:14px; }
+  .head { background:linear-gradient(135deg,#b71c1c,#e53935); color:#fff; border-radius:16px;
+          padding:16px 18px; margin-bottom:14px; display:flex; align-items:center; gap:14px; }
+  .head-logo { width:46px; height:46px; border-radius:10px; background:#fff; padding:5px; flex:0 0 auto; }
+  .head h1 { margin:0; font-size:19px; }
+  .head p { margin:2px 0 0; font-size:13px; opacity:.9; }
+  .bar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+  .bar form { display:flex; gap:8px; flex:1; min-width:220px; }
+  .bar input[type=text] { flex:1; padding:10px 12px; font-size:15px; border:1.5px solid #cfd6dd; border-radius:11px; background:#fff; }
+  .bar .btn { padding:10px 16px; font-size:14px; font-weight:700; border:none; border-radius:11px; background:#e53935; color:#fff; cursor:pointer; }
+  .bar .btn.clear { background:#fff; color:#6b7680; border:1.5px solid #cfd6dd; text-decoration:none; display:inline-flex; align-items:center; }
+  .count { font-size:13px; color:#6b7680; font-weight:700; margin-left:auto; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
+  .rl { background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,.06); padding:14px; cursor:pointer;
+        border:1px solid #eef1f4; transition:transform .08s ease, box-shadow .08s ease; }
+  .rl:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }
+  .rl-top { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  .rl-name { font-weight:800; font-size:16px; }
+  .rl-ag { color:#6b7680; font-size:13px; margin-top:1px; }
+  .rl-loc { color:#6b7680; font-size:13px; margin:8px 0 6px; }
+  .rl-foot { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .pill { display:inline-block; padding:3px 11px; border-radius:20px; font-size:12.5px; font-weight:800; white-space:nowrap; }
+  .src { background:#E3F2FD; color:#1565C0; font-size:11.5px; font-weight:700; padding:2px 9px; border-radius:16px; }
+  .when { color:#8a95a0; font-size:12px; margin-left:auto; }
+  .empty { grid-column:1/-1; background:#fff; border-radius:14px; padding:40px 16px; text-align:center; color:#6b7680; }
+
+  .pager { display:flex; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; margin:18px 0 4px; }
+  .pager a, .pager span { min-width:36px; height:36px; padding:0 10px; display:inline-flex; align-items:center; justify-content:center;
+        border-radius:10px; font-size:14px; font-weight:700; text-decoration:none; border:1.5px solid #d7dde3; background:#fff; color:#33475b; }
+  .pager a:hover { border-color:#e53935; color:#e53935; }
+  .pager .cur { background:#e53935; border-color:#e53935; color:#fff; }
+  .pager .dis { opacity:.4; pointer-events:none; }
+  .pager .dots { border:none; background:none; }
+
+  /* modal */
+  .ov { position:fixed; inset:0; background:rgba(20,26,33,.55); display:none; align-items:flex-end; justify-content:center; z-index:50; padding:0; overflow-y:auto; }
+  .ov.show { display:flex; }
+  .sheet { background:#fff; width:100%; max-width:520px; border-radius:18px 18px 0 0; margin-top:auto; overflow:hidden; animation:up .2s ease; }
+  @media (min-width:560px){ .ov { align-items:center; padding:16px; } .sheet { border-radius:18px; margin-top:0; } }
+  @keyframes up { from { transform:translateY(30px); opacity:.6; } to { transform:translateY(0); opacity:1; } }
+  .sh-head { background:#fff; padding:16px 18px 10px; border-bottom:1px solid #eef1f4; display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .sh-head h2 { margin:0; font-size:19px; } .sh-head .loc { color:#6b7680; font-size:13px; margin-top:2px; }
+  .x { border:none; background:#f2f4f7; width:34px; height:34px; border-radius:50%; font-size:20px; cursor:pointer; color:#6b7680; flex:0 0 auto; }
+  .sh-body { padding:14px 18px 20px; }
+  .call { display:flex; align-items:center; gap:12px; background:#fdecea; border:1px solid #f3c1bd; border-radius:12px; padding:12px 14px; margin-bottom:12px; text-decoration:none; }
+  .call .ph { font-weight:800; font-size:18px; color:#b71c1c; } .call .who { font-size:12.5px; color:#8a5a56; }
+  .call .go { margin-left:auto; background:#e53935; color:#fff; border-radius:10px; padding:8px 14px; font-weight:700; font-size:14px; }
+  .row { display:flex; padding:9px 0; border-bottom:1px solid #f2f4f7; gap:12px; }
+  .row:last-child { border-bottom:none; }
+  .row .k { flex:0 0 110px; color:#8a95a0; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; padding-top:2px; }
+  .row .v { flex:1; font-size:14.5px; }
+  .vbadge { display:inline-block; padding:2px 9px; border-radius:16px; font-size:12px; font-weight:800; }
+  .foot { text-align:center; color:#8a95a0; font-size:12.5px; margin:18px 0 6px; }
+  .foot a { color:#1565C0; text-decoration:none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <img src="img/fab.png" alt="SETU" class="head-logo">
+      <div>
+        <h1>Rescued & Missing Persons - Rasuwa Flood</h1>
+        <p>Tap a person to see full details</p>
+      </div>
+    </div>
+
+    <div class="bar">
+      <form method="get" action="recordlist.php">
+        <input type="text" name="q" value="" placeholder="Search name, district, contact...">
+        <button class="btn" type="submit">Search</button>
+              </form>
+    </div>
+
+    <div class="grid">
+              <div class="rl" data-i="0">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार दियाली</div>
+              <div class="rl-ag">Age 36 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jhapa, Buddhashanti, Ward 2, रसुवा स्यप्रुबेशी</div>          <div class="rl-foot">
+            <span class="src">DAO Jhapa</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="1">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार पण्डित</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Thakre, Ward 9</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="2">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार पराजुली</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Chautara Sangachokgadhi, Ward 12</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="3">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार परियार</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Sahid Lakhan, Ward 7, रसुवा गढिमा होटल संचालन गरी बसेको</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="4">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार पोखरेल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Chautara Sangachokgadhi, Ward 9</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="5">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार माझी</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Sunkoshi, Ward 7</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="6">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार रिजाल</div>
+              <div class="rl-ag">Age 25 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Bhumlu, Ward 6, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="7">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार लामा</div>
+              <div class="rl-ag">Age 41 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dolakha, Bhimeshwar, Ward 9, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dolakha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="8">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार लोप्चन</div>
+              <div class="rl-ag">Age 32 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Bethanchok, Ward 4, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="9">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार श्रेष्ठ</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhuli, Kamalamai, Ward 11, जिल्ला रसुवा टिम्बुरे बजार क्षेत्रमा बाटो निर्माण गर्ने</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhuli</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="10">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Bahrabise, Ward 4</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="11">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजकुमार श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Chautara Sangachokgadhi, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="12">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज कुमार सुवाल</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Bhaktapur, Suryabinayak, Ward 09, टिमुरे</div>          <div class="rl-foot">
+            <span class="src">DAO Bhaktapur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="13">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन आचार्य</div>
+              <div class="rl-ag">Age 52 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jhapa, Birtamod, Ward 10, जिल्ला रसुवा लाङटाङ खोला डाइड्रोपावर स्यापुरु बेसी मा काम गर्ने</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="14">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन कार्की</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dolakha, Melung, Ward 5, रसुवा सहचालक</div>          <div class="rl-foot">
+            <span class="src">DAO Dolakha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="15">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन तामाङ्ग</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Balephi, Ward 8</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="16">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन थापा</div>
+              <div class="rl-ag">Age 36 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Lamjung, Rainas, Ward 7, रसुवागढी हाइड्रोपावरमा</div>          <div class="rl-foot">
+            <span class="src">DAO Lamjung</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="17">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन धिताल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Galchhi, Ward 1</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="18">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन धिताल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Galchhi, Ward 1, गल्छीमा बगाएको</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="19">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन नेपाली</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Jugal, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="20">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन लम्साल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Nilkantha, Ward 9, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="21">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Bhotekoshi, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="22">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Bahrabise, Ward 3</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="23">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजन श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Dhunibeshi, Ward 8, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="24">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज बहादुर बुढा</div>
+              <div class="rl-ag">Age 27 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 5, २१६  ड्याम रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="25">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राज बिष्ट</div>
+              <div class="rl-ag">Age 39 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Bara, Nijgadh, Ward 09, त्रिशुली हाईड्रो कामदार</div>          <div class="rl-foot">
+            <span class="src">DAO Bara</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="26">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजा यादव</div>
+              <div class="rl-ag">Age 32 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Siraha, Golbazar, Ward 10, रसुवा हाईड्रो पावर</div>          <div class="rl-foot">
+            <span class="src">DAO Siraha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="27">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजिव कुमार सिंह</div>
+              <div class="rl-ag">Age 24 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Saptari, Rajgadh, Ward 2, रसुवा स्थित upper trishuli  216 MW मा QC इन्जिनियर रूपमा कार्यरत</div>          <div class="rl-foot">
+            <span class="src">DAO Saptari</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="28">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजिव श्रेष्ठ</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Bhaktapur, Suryabinayak, Ward 04, अपर त्रिशुलि हाईड्रो</div>          <div class="rl-foot">
+            <span class="src">DAO Bhaktapur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="29">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजु खतिवडा</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Thakre, Ward 6</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="30">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजु थापा</div>
+              <div class="rl-ag">Age 42 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Dhulikhel, Ward 2, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="31">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजु बि.क</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Rubi Valley, Ward 4</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="32">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजु राना मगर</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Tripurasundari, Ward 4</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="33">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजु श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Balephi, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="34">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र ढकाल</div>
+              <div class="rl-ag">Age 33 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhuli, Kamalamai, Ward 3, त्रिसुली -३ A जलविद्युत</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhuli</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="35">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र तामाङ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Thakre, Ward 7, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="36">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र प्रधान</div>
+              <div class="rl-ag">Age 33 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Chaurideurali, Ward 2, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="37">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र बस्नेत</div>
+              <div class="rl-ag">Age 55 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Nuwakot, Bidur, Ward 7, नुवाकोट जिल्ला तुप्चे सोलेबजार</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="38">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र महत</div>
+              <div class="rl-ag">Age 38 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dang, Ghorahi, Ward 15, रसुवा त्रिशुलि हाईड्रोपावर</div>          <div class="rl-foot">
+            <span class="src">DAO Dang</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="39">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र महतरा</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Pyuthan, Jhimruk, Ward 2, प्रहरी चौकी रसुवागढी</div>          <div class="rl-foot">
+            <span class="src">DAO Pyuthan</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="40">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Dhunibeshi, Ward 6, स्याफ्रुबेशी</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="41">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेन्द्र श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Sahid Lakhan, Ward 3, ट्रक चालक टिमुरे होटलमा बस्नु भएको</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="42">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश</div>
+              <div class="rl-ag">Age 24 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dadeldhura, Aalital, Ward 7, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dadeldhura</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="43">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश तिमल्सिना</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Gangajamuna, Ward 5, मानसरोवर यात्रामा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="44">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश महतरा</div>
+              <div class="rl-ag">Age 24 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 6, २१६  ड्याम रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="45">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश रोका</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Sunkoshi, Ward 07, रसुवा भन्सार</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="46">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश रोक्का</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Sunkoshi, Ward 7</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="47">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Bahrabise, Ward 4</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="48">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेश स्याङतान</div>
+              <div class="rl-ag">Age 49 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Lalitpur, Mahankal, Ward 2, मालबाहक गाडी लिएर रसुवा  केरुङ नाकाबाट नेपाल प्रबेश</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="49">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राजेस शर्मा</div>
+              <div class="rl-ag">Age 39 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Kathmandu, Kathmandu, नुवाकोट</div>          <div class="rl-foot">
+            <span class="src">DAO Kaski</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="50">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राधा ठाडा मगर</div>
+              <div class="rl-ag">Age 29 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sankhuwasabha, Sabhapokhari, Ward 1, नुवाकोट नेत्रावति वजार</div>          <div class="rl-foot">
+            <span class="src">DAO Sankhuwasabha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="51">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राधिका खनाल</div>
+              <div class="rl-ag">Female</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Nilkantha, Ward 9, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="52">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राधिका घर्ती</div>
+              <div class="rl-ag">Age 43 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Lamjung, Besishahar, Ward 11, माथिल्लो त्रिशूली–३ ए जलविद्युत् केन्द्र</div>          <div class="rl-foot">
+            <span class="src">DAO Lamjung</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="53">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामकाजी थापा गोदार</div>
+              <div class="rl-ag">Age 43 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Nuwakot, Bidur, Ward 02, साइट अफिस बेत्रावती नुवाकोट</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="54">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम कुमार चौधरी</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Dang, Tulsipur, Ward 12</div>          <div class="rl-foot">
+            <span class="src">DAO Dang</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="55">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम कुमार बस्नेत</div>
+              <div class="rl-ag">Age 57 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Nuwakot, Bidur, Ward 7, नुवाकोट जिल्ला तुप्चे सोलेबजार</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="56">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम कृष्ण बुढा</div>
+              <div class="rl-ag">Age 35 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 6, २१६  ड्याम रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="57">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामचन्द्र खनाल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Nilkantha, Ward 9, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="58">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामचन्द्र बिश्वकर्मा</div>
+              <div class="rl-ag">Age 40 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Bhimsen Thapa, Ward 3, नेपाल राष्ट्र आ मा बि मा कार्यरत शिक्षक</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="59">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम चन्द्र बुढा</div>
+              <div class="rl-ag">Age 33 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 6</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="60">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामजि दनुवार</div>
+              <div class="rl-ag">Age 70 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Panchkhal, Ward 4, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="61">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बहादुर खड्का</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Balephi, Ward 1</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="62">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बहादुर चौधरी</div>
+              <div class="rl-ag">Age 45 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dang, Rapti, Ward 4, रसुवा रोडमा मिस्त्री काम गर्ने</div>          <div class="rl-foot">
+            <span class="src">DAO Dang</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="63">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बहादुर नेपाली</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Jugal, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="64">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बहादुर मगर</div>
+              <div class="rl-ag">Age 44 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Lalitpur, Godawari, जिल्ला रसुवा टिमुरेमा पर्यटक गाईड</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="65">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बहादुर श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Lisankhu Pakhar, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="66">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामबाबु चालिसे</div>
+              <div class="rl-ag">Age 45 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Bhaktapur, Suryabinayak, Ward 06, टिमुरे</div>          <div class="rl-foot">
+            <span class="src">DAO Bhaktapur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="67">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बाबु चौधरी</div>
+              <div class="rl-ag">Age 14 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Parsa, Sakhuwa Prasauni, Ward 2, त्रीसुली</div>          <div class="rl-foot">
+            <span class="src">DAO Parsa</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="68">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामबाबु चौधरी</div>
+              <div class="rl-ag">Age 19 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Parsa, Sakhuwa Prasauni, Ward 2, त्रीसुली बेद्रावती वक्सव</div>          <div class="rl-foot">
+            <span class="src">DAO Parsa</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="69">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामबाबु साह</div>
+              <div class="rl-ag">Age 53 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">रसुवा हाइडोरपावर</div>          <div class="rl-foot">
+            <span class="src">DAO Dhanusha</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="70">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बिनोद भगत</div>
+              <div class="rl-ag">Age 42 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Rautahat, Rajdevi, Ward 2, नुवाकोट त्रिसुलू बजार</div>          <div class="rl-foot">
+            <span class="src">DAO Rautahat</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="71">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बिबेक</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sarlahi, Barahathwa, Ward 14, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Sarlahi</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="72">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम बुढा</div>
+              <div class="rl-ag">Age 24 years · Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 5</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="73">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामभक्त नेवार</div>
+              <div class="rl-ag">Age 39 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Terhathum, Chhathar, Ward 01, रसुवा, टिमुरे बजार</div>          <div class="rl-foot">
+            <span class="src">DAO Terhathum</span>            <span class="when">Aug 27, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="74">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम माया देबकोटा</div>
+              <div class="rl-ag">Age 59 years · Female</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Palungtar, Ward 5, बस सहित सम्पर्क बिहिनि</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="75">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम रिझान यादब</div>
+              <div class="rl-ag">Age 26 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Siraha, Dhangadhimai, Ward 11, रसुवा श्रीहाकु  मा.बी स्कुलमा काम गर्ने कर्मचारी</div>          <div class="rl-foot">
+            <span class="src">DAO Lalitpur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="76">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम लम्साल</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Nilkantha, Ward 12, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="77">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामशरण तामाङ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Roshi, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="78">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामशरण तिमल्सिना</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Sunkoshi, Ward 6</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="79">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामशरण नेपाल</div>
+              <div class="rl-ag">Age 50 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Bhaktapur, Suryabinayak, Ward 05, टिमुरे</div>          <div class="rl-foot">
+            <span class="src">DAO Bhaktapur</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="80">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामशरण रसाईली</div>
+              <div class="rl-ag">Age 28 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dolakha, Melung, Ward 1, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dolakha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="81">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम श्रेष्ठ</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhupalchok, Bahrabise, Ward 6</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhupalchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="82">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामश्वामी भैसेनी</div>
+              <div class="rl-ag">Age 52 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kapilvastu</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="83">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामश्वामी सिठा</div>
+              <div class="rl-ag">Age 68 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kapilvastu</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="84">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामसर बुढा</div>
+              <div class="rl-ag">Age 34 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Jumla, Patarasi, Ward 4, २१६  ड्याम रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Jumla</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="85">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम सुबेदी</div>
+              <div class="rl-ag">Age 36 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Thakre, Ward 7</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="86">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राम सुबेदी(सुरेस)</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhading, Thakre, Ward 7, चालक</div>          <div class="rl-foot">
+            <span class="src">DAO Dhading</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="87">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामहरी देबकोटा</div>
+              <div class="rl-ag">Age 59 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Palungtar, Ward 5, बस सहित सम्पर्क बिहिनि</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="88">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामिला कार्की पराजुली</div>
+              <div class="rl-ag">Female</div>
+            </div>
+            <span class="pill" style="background:#E8F5E9; color:#2E7D32;">Found - Safe</span>          </div>
+          <div class="rl-loc">Kavrepalanchok, Mandandeupur, Ward 12, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="89">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामु कार्कि</div>
+              <div class="rl-ag">Age 38 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Gorkha, Aarughat, Ward 10, रसुवा हाईड्रोपावरमा चालकको रुपमा काम गर्ने</div>          <div class="rl-foot">
+            <span class="src">DAO Gorkha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="90">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रामे जिम्बा</div>
+              <div class="rl-ag">Age 29 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Sindhuli, Marin, Ward 3, कठामाण्डौं देखि रसुवा ट्रक चलाउने चालक</div>          <div class="rl-foot">
+            <span class="src">DAO Sindhuli</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="91">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रावल घर्ती मगर</div>
+              <div class="rl-ag">Age 26 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Nawalpur, Gaidakot, Ward 15, टिमुरे आर्मी बेशक्याम रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Nawalpur</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="92">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राहुल कुमार</div>
+              <div class="rl-ag">Age 25 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Rautahat, Rajdevi, Ward 9, त्रिसुली बजार</div>          <div class="rl-foot">
+            <span class="src">DAO Rautahat</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="93">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राहुल गुप्ता</div>
+              <div class="rl-ag">Age 30 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dhanusha, Sabaila, Ward 8, त्रिशूली रसुवा हाइड्रोपावर</div>          <div class="rl-foot">
+            <span class="src">DAO Dhanusha</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="94">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">राहुल मिया</div>
+              <div class="rl-ag">Age 20 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Parsa, Birgunj, Ward 22, रसुवा घट्टेखोला</div>          <div class="rl-foot">
+            <span class="src">DAO Parsa</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="95">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रिकेश बस्नेत</div>
+              <div class="rl-ag">Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Kavrepalanchok</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="96">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रिकेश श्रेष्ठ</div>
+              <div class="rl-ag">Age 30 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Chitwan, Khairahani, Ward 6, त्रिशुली ए जलविद्युत</div>          <div class="rl-foot">
+            <span class="src">DAO Chitwan</span>            <span class="when">Aug 29, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="97">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रिकेस बस्नेत</div>
+              <div class="rl-ag">Age 21 years · Male</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Dolakha, Bhimeshwar, Ward 8, रसुवा</div>          <div class="rl-foot">
+            <span class="src">DAO Dolakha</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+              <div class="rl" data-i="98">
+          <div class="rl-top">
+            <div>
+              <div class="rl-name">रिचा निरौला</div>
+              <div class="rl-ag">Female</div>
+            </div>
+            <span class="pill" style="background:#FDECEA; color:#C62828;">Missing</span>          </div>
+          <div class="rl-loc">Morang, Pathari Shanishchare, Ward 7, दोसाङ हाईड्रिपावर</div>          <div class="rl-foot">
+            <span class="src">DAO Morang</span>            <span class="when">Aug 28, 2026</span>
+          </div>
+        </div>
+          </div>
+
+          <div class="pager">
+        <a class="" href="recordlist.php?page=9">&laquo;</a>
+        <a href="recordlist.php?page=1">1</a><span class="dots">…</span>                  <a href="recordlist.php?page=8">8</a>                  <a href="recordlist.php?page=9">9</a>                  <span class="cur">10</span>                  <a href="recordlist.php?page=11">11</a>                  <a href="recordlist.php?page=12">12</a>                <span class="dots">…</span><a href="recordlist.php?page=18">18</a>        <a class="" href="recordlist.php?page=11">&raquo;</a>
+      </div>
+    
+    <div class="foot"><a href="https://setu.ndrrma.gov.np/">&#8592; Back to Home</a><br>Setu Rapid - Government of Nepal</div>
+  </div>
+
+  <!-- Detail modal -->
+  <div class="ov" id="ov">
+    <div class="sheet">
+      <div class="sh-head">
+        <div><h2 id="mName">Person</h2><div class="loc" id="mLoc"></div></div>
+        <button class="x" id="mClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="sh-body" id="mBody"></div>
+    </div>
+  </div>
+
+<script>
+  var REC = [{"name":"राज कुमार दियाली","gender":"Male","age":36,"loc":"Jhapa, Buddhashanti, Ward 2, रसुवा स्यप्रुबेशी","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Jhapa","verified":true,"contact":"","reporter":"राधा खाती","repcon":"9843630740","details":"","when":"Aug 28, 2026","time":"6:26 AM"},{"name":"राज कुमार पण्डित","gender":"Male","age":null,"loc":"Dhading, Thakre, Ward 9","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"11:28 AM"},{"name":"राजकुमार पराजुली","gender":"Male","age":null,"loc":"Sindhupalchok, Chautara Sangachokgadhi, Ward 12","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:11 PM"},{"name":"राज कुमार परियार","gender":"Male","age":null,"loc":"Gorkha, Sahid Lakhan, Ward 7, रसुवा गढिमा होटल संचालन गरी बसेको","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"शकर श्रेष्ठ","repcon":"9856040368","details":"","when":"Aug 28, 2026","time":"6:24 AM"},{"name":"राजकुमार पोखरेल","gender":"Male","age":null,"loc":"Sindhupalchok, Chautara Sangachokgadhi, Ward 9","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:06 PM"},{"name":"राजकुमार माझी","gender":"Male","age":null,"loc":"Sindhupalchok, Sunkoshi, Ward 7","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:21 PM"},{"name":"राज कुमार रिजाल","gender":"Male","age":25,"loc":"Kavrepalanchok, Bhumlu, Ward 6, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"कुमारी बि.क.","repcon":"9810066636","details":"","when":"Aug 29, 2026","time":"10:43 PM"},{"name":"राजकुमार लामा","gender":"Male","age":41,"loc":"Dolakha, Bhimeshwar, Ward 9, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dolakha","verified":true,"contact":"","reporter":"हिमाल श्रेष्ठ","repcon":"9862406088","details":"","when":"Aug 28, 2026","time":"8:26 AM"},{"name":"राज कुमार लोप्चन","gender":"Male","age":32,"loc":"Kavrepalanchok, Bethanchok, Ward 4, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"","repcon":"9841106848","details":"","when":"Aug 29, 2026","time":"9:13 PM"},{"name":"राज कुमार श्रेष्ठ","gender":"Male","age":35,"loc":"Sindhuli, Kamalamai, Ward 11, जिल्ला रसुवा टिम्बुरे बजार क्षेत्रमा बाटो निर्माण गर्ने","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhuli","verified":true,"contact":"","reporter":"आफन्त","repcon":"८४४४४२२१२","details":"","when":"Aug 28, 2026","time":"11:58 AM"},{"name":"राजकुमार श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Bahrabise, Ward 4","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"4:17 PM"},{"name":"राजकुमार श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Chautara Sangachokgadhi, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:03 PM"},{"name":"राज कुमार सुवाल","gender":"Male","age":35,"loc":"Bhaktapur, Suryabinayak, Ward 09, टिमुरे","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Bhaktapur","verified":true,"contact":"","reporter":"सन्त बहादुर लकाजु","repcon":"9843251199","details":"","when":"Aug 28, 2026","time":"10:56 AM"},{"name":"राजन आचार्य","gender":"Male","age":52,"loc":"Jhapa, Birtamod, Ward 10, जिल्ला रसुवा लाङटाङ खोला डाइड्रोपावर स्यापुरु बेसी मा काम गर्ने","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"तारा आचार्य/प्रज्ञा आचार्य","repcon":"९८६००३८३१३/९७६५०२०६८०","details":"-","when":"Aug 28, 2026","time":"5:02 PM"},{"name":"राजन कार्की","gender":"Male","age":20,"loc":"Dolakha, Melung, Ward 5, रसुवा सहचालक","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dolakha","verified":true,"contact":"","reporter":"ललित बहादुर थापामगर","repcon":"9841830314","details":"","when":"Aug 28, 2026","time":"9:29 AM"},{"name":"राजन तामाङ्ग","gender":"Male","age":null,"loc":"Sindhupalchok, Balephi, Ward 8","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"2:21 PM"},{"name":"राजन थापा","gender":"Male","age":36,"loc":"Lamjung, Rainas, Ward 7, रसुवागढी हाइड्रोपावरमा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lamjung","verified":true,"contact":"","reporter":"रेवती थापा अर्याल (श्रीमती)","repcon":"9849841458","details":"","when":"Aug 27, 2026","time":"11:38 PM"},{"name":"राजन धिताल","gender":"Male","age":null,"loc":"Dhading, Galchhi, Ward 1","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"11:30 AM"},{"name":"राजन धिताल","gender":"Male","age":null,"loc":"Dhading, Galchhi, Ward 1, गल्छीमा बगाएको","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"9765342791","details":"टेलिफोन बाट","when":"Aug 28, 2026","time":"1:43 PM"},{"name":"राजन नेपाली","gender":"Male","age":null,"loc":"Sindhupalchok, Jugal, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:52 PM"},{"name":"राजन लम्साल","gender":"Male","age":null,"loc":"Dhading, Nilkantha, Ward 9, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"रमेश ढकाल","repcon":"9862832070","details":"टेलिफोन बाट","when":"Aug 28, 2026","time":"1:56 PM"},{"name":"राजन श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Bhotekoshi, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"दाइ","repcon":"9849497044","details":"","when":"Aug 29, 2026","time":"3:58 PM"},{"name":"राजन श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Bahrabise, Ward 3","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"4:13 PM"},{"name":"राजन श्रेष्ठ","gender":"Male","age":null,"loc":"Dhading, Dhunibeshi, Ward 8, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"माया कामी","repcon":"९७६९००३९६७","details":"टोलिफोन मार्फत","when":"Aug 28, 2026","time":"11:52 AM"},{"name":"राज बहादुर बुढा","gender":"Male","age":27,"loc":"Jumla, Patarasi, Ward 5, २१६  ड्याम रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"पातारासी गा.पा. कार्यालय जुम्ला","repcon":"९८४८३८२५११","details":"","when":"Aug 28, 2026","time":"4:07 PM"},{"name":"राज बिष्ट","gender":"Male","age":39,"loc":"Bara, Nijgadh, Ward 09, त्रिशुली हाईड्रो कामदार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Bara","verified":true,"contact":"","reporter":"सुनिता बिष्ट","repcon":"9827249148","details":"","when":"Aug 28, 2026","time":"10:14 AM"},{"name":"राजा यादव","gender":"Male","age":32,"loc":"Siraha, Golbazar, Ward 10, रसुवा हाईड्रो पावर","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Siraha","verified":true,"contact":"","reporter":"दाई","repcon":"९७०९८६१४९६","details":"-","when":"Aug 28, 2026","time":"7:37 AM"},{"name":"राजिव कुमार सिंह","gender":"Male","age":24,"loc":"Saptari, Rajgadh, Ward 2, रसुवा स्थित upper trishuli  216 MW मा QC इन्जिनियर रूपमा कार्यरत","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Saptari","verified":true,"contact":"","reporter":"","repcon":"9702663844","details":"","when":"Aug 28, 2026","time":"1:48 PM"},{"name":"राजिव श्रेष्ठ","gender":"Male","age":29,"loc":"Bhaktapur, Suryabinayak, Ward 04, अपर त्रिशुलि हाईड्रो","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Bhaktapur","verified":true,"contact":"","reporter":"राजेश श्रेष्ठ","repcon":"9841477509","details":"","when":"Aug 28, 2026","time":"11:41 AM"},{"name":"राजु खतिवडा","gender":"Male","age":null,"loc":"Dhading, Thakre, Ward 6","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"11:23 AM"},{"name":"राजु थापा","gender":"Male","age":42,"loc":"Kavrepalanchok, Dhulikhel, Ward 2, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"10:36 PM"},{"name":"राजु बि.क","gender":"Male","age":null,"loc":"Dhading, Rubi Valley, Ward 4","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"12:41 PM"},{"name":"राजु राना मगर","gender":"Male","age":null,"loc":"Dhading, Tripurasundari, Ward 4","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"12:07 PM"},{"name":"राजु श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Balephi, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"2:11 PM"},{"name":"राजेन्द्र ढकाल","gender":"Male","age":33,"loc":"Sindhuli, Kamalamai, Ward 3, त्रिसुली -३ A जलविद्युत","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhuli","verified":true,"contact":"","reporter":"दाजु","repcon":"९८४४०४३८६६","details":"","when":"Aug 28, 2026","time":"11:48 AM"},{"name":"राजेन्द्र तामाङ","gender":"Male","age":null,"loc":"Dhading, Thakre, Ward 7, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"11:00 AM"},{"name":"राजेन्द्र प्रधान","gender":"Male","age":33,"loc":"Kavrepalanchok, Chaurideurali, Ward 2, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"","repcon":"9813527430","details":"","when":"Aug 29, 2026","time":"9:32 PM"},{"name":"राजेन्द्र बस्नेत","gender":"Male","age":55,"loc":"Nuwakot, Bidur, Ward 7, नुवाकोट जिल्ला तुप्चे सोलेबजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"देवकी बस्नेत","repcon":"९८४११९४१४८,९८६४८३४४१५","details":"-","when":"Aug 28, 2026","time":"4:23 PM"},{"name":"राजेन्द्र महत","gender":"Male","age":38,"loc":"Dang, Ghorahi, Ward 15, रसुवा त्रिशुलि हाईड्रोपावर","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dang","verified":true,"contact":"","reporter":"","repcon":"९८६४४४५२७४","details":"रोल्पा घर","when":"Aug 28, 2026","time":"2:18 PM"},{"name":"राजेन्द्र महतरा","gender":"Male","age":29,"loc":"Pyuthan, Jhimruk, Ward 2, प्रहरी चौकी रसुवागढी","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Pyuthan","verified":true,"contact":"","reporter":"बल बहादुर महतरा काका","repcon":"9857833994","details":"","when":"Aug 28, 2026","time":"9:19 AM"},{"name":"राजेन्द्र श्रेष्ठ","gender":"Male","age":null,"loc":"Dhading, Dhunibeshi, Ward 6, स्याफ्रुबेशी","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"राजाराम श्रेष्ठ","repcon":"9841599042","details":"टेलिफोन मार्फत","when":"Aug 28, 2026","time":"1:33 PM"},{"name":"राजेन्द्र श्रेष्ठ","gender":"Male","age":null,"loc":"Gorkha, Sahid Lakhan, Ward 3, ट्रक चालक टिमुरे होटलमा बस्नु भएको","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"चण्डिका श्रेष्ठ","repcon":"9864532762","details":"","when":"Aug 28, 2026","time":"6:36 AM"},{"name":"राजेश","gender":"Male","age":24,"loc":"Dadeldhura, Aalital, Ward 7, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dadeldhura","verified":true,"contact":"","reporter":"टेक बहादुर घर्ती ,मगर","repcon":"९७६३३०६८०६","details":"","when":"Aug 28, 2026","time":"7:43 AM"},{"name":"राजेश तिमल्सिना","gender":"Male","age":null,"loc":"Dhading, Gangajamuna, Ward 5, मानसरोवर यात्रामा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"-","repcon":"-","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 28, 2026","time":"3:04 PM"},{"name":"राजेश महतरा","gender":"Male","age":24,"loc":"Jumla, Patarasi, Ward 6, २१६  ड्याम रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"पातारासी गा.पा. कार्यालय जुम्ला","repcon":"९८४८३८२५११","details":"","when":"Aug 28, 2026","time":"4:33 PM"},{"name":"राजेश रोका","gender":"Male","age":20,"loc":"Sindhupalchok, Sunkoshi, Ward 07, रसुवा भन्सार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"सुजल रोक्का","repcon":"९८६६०१२९१४","details":"","when":"Aug 29, 2026","time":"8:03 PM"},{"name":"राजेश रोक्का","gender":"Male","age":null,"loc":"Sindhupalchok, Sunkoshi, Ward 7","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:19 PM"},{"name":"राजेश श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Bahrabise, Ward 4","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"4:19 PM"},{"name":"राजेश स्याङतान","gender":"Male","age":49,"loc":"Lalitpur, Mahankal, Ward 2, मालबाहक गाडी लिएर रसुवा  केरुङ नाकाबाट नेपाल प्रबेश","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"मान सिंह घलान","repcon":"९८४३८०७०१३","details":"-","when":"Aug 28, 2026","time":"5:35 PM"},{"name":"राजेस शर्मा","gender":"Male","age":39,"loc":"Kathmandu, Kathmandu, नुवाकोट","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kaski","verified":true,"contact":"","reporter":"अनिता पौडेल","repcon":"9857039525","details":"","when":"Aug 28, 2026","time":"12:07 PM"},{"name":"राधा ठाडा मगर","gender":"Female","age":29,"loc":"Sankhuwasabha, Sabhapokhari, Ward 1, नुवाकोट नेत्रावति वजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sankhuwasabha","verified":true,"contact":"","reporter":"देवर डम्बर बहादुर ठाडा मगर","repcon":"९८४५८६६८२०","details":"","when":"Aug 28, 2026","time":"10:19 AM"},{"name":"राधिका खनाल","gender":"Female","age":null,"loc":"Dhading, Nilkantha, Ward 9, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"रमेश ढकाल","repcon":"9862832070","details":"टेलिफोन बाट","when":"Aug 28, 2026","time":"1:52 PM"},{"name":"राधिका घर्ती","gender":"Female","age":43,"loc":"Lamjung, Besishahar, Ward 11, माथिल्लो त्रिशूली–३ ए जलविद्युत् केन्द्र","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lamjung","verified":true,"contact":"","reporter":"बिशाल घर्ती (भतिज)","repcon":"9744522113","details":"","when":"Aug 27, 2026","time":"11:34 PM"},{"name":"रामकाजी थापा गोदार","gender":"Male","age":43,"loc":"Nuwakot, Bidur, Ward 02, साइट अफिस बेत्रावती नुवाकोट","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"राम नरेश कुमार चौधरी","repcon":"९८०१११०५३७","details":"टुन्डी कन्सट्रक्सन प्राइभेट लिमिटेड कम्पनिमा कार्यरत","when":"Aug 29, 2026","time":"1:34 PM"},{"name":"राम कुमार चौधरी","gender":"Male","age":null,"loc":"Dang, Tulsipur, Ward 12","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Dang","verified":true,"contact":"","reporter":"","repcon":"","details":"आफन्तको सम्पर्कमा","when":"Aug 28, 2026","time":"1:58 PM"},{"name":"राम कुमार बस्नेत","gender":"Male","age":57,"loc":"Nuwakot, Bidur, Ward 7, नुवाकोट जिल्ला तुप्चे सोलेबजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"देवकी बस्नेत","repcon":"९८४११९४१४८,९८६४८३४४१५","details":"-","when":"Aug 28, 2026","time":"4:24 PM"},{"name":"राम कृष्ण बुढा","gender":"Male","age":35,"loc":"Jumla, Patarasi, Ward 6, २१६  ड्याम रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"पातारासी गा.पा. कार्यालय जुम्ला","repcon":"९८४८३८२५११","details":"","when":"Aug 28, 2026","time":"4:25 PM"},{"name":"रामचन्द्र खनाल","gender":"Male","age":null,"loc":"Dhading, Nilkantha, Ward 9, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"रमेश ढकाल","repcon":"9862832070","details":"टेलिफोन बाट","when":"Aug 28, 2026","time":"1:52 PM"},{"name":"रामचन्द्र बिश्वकर्मा","gender":"Male","age":40,"loc":"Gorkha, Bhimsen Thapa, Ward 3, नेपाल राष्ट्र आ मा बि मा कार्यरत शिक्षक","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"","repcon":"९८४२२१३५०५","details":"","when":"Aug 28, 2026","time":"10:27 AM"},{"name":"राम चन्द्र बुढा","gender":"Male","age":33,"loc":"Jumla, Patarasi, Ward 6","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 28, 2026","time":"6:45 PM"},{"name":"रामजि दनुवार","gender":"Male","age":70,"loc":"Kavrepalanchok, Panchkhal, Ward 4, रसुवा","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"","repcon":"९८०३१४८०१७","details":"","when":"Aug 28, 2026","time":"6:17 PM"},{"name":"राम बहादुर खड्का","gender":"Male","age":null,"loc":"Sindhupalchok, Balephi, Ward 1","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:57 PM"},{"name":"राम बहादुर चौधरी","gender":"Male","age":45,"loc":"Dang, Rapti, Ward 4, रसुवा रोडमा मिस्त्री काम गर्ने","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dang","verified":true,"contact":"","reporter":"पुष्पा चौधरी","repcon":"९७६१७०४१५३","details":"","when":"Aug 29, 2026","time":"1:27 PM"},{"name":"राम बहादुर नेपाली","gender":"Male","age":null,"loc":"Sindhupalchok, Jugal, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:54 PM"},{"name":"राम बहादुर मगर","gender":"Male","age":44,"loc":"Lalitpur, Godawari, जिल्ला रसुवा टिमुरेमा पर्यटक गाईड","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"निशान नकर्मी","repcon":"९८४१५९५२३६","details":"-","when":"Aug 28, 2026","time":"4:18 PM"},{"name":"राम बहादुर श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Lisankhu Pakhar, Ward 5","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:56 PM"},{"name":"रामबाबु चालिसे","gender":"Male","age":45,"loc":"Bhaktapur, Suryabinayak, Ward 06, टिमुरे","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Bhaktapur","verified":true,"contact":"","reporter":"शर्मिला चालिसे","repcon":"9843310317","details":"","when":"Aug 28, 2026","time":"11:42 AM"},{"name":"राम बाबु चौधरी","gender":"Male","age":14,"loc":"Parsa, Sakhuwa Prasauni, Ward 2, त्रीसुली","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Parsa","verified":true,"contact":"","reporter":"राजेन्द्र ब. दमई","repcon":"9816442352","details":"","when":"Aug 29, 2026","time":"9:41 AM"},{"name":"रामबाबु चौधरी","gender":"Male","age":19,"loc":"Parsa, Sakhuwa Prasauni, Ward 2, त्रीसुली बेद्रावती वक्सव","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Parsa","verified":true,"contact":"","reporter":"रमेश चौधरी थारु","repcon":"9762181291","details":"","when":"Aug 28, 2026","time":"9:37 AM"},{"name":"रामबाबु साह","gender":"Male","age":53,"loc":"रसुवा हाइडोरपावर","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhanusha","verified":true,"contact":"","reporter":"सुधिर प्रसाद","repcon":"९८०६८०९७७७","details":"भारतिय नागरिक","when":"Aug 29, 2026","time":"4:10 PM"},{"name":"राम बिनोद भगत","gender":"Male","age":42,"loc":"Rautahat, Rajdevi, Ward 2, नुवाकोट त्रिसुलू बजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Rautahat","verified":true,"contact":"","reporter":"लक्ष्मण भगत","repcon":"९८६४३३०२०९","details":"","when":"Aug 28, 2026","time":"7:30 AM"},{"name":"राम बिबेक","gender":"Male","age":29,"loc":"Sarlahi, Barahathwa, Ward 14, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sarlahi","verified":true,"contact":"","reporter":"निजको दाजु","repcon":"9714410810","details":"","when":"Aug 28, 2026","time":"8:04 AM"},{"name":"राम बुढा","gender":"Male","age":24,"loc":"Jumla, Patarasi, Ward 5","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 28, 2026","time":"6:26 PM"},{"name":"रामभक्त नेवार","gender":"Male","age":39,"loc":"Terhathum, Chhathar, Ward 01, रसुवा, टिमुरे बजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Terhathum","verified":true,"contact":"","reporter":"तेज बहादुर नेवार (दाजु)","repcon":"9815319210","details":"ना.६ ख ४५१२ नं. को ट्रक गाडि साहु चालक आफै ट्रकमा सामान लिन ९ गते रसुवा गएको","when":"Aug 27, 2026","time":"11:24 PM"},{"name":"राम माया देबकोटा","gender":"Female","age":59,"loc":"Gorkha, Palungtar, Ward 5, बस सहित सम्पर्क बिहिनि","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"","repcon":"9856070812","details":"","when":"Aug 28, 2026","time":"7:03 AM"},{"name":"राम रिझान यादब","gender":"Male","age":26,"loc":"Siraha, Dhangadhimai, Ward 11, रसुवा श्रीहाकु  मा.बी स्कुलमा काम गर्ने कर्मचारी","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Lalitpur","verified":true,"contact":"","reporter":"प्र.स.नि.राम बालक यादव","repcon":"९८६६७०५७१६","details":"-","when":"Aug 28, 2026","time":"4:41 PM"},{"name":"राम लम्साल","gender":"Male","age":null,"loc":"Dhading, Nilkantha, Ward 12, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"रमेश ढकाल","repcon":"9862832070","details":"टेलिफोन बाट","when":"Aug 28, 2026","time":"1:50 PM"},{"name":"रामशरण तामाङ","gender":"Male","age":null,"loc":"Kavrepalanchok, Roshi, रसुवा","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"रमिला तामाङ","repcon":"9810255569","details":"","when":"Aug 29, 2026","time":"9:58 PM"},{"name":"रामशरण तिमल्सिना","gender":"Male","age":null,"loc":"Sindhupalchok, Sunkoshi, Ward 6","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"1:15 PM"},{"name":"रामशरण नेपाल","gender":"Male","age":50,"loc":"Bhaktapur, Suryabinayak, Ward 05, टिमुरे","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Bhaktapur","verified":true,"contact":"","reporter":"सलिन के.सी.","repcon":"9849277528","details":"","when":"Aug 28, 2026","time":"9:10 AM"},{"name":"रामशरण रसाईली","gender":"Male","age":28,"loc":"Dolakha, Melung, Ward 1, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dolakha","verified":true,"contact":"","reporter":"ईश्वर कार्की","repcon":"9849445784","details":"","when":"Aug 28, 2026","time":"9:23 AM"},{"name":"राम श्रेष्ठ","gender":"Male","age":null,"loc":"Sindhupalchok, Bahrabise, Ward 6","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhupalchok","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 29, 2026","time":"4:21 PM"},{"name":"रामश्वामी भैसेनी","gender":"Male","age":52,"loc":"रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kapilvastu","verified":true,"contact":"","reporter":"केशव बिस्त","repcon":"9763758240","details":"वतन भारत चेन्नई","when":"Aug 28, 2026","time":"6:25 AM"},{"name":"रामश्वामी सिठा","gender":"Male","age":68,"loc":"रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kapilvastu","verified":true,"contact":"","reporter":"केशव बिस्ट","repcon":"9763758240","details":"वतन भारत चेन्नई","when":"Aug 28, 2026","time":"6:26 AM"},{"name":"रामसर बुढा","gender":"Male","age":34,"loc":"Jumla, Patarasi, Ward 4, २१६  ड्याम रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Jumla","verified":true,"contact":"","reporter":"पातारासी गा.पा. कार्यालय जुम्ला","repcon":"९८४८३८२५११","details":"","when":"Aug 28, 2026","time":"4:37 PM"},{"name":"राम सुबेदी","gender":"Male","age":36,"loc":"Dhading, Thakre, Ward 7","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"टोलिफोन मार्फत","when":"Aug 29, 2026","time":"1:39 PM"},{"name":"राम सुबेदी(सुरेस)","gender":"Male","age":null,"loc":"Dhading, Thakre, Ward 7, चालक","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhading","verified":true,"contact":"","reporter":"","repcon":"","details":"गा.पा. बाट प्राप्त विवरण","when":"Aug 29, 2026","time":"10:59 AM"},{"name":"रामहरी देबकोटा","gender":"Male","age":59,"loc":"Gorkha, Palungtar, Ward 5, बस सहित सम्पर्क बिहिनि","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"","repcon":"9856070812","details":"","when":"Aug 28, 2026","time":"7:14 AM"},{"name":"रामिला कार्की पराजुली","gender":"Female","age":null,"loc":"Kavrepalanchok, Mandandeupur, Ward 12, रसुवा","status":"Found - Safe","st":{"bg":"#E8F5E9","fg":"#2E7D32"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"प्रदिप खड्का","repcon":"9840335004","details":"","when":"Aug 29, 2026","time":"10:21 PM"},{"name":"रामु कार्कि","gender":"Male","age":38,"loc":"Gorkha, Aarughat, Ward 10, रसुवा हाईड्रोपावरमा चालकको रुपमा काम गर्ने","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Gorkha","verified":true,"contact":"","reporter":"आफन्त","repcon":"9869222471","details":"","when":"Aug 28, 2026","time":"6:43 AM"},{"name":"रामे जिम्बा","gender":"Male","age":29,"loc":"Sindhuli, Marin, Ward 3, कठामाण्डौं देखि रसुवा ट्रक चलाउने चालक","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Sindhuli","verified":true,"contact":"","reporter":"","repcon":"","details":"","when":"Aug 28, 2026","time":"1:19 PM"},{"name":"रावल घर्ती मगर","gender":"Male","age":26,"loc":"Nawalpur, Gaidakot, Ward 15, टिमुरे आर्मी बेशक्याम रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Nawalpur","verified":true,"contact":"","reporter":"समझना पुरी","repcon":"9867108937","details":"","when":"Aug 29, 2026","time":"9:05 AM"},{"name":"राहुल कुमार","gender":"Male","age":25,"loc":"Rautahat, Rajdevi, Ward 9, त्रिसुली बजार","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Rautahat","verified":true,"contact":"","reporter":"शुसिल साह","repcon":"९८४५४१४८३१","details":"","when":"Aug 28, 2026","time":"7:05 AM"},{"name":"राहुल गुप्ता","gender":"Male","age":30,"loc":"Dhanusha, Sabaila, Ward 8, त्रिशूली रसुवा हाइड्रोपावर","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dhanusha","verified":true,"contact":"","reporter":"गंगा प्रसाद साह","repcon":"९८४४१२२१६१","details":"","when":"Aug 29, 2026","time":"4:37 PM"},{"name":"राहुल मिया","gender":"Male","age":20,"loc":"Parsa, Birgunj, Ward 22, रसुवा घट्टेखोला","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Parsa","verified":true,"contact":"","reporter":"अहमद मिया","repcon":"9716191357","details":"","when":"Aug 28, 2026","time":"11:42 AM"},{"name":"रिकेश बस्नेत","gender":"Male","age":null,"loc":"रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Kavrepalanchok","verified":true,"contact":"","reporter":"प्रिया थापा","repcon":"9854855708","details":"","when":"Aug 29, 2026","time":"9:05 PM"},{"name":"रिकेश श्रेष्ठ","gender":"Male","age":30,"loc":"Chitwan, Khairahani, Ward 6, त्रिशुली ए जलविद्युत","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Chitwan","verified":true,"contact":"","reporter":"शिवलाल श्रेष्ठ","repcon":"9845082145","details":"","when":"Aug 29, 2026","time":"12:37 PM"},{"name":"रिकेस बस्नेत","gender":"Male","age":21,"loc":"Dolakha, Bhimeshwar, Ward 8, रसुवा","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Dolakha","verified":true,"contact":"","reporter":"काजि बुदाथोकी","repcon":"9844185614","details":"","when":"Aug 28, 2026","time":"8:24 AM"},{"name":"रिचा निरौला","gender":"Female","age":null,"loc":"Morang, Pathari Shanishchare, Ward 7, दोसाङ हाईड्रिपावर","status":"Missing","st":{"bg":"#FDECEA","fg":"#C62828"},"source":"DAO Morang","verified":true,"contact":"","reporter":"लिला निरौला(वुबा)","repcon":"९८४२४८५४६६","details":"","when":"Aug 28, 2026","time":"1:57 PM"}];
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  var ov = document.getElementById('ov');
+  function rowHtml(k, v){ return v ? '<div class="row"><div class="k">'+esc(k)+'</div><div class="v">'+v+'</div></div>' : ''; }
+
+  function openRec(i){
+    var r = REC[i]; if(!r) return;
+    document.getElementById('mName').textContent = r.name || 'Person';
+    var ag = (r.age!=null?('Age '+r.age+' years'):'') + ((r.age!=null&&r.gender)?' · ':'') + (r.gender||'');
+    document.getElementById('mLoc').textContent = ag;
+    var b = '';
+    if (r.contact) {
+      b += '<a class="call" href="tel:'+esc(r.contact)+'"><div><div class="ph">'+esc(r.contact)+'</div><div class="who">Person contact</div></div><span class="go">Call</span></a>';
+    }
+    if (r.status) b += '<div style="margin:0 0 8px;"><span class="pill" style="background:'+r.st.bg+';color:'+r.st.fg+';">'+esc(r.status)+'</span></div>';
+    b += rowHtml('Location', esc(r.loc || '-'));
+    b += rowHtml('Source', esc(r.source || '-') + ' &nbsp; <span class="vbadge" style="background:'+(r.verified?'#E8F5E9':'#FFF3E0')+';color:'+(r.verified?'#2E7D32':'#EF6C00')+';">'+(r.verified?'Verified':'Unverified')+'</span>');
+    if (r.reporter) {
+      b += rowHtml('Reporter', esc(r.reporter));
+    }
+    if (r.details) b += rowHtml('Details', esc(r.details));
+    b += rowHtml('Recorded', esc((r.when||'') + (r.time?(' · '+r.time):'')));
+    document.getElementById('mBody').innerHTML = b;
+    ov.classList.add('show'); document.body.style.overflow = 'hidden';
+  }
+  function closeRec(){ ov.classList.remove('show'); document.body.style.overflow = ''; }
+
+  document.querySelectorAll('.rl').forEach(function(c){ c.addEventListener('click', function(){ openRec(parseInt(c.dataset.i, 10)); }); });
+  document.getElementById('mClose').addEventListener('click', closeRec);
+  ov.addEventListener('click', function(e){ if (e.target === ov) closeRec(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeRec(); });
+</script>
+</body>
+</html>

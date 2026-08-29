@@ -1,55 +1,67 @@
 {
-  "generated_at": "2026-08-29T20:48:18.460Z",
+  "generated_at": "2026-08-29T20:52:12.228Z",
   "sources": [
     {
       "source_id": "SETU",
       "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-      "retrieved_at": "2026-08-29T20:48:14.084Z",
+      "retrieved_at": "2026-08-29T20:51:11.265Z",
       "http_status": 200,
       "sha256": "1f8399aec955ff22db57c004873dcc6be5232e630e2334c88dcbe036202d2c92",
-      "bytes": 103284,
+      "bytes": 1904262,
       "changed": true,
-      "error": null
+      "error": null,
+      "transport": "fetch",
+      "pages": 18,
+      "page_failures": []
     },
     {
       "source_id": "POLICE_MISSING",
       "url": "https://udb.nepalpolice.gov.np/missing",
-      "retrieved_at": "2026-08-29T20:48:15.129Z",
+      "retrieved_at": "2026-08-29T20:51:20.716Z",
       "http_status": 0,
       "sha256": null,
       "bytes": 0,
-      "changed": "",
-      "error": "TypeError: fetch failed"
+      "changed": false,
+      "error": "Error: TypeError: fetch failed; curl: Command failed: curl -fsSL --retry 3 --retry-all-errors --connect-timeout 15 --max-time 60 -A central-missing-person-resolution/1.1 evidence-snapshot https://udb.nepalpolice.gov.np/missing\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n",
+      "pages": 0,
+      "page_failures": []
     },
     {
       "source_id": "POLICE_FOUND",
       "url": "https://udb.nepalpolice.gov.np/found",
-      "retrieved_at": "2026-08-29T20:48:16.107Z",
+      "retrieved_at": "2026-08-29T20:51:37.770Z",
       "http_status": 0,
       "sha256": null,
       "bytes": 0,
-      "changed": "",
-      "error": "TypeError: fetch failed"
+      "changed": false,
+      "error": "Error: TypeError: fetch failed; curl: Command failed: curl -fsSL --retry 3 --retry-all-errors --connect-timeout 15 --max-time 60 -A central-missing-person-resolution/1.1 evidence-snapshot https://udb.nepalpolice.gov.np/found\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n",
+      "pages": 0,
+      "page_failures": []
     },
     {
       "source_id": "POLICE_BODIES",
       "url": "https://udb.nepalpolice.gov.np/dead-bodies",
-      "retrieved_at": "2026-08-29T20:48:17.066Z",
+      "retrieved_at": "2026-08-29T20:51:53.337Z",
       "http_status": 0,
       "sha256": null,
       "bytes": 0,
-      "changed": "",
-      "error": "TypeError: fetch failed"
+      "changed": false,
+      "error": "Error: TypeError: fetch failed; curl: Command failed: curl -fsSL --retry 3 --retry-all-errors --connect-timeout 15 --max-time 60 -A central-missing-person-resolution/1.1 evidence-snapshot https://udb.nepalpolice.gov.np/dead-bodies\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n",
+      "pages": 0,
+      "page_failures": []
     },
     {
       "source_id": "DAO_MAKWANPUR_BHADRA13",
       "url": "https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-sama-bna-thha-makava-napa-ra-ja-l-l-apada-ta-ma-ta-bha-tha-ra",
-      "retrieved_at": "2026-08-29T20:48:18.459Z",
+      "retrieved_at": "2026-08-29T20:52:10.630Z",
       "http_status": 200,
-      "sha256": "8d720510d03d27232b67bdf80b9c23f2b1497abbb8b67b484696a4c4f286c90d",
+      "sha256": "38e8d7d9eef55e47b5dfa628b5af2c3d55427a28d660860df16ab10ad1344f4a",
       "bytes": 225859,
       "changed": true,
-      "error": null
+      "error": null,
+      "transport": "fetch",
+      "pages": 1,
+      "page_failures": []
     }
   ]
 }
