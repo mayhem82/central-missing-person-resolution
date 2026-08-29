@@ -1,16 +1,22 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "scope": "national",
-  "generated_at": "2026-08-29T21:49:57.972Z",
-  "record_count": 1736,
+  "generated_at": "2026-08-29T21:54:08.515Z",
+  "record_count": 1738,
   "source_counts": {
     "CURATED": 3,
     "NDRRMA_SETU": 1731,
+    "OPMCM_RESCUE_PORTAL": 0,
     "NEPAL_POLICE_MISSING": 2,
-    "NEPAL_POLICE_FOUND": 0
+    "NEPAL_POLICE_FOUND": 0,
+    "DAO_RASUWA_FLOOD_HUB": 0,
+    "DAO_RASUWA_BHADRA12_NOTICE": 0,
+    "DAO_MAKWANPUR_BHADRA13": 0,
+    "DAO_BANKE_MISSING": 2,
+    "DAO_PARSA_BHADRA13_MISSING": 0
   },
   "status_counts": {
-    "MISSING": 1277,
+    "MISSING": 1279,
     "FOUND_DEAD": 20,
     "RESCUED": 151,
     "FOUND_SAFE": 260,
@@ -811,6 +817,24 @@
     }
   ],
   "records": [
+    {
+      "id": "DAO_BANKe_MISSING-00001",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "source": "DAO_BANKe_MISSING",
+      "status": "MISSING",
+      "detail": "flood_missing_public_detail_13.pdf 482.25 KB View Download",
+      "source_url": "https://daobanke.moha.gov.np/en/post/missing-people-in-rasuwa-flood",
+      "identity_resolution": "UNRESOLVED_SOURCE_RECORD"
+    },
+    {
+      "id": "DAO_BANKe_MISSING-00002",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "source": "DAO_BANKe_MISSING",
+      "status": "MISSING",
+      "detail": "रसुवा_जिल्ला_लगायतका_ठाउँमा_आएको_बाढीपश्चात_सम्पर्कविहिन_हुनुभएको_व्यक्तिहरुको_विवरण_(1)(1).docx 706.4 KB View Download",
+      "source_url": "https://daobanke.moha.gov.np/en/post/missing-people-in-rasuwa-flood",
+      "identity_resolution": "UNRESOLVED_SOURCE_RECORD"
+    },
     {
       "id": "POLICE_MISSING-35490",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
