@@ -3,6 +3,7 @@ const INCIDENT='NEPAL-2026-08-26-FLOOD';
 function read(path){try{return JSON.parse(fs.readFileSync(path,'utf8')).records||[]}catch{return[]}}
 const sets=[
   ['CURATED','data/manual-records.json'],
+  ['AUSTRALIAN_PUBLIC_COHORT','data/australian-cohort.json'],
   ['NDRRMA_SETU','data/setu-latest.json'],
   ['OPMCM_RESCUE_PORTAL','data/opmcm-latest.json'],
   ['NEPAL_POLICE_MISSING','data/police-missing-latest.json'],
