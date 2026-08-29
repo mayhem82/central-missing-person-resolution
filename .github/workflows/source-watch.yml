@@ -13,12 +13,16 @@ on:
       - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
   schedule:
-    - cron: '17 * * * *'
+    - cron: '*/10 * * * *'
 permissions:
   contents: write
+concurrency:
+  group: nepal-source-watch
+  cancel-in-progress: false
 jobs:
   snapshot:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
