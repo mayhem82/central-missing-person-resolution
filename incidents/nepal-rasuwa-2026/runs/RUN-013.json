@@ -1,0 +1,15 @@
+{
+  "run_id":"RUN-013",
+  "incident_id":"NEPAL-RASUWA-2026",
+  "date":"2026-08-30",
+  "focus":"Automate complete NDRRMA Setu pagination ingestion and change detection.",
+  "classification":"FACT",
+  "actions":[
+    "Source watcher upgraded to discover and preserve every Setu pagination page",
+    "Setu parser added for name, age, sex, source status, locality, authority source and source date",
+    "Stable source-record identifiers exclude mutable status while retaining duplicate occurrences",
+    "Diff engine emits additions, removals and field/status changes without interpreting removal as resolution",
+    "Source fetch retries now include curl fallback for sources that fail Node fetch"
+  ],
+  "safety":"No source-level record is automatically merged into a unique person and no removal is interpreted as found, safe, rescued or deceased."
+}
