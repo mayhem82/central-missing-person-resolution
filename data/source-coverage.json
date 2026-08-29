@@ -1,0 +1,12 @@
+{
+  "incident_id":"NEPAL-RASUWA-2026",
+  "generated":"2026-08-30",
+  "sources":[
+    {"source":"NDRRMA Setu Rapid","authority":"Government of Nepal / NDRRMA","coverage":"PARTIAL_INGESTION","status":"ACTIVE","notes":"Current indexed pages show missing, rescued, found-safe, injured and dead source records. Duplicate-looking entries are present and must not be silently collapsed.","url":"https://setu.ndrrma.gov.np/admin/recordlist.php"},
+    {"source":"Nepal Police UDB Missing","authority":"Nepal Police","coverage":"PARTIAL_INGESTION","status":"ACTIVE","notes":"Separate person-level missing-person database; Rasuwa records dated 26 Aug 2026 are being reconciled.","url":"https://udb.nepalpolice.gov.np/missing"},
+    {"source":"Nepal Police UDB Found","authority":"Nepal Police","coverage":"PENDING_FULL_RECONCILIATION","status":"ACTIVE","notes":"Must be searched separately from Missing; absence from one dataset is not status evidence.","url":"https://udb.nepalpolice.gov.np/found"},
+    {"source":"Nepal Police Unidentified Bodies","authority":"Nepal Police","coverage":"PENDING_FULL_RECONCILIATION","status":"ACTIVE_RESTRICTED_MATCHING","notes":"No automated death matching. Human review and hard identifiers required.","url":"https://udb.nepalpolice.gov.np/dead-bodies-lists"},
+    {"source":"DAO Makwanpur Bhadra 12 lists","authority":"District Administration Office Makwanpur","coverage":"SEEDED_TARGET_RECORDS","status":"SUPERSEDED_CHRONOLOGICALLY_BY_BHADRA13_UPDATE","notes":"Two same-title Bhadra 12 publications preserved as separate snapshots."},
+    {"source":"DAO Makwanpur Bhadra 13 update","authority":"District Administration Office Makwanpur","coverage":"METADATA_ONLY","status":"BINARY_EXTRACTION_REQUIRED","notes":"document(8).pdf is later than Bhadra 12 lists. No person-level inference until extracted and row-diffed."}
+  ]
+}
