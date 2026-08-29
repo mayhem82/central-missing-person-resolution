@@ -1,6 +1,11 @@
 name: Source change watch
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/snapshot_sources.js'
+      - 'data/source-manifest.json'
+      - '.github/workflows/source-watch.yml'
   schedule:
     - cron: '17 * * * *'
 permissions:
