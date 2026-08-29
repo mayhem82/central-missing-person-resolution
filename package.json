@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node scripts/validate.js",
     "test": "node scripts/test.js",
-    "export:pfif": "node scripts/export_pfif.js"
+    "export:pfif": "node scripts/export_pfif.js",
+    "build:cohorts": "node scripts/build_cohort_index.js"
   }
 }
