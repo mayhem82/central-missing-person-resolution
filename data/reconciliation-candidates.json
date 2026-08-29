@@ -1,16 +1,85 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-08-29T22:01:48.018Z",
+  "generated_at": "2026-08-29T22:16:17.180Z",
   "rules": {
     "name_only_never_confirms": true,
     "automatic_merge": false,
     "automatic_death_match": false
   },
-  "candidate_link_count": 1,
-  "body_review_candidate_count": 7,
+  "candidate_link_count": 6,
+  "body_review_candidate_count": 17,
   "identity_links": [
     {
       "id": "LINK-000001",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "AU-CLAIM-006",
+      "right_record_id": "SETU-538D3B57082785",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME",
+        "EXACT_AGE"
+      ],
+      "conflicts": [],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000002",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "AU-CLAIM-005",
+      "right_record_id": "SETU-7ED06E4DF0A399",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME",
+        "EXACT_AGE"
+      ],
+      "conflicts": [],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000003",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "AU-CLAIM-004",
+      "right_record_id": "SETU-D66C97F1D72009",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME",
+        "EXACT_AGE"
+      ],
+      "conflicts": [],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000004",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "AU-CLAIM-002",
+      "right_record_id": "SETU-222B703D2BBC2B",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME"
+      ],
+      "conflicts": [],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000005",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "left_record_id": "AU-CLAIM-003",
+      "right_record_id": "SETU-56D44506F79DA5",
+      "classification": "POSSIBLE_MATCH",
+      "signals": [
+        "EXACT_NORMALIZED_NAME",
+        "EXACT_AGE"
+      ],
+      "conflicts": [],
+      "automatic_merge": false,
+      "human_review_required": true
+    },
+    {
+      "id": "LINK-000006",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "left_record_id": "DAO-MAKWANPUR-B12-SERIAL-50",
       "right_record_id": "FAMILY-SUMAN-TAMANG-0001",
@@ -28,11 +97,11 @@
     {
       "id": "BODY-CAND-000001",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
-      "person_record_id": "SETU-1188E69E8BF0D5",
-      "body_record_id": "POLICE_DISASTER_BODIES-2553",
+      "person_record_id": "AU-CLAIM-006",
+      "body_record_id": "POLICE_DISASTER_BODIES-2550",
       "classification": "REVIEW_ONLY",
       "signals": [
-        "AGE_WITHIN_0_YEARS"
+        "AGE_WITHIN_1_YEARS"
       ],
       "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
       "human_review_required": true
@@ -40,7 +109,7 @@
     {
       "id": "BODY-CAND-000002",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
-      "person_record_id": "SETU-D75AD068BBA0DF",
+      "person_record_id": "AU-CLAIM-016",
       "body_record_id": "POLICE_DISASTER_BODIES-2555",
       "classification": "REVIEW_ONLY",
       "signals": [
@@ -52,6 +121,90 @@
     {
       "id": "BODY-CAND-000003",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-016",
+      "body_record_id": "POLICE_DISASTER_BODIES-2548",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000004",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-016",
+      "body_record_id": "POLICE_DISASTER_BODIES-2540",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000005",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "SETU-1188E69E8BF0D5",
+      "body_record_id": "POLICE_DISASTER_BODIES-2553",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_0_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000006",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-013",
+      "body_record_id": "POLICE_DISASTER_BODIES-2555",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_0_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000007",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-013",
+      "body_record_id": "POLICE_DISASTER_BODIES-2548",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_0_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000008",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-013",
+      "body_record_id": "POLICE_DISASTER_BODIES-2540",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_0_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000009",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "SETU-D75AD068BBA0DF",
+      "body_record_id": "POLICE_DISASTER_BODIES-2555",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000010",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
       "person_record_id": "SETU-D75AD068BBA0DF",
       "body_record_id": "POLICE_DISASTER_BODIES-2553",
       "classification": "REVIEW_ONLY",
@@ -62,7 +215,7 @@
       "human_review_required": true
     },
     {
-      "id": "BODY-CAND-000004",
+      "id": "BODY-CAND-000011",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "person_record_id": "SETU-D75AD068BBA0DF",
       "body_record_id": "POLICE_DISASTER_BODIES-2548",
@@ -74,7 +227,7 @@
       "human_review_required": true
     },
     {
-      "id": "BODY-CAND-000005",
+      "id": "BODY-CAND-000012",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "person_record_id": "SETU-D75AD068BBA0DF",
       "body_record_id": "POLICE_DISASTER_BODIES-2540",
@@ -86,7 +239,43 @@
       "human_review_required": true
     },
     {
-      "id": "BODY-CAND-000006",
+      "id": "BODY-CAND-000013",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-003",
+      "body_record_id": "POLICE_DISASTER_BODIES-2555",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000014",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-003",
+      "body_record_id": "POLICE_DISASTER_BODIES-2548",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000015",
+      "incident_id": "NEPAL-2026-08-26-FLOOD",
+      "person_record_id": "AU-CLAIM-003",
+      "body_record_id": "POLICE_DISASTER_BODIES-2540",
+      "classification": "REVIEW_ONLY",
+      "signals": [
+        "AGE_WITHIN_2_YEARS"
+      ],
+      "prohibited_conclusion": "NO_IDENTITY_OR_DEATH_DETERMINATION",
+      "human_review_required": true
+    },
+    {
+      "id": "BODY-CAND-000016",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "person_record_id": "DAO-MAKWANPUR-B12-SERIAL-62",
       "body_record_id": "POLICE_DISASTER_BODIES-2553",
@@ -98,7 +287,7 @@
       "human_review_required": true
     },
     {
-      "id": "BODY-CAND-000007",
+      "id": "BODY-CAND-000017",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "person_record_id": "SETU-4F36BF07E0DFFE",
       "body_record_id": "POLICE_DISASTER_BODIES-2550",

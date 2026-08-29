@@ -1,10 +1,11 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "scope": "national",
-  "generated_at": "2026-08-29T22:01:47.900Z",
-  "record_count": 1738,
+  "generated_at": "2026-08-29T22:16:16.827Z",
+  "record_count": 1756,
   "source_counts": {
     "CURATED": 3,
+    "AUSTRALIAN_PUBLIC_COHORT": 18,
     "NDRRMA_SETU": 1731,
     "OPMCM_RESCUE_PORTAL": 0,
     "NEPAL_POLICE_MISSING": 2,
@@ -16,14 +17,30 @@
     "DAO_PARSA_BHADRA13_MISSING": 0
   },
   "status_counts": {
-    "MISSING": 1279,
+    "MISSING": 1296,
     "FOUND_DEAD": 20,
     "RESCUED": 151,
-    "FOUND_SAFE": 260,
+    "FOUND_SAFE": 261,
     "FOUND_INJURED": 25,
     "OUT_OF_CONTACT": 3
   },
   "identity_collisions": [
+    {
+      "normalized_name": "aarush muralitharan",
+      "record_ids": [
+        "AU-CLAIM-006",
+        "SETU-538D3B57082785"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
+    {
+      "normalized_name": "ashwin muralitharan",
+      "record_ids": [
+        "AU-CLAIM-005",
+        "SETU-7ED06E4DF0A399"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
     {
       "normalized_name": "atul pathak",
       "record_ids": [
@@ -73,10 +90,26 @@
       "warning": "Same/similar source-record name is not proof of same person."
     },
     {
+      "normalized_name": "chandrasekaran muralitharan",
+      "record_ids": [
+        "AU-CLAIM-004",
+        "SETU-D66C97F1D72009"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
+    {
       "normalized_name": "chinlal tamang",
       "record_ids": [
         "SETU-0B96D23A2C33BE",
         "SETU-2D32D952A336A3"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
+    {
+      "normalized_name": "chitra venkatraman",
+      "record_ids": [
+        "AU-CLAIM-002",
+        "SETU-222B703D2BBC2B"
       ],
       "warning": "Same/similar source-record name is not proof of same person."
     },
@@ -198,6 +231,14 @@
       "record_ids": [
         "SETU-26F7895ECB21DB",
         "SETU-C70216FFC43E1C"
+      ],
+      "warning": "Same/similar source-record name is not proof of same person."
+    },
+    {
+      "normalized_name": "shylaja muralitharan",
+      "record_ids": [
+        "AU-CLAIM-003",
+        "SETU-56D44506F79DA5"
       ],
       "warning": "Same/similar source-record name is not proof of same person."
     },
@@ -872,6 +913,20 @@
       "raw_text": "३ नाम:- समिर आलम उमेर:- 12, अन्दाजी उमेर:- 12 लिङ्ग:- पुरुष हराएको व्यक्तिको ठेगाना:- मधेश प्रदेश ,रौतहट ,वृन्दावन नगरपालिका - 3 पिप्रा हराएको ठेगाना:- बागमती प्रदेश ,नुवाकोट ,विदुर नगरपालिका - 3 बेतराउती हराएको मिति : 2026-08-26 विवरण हेर्नुहोस्"
     },
     {
+      "id": "AU-CLAIM-006",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Aarush Muralitharan",
+      "age": 11,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with parents and older brother. Minor: public data must remain minimised.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "minor": true,
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-538D3B57082785",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -1292,6 +1347,20 @@
       "detail": "Setu App · Aug 27, 2026"
     },
     {
+      "id": "AU-CLAIM-005",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Ashwin Muralitharan",
+      "age": 14,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with parents and younger brother. Minor: public data must remain minimised.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "minor": true,
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-7ED06E4DF0A399",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -1563,6 +1632,19 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=15",
       "duplicate_occurrence": 1,
       "detail": "Setu App · Aug 27, 2026"
+    },
+    {
+      "id": "AU-CLAIM-016",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Bharat Mangwani",
+      "age": 42,
+      "status": "MISSING",
+      "australian_connection": "Kellyville, Sydney resident",
+      "group": "Isha Foundation pilgrimage",
+      "detail": "Reported missing after the group headed toward the immigration building on the Nepal-Tibet border.",
+      "source_url": "https://www.abc.net.au/news/2026-08-29/death-toll-rises-as-rescuers-work-through-flood-devastation/107092742",
+      "publication_date": "2026-08-29",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-3FEB89D56CD3F7",
@@ -2132,6 +2214,19 @@
       "detail": "DAO Udayapur · Aug 28, 2026"
     },
     {
+      "id": "AU-CLAIM-018",
+      "source": "PUBLIC_REPORT_GUARDIAN",
+      "name": "Cara Severino",
+      "age": 26,
+      "status": "FOUND_SAFE",
+      "australian_connection": "Sydney resident",
+      "group": null,
+      "detail": "Initially reported missing; subsequently made contact with family and was reported safe. Preserve earlier missing state in source chronology rather than treating her as never missing.",
+      "source_url": "https://www.theguardian.com/world/2026/aug/29/australians-missing-nepal-floods-total-rises-albanese-dfat-personnel-arriving",
+      "publication_date": "2026-08-29",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-262DB5E85EE99F",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -2172,6 +2267,19 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=1",
       "duplicate_occurrence": 1,
       "detail": "DAO Udayapur · Aug 28, 2026"
+    },
+    {
+      "id": "AU-CLAIM-004",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Chandrasekaran Muralitharan",
+      "age": 47,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing as part of a family of four travelling with the tour group.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-D66C97F1D72009",
@@ -2298,6 +2406,19 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=15",
       "duplicate_occurrence": 2,
       "detail": "Setu App · Aug 27, 2026"
+    },
+    {
+      "id": "AU-CLAIM-002",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Chitra Venkatraman",
+      "age": 46,
+      "status": "MISSING",
+      "australian_connection": "Western Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with husband Venkatraman Balakrishnan after the flood.",
+      "source_url": "https://www.abc.net.au/news/2026-08-27/australians-missing-in-nepal-floods-includes-nsw-sydney-couple/107086088",
+      "publication_date": "2026-08-27",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-222B703D2BBC2B",
@@ -3854,6 +3975,19 @@
       "detail": "DAO Udayapur · Aug 28, 2026"
     },
     {
+      "id": "AU-CLAIM-013",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Karan Bhardwaj",
+      "age": 40,
+      "status": "MISSING",
+      "australian_connection": "Brisbane resident; Royal Australian Air Force member",
+      "group": "Kailash Journey's tour group",
+      "detail": "Reported unaccounted for after flash flooding.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-E19AEDF4FE2EC6",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -4148,6 +4282,19 @@
       "detail": "Setu App · Aug 27, 2026"
     },
     {
+      "id": "AU-CLAIM-012",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Krishna Sharma",
+      "age": 50,
+      "status": "MISSING",
+      "australian_connection": "Australian tour-group member",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported by family as part of the missing tour group.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-E6244DE69F42F6",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -4167,6 +4314,18 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=16",
       "duplicate_occurrence": 1,
       "detail": "Setu App · Aug 27, 2026"
+    },
+    {
+      "id": "AU-CLAIM-008",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Lakshmi Iyer",
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with spouse and two adult sons; also reported as known to some friends as Roopa.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-14259C3EF4742A",
@@ -4503,6 +4662,18 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=16",
       "duplicate_occurrence": 1,
       "detail": "Setu App · Aug 27, 2026"
+    },
+    {
+      "id": "AU-CLAIM-015",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Michael Ryan Keats",
+      "status": "MISSING",
+      "australian_connection": "Australian",
+      "group": "Isha Foundation pilgrimage",
+      "detail": "Reported missing; believed to have been at the immigration centre on the Tibet-Nepal border when the flood struck.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/nepal-tibet-floods-live-updates/107086974",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-A3F4BE62BF9508",
@@ -6416,6 +6587,19 @@
       "detail": "Setu App · Aug 27, 2026"
     },
     {
+      "id": "AU-CLAIM-009",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Rishab Iyer",
+      "age": 23,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident; University of Newcastle medical student",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with parents and brother.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-ADDA78B9E77D8C",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -6561,6 +6745,19 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=17",
       "duplicate_occurrence": 1,
       "detail": "Setu App · Aug 27, 2026"
+    },
+    {
+      "id": "AU-CLAIM-010",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Rudhra Iyer",
+      "age": 20,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident; medical student",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with parents and brother.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-7351114065D352",
@@ -7067,6 +7264,19 @@
       "detail": "Setu App · Aug 28, 2026"
     },
     {
+      "id": "AU-CLAIM-003",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Shylaja Muralitharan",
+      "age": 42,
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing as part of a family of four travelling with the tour group.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-56D44506F79DA5",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -7361,6 +7571,18 @@
       "detail": "Setu App · Aug 27, 2026"
     },
     {
+      "id": "AU-CLAIM-007",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Sreedharan Iyer",
+      "status": "MISSING",
+      "australian_connection": "Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing with spouse and two adult sons.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-F5B4F7402E6140",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -7506,6 +7728,18 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=17",
       "duplicate_occurrence": 1,
       "detail": "Setu App · Aug 28, 2026"
+    },
+    {
+      "id": "AU-CLAIM-014",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Suhasini Reddy Kandimalla",
+      "status": "MISSING",
+      "australian_connection": "Brisbane resident for four years; New Zealand citizen",
+      "group": null,
+      "detail": "Reported missing while travelling toward the border. Citizenship is reported as New Zealand, so Australian connection must not be converted into Australian nationality.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-527C239C3D65CE",
@@ -7674,6 +7908,18 @@
       "detail": "Official Bhadra 12 out-of-contact list, original serial 62. Exact locality match to family subject but name differs; no hard bridge.",
       "source_url": "https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-ma-sama-para-ka-va-ha-na-bhaeka-makava-napa-ra-ja-l-l-ka-va-yaka-2",
       "identity_state": "POSSIBLE_MATCH"
+    },
+    {
+      "id": "AU-CLAIM-017",
+      "source": "PUBLIC_REPORT_GUARDIAN",
+      "name": "Sumi Adhikari",
+      "status": "MISSING",
+      "australian_connection": "Australian woman",
+      "group": "Isha Foundation pilgrimage",
+      "detail": "Reported among 11 Australians in the Isha Foundation group missing around the Gyirong border crossing.",
+      "source_url": "https://www.theguardian.com/australia-news/2026/aug/29/what-we-know-about-the-australians-missing-in-the-nepal-floods",
+      "publication_date": "2026-08-29",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-00DEC0D20CD527",
@@ -8495,6 +8741,19 @@
       "detail": "Setu App · Aug 28, 2026"
     },
     {
+      "id": "AU-CLAIM-011",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Umesh Sharma",
+      "age": 55,
+      "status": "MISSING",
+      "australian_connection": "Australian tour-group member",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported by family as part of the missing tour group.",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/missing-australians-nepal-tibet-floods/107088404",
+      "publication_date": "2026-08-28",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
+    },
+    {
       "id": "SETU-DE57E4E227DFB4",
       "incident_id": "NEPAL-2026-08-26-FLOOD",
       "source": "NDRRMA_SETU",
@@ -8577,6 +8836,19 @@
       "source_url": "https://setu.ndrrma.gov.np/admin/recordlist.php?page=1",
       "duplicate_occurrence": 1,
       "detail": "DAO Lalitpur · Aug 29, 2026"
+    },
+    {
+      "id": "AU-CLAIM-001",
+      "source": "PUBLIC_REPORT_ABC",
+      "name": "Venkatraman Balakrishnan",
+      "age": 52,
+      "status": "MISSING",
+      "australian_connection": "Western Sydney resident",
+      "group": "Himalayan Glacier Adventures",
+      "detail": "Reported missing after the flood; family last spoke with him when the group was approximately 15 km from the Tibet border.",
+      "source_url": "https://www.abc.net.au/news/2026-08-27/australians-missing-in-nepal-floods-includes-nsw-sydney-couple/107086088",
+      "publication_date": "2026-08-27",
+      "incident_id": "NEPAL-2026-08-26-FLOOD"
     },
     {
       "id": "SETU-8976774D200968",

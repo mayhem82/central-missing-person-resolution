@@ -1,0 +1,456 @@
+{
+  "incident_id": "NEPAL-2026-08-26-FLOOD",
+  "generated_at": "2026-08-29T22:16:17.010Z",
+  "scope": "international-cohort-index",
+  "rules": [
+    "Cohort claims are source claims, not canonical unique-person totals.",
+    "Never sum overlapping nationality, operator, location or aggregate cohorts without reconciliation.",
+    "Person-level membership is only included where a source record explicitly carries the relevant field.",
+    "Nationality and country-of-residence/connection are distinct.",
+    "A later source claim does not erase an earlier claim; chronology is preserved."
+  ],
+  "nationality_count": 24,
+  "nationality_claims": {
+    "India": [
+      {
+        "id": "COHORT-NAT-INDIA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "India",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 288,
+        "geography": "Nepal",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/",
+        "notes": "Reuters reported 288 Indian nationals missing in Nepal. Separate claim reported about 200 stranded in China; do not combine without reconciliation."
+      },
+      {
+        "id": "COHORT-NAT-INDIA-CHINA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "India",
+        "status": "STRANDED",
+        "count": 200,
+        "geography": "China/Tibet",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "China": [
+      {
+        "id": "COHORT-NAT-CHINA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "China",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count_approx": 100,
+        "geography": "Nepal/Tibet disaster area",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "United States": [
+      {
+        "id": "COHORT-NAT-USA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "United States",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 65,
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Malaysia": [
+      {
+        "id": "COHORT-NAT-MALAYSIA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Malaysia",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count_min": 51,
+        "count_max": 55,
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Ukraine": [
+      {
+        "id": "COHORT-NAT-UKRAINE-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Ukraine",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 53,
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "United Kingdom": [
+      {
+        "id": "COHORT-NAT-UK-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "United Kingdom",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 33,
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Canada": [
+      {
+        "id": "COHORT-NAT-CANADA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Canada",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 25,
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Australia": [
+      {
+        "id": "COHORT-NAT-AUSTRALIA-GUARDIAN-20260829",
+        "type": "NATIONALITY",
+        "nationality": "Australia",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": 41,
+        "as_of": "2026-08-29",
+        "source_name": "The Guardian",
+        "source_url": "https://www.theguardian.com/world/2026/aug/29/australians-missing-nepal-floods-total-rises-albanese-dfat-personnel-arriving",
+        "notes": "Later Australian-specific count. Earlier Reuters and ABC counts are retained elsewhere as historical source claims and must not be overwritten."
+      }
+    ],
+    "Singapore": [
+      {
+        "id": "COHORT-NAT-SINGAPORE-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Singapore",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "South Korea": [
+      {
+        "id": "COHORT-NAT-SOUTHKOREA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "South Korea",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Russia": [
+      {
+        "id": "COHORT-NAT-RUSSIA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Russia",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Germany": [
+      {
+        "id": "COHORT-NAT-GERMANY-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Germany",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Latvia": [
+      {
+        "id": "COHORT-NAT-LATVIA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Latvia",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "South Africa": [
+      {
+        "id": "COHORT-NAT-SOUTHAFRICA-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "South Africa",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Japan": [
+      {
+        "id": "COHORT-NAT-JAPAN-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Japan",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "New Zealand": [
+      {
+        "id": "COHORT-NAT-NEWZEALAND-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "New Zealand",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED_SMALL_NUMBER",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Belarus": [
+      {
+        "id": "COHORT-NAT-BELARUS-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Belarus",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Belgium": [
+      {
+        "id": "COHORT-NAT-BELGIUM-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Belgium",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "France": [
+      {
+        "id": "COHORT-NAT-FRANCE-REUTERS-20260827",
+        "type": "NATIONALITY",
+        "nationality": "France",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/"
+      }
+    ],
+    "Netherlands": [
+      {
+        "id": "COHORT-NAT-NETHERLANDS-GUARDIAN-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Netherlands",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "The Guardian",
+        "source_url": "https://www.theguardian.com/world/2026/aug/27/nepal-tibet-flash-floods-what-we-know-so-far-flooding"
+      }
+    ],
+    "Portugal": [
+      {
+        "id": "COHORT-NAT-PORTUGAL-GUARDIAN-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Portugal",
+        "status": "MISSING_OR_UNACCOUNTED",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "The Guardian",
+        "source_url": "https://www.theguardian.com/world/2026/aug/27/nepal-tibet-flash-floods-what-we-know-so-far-flooding"
+      }
+    ],
+    "Italy": [
+      {
+        "id": "COHORT-NAT-ITALY-ABC-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Italy",
+        "status": "RESCUED_SOURCE_CLAIM",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "ABC News Australia",
+        "source_url": "https://www.abc.net.au/news/2026-08-27/nepal-flooding-live-updates-australians-missing/107082946"
+      }
+    ],
+    "Bulgaria": [
+      {
+        "id": "COHORT-NAT-BULGARIA-ABC-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Bulgaria",
+        "status": "RESCUED_SOURCE_CLAIM",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "ABC News Australia",
+        "source_url": "https://www.abc.net.au/news/2026-08-27/nepal-flooding-live-updates-australians-missing/107082946"
+      }
+    ],
+    "Switzerland": [
+      {
+        "id": "COHORT-NAT-SWITZERLAND-ABC-20260827",
+        "type": "NATIONALITY",
+        "nationality": "Switzerland",
+        "status": "RESCUED_SOURCE_CLAIM",
+        "count": "UNSPECIFIED",
+        "as_of": "2026-08-27",
+        "source_name": "ABC News Australia",
+        "source_url": "https://www.abc.net.au/news/2026-08-27/nepal-flooding-live-updates-australians-missing/107082946"
+      }
+    ]
+  },
+  "operator_claims": [
+    {
+      "id": "COHORT-TOUR-HIMALAYAN-GLACIER-AU-20260826",
+      "type": "TOUR_OPERATOR",
+      "operator": "Himalayan Glacier Adventures",
+      "status": "MISSING_OR_UNACCOUNTED",
+      "count": 15,
+      "nationality_or_connection": "Australian",
+      "as_of": "2026-08-26",
+      "source_name": "ABC News Australia",
+      "source_url": "https://www.abc.net.au/news/2026-08-26/australian-missing-in-nepal-flood/107082672"
+    },
+    {
+      "id": "COHORT-TOUR-KAILASH-JOURNEYS-AU-20260826",
+      "type": "TOUR_OPERATOR",
+      "operator": "Kailash Journeys",
+      "status": "MISSING_OR_UNACCOUNTED",
+      "count": 6,
+      "nationality_or_connection": "Australian",
+      "as_of": "2026-08-26",
+      "source_name": "ABC News Australia",
+      "source_url": "https://www.abc.net.au/news/2026-08-26/australian-missing-in-nepal-flood/107082672"
+    },
+    {
+      "id": "COHORT-TOUR-KATHMANDU-HOLIDAY-AU-20260826",
+      "type": "TOUR_OPERATOR",
+      "operator": "Kathmandu Holiday Tours and Travels",
+      "status": "MISSING_OR_UNACCOUNTED",
+      "count": 1,
+      "nationality_or_connection": "Australian",
+      "as_of": "2026-08-26",
+      "source_name": "ABC News Australia",
+      "source_url": "https://www.abc.net.au/news/2026-08-26/australian-missing-in-nepal-flood/107082672"
+    },
+    {
+      "id": "COHORT-TOUR-ISHA-AU-20260828",
+      "type": "TOUR_ORGANISATION",
+      "operator": "Isha Foundation",
+      "status": "OUT_OF_CONTACT_SOURCE_CLAIM",
+      "count": 11,
+      "nationality_or_connection": "Australian",
+      "as_of": "2026-08-28",
+      "source_name": "ABC News Australia",
+      "source_url": "https://www.abc.net.au/news/2026-08-28/new-flood-warnings-issued-in-nepal-tibet-as-death-toll-rises/107087570",
+      "notes": "Reported as having completed a pilgrimage and clearing immigration on the Chinese side when contact was lost."
+    }
+  ],
+  "aggregate_foreign_claims": [
+    {
+      "id": "COHORT-FOREIGN-TOTAL-REUTERS-20260827",
+      "type": "AGGREGATE_FOREIGN_TOURISTS",
+      "status": "MISSING_OR_UNACCOUNTED",
+      "count": 540,
+      "countries": 31,
+      "as_of": "2026-08-27",
+      "source_name": "Reuters",
+      "source_url": "https://www.reuters.com/world/china/list-nationalities-missing-tourists-nepal-flood-2026-08-27/",
+      "notes": "Aggregate foreign-tourist claim. Do not sum with nationality cohorts."
+    },
+    {
+      "id": "COHORT-FOREIGN-TOTAL-NTB-GUARDIAN-20260829",
+      "type": "AGGREGATE_FOREIGN_TOURISTS",
+      "status": "MISSING_OR_UNACCOUNTED",
+      "count": 517,
+      "as_of": "2026-08-29",
+      "source_name": "The Guardian",
+      "source_url": "https://www.theguardian.com/world/2026/aug/29/australians-missing-nepal-floods-total-rises-albanese-dfat-personnel-arriving",
+      "notes": "Later source claim attributed to Nepal disaster authorities. Retained alongside earlier aggregate rather than overwriting it."
+    }
+  ],
+  "person_level_membership": {
+    "nationality": {},
+    "connection": {
+      "Sydney resident": [
+        "AU-CLAIM-003",
+        "AU-CLAIM-004",
+        "AU-CLAIM-005",
+        "AU-CLAIM-006",
+        "AU-CLAIM-007",
+        "AU-CLAIM-008",
+        "AU-CLAIM-018"
+      ],
+      "Kellyville, Sydney resident": [
+        "AU-CLAIM-016"
+      ],
+      "Western Sydney resident": [
+        "AU-CLAIM-001",
+        "AU-CLAIM-002"
+      ],
+      "Brisbane resident; Royal Australian Air Force member": [
+        "AU-CLAIM-013"
+      ],
+      "Australian tour-group member": [
+        "AU-CLAIM-011",
+        "AU-CLAIM-012"
+      ],
+      "Australian": [
+        "AU-CLAIM-015"
+      ],
+      "Sydney resident; University of Newcastle medical student": [
+        "AU-CLAIM-009"
+      ],
+      "Sydney resident; medical student": [
+        "AU-CLAIM-010"
+      ],
+      "Brisbane resident for four years; New Zealand citizen": [
+        "AU-CLAIM-014"
+      ],
+      "Australian woman": [
+        "AU-CLAIM-017"
+      ]
+    },
+    "operator": {
+      "Himalayan Glacier Adventures": [
+        "AU-CLAIM-001",
+        "AU-CLAIM-002",
+        "AU-CLAIM-003",
+        "AU-CLAIM-004",
+        "AU-CLAIM-005",
+        "AU-CLAIM-006",
+        "AU-CLAIM-007",
+        "AU-CLAIM-008",
+        "AU-CLAIM-009",
+        "AU-CLAIM-010",
+        "AU-CLAIM-011",
+        "AU-CLAIM-012"
+      ],
+      "Isha Foundation pilgrimage": [
+        "AU-CLAIM-015",
+        "AU-CLAIM-016",
+        "AU-CLAIM-017"
+      ],
+      "Kailash Journey's tour group": [
+        "AU-CLAIM-013"
+      ]
+    }
+  }
+}
