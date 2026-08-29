@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Event",
+  "type": "object",
+  "required": ["evidence_id", "incident_id", "record_ids", "classification", "statement", "created_at"],
+  "properties": {
+    "evidence_id": {"type": "string"},
+    "incident_id": {"type": "string"},
+    "record_ids": {"type": "array", "items": {"type": "string"}},
+    "classification": {"enum": ["FACT", "INFERENCE", "UNKNOWN"]},
+    "statement": {"type": "string"},
+    "reliability": {"type": ["string", "null"]},
+    "created_at": {"type": "string"},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

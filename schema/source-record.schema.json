@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Source Record",
+  "type": "object",
+  "required": ["record_id", "incident_id", "source_id", "original_name", "reported_status", "retrieved_at"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "incident_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_record_reference": {"type": ["string", "null"]},
+    "original_name": {"type": "string"},
+    "original_text": {"type": ["string", "null"]},
+    "original_language": {"type": ["string", "null"]},
+    "transliteration": {"type": ["string", "null"]},
+    "reported_age": {"type": ["number", "null"]},
+    "reported_address": {"type": ["string", "null"]},
+    "reported_locality": {"type": ["string", "null"]},
+    "reported_ward": {"type": ["string", "null"]},
+    "reported_district": {"type": ["string", "null"]},
+    "reported_phone_numbers": {"type": "array", "items": {"type": "string"}},
+    "reported_vehicle": {"type": ["string", "null"]},
+    "reported_registration": {"type": ["string", "null"]},
+    "reported_purpose": {"type": ["string", "null"]},
+    "reported_status": {"type": "string"},
+    "photo_reference": {"type": ["string", "null"]},
+    "publication_date": {"type": ["string", "null"]},
+    "event_date": {"type": ["string", "null"]},
+    "retrieved_at": {"type": "string"},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

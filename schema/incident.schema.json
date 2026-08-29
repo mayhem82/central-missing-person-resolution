@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Incident",
+  "type": "object",
+  "required": ["incident_id", "title", "country", "event_date_start", "status"],
+  "properties": {
+    "incident_id": {"type": "string"},
+    "title": {"type": "string"},
+    "country": {"type": "string"},
+    "jurisdiction": {"type": ["string", "null"]},
+    "event_type": {"type": "string"},
+    "event_date_start": {"type": "string"},
+    "event_date_end": {"type": ["string", "null"]},
+    "geographic_scope": {"type": "string"},
+    "description": {"type": "string"},
+    "status": {"type": "string"}
+  },
+  "additionalProperties": true
+}

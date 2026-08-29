@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conflict",
+  "type": "object",
+  "required": ["conflict_id", "incident_id", "record_ids", "conflict_type", "description", "status"],
+  "properties": {
+    "conflict_id": {"type": "string"},
+    "incident_id": {"type": "string"},
+    "person_ids": {"type": "array", "items": {"type": "string"}},
+    "record_ids": {"type": "array", "items": {"type": "string"}},
+    "conflict_type": {"type": "string"},
+    "description": {"type": "string"},
+    "severity": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+    "status": {"enum": ["OPEN", "RESOLVED", "ACCEPTED_UNCERTAINTY"]},
+    "resolution": {"type": ["string", "null"]},
+    "resolved_by": {"type": ["string", "null"]},
+    "resolved_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

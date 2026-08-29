@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source",
+  "type": "object",
+  "required": ["source_id", "publisher", "authority_type", "url", "retrieved_at", "source_tier"],
+  "properties": {
+    "source_id": {"type": "string"},
+    "publisher": {"type": "string"},
+    "authority_type": {"type": "string"},
+    "url": {"type": "string"},
+    "publication_date": {"type": ["string", "null"]},
+    "retrieved_at": {"type": "string"},
+    "source_tier": {"type": "integer", "minimum": 1, "maximum": 5},
+    "language": {"type": ["string", "null"]},
+    "archived_copy": {"type": ["string", "null"]},
+    "hash": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

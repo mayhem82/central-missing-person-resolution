@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Person",
+  "type": "object",
+  "required": ["person_id", "incident_id", "preferred_name", "identity_state", "current_status"],
+  "properties": {
+    "person_id": {"type": "string"},
+    "incident_id": {"type": "string"},
+    "preferred_name": {"type": "string"},
+    "name_variants": {"type": "array", "items": {"type": "string"}},
+    "estimated_age": {"type": ["number", "null"]},
+    "home_location": {"type": ["string", "null"]},
+    "identity_state": {"enum": ["RESOLVED", "UNRESOLVED", "CONFLICTING"]},
+    "current_status": {"type": "string"},
+    "attribute_sources": {"type": "object"}
+  },
+  "additionalProperties": true
+}

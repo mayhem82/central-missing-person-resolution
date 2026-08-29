@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Identity Claim",
+  "type": "object",
+  "required": ["identity_claim_id", "person_id", "record_id", "classification", "basis", "review_state"],
+  "properties": {
+    "identity_claim_id": {"type": "string"},
+    "person_id": {"type": "string"},
+    "record_id": {"type": "string"},
+    "classification": {"enum": ["CONFIRMED_MATCH", "PROBABLE_MATCH", "POSSIBLE_MATCH", "CONFLICTING_MATCH", "EXCLUDED", "UNKNOWN"]},
+    "basis": {"type": "string"},
+    "supporting_fields": {"type": "array", "items": {"type": "string"}},
+    "conflicting_fields": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "review_state": {"enum": ["HUMAN_REVIEW_REQUIRED", "HUMAN_CONFIRMED", "HUMAN_REJECTED"]}
+  },
+  "additionalProperties": true
+}

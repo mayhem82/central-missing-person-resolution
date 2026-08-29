@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Status Event",
+  "type": "object",
+  "required": ["status_event_id", "person_id", "record_id", "status", "authority"],
+  "properties": {
+    "status_event_id": {"type": "string"},
+    "person_id": {"type": "string"},
+    "record_id": {"type": "string"},
+    "status": {"enum": ["OUT_OF_CONTACT", "MISSING_OFFICIALLY_RECORDED", "LOCATED", "RECONTACTED", "RESCUED", "HOSPITALISED", "INJURED", "DECEASED", "STATUS_UNKNOWN"]},
+    "effective_date": {"type": ["string", "null"]},
+    "publication_date": {"type": ["string", "null"]},
+    "authority": {"type": "string"},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
