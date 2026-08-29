@@ -3,11 +3,16 @@
   "scope":"national",
   "sources":[
     {"id":"SETU","url":"https://setu.ndrrma.gov.np/admin/recordlist.php","kind":"HTML","critical":true,"pagination":"discover_all","role":"affected-person register"},
+    {"id":"OPMCM_RESCUE_PORTAL","url":"https://rescue.opmcm.gov.np/","kind":"HTML","critical":true,"pagination":"discover_all","role":"official OPMCM missing/found person and rescue portal","note":"Government portal reports missing and found persons plus rescue requests; preserve as an independent source stream and reconcile rather than merge by name."},
     {"id":"POLICE_MISSING","url":"https://udb.nepalpolice.gov.np/missing?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"missing-person register","note":"large page size requested to reduce crawl latency; person rows are incident-filtered before live ingestion"},
     {"id":"POLICE_FOUND","url":"https://udb.nepalpolice.gov.np/found?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"found-person register","note":"large page size requested to reduce crawl latency; person rows are incident-filtered before live ingestion"},
     {"id":"POLICE_DISASTER_BODIES","url":"https://udb.nepalpolice.gov.np/disaster?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"disaster unidentified-body register"},
     {"id":"POLICE_ALL_BODIES","url":"https://udb.nepalpolice.gov.np/dead-bodies-lists?count=1000&page=1","kind":"HTML","critical":false,"pagination":"discover_all","role":"general unidentified-body cross-check"},
-    {"id":"DAO_MAKWANPUR_BHADRA13","url":"https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-sama-bna-thha-makava-napa-ra-ja-l-l-apada-ta-ma-ta-bha-tha-ra","kind":"HTML","critical":true,"pagination":"none","role":"district update"},
+    {"id":"DAO_RASUWA_FLOOD_HUB","url":"https://daorasuwa.moha.gov.np/en/post/bha-ta-ka-sha-b-dha-bha-tha-ra","kind":"HTML","critical":true,"pagination":"discover_all","role":"origin-district flood update hub"},
+    {"id":"DAO_RASUWA_BHADRA12_NOTICE","url":"https://daorasuwa.moha.gov.np/en/post/sa-cana-bha-ta-ka-sha-b-dha-gata","kind":"HTML","critical":true,"pagination":"none","role":"Rasuwa DAO Bhote Koshi flood notice and attached official PDF"},
+    {"id":"DAO_MAKWANPUR_BHADRA13","url":"https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-sama-bna-thha-makava-napa-ra-ja-l-l-apada-ta-ma-ta-bha-tha-ra","kind":"HTML","critical":true,"pagination":"none","role":"Makwanpur district person-status update"},
+    {"id":"DAO_BANKe_MISSING","url":"https://daobanke.moha.gov.np/en/post/missing-people-in-rasuwa-flood","kind":"HTML","critical":false,"pagination":"none","role":"district administration copy of updated out-of-contact person list"},
+    {"id":"DAO_PARSA_BHADRA13_MISSING","url":"https://daoparsa.moha.gov.np/post/rasa-va-b-dha-ma-va-pata-ta-bhaeka-ka-va-varanae","kind":"HTML","critical":true,"pagination":"none","role":"Bhadra 13 missing-person list images published by Parsa DAO"},
     {"id":"WHO_NEPAL_RASUWA_2026","url":"https://www.who.int/nepal/emergencies/2026-rasuwa-flash-floods","kind":"HTML","critical":true,"pagination":"none","role":"national geographic and health-impact scope"},
     {"id":"WHO_STATEMENT_2026_08_26","url":"https://www.who.int/nepal/news/detail/26-08-2026-who-nepal-statement-on-rasuwa-floods","kind":"HTML","critical":false,"pagination":"none","role":"health-response chronology"}
   ]
