@@ -41,7 +41,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Force baseline to latest published main
         shell: bash
         run: |
@@ -50,71 +49,54 @@ jobs:
           git checkout -B main origin/main
           git reset --hard origin/main
           echo "Baseline: $(git rev-parse HEAD)"
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Snapshot national and international authoritative sources
         run: node scripts/snapshot_sources.js
         continue-on-error: true
-
       - name: Extract location-based operational activity
         run: node scripts/extract_operational_activity.js
         continue-on-error: true
-
       - name: Parse NDRRMA Setu
         run: node scripts/ingest_setu.js
         continue-on-error: true
-
       - name: Parse Nepal Police datasets
         run: node scripts/ingest_police.js
         continue-on-error: true
-
       - name: Parse additional official source streams
         run: node scripts/ingest_additional_sources.js
         continue-on-error: true
-
       - name: Crawl OPMCM person-report application
         run: node scripts/ingest_opmcm.js
         continue-on-error: true
-
       - name: Parse Government of Nepal MOFA foreign-national cohorts
         run: node scripts/ingest_mofa_foreign_cohorts.js
         continue-on-error: true
-
       - name: Build raw national source-record dataset and version metadata
         run: node scripts/build_live_dataset.js
         continue-on-error: true
-
       - name: Build international nationality and travel cohort index
         run: npm run build:cohorts
         continue-on-error: true
-
       - name: Build deterministic reconciliation review queue
         run: node scripts/reconcile_candidates.js
         continue-on-error: true
-
       - name: Build reconciled person/entity publication dataset
         run: node scripts/build_reconciled_people.js
         continue-on-error: true
-
       - name: Assess national incident completeness
         run: node scripts/assess_completeness.js
         continue-on-error: true
-
       - name: Build privacy-preserving PFIF 1.4 interchange export
         run: npm run export:pfif
         continue-on-error: true
-
       - name: Validate evidence model
         run: npm run validate
         continue-on-error: true
-
       - name: Run tests
         run: npm test
         continue-on-error: true
-
       - name: Commit every recoverable source/data update
         if: always()
         shell: bash
@@ -122,7 +104,6 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
           git add -A data/source-snapshots \
             data/source-snapshot-state.json \
             data/setu-latest.json \
@@ -139,6 +120,7 @@ jobs:
             data/dao-parsa-bhadra13-latest.json \
             data/mofa-foreign-cohorts.json \
             data/operations-auto.json \
+            data/source-records.json \
             data/records.json \
             data/unidentified-bodies.json \
             data/update-meta.json \
@@ -148,14 +130,11 @@ jobs:
             data/completeness.json \
             data/cohort-index.json \
             data/interchange 2>/dev/null || true
-
           if git diff --cached --quiet; then
             echo 'No source or normalized-data changes.'
             exit 0
           fi
-
           git commit -m "source-watch: autonomous refresh ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}"
-
           if ! git push origin HEAD:main; then
             echo 'Main advanced while this evidence run was executing. Refusing to rebase generated evidence; the next autonomous run will rebuild from the latest published main.' >&2
             exit 1
