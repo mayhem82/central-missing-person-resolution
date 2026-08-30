@@ -1,7 +1,7 @@
 {
-  "incident_id":"NEPAL-2026-08-26-FLOOD",
-  "scope":"national",
-  "sources":[
+  "incident_id": "NEPAL-2026-08-26-FLOOD",
+  "scope": "national-and-international",
+  "sources": [
     {"id":"SETU","url":"https://setu.ndrrma.gov.np/admin/recordlist.php","kind":"HTML","critical":true,"pagination":"discover_all","role":"affected-person register"},
     {"id":"OPMCM_RESCUE_PORTAL","url":"https://rescue.opmcm.gov.np/","kind":"HTML","critical":true,"pagination":"discover_all","role":"official OPMCM missing/found person and rescue portal","note":"Government portal reports missing and found persons plus rescue requests; preserve as an independent source stream and reconcile rather than merge by name."},
     {"id":"POLICE_MISSING","url":"https://udb.nepalpolice.gov.np/missing?count=1000&page=1","kind":"HTML","critical":true,"pagination":"discover_all","role":"missing-person register","note":"large page size requested to reduce crawl latency; person rows are incident-filtered before live ingestion"},
@@ -13,6 +13,22 @@
     {"id":"DAO_MAKWANPUR_BHADRA13","url":"https://daomakawanpur.moha.gov.np/post/rasa-va-ghatana-sama-bna-thha-makava-napa-ra-ja-l-l-apada-ta-ma-ta-bha-tha-ra","kind":"HTML","critical":true,"pagination":"none","role":"Makwanpur district person-status update"},
     {"id":"DAO_BANKe_MISSING","url":"https://daobanke.moha.gov.np/en/post/missing-people-in-rasuwa-flood","kind":"HTML","critical":false,"pagination":"none","role":"district administration copy of updated out-of-contact person list"},
     {"id":"DAO_PARSA_BHADRA13_MISSING","url":"https://daoparsa.moha.gov.np/post/rasa-va-b-dha-ma-va-pata-ta-bhaeka-ka-va-varanae","kind":"HTML","critical":true,"pagination":"none","role":"Bhadra 13 missing-person list images published by Parsa DAO"},
+
+    {"id":"MOFA_NEPAL_FLASHFLOOD_INDEX","url":"https://mofa.gov.np/category/flashflood/","kind":"HTML","critical":true,"pagination":"none","role":"Government of Nepal foreign-national incident update index","note":"Central official channel for foreign-national verification and consular coordination."},
+    {"id":"MOFA_NEPAL_2026_08_26","url":"https://www.mofa.gov.np/content/1865/latest-updates-on-flash-floods--26-august/","kind":"HTML","critical":false,"pagination":"none","role":"Government of Nepal foreign-national aggregate chronology — 26 August"},
+    {"id":"MOFA_NEPAL_2026_08_27","url":"https://www.mofa.gov.np/content/1863/latest-/","kind":"HTML","critical":true,"pagination":"none","role":"Government of Nepal foreign-national country counts — 27 August","note":"Includes country-level total/found/still-missing counts sourced to NDRRMA and Nepal Tourism Board."},
+    {"id":"MOFA_NEPAL_2026_08_28","url":"https://mofa.gov.np/content/1864/latest-updates-on-flash-floods--28-august/","kind":"HTML","critical":true,"pagination":"none","role":"Government of Nepal foreign-national country counts — 28 August","note":"Includes country-level total/found/still-missing counts sourced to NDRRMA and Nepal Tourism Board."},
+    {"id":"MOFA_NEPAL_ECR","url":"https://www.mofa.gov.np/content/1862/notice--emergency-control-room--ecr--for-assistance/","kind":"HTML","critical":true,"pagination":"none","role":"Government of Nepal Emergency Control Room for foreign nationals"},
+
+    {"id":"NRCS_RASUWA_SITREP_2","url":"https://nrcs.org/resources/news-and-events/situation-report-27-08-2026/","kind":"HTML","critical":false,"pagination":"none","role":"Nepal Red Cross operational situation report and Restoring Family Links activity"},
+    {"id":"NRCS_RASUWA_SITREP_3","url":"https://nrcs.org/resources/news-and-events/situation-report3-8282026/","kind":"HTML","critical":false,"pagination":"none","role":"Nepal Red Cross operational situation report"},
+    {"id":"NRCS_PRESENCE","url":"https://nrcs.org/our-presence/","kind":"HTML","critical":false,"pagination":"none","role":"Nepal Red Cross district service directory, including Rasuwa chapter"},
+
+    {"id":"DFAT_AUSTRALIA_NEPAL_RESPONSE","url":"https://ministers.dfat.gov.au/minister/anne-aly/media-release/australias-response-nepal-china-floods","kind":"HTML","critical":false,"pagination":"none","role":"Australian Government consular and humanitarian response"},
+    {"id":"SMARTRAVELLER_NEPAL_CRISIS","url":"https://www.smartraveller.gov.au/destinations/asia/crisis-alert","kind":"HTML","critical":false,"pagination":"none","role":"Australian Government current crisis and consular guidance"},
+    {"id":"FCDO_UK_NEPAL_FLOOD_RESPONSE","url":"https://www.gov.uk/government/news/pm-statement-in-response-to-flooding-along-the-nepal-china-border-26-august-2026","kind":"HTML","critical":false,"pagination":"none","role":"UK Government response concerning British nationals"},
+    {"id":"JAPAN_MOFA_NEPAL_FLOOD_RESPONSE","url":"https://www.mofa.go.jp/s_sa/sw/np/pageite_000001_01779.html","kind":"HTML","critical":false,"pagination":"none","role":"Japan Ministry of Foreign Affairs response concerning Japanese nationals"},
+
     {"id":"WHO_NEPAL_RASUWA_2026","url":"https://www.who.int/nepal/emergencies/2026-rasuwa-flash-floods","kind":"HTML","critical":true,"pagination":"none","role":"national geographic and health-impact scope"},
     {"id":"WHO_STATEMENT_2026_08_26","url":"https://www.who.int/nepal/news/detail/26-08-2026-who-nepal-statement-on-rasuwa-floods","kind":"HTML","critical":false,"pagination":"none","role":"health-response chronology"}
   ]
