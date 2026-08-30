@@ -2,19 +2,22 @@ const fs=require('fs');
 const INCIDENT='NEPAL-2026-08-26-FLOOD';
 function readJson(path,fallback){try{return JSON.parse(fs.readFileSync(path,'utf8'))}catch{return fallback}}
 const cohortRegister=readJson('data/international-cohorts.json',{cohorts:[]});
+const mofaRegister=readJson('data/mofa-foreign-cohorts.json',{cohorts:[],source_health:[]});
 const live=readJson('data/records.json',{records:[]});
 const australian=readJson('data/australian-cohort.json',{records:[]});
 
-const nationalityClaims=cohortRegister.cohorts.filter(c=>c.type==='NATIONALITY');
-const operatorClaims=cohortRegister.cohorts.filter(c=>c.type==='TOUR_OPERATOR'||c.type==='TOUR_ORGANISATION');
-const aggregateClaims=cohortRegister.cohorts.filter(c=>String(c.type).startsWith('AGGREGATE_'));
+const historicalClaims=cohortRegister.cohorts||[];
+const officialMofaClaims=mofaRegister.cohorts||[];
+const nationalityClaims=[...historicalClaims.filter(c=>c.type==='NATIONALITY'),...officialMofaClaims.filter(c=>c.type==='NATIONALITY')];
+const operatorClaims=historicalClaims.filter(c=>c.type==='TOUR_OPERATOR'||c.type==='TOUR_ORGANISATION');
+const aggregateClaims=historicalClaims.filter(c=>String(c.type).startsWith('AGGREGATE_'));
 
 const byNationality={};
 for(const c of nationalityClaims){
   const k=c.nationality||'UNKNOWN';
   (byNationality[k]??=[]).push(c);
 }
-for(const arr of Object.values(byNationality)) arr.sort((a,b)=>String(a.as_of||'').localeCompare(String(b.as_of||'')));
+for(const arr of Object.values(byNationality)) arr.sort((a,b)=>String(a.as_of||'').localeCompare(String(b.as_of||''))||String(a.source_name||'').localeCompare(String(b.source_name||'')));
 
 const personCohorts={nationality:{},connection:{},operator:{}};
 function add(bucket,key,id){if(!key||!id)return;(bucket[key]??=[]).push(id)}
@@ -58,13 +61,16 @@ const output={
     'Person-level cohort filters use explicit record membership or an explicit source-cohort assignment, never free-text inference.',
     'Nationality and country-of-residence/connection are distinct.',
     'Australian-cohort records are assigned to Country connection — Australia unless citizenship is explicitly stated.',
-    'A later source claim does not erase an earlier claim; chronology is preserved.'
+    'A later source claim does not erase an earlier claim; chronology is preserved.',
+    'Government of Nepal MOFA country rows are aggregate official claims and must never create synthetic person records.'
   ],
   nationality_count:Object.keys(byNationality).length,
   nationality_claims:byNationality,
+  official_mofa_source_health:mofaRegister.source_health||[],
+  official_mofa_claim_count:officialMofaClaims.length,
   operator_claims:operatorClaims,
   aggregate_foreign_claims:aggregateClaims,
   person_level_membership:personCohorts
 };
 fs.writeFileSync('data/cohort-index.json',JSON.stringify(output,null,2)+'\n');
-console.log(JSON.stringify({nationalities:output.nationality_count,operator_claims:operatorClaims.length,aggregate_claims:aggregateClaims.length,person_records:(live.records||[]).length,australia_connected:(personCohorts.connection.Australia||[]).length},null,2));
+console.log(JSON.stringify({nationalities:output.nationality_count,official_mofa_claims:officialMofaClaims.length,operator_claims:operatorClaims.length,aggregate_claims:aggregateClaims.length,person_records:(live.records||[]).length,australia_connected:(personCohorts.connection.Australia||[]).length},null,2));
