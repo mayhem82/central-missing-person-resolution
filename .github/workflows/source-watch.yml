@@ -7,6 +7,7 @@ on:
       - 'scripts/ingest_setu.js'
       - 'scripts/ingest_police.js'
       - 'scripts/ingest_additional_sources.js'
+      - 'scripts/ingest_mofa_foreign_cohorts.js'
       - 'scripts/build_live_dataset.js'
       - 'scripts/build_cohort_index.js'
       - 'scripts/reconcile_candidates.js'
@@ -18,6 +19,7 @@ on:
       - 'data/public-social-claims.json'
       - 'data/australian-cohort.json'
       - 'data/international-cohorts.json'
+      - 'data/service-registry.json'
       - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
   schedule:
@@ -49,7 +51,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Snapshot national authoritative sources
+      - name: Snapshot national and international authoritative sources
         run: node scripts/snapshot_sources.js
         continue-on-error: true
 
@@ -63,6 +65,10 @@ jobs:
 
       - name: Parse additional official source streams
         run: node scripts/ingest_additional_sources.js
+        continue-on-error: true
+
+      - name: Parse Government of Nepal MOFA foreign-national cohorts
+        run: node scripts/ingest_mofa_foreign_cohorts.js
         continue-on-error: true
 
       - name: Build unified national live dataset and version metadata
@@ -114,6 +120,7 @@ jobs:
             data/dao-makwanpur-bhadra13-latest.json \
             data/dao-banke-latest.json \
             data/dao-parsa-bhadra13-latest.json \
+            data/mofa-foreign-cohorts.json \
             data/records.json \
             data/unidentified-bodies.json \
             data/update-meta.json \
