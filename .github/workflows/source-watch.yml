@@ -8,6 +8,7 @@ on:
       - 'scripts/ingest_police.js'
       - 'scripts/ingest_additional_sources.js'
       - 'scripts/ingest_mofa_foreign_cohorts.js'
+      - 'scripts/extract_operational_activity.js'
       - 'scripts/build_live_dataset.js'
       - 'scripts/build_cohort_index.js'
       - 'scripts/reconcile_candidates.js'
@@ -20,6 +21,7 @@ on:
       - 'data/australian-cohort.json'
       - 'data/international-cohorts.json'
       - 'data/service-registry.json'
+      - 'data/operations-by-location.json'
       - 'incidents/nepal-2026-08-26/**'
       - '.github/workflows/source-watch.yml'
   schedule:
@@ -53,6 +55,10 @@ jobs:
 
       - name: Snapshot national and international authoritative sources
         run: node scripts/snapshot_sources.js
+        continue-on-error: true
+
+      - name: Extract location-based operational activity
+        run: node scripts/extract_operational_activity.js
         continue-on-error: true
 
       - name: Parse NDRRMA Setu
@@ -121,6 +127,7 @@ jobs:
             data/dao-banke-latest.json \
             data/dao-parsa-bhadra13-latest.json \
             data/mofa-foreign-cohorts.json \
+            data/operations-auto.json \
             data/records.json \
             data/unidentified-bodies.json \
             data/update-meta.json \
