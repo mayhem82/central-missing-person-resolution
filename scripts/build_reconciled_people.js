@@ -17,7 +17,6 @@ function statusClass(statuses){
 const recordsDoc=json('data/records.json',{records:[]});
 const candidates=json('data/reconciliation-candidates.json',{identity_links:[]});
 const records=recordsDoc.records||[];
-const byId=new Map(records.map(r=>[String(r.id),r]));
 const parent=new Map(records.map(r=>[String(r.id),String(r.id)]));
 function find(x){let p=parent.get(x);if(p===undefined)return null;while(p!==parent.get(p)){parent.set(p,parent.get(parent.get(p)));p=parent.get(p)}return p}
 function union(a,b){const ra=find(a),rb=find(b);if(!ra||!rb||ra===rb)return;parent.set(rb,ra)}
@@ -74,16 +73,19 @@ for(const rows of groups.values()){
     detail_variants:uniq([...detailsEn,...detailsRaw]),
     source_url:sourceUrls[0]||'',
     source_urls:sourceUrls,
-    reconciliation_note:rows.length>1?'Multiple independent source records were linked by the deterministic reconciliation rules.':'No sufficiently strong cross-source identity link has yet been established.'
+    reconciliation_note:rows.length>1?'Multiple independent source records were linked by deterministic reconciliation rules.':'No sufficiently strong cross-source identity link has yet been established.'
   });
 }
 entities.sort((a,b)=>String(a.name_en||a.name).localeCompare(String(b.name_en||b.name),'en',{sensitivity:'base'})||a.id.localeCompare(b.id));
 const status_counts={};for(const e of entities)status_counts[e.status]=(status_counts[e.status]||0)+1;
+const generated_at=new Date().toISOString();
 const output={
   incident_id:INCIDENT,
   scope:'national',
-  generated_at:new Date().toISOString(),
+  generated_at,
   dataset_version:recordsDoc.dataset_version||null,
+  source_watch_run_id:recordsDoc.source_watch_run_id||null,
+  source_watch_run_number:recordsDoc.source_watch_run_number||null,
   publication_model:'RECONCILED_PERSON_ENTITIES',
   raw_source_record_count:records.length,
   reconciled_person_count:entities.length,
@@ -95,5 +97,8 @@ const output={
   records:entities
 };
 fs.writeFileSync('data/reconciled-people.json',JSON.stringify(output,null,2)+'\n');
+fs.writeFileSync('data/records.json',JSON.stringify(output,null,2)+'\n');
+const meta=json('data/update-meta.json',{});
+fs.writeFileSync('data/update-meta.json',JSON.stringify({...meta,generated_at,publication_model:output.publication_model,raw_source_record_count:records.length,reconciled_person_count:entities.length,cross_source_reconciled_count:output.cross_source_reconciled_count,accepted_identity_link_count:accepted.length,review_identity_link_count:review.length},null,2)+'\n');
 console.log(JSON.stringify({raw_source_records:records.length,reconciled_people:entities.length,cross_source_reconciled:output.cross_source_reconciled_count,accepted_identity_links:accepted.length,review_identity_links:review.length},null,2));
 if(!entities.length)process.exitCode=3;
