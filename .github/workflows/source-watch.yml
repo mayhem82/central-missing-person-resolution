@@ -13,6 +13,7 @@ on:
       - 'scripts/build_live_dataset.js'
       - 'scripts/build_cohort_index.js'
       - 'scripts/reconcile_candidates.js'
+      - 'scripts/build_reconciled_people.js'
       - 'scripts/assess_completeness.js'
       - 'scripts/export_pfif.js'
       - 'data/source-manifest.json'
@@ -82,7 +83,7 @@ jobs:
         run: node scripts/ingest_mofa_foreign_cohorts.js
         continue-on-error: true
 
-      - name: Build unified national live dataset and version metadata
+      - name: Build raw national source-record dataset and version metadata
         run: node scripts/build_live_dataset.js
         continue-on-error: true
 
@@ -92,6 +93,10 @@ jobs:
 
       - name: Build deterministic reconciliation review queue
         run: node scripts/reconcile_candidates.js
+        continue-on-error: true
+
+      - name: Build reconciled person/entity publication dataset
+        run: node scripts/build_reconciled_people.js
         continue-on-error: true
 
       - name: Assess national incident completeness
@@ -139,6 +144,7 @@ jobs:
             data/update-meta.json \
             data/change-summary.json \
             data/reconciliation-candidates.json \
+            data/reconciled-people.json \
             data/completeness.json \
             data/cohort-index.json \
             data/interchange 2>/dev/null || true
