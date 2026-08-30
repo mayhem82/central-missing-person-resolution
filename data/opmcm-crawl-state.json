@@ -1,0 +1,92 @@
+{
+  "incident_id": "NEPAL-2026-08-26-FLOOD",
+  "source": "OPMCM_RESCUE_PORTAL",
+  "started_at": "2026-08-30T00:51:01.873Z",
+  "finished_at": "2026-08-30T00:54:56.490Z",
+  "root_http_status": 200,
+  "bundle_url": "https://rescue.opmcm.gov.np/assets/index-BJdOU_x4.js",
+  "candidate_endpoints": [
+    "/api/person-reports",
+    "/api/person-reports?limit=100&page=1",
+    "/api/person-reports?per_page=100&page=1",
+    "/api/person-reports?status=missing&limit=100&page=1",
+    "/api/person-reports?status=found&limit=100&page=1",
+    "/api/person-lost-found",
+    "/api/persons",
+    "/api/missing-persons",
+    "/api/found-persons"
+  ],
+  "working_endpoints": [
+    "/api/person-reports",
+    "/api/person-reports?limit=100&page=1",
+    "/api/person-reports?per_page=100&page=1"
+  ],
+  "probe_results": [
+    {
+      "endpoint": "/api/person-reports",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
+    },
+    {
+      "endpoint": "/api/person-reports?limit=100&page=1",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
+    },
+    {
+      "endpoint": "/api/person-reports?per_page=100&page=1",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
+    },
+    {
+      "endpoint": "/api/person-reports?status=missing&limit=100&page=1",
+      "http_status": 400,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    },
+    {
+      "endpoint": "/api/person-reports?status=found&limit=100&page=1",
+      "http_status": 400,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    },
+    {
+      "endpoint": "/api/person-lost-found",
+      "http_status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    },
+    {
+      "endpoint": "/api/persons",
+      "http_status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    },
+    {
+      "endpoint": "/api/missing-persons",
+      "http_status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    },
+    {
+      "endpoint": "/api/found-persons",
+      "http_status": 404,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
+    }
+  ],
+  "records_extracted": 16777,
+  "preserved_previous_dataset": false,
+  "errors": []
+}
