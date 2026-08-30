@@ -1,20 +1,20 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "dataset_version": "SW-39",
-  "generated_at": "2026-08-30T00:54:57.951Z",
-  "source_watch_run_id": "33283973145",
-  "source_watch_run_number": "39",
+  "dataset_version": "SW-44",
+  "generated_at": "2026-08-30T05:37:07.828Z",
+  "source_watch_run_id": "33294627441",
+  "source_watch_run_number": "44",
   "source_watch_run_attempt": "1",
-  "trigger_commit_sha": "8817e3fdf4059687db4db66c9fa9857cac0f53e1",
+  "trigger_commit_sha": "ac099daf04d3d63eb6c0ce9ff56d851b97595dc0",
   "repository": "mayhem82/central-missing-person-resolution",
   "history_url": "https://github.com/mayhem82/central-missing-person-resolution/commits/main",
-  "record_count": 18534,
+  "raw_source_record_count": 16057,
   "unidentified_body_record_count": 20,
   "source_counts": {
     "CURATED": 4,
     "AUSTRALIAN_PUBLIC_COHORT": 18,
-    "NDRRMA_SETU": 1731,
-    "OPMCM_RESCUE_PORTAL": 16777,
+    "NDRRMA_SETU": 1738,
+    "OPMCM_RESCUE_PORTAL": 14293,
     "NEPAL_POLICE_MISSING": 2,
     "NEPAL_POLICE_FOUND": 0,
     "DAO_RASUWA_FLOOD_HUB": 0,
@@ -24,18 +24,23 @@
     "DAO_PARSA_BHADRA13_MISSING": 0
   },
   "status_counts": {
-    "MISSING": 2630,
-    "OUT_OF_CONTACT": 4883,
-    "STATUS_UNKNOWN": 5306,
-    "RESCUED": 5211,
-    "FOUND_SAFE": 428,
-    "FOUND_DEAD": 43,
-    "FOUND_INJURED": 33
+    "MISSING": 2668,
+    "OUT_OF_CONTACT": 4100,
+    "STATUS_UNKNOWN": 5351,
+    "RESCUED": 3426,
+    "FOUND_SAFE": 406,
+    "FOUND_DEAD": 42,
+    "FOUND_INJURED": 64
   },
   "change_summary": {
-    "person_record_change_count": 16803,
-    "added_count": 16803,
+    "person_record_change_count": 16057,
+    "added_count": 16057,
     "updated_count": 0,
     "removed_count": 0
-  }
+  },
+  "publication_model": "RECONCILED_PERSON_ENTITIES",
+  "reconciled_person_count": 16057,
+  "cross_source_reconciled_count": 0,
+  "accepted_identity_link_count": 0,
+  "review_identity_link_count": 2599
 }
