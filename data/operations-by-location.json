@@ -1,0 +1,259 @@
+{
+  "incident_id": "NEPAL-2026-08-26-FLOOD",
+  "scope": "location-based operational activity",
+  "generated_at": "2026-08-30T00:33:00Z",
+  "rules": [
+    "Each entry is a dated operational source claim, not proof that an area has been exhaustively searched or cleared.",
+    "Search, rescue, recovery, road clearance, relief, family tracing, infrastructure assessment, sanitation and risk monitoring are distinct categories.",
+    "A location may have multiple simultaneous activities and multiple source claims.",
+    "Completed activity at one named site must not be generalized to the surrounding district.",
+    "Person-status conclusions must come from person-level evidence, not from operational activity alone."
+  ],
+  "categories": [
+    "SEARCH_RESCUE",
+    "HUMAN_REMAINS_RECOVERY",
+    "EVACUATION",
+    "ROAD_CLEARANCE",
+    "ACCESS_RESTORATION",
+    "RELIEF_DISTRIBUTION",
+    "FAMILY_TRACING",
+    "SHELTER_SUPPORT",
+    "INFRASTRUCTURE_ASSESSMENT",
+    "WATER_SANITATION_FUEL",
+    "RISK_MONITORING",
+    "FOREIGN_NATIONAL_COORDINATION"
+  ],
+  "activities": [
+    {
+      "id": "OPS-20260829-RASUWA-SEARCH-001",
+      "as_of": "2026-08-29",
+      "district": "Rasuwa",
+      "location": "Rasuwa district / Bhote Koshi corridor",
+      "category": "SEARCH_RESCUE",
+      "status": "ONGOING",
+      "activity": "National search and rescue operations continued with Nepal Army, Nepal Police, Armed Police Force and other responders; operations had resumed after weather and secondary-flood concerns.",
+      "source_name": "Reuters",
+      "source_url": "https://www.reuters.com/world/china/nepal-needs-help-technical-areas-not-search-rescue-foreign-minister-says-2026-08-29/"
+    },
+    {
+      "id": "OPS-20260829-TRISHULI-HYDRO-001",
+      "as_of": "2026-08-29",
+      "district": "Rasuwa/Nuwakot corridor",
+      "location": "Upper Trishuli-1 Hydropower Project",
+      "category": "SEARCH_RESCUE",
+      "status": "ONGOING",
+      "activity": "Search efforts were focused on the hydropower project, including a mud-filled tunnel where more than 100 people were feared trapped; tunnel rescues were reported as part of the wider operation.",
+      "source_name": "Associated Press / Radio Nepal",
+      "source_url": "https://apnews.com/article/fde34c839b648f93f6aa011f044deb00"
+    },
+    {
+      "id": "OPS-20260829-AIR-SHUTTLE-001",
+      "as_of": "2026-08-29",
+      "district": "Rasuwa/Nuwakot",
+      "location": "Dhunche · Trishuli · Timure · Syafrubesi",
+      "category": "EVACUATION",
+      "status": "ONGOING",
+      "activity": "Sixteen Nepal Army and private-sector helicopters were operating shuttle flights through these locations for evacuation, rescue and supply movement.",
+      "source_name": "Radio Nepal",
+      "source_url": "https://radionepalonline.com/en/2026/08/29/434950.html"
+    },
+    {
+      "id": "OPS-20260829-RASUWA-ROAD-001",
+      "as_of": "2026-08-29",
+      "district": "Rasuwa",
+      "location": "Bogatitar–Kalikasthan–Dhunche route",
+      "category": "ACCESS_RESTORATION",
+      "status": "RESTORED_LIMITED",
+      "activity": "Road connectivity to Rasuwa was restored through the Bogatitar–Kalikasthan–Dhunche route, reconnecting the district to the national road network for small four-wheeled vehicles.",
+      "source_name": "Radio Nepal / NDRRMA reporting",
+      "source_url": "https://radionepalonline.com/en/2026/08/29/434950.html"
+    },
+    {
+      "id": "OPS-20260829-BAIRENI-001",
+      "as_of": "2026-08-29",
+      "district": "Dhading",
+      "location": "Baireni Bazaar / Prithvi Highway",
+      "category": "ROAD_CLEARANCE",
+      "status": "ONGOING",
+      "activity": "Authorities were clearing mud and flood debris from a remaining constrained section of the Prithvi Highway near Baireni Bazaar; excavators were deployed and traffic was progressively restored.",
+      "source_name": "The Farsight Nepal",
+      "source_url": "https://farsightnepal.com/news/road-links-restored-to-flood-hit-rasuwa-as-prithvi-highway-reopens/"
+    },
+    {
+      "id": "OPS-20260828-DEVIGHAT-001",
+      "as_of": "2026-08-28",
+      "district": "Nuwakot",
+      "location": "Devighat",
+      "category": "ROAD_CLEARANCE",
+      "status": "COMPLETED_SITE",
+      "activity": "Road clearance at Devighat was reported completed.",
+      "source_name": "NDRRMA report relayed by Khabarhub",
+      "source_url": "https://english.khabarhub.com/2026/28/565289/"
+    },
+    {
+      "id": "OPS-20260828-GALCHHI-BIDUR-001",
+      "as_of": "2026-08-28",
+      "district": "Nuwakot/Dhading",
+      "location": "Galchhi–Bidur–Trishuli corridor",
+      "category": "ROAD_CLEARANCE",
+      "status": "ONGOING",
+      "activity": "Heavy equipment was mobilized to remove flood debris and restore transport services along the corridor.",
+      "source_name": "NDRRMA report relayed by Khabarhub",
+      "source_url": "https://english.khabarhub.com/2026/28/565289/"
+    },
+    {
+      "id": "OPS-20260828-DHUNCHE-GRANG-001",
+      "as_of": "2026-08-28",
+      "district": "Rasuwa",
+      "location": "Dhunche–Grang road section",
+      "category": "ROAD_CLEARANCE",
+      "status": "ONGOING",
+      "activity": "A hill excavator, loader and tipper were deployed for road clearance.",
+      "source_name": "NDRRMA report relayed by Khabarhub",
+      "source_url": "https://english.khabarhub.com/2026/28/565289/"
+    },
+    {
+      "id": "OPS-20260828-BIDUR-TRISHULI-DHUNGE-001",
+      "as_of": "2026-08-28",
+      "district": "Nuwakot",
+      "location": "Bidur–Trishuli–Dhunge road section",
+      "category": "ROAD_CLEARANCE",
+      "status": "ONGOING",
+      "activity": "Three heavy-equipment units were deployed for obstruction removal and road restoration.",
+      "source_name": "NDRRMA report relayed by Khabarhub",
+      "source_url": "https://english.khabarhub.com/2026/28/565289/"
+    },
+    {
+      "id": "OPS-20260828-BAIRENI-MUGLIN-001",
+      "as_of": "2026-08-28",
+      "district": "Dhading corridor",
+      "location": "Baireni–Muglin road section",
+      "category": "ROAD_CLEARANCE",
+      "status": "ONGOING",
+      "activity": "A backhoe was deployed and an additional wheel loader was being arranged from the Nuwakot Road Division.",
+      "source_name": "NDRRMA report relayed by Khabarhub",
+      "source_url": "https://english.khabarhub.com/2026/28/565289/"
+    },
+    {
+      "id": "OPS-20260827-NUWAKOT-RFL-001",
+      "as_of": "2026-08-27",
+      "district": "Nuwakot",
+      "location": "Nuwakot",
+      "category": "FAMILY_TRACING",
+      "status": "ACTIVE",
+      "activity": "Nepal Red Cross established a Restoring Family Links help desk to help affected people contact relatives by phone.",
+      "source_name": "Nepal Red Cross Society Situation Report #2",
+      "source_url": "https://nrcs.org/resources/news-and-events/situation-report-27-08-2026/"
+    },
+    {
+      "id": "OPS-20260827-NUWAKOT-ASSESS-001",
+      "as_of": "2026-08-27",
+      "district": "Nuwakot",
+      "location": "Affected areas of Nuwakot",
+      "category": "INFRASTRUCTURE_ASSESSMENT",
+      "status": "ONGOING",
+      "activity": "Fifteen Nepal Red Cross volunteers were oriented on Initial Rapid Assessment and mobilized for affected-area data collection.",
+      "source_name": "Nepal Red Cross Society Situation Report #2",
+      "source_url": "https://nrcs.org/resources/news-and-events/situation-report-27-08-2026/"
+    },
+    {
+      "id": "OPS-20260826-BIDUR-RELIEF-001",
+      "as_of": "2026-08-26",
+      "district": "Nuwakot",
+      "location": "Bidur wards 1, 2 and 5 / Trisuli Bazar",
+      "category": "RELIEF_DISTRIBUTION",
+      "status": "DELIVERED",
+      "activity": "Nepal Red Cross distributed ready-to-eat food to 750 people across Kriyaputri Bhawan, Yoga Kendra, Ayurvedic Hospital, Chandra Jyoti school and Trisuli Bazar, with blankets and mattresses also distributed at selected sites.",
+      "source_name": "Nepal Red Cross Society",
+      "source_url": "https://nrcs.org/highlight/10/"
+    },
+    {
+      "id": "OPS-20260827-NUWAKOT-SHELTER-001",
+      "as_of": "2026-08-27",
+      "district": "Nuwakot",
+      "location": "Bidur · Kispang shelters",
+      "category": "SHELTER_SUPPORT",
+      "status": "ACTIVE",
+      "activity": "Nepal Red Cross volunteers were supporting meal management and shelter populations at Ayurvedic Hospital, Archale, Chaapdanda, Bidur Kriyaputri shelter and Yogbhawan shelter.",
+      "source_name": "Nepal Red Cross Society",
+      "source_url": "https://nrcs.org/highlight/10/"
+    },
+    {
+      "id": "OPS-20260829-NATIONAL-ASSESS-001",
+      "as_of": "2026-08-29",
+      "district": "Multiple affected districts",
+      "location": "Roads · bridges · electricity · drinking water · telecommunications · hydropower",
+      "category": "INFRASTRUCTURE_ASSESSMENT",
+      "status": "ONGOING",
+      "activity": "Fifteen technical teams and sectoral groups were deployed for a comprehensive damage assessment across critical infrastructure sectors.",
+      "source_name": "Radio Nepal",
+      "source_url": "https://radionepalonline.com/en/2026/08/29/434950.html"
+    },
+    {
+      "id": "OPS-20260829-NATIONAL-WASH-001",
+      "as_of": "2026-08-29",
+      "district": "Multiple affected districts",
+      "location": "Affected communities",
+      "category": "WATER_SANITATION_FUEL",
+      "status": "ONGOING",
+      "activity": "Authorities reported arrangements for drinking water, fuel and sanitation as part of the post-disaster response.",
+      "source_name": "Radio Nepal",
+      "source_url": "https://radionepalonline.com/en/2026/08/29/434950.html"
+    },
+    {
+      "id": "OPS-20260829-BHOTEKOSHI-RISK-001",
+      "as_of": "2026-08-29",
+      "district": "Rasuwa and downstream basin",
+      "location": "Bhote Koshi and lower basin",
+      "category": "RISK_MONITORING",
+      "status": "ACTIVE_ALERT",
+      "activity": "Authorities continued monitoring for a possible fresh flood and urged people in risk locations to move to safe areas.",
+      "source_name": "Radio Nepal",
+      "source_url": "https://radionepalonline.com/en/2026/08/29/434950.html"
+    },
+    {
+      "id": "OPS-20260829-FOREIGN-001",
+      "as_of": "2026-08-29",
+      "district": "National / foreign-national cases",
+      "location": "Nepal disaster response and consular network",
+      "category": "FOREIGN_NATIONAL_COORDINATION",
+      "status": "ONGOING",
+      "activity": "Special coordination continued for search, rescue and identification of foreign nationals through Nepal's Ministry of Foreign Affairs Emergency Control Room, embassies and families.",
+      "source_name": "Radio Nepal / Nepal MOFA",
+      "source_url": "https://mofa.gov.np/content/1866/press-briefing-by-hon--minister-for-foreign/"
+    },
+    {
+      "id": "OPS-20260829-CHITWAN-RECOVERY-001",
+      "as_of": "2026-08-29",
+      "district": "Chitwan",
+      "location": "Chitwan district",
+      "category": "HUMAN_REMAINS_RECOVERY",
+      "status": "ONGOING",
+      "activity": "Chitwan had the largest reported downstream body-recovery count in the 29 August NDRRMA update, indicating a major recovery and identification workload downstream from the source area.",
+      "source_name": "NDRRMA update relayed by INSEC",
+      "source_url": "https://inseconline.org/en/main_news/156199/"
+    },
+    {
+      "id": "OPS-20260829-NAWALPARASI-E-RECOVERY-001",
+      "as_of": "2026-08-29",
+      "district": "Nawalparasi East",
+      "location": "Nawalparasi East district",
+      "category": "HUMAN_REMAINS_RECOVERY",
+      "status": "ONGOING",
+      "activity": "Large downstream body-recovery numbers were reported, making this a major recovery and identification location rather than only a distant impact district.",
+      "source_name": "NDRRMA update relayed by INSEC",
+      "source_url": "https://inseconline.org/en/main_news/156199/"
+    },
+    {
+      "id": "OPS-20260829-DHADING-RECOVERY-001",
+      "as_of": "2026-08-29",
+      "district": "Dhading",
+      "location": "Dhading district / Trishuli corridor",
+      "category": "HUMAN_REMAINS_RECOVERY",
+      "status": "ONGOING",
+      "activity": "Downstream body recovery continued in Dhading while road clearance and access restoration were also underway on major transport corridors.",
+      "source_name": "NDRRMA update relayed by INSEC",
+      "source_url": "https://inseconline.org/en/main_news/156199/"
+    }
+  ]
+}
