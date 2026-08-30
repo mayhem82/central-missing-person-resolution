@@ -7,6 +7,7 @@ on:
       - 'scripts/ingest_setu.js'
       - 'scripts/ingest_police.js'
       - 'scripts/ingest_additional_sources.js'
+      - 'scripts/ingest_opmcm.js'
       - 'scripts/ingest_mofa_foreign_cohorts.js'
       - 'scripts/extract_operational_activity.js'
       - 'scripts/build_live_dataset.js'
@@ -73,6 +74,10 @@ jobs:
         run: node scripts/ingest_additional_sources.js
         continue-on-error: true
 
+      - name: Crawl OPMCM person-report application
+        run: node scripts/ingest_opmcm.js
+        continue-on-error: true
+
       - name: Parse Government of Nepal MOFA foreign-national cohorts
         run: node scripts/ingest_mofa_foreign_cohorts.js
         continue-on-error: true
@@ -121,6 +126,7 @@ jobs:
             data/police-found-latest.json \
             data/police-bodies-latest.json \
             data/opmcm-latest.json \
+            data/opmcm-crawl-state.json \
             data/dao-rasuwa-latest.json \
             data/dao-rasuwa-bhadra12-latest.json \
             data/dao-makwanpur-bhadra13-latest.json \
