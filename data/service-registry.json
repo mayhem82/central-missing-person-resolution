@@ -10,105 +10,23 @@
     "Any status received from a service must be recorded as a dated source claim with provenance rather than silently overwriting prior evidence."
   ],
   "services": [
-    {
-      "id": "OPMCM_RESCUE_PORTAL",
-      "name": "Rasuwa Flood Rescue Portal — Office of the Prime Minister and Council of Ministers",
-      "country": "Nepal",
-      "service_type": ["MISSING_PERSON_SEARCH", "FOUND_PERSON_SEARCH", "RESCUE_REQUEST", "HELP_OFFER", "EMERGENCY_CONTACTS"],
-      "url": "https://rescue.opmcm.gov.np/",
-      "priority": "PRIMARY_OPERATIONAL"
-    },
-    {
-      "id": "MOFA_NEPAL_ECR",
-      "name": "Ministry of Foreign Affairs Emergency Control Room",
-      "country": "Nepal",
-      "service_type": ["FOREIGN_NATIONAL_VERIFICATION", "CONSULAR_COORDINATION", "INFORMATION_VERIFICATION"],
-      "url": "https://www.mofa.gov.np/content/1862/notice--emergency-control-room--ecr--for-assistance/",
-      "hotline_whatsapp": ["+977-9744441227", "+977-9744441228"],
-      "hours": "07:00-22:00 Nepal time",
-      "email": "emergency@mofa.gov.np",
-      "priority": "PRIMARY_CONSULAR_COORDINATION"
-    },
-    {
-      "id": "NDRRMA_SETU",
-      "name": "NDRRMA Setu affected-person register",
-      "country": "Nepal",
-      "service_type": ["MISSING_PERSON_REGISTER", "RESCUED_PERSON_REGISTER", "FOUND_PERSON_REGISTER"],
-      "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-      "emergency_number": "1155",
-      "priority": "PRIMARY_STATUS_SOURCE"
-    },
-    {
-      "id": "NEPAL_POLICE",
-      "name": "Nepal Police",
-      "country": "Nepal",
-      "service_type": ["POLICE_EMERGENCY", "MISSING_PERSON_REGISTER", "FOUND_PERSON_REGISTER", "UNIDENTIFIED_DECEASED_REGISTER"],
-      "url": "https://udb.nepalpolice.gov.np/",
-      "emergency_number": "100",
-      "priority": "PRIMARY_LAW_ENFORCEMENT"
-    },
-    {
-      "id": "NEPAL_AMBULANCE",
-      "name": "Nepal ambulance service",
-      "country": "Nepal",
-      "service_type": ["MEDICAL_EMERGENCY"],
-      "emergency_number": "102",
-      "priority": "IMMEDIATE_MEDICAL"
-    },
-    {
-      "id": "NRCS_RFL",
-      "name": "Nepal Red Cross Society — Restoring Family Links response",
-      "country": "Nepal",
-      "service_type": ["RESTORING_FAMILY_LINKS", "FAMILY_CONTACT", "HUMANITARIAN_HELP_DESK"],
-      "url": "https://nrcs.org/resources/news-and-events/situation-report-27-08-2026/",
-      "note": "NRCS Situation Report #2 states a Restoring Family Links help desk was established in Nuwakot to help affected people connect with relatives by phone.",
-      "priority": "FAMILY_TRACING"
-    },
-    {
-      "id": "NRCS_RASUWA_CHAPTER",
-      "name": "Nepal Red Cross Society — Rasuwa District Chapter",
-      "country": "Nepal",
-      "service_type": ["LOCAL_HUMANITARIAN_COORDINATION", "FAMILY_TRACING_REFERRAL"],
-      "url": "https://nrcs.org/our-presence/",
-      "address": "Dhunche-5, Rasuwa",
-      "phone": "010-540195",
-      "email": "rasuwaredcross@gmail.com",
-      "priority": "LOCAL_HUMANITARIAN"
-    },
-    {
-      "id": "DFAT_CEC",
-      "name": "Australian Government Consular Emergency Centre",
-      "country": "Australia",
-      "service_type": ["AUSTRALIAN_CONSULAR_ASSISTANCE", "WELFARE_CHECK_COORDINATION"],
-      "url": "https://www.smartraveller.gov.au/destinations/asia/crisis-alert",
-      "phone_australia": "1300 555 135",
-      "phone_overseas": "+61 2 6261 3305",
-      "priority": "NATIONAL_CONSULAR"
-    },
-    {
-      "id": "FCDO_UK",
-      "name": "UK Foreign, Commonwealth & Development Office",
-      "country": "United Kingdom",
-      "service_type": ["BRITISH_CONSULAR_ASSISTANCE"],
-      "url": "https://www.gov.uk/government/news/pm-statement-in-response-to-flooding-along-the-nepal-china-border-26-august-2026",
-      "priority": "NATIONAL_CONSULAR"
-    },
-    {
-      "id": "JAPAN_MOFA_RESPONSE",
-      "name": "Ministry of Foreign Affairs of Japan — Nepal flood response",
-      "country": "Japan",
-      "service_type": ["JAPANESE_CONSULAR_ASSISTANCE", "EMERGENCY_RESPONSE_TEAM"],
-      "url": "https://www.mofa.go.jp/s_sa/sw/np/pageite_000001_01779.html",
-      "priority": "NATIONAL_CONSULAR"
-    },
-    {
-      "id": "BRITISH_RED_CROSS_FAMILY_TRACING",
-      "name": "British Red Cross International Family Tracing",
-      "country": "United Kingdom",
-      "service_type": ["INTERNATIONAL_FAMILY_TRACING"],
-      "url": "https://www.redcross.org.uk/get-help/find-missing-family",
-      "note": "Family tracing service for people separated by natural disaster, conflict or migration; not an official Nepalese missing-person status authority.",
-      "priority": "FAMILY_TRACING"
-    }
+    {"id":"OPMCM_RESCUE_PORTAL","name":"Rasuwa Flood Rescue Portal — Office of the Prime Minister and Council of Ministers","country":"Nepal","service_type":["MISSING_PERSON_SEARCH","FOUND_PERSON_SEARCH","RESCUE_REQUEST","HELP_OFFER","EMERGENCY_CONTACTS"],"url":"https://rescue.opmcm.gov.np/","priority":"PRIMARY_OPERATIONAL"},
+    {"id":"MOFA_NEPAL_ECR","name":"Ministry of Foreign Affairs Emergency Control Room","country":"Nepal","service_type":["FOREIGN_NATIONAL_VERIFICATION","CONSULAR_COORDINATION","INFORMATION_VERIFICATION"],"url":"https://www.mofa.gov.np/content/1862/notice--emergency-control-room--ecr--for-assistance/","hotline_whatsapp":["+977-9744441227","+977-9744441228"],"hours":"07:00-22:00 Nepal time","email":"emergency@mofa.gov.np","priority":"PRIMARY_CONSULAR_COORDINATION"},
+    {"id":"NDRRMA_SETU","name":"NDRRMA Setu affected-person register","country":"Nepal","service_type":["MISSING_PERSON_REGISTER","RESCUED_PERSON_REGISTER","FOUND_PERSON_REGISTER"],"url":"https://setu.ndrrma.gov.np/admin/recordlist.php","emergency_number":"1155","priority":"PRIMARY_STATUS_SOURCE"},
+    {"id":"NEPAL_POLICE","name":"Nepal Police","country":"Nepal","service_type":["POLICE_EMERGENCY","MISSING_PERSON_REGISTER","FOUND_PERSON_REGISTER","UNIDENTIFIED_DECEASED_REGISTER"],"url":"https://udb.nepalpolice.gov.np/","emergency_number":"100","priority":"PRIMARY_LAW_ENFORCEMENT"},
+    {"id":"NEPAL_AMBULANCE","name":"Nepal ambulance service","country":"Nepal","service_type":["MEDICAL_EMERGENCY"],"emergency_number":"102","priority":"IMMEDIATE_MEDICAL"},
+    {"id":"NRCS_RFL","name":"Nepal Red Cross Society — Restoring Family Links response","country":"Nepal","service_type":["RESTORING_FAMILY_LINKS","FAMILY_CONTACT","HUMANITARIAN_HELP_DESK"],"url":"https://nrcs.org/resources/news-and-events/situation-report-27-08-2026/","note":"NRCS Situation Report #2 states a Restoring Family Links help desk was established in Nuwakot to help affected people connect with relatives by phone.","priority":"FAMILY_TRACING"},
+    {"id":"NRCS_RASUWA_CHAPTER","name":"Nepal Red Cross Society — Rasuwa District Chapter","country":"Nepal","service_type":["LOCAL_HUMANITARIAN_COORDINATION","FAMILY_TRACING_REFERRAL"],"url":"https://nrcs.org/our-presence/","address":"Dhunche-5, Rasuwa","phone":"010-540195","email":"rasuwaredcross@gmail.com","priority":"LOCAL_HUMANITARIAN"},
+    {"id":"IFRC_NEPAL","name":"International Federation of Red Cross and Red Crescent Societies — Nepal flood response","country":"International","service_type":["HUMANITARIAN_COORDINATION","RESTORING_FAMILY_LINKS_SUPPORT"],"url":"https://www.ifrc.org/press-release/ifrc-launches-chf-25-million-emergency-appeal-response-devastating-nepal-flash-floods","priority":"HUMANITARIAN_NETWORK"},
+
+    {"id":"DFAT_CEC","name":"Australian Government Consular Emergency Centre","country":"Australia","service_type":["AUSTRALIAN_CONSULAR_ASSISTANCE","WELFARE_CHECK_COORDINATION"],"url":"https://www.smartraveller.gov.au/destinations/asia/crisis-alert","phone_australia":"1300 555 135","phone_overseas":"+61 2 6261 3305","priority":"NATIONAL_CONSULAR"},
+    {"id":"FCDO_UK","name":"UK Foreign, Commonwealth & Development Office","country":"United Kingdom","service_type":["BRITISH_CONSULAR_ASSISTANCE"],"url":"https://www.gov.uk/government/news/pm-statement-in-response-to-flooding-along-the-nepal-china-border-26-august-2026","priority":"NATIONAL_CONSULAR"},
+    {"id":"JAPAN_MOFA_RESPONSE","name":"Ministry of Foreign Affairs of Japan — Nepal flood response","country":"Japan","service_type":["JAPANESE_CONSULAR_ASSISTANCE","EMERGENCY_RESPONSE_TEAM"],"url":"https://www.mofa.go.jp/s_sa/sw/np/pageite_000001_01779.html","priority":"NATIONAL_CONSULAR"},
+    {"id":"CANADA_NEPAL_CRISIS","name":"Government of Canada — Nepal travel and emergency assistance","country":"Canada","service_type":["CANADIAN_CONSULAR_ASSISTANCE","EMERGENCY_WATCH_RESPONSE"],"url":"https://travel.gc.ca/destinations/nepal","priority":"NATIONAL_CONSULAR"},
+    {"id":"SINGAPORE_MFA_NEPAL","name":"Singapore Ministry of Foreign Affairs — Nepal crisis response","country":"Singapore","service_type":["SINGAPORE_CONSULAR_ASSISTANCE","CRISIS_RESPONSE_TEAM","TRAVELLER_REGISTRATION"],"url":"https://www.mfa.gov.sg/newsroom/press-statements-transcripts-and-photos/mfa-spokesperson-s-comments-on-the-flood-situation-along-the-nepal-china-border--27-august-2026/","emergency_contacts":["+91-981-020-3595","+86-1391-0755-251","+65-6379-8800","+65-6379-8855"],"priority":"NATIONAL_CONSULAR"},
+    {"id":"MALAYSIA_MFA_NEPAL","name":"Malaysia Ministry of Foreign Affairs — Nepal flood response","country":"Malaysia","service_type":["MALAYSIAN_CONSULAR_ASSISTANCE","AFFECTED_NATIONAL_STATUS_UPDATES"],"url":"https://www.kln.gov.my/web/guest/posts/press-releases-mfa-news","note":"Official MFA index currently carries Nepal flood updates including the 27 August report concerning 55 Malaysians who could not be contacted.","priority":"NATIONAL_CONSULAR"},
+    {"id":"KOREA_MOFA_NEPAL","name":"Republic of Korea Ministry of Foreign Affairs — Nepal flood response","country":"South Korea","service_type":["KOREAN_CONSULAR_ASSISTANCE","INTERAGENCY_SEARCH_AND_RESCUE_COORDINATION"],"url":"https://www.mofa.go.kr/www/brd/m_4076/view.do?page=1&seq=372397","note":"MFA established an overseas-national protection response structure after nine Korean nationals became unreachable in Rasuwa and coordinated search-and-rescue with Nepal authorities.","priority":"NATIONAL_CONSULAR"},
+
+    {"id":"BRITISH_RED_CROSS_FAMILY_TRACING","name":"British Red Cross International Family Tracing","country":"United Kingdom","service_type":["INTERNATIONAL_FAMILY_TRACING"],"url":"https://www.redcross.org.uk/get-help/find-missing-family","note":"Family tracing service for people separated by natural disaster, conflict or migration; not an official Nepalese missing-person status authority.","priority":"FAMILY_TRACING"}
   ]
 }
