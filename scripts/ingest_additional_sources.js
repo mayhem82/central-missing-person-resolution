@@ -3,7 +3,6 @@ const path=require('path');
 
 const INCIDENT='NEPAL-2026-08-26-FLOOD';
 const sources=[
-  ['OPMCM_RESCUE_PORTAL','data/opmcm-latest.json','UNKNOWN'],
   ['DAO_RASUWA_FLOOD_HUB','data/dao-rasuwa-latest.json','UNKNOWN'],
   ['DAO_RASUWA_BHADRA12_NOTICE','data/dao-rasuwa-bhadra12-latest.json','MISSING'],
   ['DAO_MAKWANPUR_BHADRA13','data/dao-makwanpur-bhadra13-latest.json','UNKNOWN'],
