@@ -14,7 +14,7 @@
 
     <link href="https://udb.nepalpolice.gov.np/assets/nepali.datepicker.v4.0.8/css/nepali.datepicker.v4.0.8.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://udb.nepalpolice.gov.np/css/style.css">
-    <meta name="csrf-token" content="YW019LfYe9G0kZBS4vkm9ztTxumW7eHZZNlSrvy3">
+    <meta name="csrf-token" content="d8lthp8gYSpLm2UEfyWUmlyts2avigiU3mcnKIRr">
 
 
 <script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.1/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
@@ -226,6 +226,72 @@
     </div>
 </div>
 <main id="site-main">
+    <div class="container my-5 rounded-md shadow-md">
+        <form action="https://udb.nepalpolice.gov.np/disaster" method="GET">
+            <div class="row p-3 bg-light rounded-3 shadow-sm border">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <input
+                        type="text"
+                        name="registration_number"
+                        value=""
+                        placeholder="दर्ता नम्बर"
+                        class="form-control"
+                        autocomplete="off"
+                    />
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <select class="form-select select2" style="width:100%;" id="gender" name="gender"><option selected="selected" value="">लिङ्गको आधारमा खोज्नुहोस्</option><option value="male">पुरुष</option><option value="female">महिला</option><option value="other">अन्य</option></select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <select id="pradesh_id" name="province_id" class="form-select">
+                        <option value="" disabled selected>प्रदेशको आधारमा खोज्नुहोस्</option>
+                                                    <option
+                                 value="1">कोशी प्रदेश</option>
+                                                    <option
+                                 value="2">मधेश प्रदेश</option>
+                                                    <option
+                                 value="3">बागमती प्रदेश</option>
+                                                    <option
+                                 value="4">गण्डकी प्रदेश</option>
+                                                    <option
+                                 value="5">लुम्बिनी प्रदेश</option>
+                                                    <option
+                                 value="6">कर्णाली प्रदेश</option>
+                                                    <option
+                                 value="7">सुदूरपश्चिम प्रदेश</option>
+                                            </select>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <select id="district_id" name="district_id" class="form-select">
+                        <option value="" disabled selected>जिल्लाको आधारमा खोज्नुहोस्</option>
+                        
+                    </select>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <input class="form-control" id="date_fromNP" placeholder="मिति देखि" autocomplete="off" name="date_fromNP" type="text">
+                    <input type="hidden" name="date_from" id="date_from">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <input class="form-control" id="date_toNP" placeholder="मिति सम्म" autocomplete="off" name="date_toNP" type="text">
+                    <input type="hidden" name="date_to" id="date_to">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <button class="btn btn-primary py-2 px-4 rounded-md text-white text-sm">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        खोज्नुहोस्
+                    </button>
+                    <a href="https://udb.nepalpolice.gov.np/disaster"
+                       class="btn btn-secondary py-2 px-4 rounded-md text-white text-sm">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        रिफ्रेस
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="container">
         <div class="row m-1" style="background: lightgray">
             <h5 class="fw-bold pb-2 text-center mt-3">रसुवा जिल्लामा आएको बाढीसंग सम्बन्धित पहिचान नखुलेका शवहरूको विवरण</h5>
@@ -258,13 +324,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2618"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2681"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2618">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2681">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -284,22 +350,23 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>19,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>20
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>महिला</span>
+                                                                                                    <span>अन्य</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>895</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
-                                                                                                                            ईच्छाकामना गाउँपालिका-
-                                                                                                                            5,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
                                                                                                                             नखुलेको
                                                                             </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
@@ -323,7 +390,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2618">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2681">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -345,13 +412,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2617"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2679"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2617">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2679">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -370,16 +437,18 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>2,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>3
+                                                                                            <b class="font-bold">उमेर:-</b>40,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>39
                                                                                      </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>915</span>
+
                                     </li>
 
 
@@ -387,15 +456,14 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            1,
-                                                                                                                            देवघाट
-                                                                            </li>
+                                                                                                                            18,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 15:00                                     </li>
+                                         / 16:18                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
@@ -411,7 +479,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2617">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2679">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -433,13 +501,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2616"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2677"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2616">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2677">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -466,6 +534,9 @@
                                                                                                     <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>882</span>
+
                                     </li>
 
 
@@ -473,30 +544,30 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            १,
+                                                                                                                            16,
                                                                                                                     </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 10:00                                     </li>
+                                         / 15:20                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="कारागार अगाडि उद्योग संघको भवन, भरतपुर चितवन ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                कारागार अगाडि उद्योग संघको भवन, भरतपुर चितवन ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2616">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2677">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -518,13 +589,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2615"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2676"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2615">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2676">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -543,16 +614,16 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>30,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>35
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>महिला</span>
+                                                                                                    <span>अन्य</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>894</span>
+
                                     </li>
 
 
@@ -560,31 +631,31 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            1,
-                                                                                                                            देवघाट
+                                                                                                                            16,
+                                                                                                                            नखुलेको
                                                                             </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 14:00                                     </li>
+                                         / 1:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन"
                                                                 style="cursor: pointer;">
-                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2615">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2676">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -606,13 +677,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2614"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2675"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2614">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2675">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -632,30 +703,32 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>30,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>35
+                                                                                            <b class="font-bold">उमेर:-</b>24,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>25
                                                                                      </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>महिला</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>914</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
-                                                                                                                            ईच्छाकामना गाउँपालिका-
-                                                                                                                            5,
-                                                                                                                            नखुलेको
-                                                                            </li>
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            18,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 11:00                                     </li>
+                                         / 16:07                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
@@ -671,7 +744,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2614">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2675">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -693,13 +766,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2613"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2674"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2613">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2674">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -718,31 +791,32 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
+                                                                                    
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>30,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>35
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>881</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
-                                                                                                                            ईच्छाकामना गाउँपालिका-
-                                                                                                                            4,
-                                                                                                                            नखुलेको
-                                                                            </li>
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 1:00                                     </li>
+                                         / 15:20                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
@@ -758,7 +832,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2613">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2674">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -780,13 +854,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2612"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2673"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2612">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2673">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -807,14 +881,15 @@
                                         नखुलेको
                                                                                     
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>28,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>29
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>पुरुष</span>
+                                                                                                    <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>840</span>
+
                                     </li>
 
 
@@ -822,15 +897,14 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            1,
-                                                                                                                            देवघाट
-                                                                            </li>
+                                                                                                                            ३,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 13:02                                     </li>
+                                         / 17:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
@@ -846,7 +920,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2612">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2673">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -868,13 +942,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2611"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2672"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2611">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2672">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -893,16 +967,18 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>30,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>35
+                                                                                            <b class="font-bold">उमेर:-</b>12,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>13
                                                                                      </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>913</span>
+
                                     </li>
 
 
@@ -910,15 +986,14 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            1,
-                                                                                                                            देवघाट
-                                                                            </li>
+                                                                                                                            18,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 12:45                                     </li>
+                                         / 16:05                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
@@ -934,7 +1009,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2611">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2672">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -956,13 +1031,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2610"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2671"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2610">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2671">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -982,22 +1057,23 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>30,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>35
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>893</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
-                                                                                                                            ईच्छाकामना गाउँपालिका-
-                                                                                                                            4,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
                                                                                                                             नखुलेको
                                                                             </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
@@ -1021,7 +1097,7 @@
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2610">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2671">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1043,13 +1119,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2609"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2670"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2609">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2670">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1070,14 +1146,15 @@
                                         नखुलेको
                                                                                     
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>40,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>45
-                                                                                     </span>
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>पुरुष</span>
+                                                                                                    <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>880</span>
+
                                     </li>
 
 
@@ -1085,31 +1162,30 @@
                                                                                     बागमती प्रदेश,
                                                                                                                             चितवन,
                                                                                                                             भरतपुर महानगरपालिका-
-                                                                                                                            1,
-                                                                                                                            देवघाट
-                                                                            </li>
+                                                                                                                            16,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 12:00                                     </li>
+                                         / 15:20                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="चितवन जिल्लाको शवहरु राखिएको स्थान कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                चितवन जिल्लाको शवहरु राखिएको स्थान कारागार अगाडि उ...
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2609">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2670">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1131,13 +1207,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2602"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2669"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2602">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2669">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1155,47 +1231,50 @@
                                     
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
-                                        नखूलेको
-                                                                                    
-                                                                                                                            नखूलेको
-                                                                                <span class="ms-4">
-                                                                                                                                 </span>
+                                        नखुलेको
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>13,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>14
+                                                                                     </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>पुरुष</span>
+                                                                                                    <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>912</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            तनहुं,
-                                                                                                                            आँबुखैरेनी गाउँपालिका-
-                                                                                                                            ४,
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            18,
                                                                                                                     </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 15:55                                     </li>
+                                         / 16:05                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="दमौली अस्तपाल तनहुँमा राखिएको ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                दमौली अस्तपाल तनहुँमा राखिएको ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2602">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2669">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1217,13 +1296,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2601"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2668"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2601">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2668">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1241,46 +1320,49 @@
                                     
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
-                                        नखुलेको
+                                        नखूलेको
                                                                                     
                                                                                                                         <span class="ms-4">
                                                                                                                                  </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>839</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            तनहुं,
-                                                                                                                            देवघाट गाउँपालिका-
-                                                                                                                            ५,
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            ३,
                                                                                                                     </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 15:10                                     </li>
+                                         / 14:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="दमौली अस्तपाल तनहुँमा राखिएको ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                दमौली अस्तपाल तनहुँमा राखिएको ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2601">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2668">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1302,13 +1384,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2599"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2667"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2599">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2667">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1326,47 +1408,49 @@
                                     
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
-                                        नखूलेको
-                                                                                    
-                                                                                                                            नखूलेको
-                                                                                <span class="ms-4">
+                                        नखुलेको
+                                                                                                                        <span class="ms-4">
                                                                                                                                  </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>892</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            तनहुं,
-                                                                                                                            देवघाट गाउँपालिका-
-                                                                                                                            ५,
-                                                                                                                    </li>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
+                                                                                                                            नखुलेको
+                                                                            </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / 15:10                                     </li>
+                                         / 2:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="दमौली अस्तपाल तनहुँमा राखिएको ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                दमौली अस्तपाल तनहुँमा राखिएको ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2599">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2667">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1388,13 +1472,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2598"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2665"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2598">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2665">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1414,46 +1498,48 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                                                         <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>44,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>45
+                                                                                            <b class="font-bold">उमेर:-</b>40,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>42
                                                                                      </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>911</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
-                                                                                                                            गैंडाकोट नगरपालिका-
-                                                                                                                            २,
-                                                                                                                            छिमेकी होटल
-                                                                            </li>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            18,
+                                                                                                                    </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
-                                            2026-08-26
+                                            2026-08-29
                                         </span>
                                         
-                                         / १०;३० बजे                                     </li>
+                                         / 16:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी अस्पताल पोखरा"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी अस्पताल पोखरा
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2598">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2665">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1475,13 +1561,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2597"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2663"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2597">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2663">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1501,45 +1587,47 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                     
-                                                                                                                            
-                                                                                <span class="ms-4">
+                                                                                                                        <span class="ms-4">
                                                                                                                                  </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>878</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     बागमती प्रदेश,
-                                                                                                                            नुवाकोट,
-                                                                                                                            विदुर नगरपालिका-
-                                                                                                                            १,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
                                                                                                                     </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
-                                            2026-08-26
+                                            2026-08-29
                                         </span>
                                         
-                                         / १६:००                                     </li>
+                                         / 15:20                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="त्रिशुली अस्पताल त्रिशुलीमा राखिएको छ ।"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                त्रिशुली अस्पताल त्रिशुलीमा राखिएको छ ।
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2597">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2663">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1561,13 +1649,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2595"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2662"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2595">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2662">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1586,46 +1674,48 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
-                                                                                                                            
-                                                                                <span class="ms-4">
+                                                                                                                        <span class="ms-4">
                                                                                                                                  </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>891</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            गोरखा,
-                                                                                                                            गण्डकी गाउँपालिका-
-                                                                                                                            ८,
-                                                                                                                    </li>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
+                                                                                                                            नखुलेको
+                                                                            </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / १२:३० बजे                                     </li>
+                                         / 2:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी प्रादेशीक अस्पताल गोरखा"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी प्रादेशीक अस्पताल गोरखा
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2595">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2662">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1647,13 +1737,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2594"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2660"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2594">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2660">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1673,47 +1763,47 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                     
-                                                                                                                            
-                                                                                <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>17,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>18
-                                                                                     </span>
+                                                                                                                        <span class="ms-4">
+                                                                                                                                 </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>877</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            गोरखा,
-                                                                                                                            धार्चे गाउँपालिका-
-                                                                                                                            ८,
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            6,
                                                                                                                     </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / १६:००                                     </li>
+                                         / 15:20                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी प्रादेशीक अस्पताल गोरखा"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी प्रादेशीक अस्पताल गोरखा
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2594">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2660">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1735,13 +1825,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2593"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2659"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2593">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2659">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1761,45 +1851,50 @@
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
                                                                                     
-                                                                                                                            
-                                                                                <span class="ms-4">
-                                                                                                                                 </span>
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>22,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>23
+                                                                                     </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>पुरुष</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>Triveni 13</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
                                                                                     गण्डकी प्रदेश,
-                                                                                                                            गोरखा,
-                                                                                                                            गण्डकी गाउँपालिका-
-                                                                                                                            ८,
-                                                                                                                    </li>
+                                                                                                                            नवलपरासी बर्दघाट सुस्ता पूर्व,
+                                                                                                                            विनयीत्रिवेणी गाउँपालिका-
+                                                                                                                            6,
+                                                                                                                            भ्यू प्वाईन्ट
+                                                                            </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
-                                            2026-08-29
+                                            2026-08-30
                                         </span>
                                         
-                                         / १६:००                                     </li>
+                                         / ०९:३० बजे                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी प्रादेशीक अस्पताल गोरखा"
+                                                                title="मध्यविन्दु प्रादेशिक अस्पताल डण्डा न.प(पूर्व)"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी प्रादेशीक अस्पताल गोरखा
+                                                                मध्यविन्दु प्रादेशिक अस्पताल डण्डा न.प(पूर्व)
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2593">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2659">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1821,13 +1916,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2592"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2657"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2592">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2657">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1846,48 +1941,50 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
-                                                                                                                            
-                                                                                <span class="ms-4">
-                                                                                            <b class="font-bold">उमेर:-</b>12,
-                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>13
+                                                                                                                        <span class="ms-4">
+                                                                                            <b class="font-bold">उमेर:-</b>25,
+                                                                                                                                        <b class="font-bold">अन्दाजी उमेर:-</b>30
                                                                                      </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
                                                                                                     <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>860</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            गोरखा,
-                                                                                                                            गण्डकी गाउँपालिका-
-                                                                                                                            ८,
-                                                                                                                    </li>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            28,
+                                                                                                                            सालबास
+                                                                            </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / १६:००                                     </li>
+                                         / 15:50                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी प्रादेशीक अस्पताल गोरखा"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी प्रादेशीक अस्पताल गोरखा
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2592">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2657">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1909,13 +2006,13 @@
 
 
                                         <a class="home-avatar-link"
-                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2591"
+                                           href="https://udb.nepalpolice.gov.np/deadbody/image/2655"
                                            target="_blank"
                                            style="display: inline-flex; flex-direction: column; align-items: center; text-decoration: none;">
 
                                             <img loading="lazy"
                                                  style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2591">
+                                                 src="https://udb.nepalpolice.gov.np/deadbody/photo/2655">
 
                                             <span style="text-align: center; margin-top: 5px;">[View]</span>
                                         </a>
@@ -1934,46 +2031,48 @@
                                     <li class="mb-2 list-group-item">
                                         <b class="font-bold ">नाम:-</b>
                                         नखुलेको
-                                                                                    
-                                                                                                                            
-                                                                                <span class="ms-4">
+                                                                                                                        <span class="ms-4">
                                                                                                                                  </span>
                                                                                     <span>
                                                 <b class="font-bold">लिङ्ग:-</b>
-                                                                                                    <span>अन्य</span>
+                                                                                                    <span>महिला</span>
                                                                                             </span>
                                         
+                                        &nbsp;<strong>दर्ता नम्बर :</strong>
+                                        <span>870</span>
+
                                     </li>
 
 
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको ठाउँ:-</b>
-                                                                                    गण्डकी प्रदेश,
-                                                                                                                            गोरखा,
-                                                                                                                            धार्चे गाउँपालिका-
-                                                                                                                            ८,
-                                                                                                                    </li>
+                                                                                    बागमती प्रदेश,
+                                                                                                                            चितवन,
+                                                                                                                            भरतपुर महानगरपालिका-
+                                                                                                                            16,
+                                                                                                                            नखुलेको
+                                                                            </li>
                                     <li class="mb-2 list-group-item"><b class="font-bold">भेटिएको मिति/समय:-</b>
                                                                                     <span class="convert_date">
                                             2026-08-29
                                         </span>
                                         
-                                         / १६:००                                     </li>
+                                         / 1:00                                     </li>
 
                                     <li class="mb-2 list-group-item">
                                                         <b class="font-bold">हाल शव राखेको स्थान:-</b>
 
                                                                                                                     <span data-toggle="tooltip"
                                                                 data-placement="top"
-                                                                title="गण्डकी प्रादेशीक अस्पताल गोरखा"
+                                                                title="कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।"
                                                                 style="cursor: pointer;">
-                                                                गण्डकी प्रादेशीक अस्पताल गोरखा
+                                                                कारागार अगाडि उद्योगसंघको भवन, भरतपुर चितवन ।
                                                             </span>
                                                                                                             </li>
 
                                 </ul>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2591">विवरण हेर्नुहोस्</a>
+                                <a class="btn btn-primary" href="https://udb.nepalpolice.gov.np/dead-bodies/2655">विवरण हेर्नुहोस्</a>
                             </td>
                         </tr>
                                                     
@@ -1984,24 +2083,24 @@
                 <div class="col-md-12 mb-3">
         <div class="row d-flex">
             <div class="col-md-6">
-                <span>Showing 1 out of 50 Pages</span>
+                <span>Showing 1 out of 32 Pages</span>
             </div>
             <div class="col-md-6 pagination-controls"> <!-- Use 'ml-auto' to align to the right -->
                                     <span class="btn btn-secondary btn-sm ml-2 disabled">&laquo; अघिल्लो</span>
                 
                 
                                     <a class="btn btn-secondary btn-sm ml-2"
-                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=1">1</a>
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=622&amp;page=1">1</a>
                                     <a class="btn btn-secondary btn-sm ml-2"
-                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=2">2</a>
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=622&amp;page=2">2</a>
                                     <a class="btn btn-secondary btn-sm ml-2"
-                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=3">3</a>
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=622&amp;page=3">3</a>
                 
                                     <span class="ml-2">...</span>
-                    <a class="btn btn-secondary btn-sm ml-2" href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=50">50</a>
+                    <a class="btn btn-secondary btn-sm ml-2" href="https://udb.nepalpolice.gov.np/disaster?&amp;count=622&amp;page=32">32</a>
                 
                                     <a class="btn btn-secondary btn-sm ml-2"
-                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=1000&amp;page=2"
+                       href="https://udb.nepalpolice.gov.np/disaster?&amp;count=622&amp;page=2"
                        id="next">अर्को &raquo;</a>
                                 
             </div>
@@ -2095,7 +2194,7 @@
             <div class="col-lg-4">
                 <span class="text-white ps-3 pull-right"><i class="fa fa-users"></i> &nbsp;पृष्ठ भ्रमण : 
                     <span class="badge badge-primary" style="font-size: 18px;">
-                    ७४३५३४
+                    ७४६५९९
                     </span>
                 </span>
             </div>
@@ -2194,6 +2293,7 @@
         $(document).ready(function () {
 
             var pradesh_id = $('#pradesh_id').val();
+            var district_id = 0;
 
             function getDisByPradesh() {
                 var district_option = '<option value="">जिल्लाको आधारमा खोज्नुहोस</option>';
@@ -2221,7 +2321,6 @@
             });
 
             if(pradesh_id > 0){
-                var district_id = 
                 getDisByPradesh();
             }
         });
