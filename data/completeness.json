@@ -1,17 +1,19 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-08-31T06:47:49.348Z",
+  "generated_at": "2026-08-31T14:37:16.564Z",
   "complete": false,
-  "blocking_gap_count": 3,
+  "blocking_gap_count": 5,
   "blocking_gap_ids": [
     "SETU_CURRENT",
     "POLICE_MISSING_CURRENT",
+    "POLICE_FOUND_CURRENT",
+    "POLICE_DISASTER_BODIES_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 15967,
+    "live_source_records": 21767,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2445,
+    "identity_review_candidates": 2760,
     "body_review_candidates": 14
   },
   "checks": [
@@ -24,7 +26,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-08-31T06:44:13.030Z",
+        "retrieved_at": "2026-08-31T14:29:12.227Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -44,12 +46,12 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-08-31T06:44:13.089Z",
+          "retrieved_at": "2026-08-31T14:29:12.287Z",
           "http_status": 0,
           "sha256": null,
           "bytes": 0,
           "changed": false,
-          "error": "Error: TypeError: fetch failed; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n",
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (18) transfer closed with outstanding read data remaining\ncurl: (28) SSL connection timeout\n",
           "pages": 0,
           "page_failures": []
         },
@@ -59,7 +61,7 @@
     },
     {
       "id": "POLICE_FOUND_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -67,15 +69,13 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-08-31T06:44:13.090Z",
-          "http_status": 200,
-          "sha256": "5c0ae122afdffa1901df1d6f821d81c4b01711d0323311d97c415a32d19b9317",
-          "bytes": 94226,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-08-31T14:29:12.288Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (28) SSL connection timeout\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (18) transfer closed with outstanding read data remaining\ncurl: (18) transfer closed with outstanding read data remaining\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 0,
@@ -84,7 +84,7 @@
     },
     {
       "id": "POLICE_DISASTER_BODIES_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -92,15 +92,13 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-08-31T06:44:13.092Z",
-          "http_status": 200,
-          "sha256": "7b6564545f56d63d3a93fa124b61afccdf8f1ff858dd5154604593db5f9d021a",
-          "bytes": 148216,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-08-31T14:29:12.290Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: TypeError: fetch failed; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8001 ms: Timeout was reached\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (18) transfer closed with outstanding read data remaining\ncurl: (28) SSL connection timeout\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 20,
@@ -112,7 +110,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 15967
+        "record_count": 21767
       }
     },
     {
@@ -120,7 +118,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2445,
+        "identity_candidates": 2760,
         "body_review_candidates": 14
       }
     },
