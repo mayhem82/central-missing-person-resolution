@@ -1,16 +1,17 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-02T09:40:14.135Z",
+  "generated_at": "2026-09-02T13:58:59.868Z",
   "complete": false,
-  "blocking_gap_count": 2,
+  "blocking_gap_count": 3,
   "blocking_gap_ids": [
     "SETU_CURRENT",
+    "POLICE_DISASTER_BODIES_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 21781,
+    "live_source_records": 21917,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2728,
+    "identity_review_candidates": 2727,
     "body_review_candidates": 9
   },
   "checks": [
@@ -23,7 +24,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-09-02T09:33:42.163Z",
+        "retrieved_at": "2026-09-02T13:51:48.899Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -43,10 +44,10 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-09-02T09:33:42.222Z",
+          "retrieved_at": "2026-09-02T13:51:48.961Z",
           "http_status": 200,
-          "sha256": "148e550404cdf3c22d633a3e49ed738ca01908d8940b6510b6eee8742cf2664f",
-          "bytes": 102464,
+          "sha256": "afdd5d9d74bcb34c22bdfa621cb17d8b74971494383a7ab4f14c51c367b74c66",
+          "bytes": 100836,
           "changed": true,
           "error": null,
           "transport": "curl-insecure-fallback",
@@ -54,7 +55,7 @@
           "pages": 1,
           "page_failures": []
         },
-        "records": 7,
+        "records": 6,
         "stale": false
       }
     },
@@ -68,9 +69,9 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-09-02T09:33:42.223Z",
+          "retrieved_at": "2026-09-02T13:51:48.962Z",
           "http_status": 200,
-          "sha256": "e9ee38882f95b4da0da09b314dea483b2ecd175c2a9ce3063726a5f5d612be77",
+          "sha256": "104eeaf023be1c3fa3c7425a6ce8b475b19fba325a694b24653bfaa692ae1fcb",
           "bytes": 94351,
           "changed": true,
           "error": null,
@@ -85,7 +86,7 @@
     },
     {
       "id": "POLICE_DISASTER_BODIES_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -93,15 +94,13 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-09-02T09:33:42.225Z",
-          "http_status": 200,
-          "sha256": "363eb27861f60fb04c543d9ac070e6cec0a2b1660b699bcee36cb1952f298a8c",
-          "bytes": 161899,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-09-02T13:51:48.964Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8003 ms: Timeout was reached\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8000 ms: Timeout was reached\ncurl: (28) SSL connection timeout\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 20,
@@ -113,7 +112,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 21781
+        "record_count": 21917
       }
     },
     {
@@ -121,7 +120,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2728,
+        "identity_candidates": 2727,
         "body_review_candidates": 9
       }
     },
