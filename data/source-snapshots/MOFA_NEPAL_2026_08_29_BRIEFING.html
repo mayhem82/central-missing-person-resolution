@@ -1838,6 +1838,91 @@
 <header class="header-7 header__title bg__image__required" id="i7r7c" role="banner">
   
 
+<style>
+  .global-slogan-topbar {
+    background: #ffffff;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .stickyHeader .global-slogan-topbar {
+    display: none;
+  }
+  .global-slogan-topbar .marquee-slider {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    padding: 10px 35px;
+    background: #ffffff;
+  }
+  .global-slogan-topbar .marquee-slider .header__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--updated-theme, var(--theme-color, #2460B9));
+    position: relative;
+    padding-right: 10px;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+  .global-slogan-topbar .marquee-slider .header__title::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 2px;
+    height: 20px;
+    background: var(--updated-theme, var(--theme-color, #2460B9));
+    opacity: 0.3;
+  }
+  .global-slogan-topbar .marquee-slider .infinite-slider .slider__item .item__details .item__title {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #333333;
+  }
+  .global-slogan-topbar .marquee-slider .infinite-slider .slider__item .item__details .item__title a {
+    color: inherit;
+  }
+  .global-slogan-topbar .swiper {
+    flex: 1;
+    min-width: 0;
+  }
+  @media (max-width: 768px) {
+    .global-slogan-topbar .marquee-slider {
+      padding: 8px 16px;
+      grid-gap: 10px;
+    }
+    .global-slogan-topbar .marquee-slider .header__title {
+      font-size: 14px;
+    }
+  }
+</style>
+<div class="global-slogan-topbar">
+  <div class="marquee-slider" role="region" aria-labelledby="global-slogan-heading" aria-live="polite" aria-atomic="false">
+    <h2 class="header__title" id="global-slogan-heading">Important Notice</h2>
+
+    <div class="swiper marqueeSwiper2" aria-live="off">
+      <div class="infinite-slider swiper-wrapper">
+
+        
+        <div class="swiper-slide" role="group" aria-label="Notice 1">
+          <div class="slider__item">
+            <div class="item__details">
+              <h3 class="item__title">
+                <a href="/content/1872/a-heartfelt-appeal-to-all-to-provide/">
+                  हार्दिक अपिल
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="header-7-top">
     
@@ -2202,8 +2287,8 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1838/welcome-remarks-by-foreign-secretary-mr--amrit/">
-                      Welcome Remarks by Foreign Secretary Mr. Amrit Bahadur Rai at the Fifth Edition of Professor Yadu Nath Khanal Lecture Series
+                    <a href="/content/1839/concluding-remarks-by-hon--mr-shisir-khanal/">
+                      Concluding Remarks by Hon. Mr Shisir Khanal Minister for Foreign Affairs at the Fifth Edition of the Professor Yadu Nath Khanal Lecture Series
                     </a>
                   </h3>
                 </div>
@@ -2214,8 +2299,8 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1839/concluding-remarks-by-hon--mr-shisir-khanal/">
-                      Concluding Remarks by Hon. Mr Shisir Khanal Minister for Foreign Affairs at the Fifth Edition of the Professor Yadu Nath Khanal Lecture Series
+                    <a href="/content/1838/welcome-remarks-by-foreign-secretary-mr--amrit/">
+                      Welcome Remarks by Foreign Secretary Mr. Amrit Bahadur Rai at the Fifth Edition of Professor Yadu Nath Khanal Lecture Series
                     </a>
                   </h3>
                 </div>
@@ -3162,7 +3247,7 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1784/press-note-9th-india-ocean-conference/">
+                    <a href="/content/1783/press-note--hon-ble-foreign-minister-mr--shishir/">
                       प्रेस नोट- माननीय परराष्ट्रमन्त्री श्री शिशिर खनाल 9th Indian Ocean Conference मा सहभागी भई स्वदेश फर्कनुहुँदा त्रिभुवन अन्तर्राष्ट्रिय विमानस्थलमा सञ्चार माध्यमसँगको संवाद २०८२ चैत्र ३० (१३ अप्रिल २०२६)
                     </a>
                   </h3>
@@ -3174,7 +3259,7 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1783/press-note--hon-ble-foreign-minister-mr--shishir/">
+                    <a href="/content/1784/press-note-9th-india-ocean-conference/">
                       प्रेस नोट- माननीय परराष्ट्रमन्त्री श्री शिशिर खनाल 9th Indian Ocean Conference मा सहभागी भई स्वदेश फर्कनुहुँदा त्रिभुवन अन्तर्राष्ट्रिय विमानस्थलमा सञ्चार माध्यमसँगको संवाद २०८२ चैत्र ३० (१३ अप्रिल २०२६)
                     </a>
                   </h3>
@@ -5152,6 +5237,28 @@
               
                 <div class="grid__card">
                     <div class="card__img">
+                        <a href="/content/1871/press-release--nepal-participates-in-commemorative-high-level/"
+                            class="image-size-70">
+                            <img src="
+                            https://giwmscdnone.gov.np/media/albums/Twitter%2520Post%2520for%2520Social%2520Media%2520(39)_tu1n7o2y7B_jybbahb_DzdCppbIhm_rga3j1s.png.370x245_q70_crop.jpg
+                            "
+                            alt="None">                  
+                        </a>
+                    </div>
+
+                    <div class="card__details">
+                        <h3 class="card__title">
+                            <a href="/content/1871/press-release--nepal-participates-in-commemorative-high-level/">
+                              Press Release-  Nepal Participates in Commemorative High-Level Meeting Marking 65th Anniversary of the First NAM Conference in Belgrade
+                            </a>
+                        </h3>
+
+                        
+                    </div>
+                </div>
+              
+                <div class="grid__card">
+                    <div class="card__img">
                         <a href="/content/1870/press-release--exchange-of-congratulatory-messages-between/"
                             class="image-size-70">
                             <img src="
@@ -5209,28 +5316,6 @@
                         <h3 class="card__title">
                             <a href="/content/1868/press-briefing-by-the-spokesperson-on-bhote/">
                               Press Briefing by the Spokesperson on Bhote Koshi Flood
-                            </a>
-                        </h3>
-
-                        
-                    </div>
-                </div>
-              
-                <div class="grid__card">
-                    <div class="card__img">
-                        <a href="/content/1867/press-briefing-note-by-foreign-secretary-on/"
-                            class="image-size-70">
-                            <img src="
-                            https://giwmscdnone.gov.np/media/albums/Twitter%2520Post%2520for%2520Social%2520Media%2520(34)_bHzkmD6yLt_nicrvvm_PVzGoW0kec_hkutenp.png.370x245_q70_crop.jpg
-                            "
-                            alt="None">                  
-                        </a>
-                    </div>
-
-                    <div class="card__details">
-                        <h3 class="card__title">
-                            <a href="/content/1867/press-briefing-note-by-foreign-secretary-on/">
-                              Press Briefing Note by Foreign Secretary on Bhote Koshi Flood (Sunday, 2:00 PM, 30 August 2026)
                             </a>
                         </h3>
 
