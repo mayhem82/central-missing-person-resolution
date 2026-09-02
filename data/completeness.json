@@ -1,17 +1,16 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-02T17:46:58.135Z",
+  "generated_at": "2026-09-02T20:13:04.959Z",
   "complete": false,
-  "blocking_gap_count": 3,
+  "blocking_gap_count": 2,
   "blocking_gap_ids": [
     "SETU_CURRENT",
-    "POLICE_MISSING_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 21780,
+    "live_source_records": 21781,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2725,
+    "identity_review_candidates": 2726,
     "body_review_candidates": 0
   },
   "checks": [
@@ -24,7 +23,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-09-02T17:39:28.596Z",
+        "retrieved_at": "2026-09-02T20:06:35.766Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -36,7 +35,7 @@
     },
     {
       "id": "POLICE_MISSING_CURRENT",
-      "pass": false,
+      "pass": true,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -44,16 +43,18 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-09-02T17:39:28.656Z",
-          "http_status": 0,
-          "sha256": null,
-          "bytes": 0,
-          "changed": false,
-          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n",
-          "pages": 0,
+          "retrieved_at": "2026-09-02T20:06:35.825Z",
+          "http_status": 200,
+          "sha256": "b0d89d3e0dc3686fa9788387f7fa26e9b8ed0bb684fa95574927609bb16a3e83",
+          "bytes": 100467,
+          "changed": true,
+          "error": null,
+          "transport": "curl-insecure-fallback",
+          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
+          "pages": 1,
           "page_failures": []
         },
-        "records": 6,
+        "records": 7,
         "stale": false
       }
     },
@@ -67,9 +68,9 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-09-02T17:39:28.657Z",
+          "retrieved_at": "2026-09-02T20:06:35.826Z",
           "http_status": 200,
-          "sha256": "5d408c92066bf864a2d2c8d240844f38a1e8ca59bd8f974857f98f5c101c5d3c",
+          "sha256": "1a8a9d3c2cf1ab3074bb655f9c60c2d52fc440e9b3b15f689ba73f26514efbef",
           "bytes": 94351,
           "changed": true,
           "error": null,
@@ -92,9 +93,9 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-09-02T17:39:28.658Z",
+          "retrieved_at": "2026-09-02T20:06:35.828Z",
           "http_status": 200,
-          "sha256": "414eb3de9d5143aaa7aca688c97b84eafabff4730d56ebef56c3f8542a877938",
+          "sha256": "c919a42333795c4f141bbe4d91271e8f652b842c35389d4b91c504714dc0a1c5",
           "bytes": 161110,
           "changed": true,
           "error": null,
@@ -112,7 +113,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 21780
+        "record_count": 21781
       }
     },
     {
@@ -120,7 +121,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2725,
+        "identity_candidates": 2726,
         "body_review_candidates": 0
       }
     },
