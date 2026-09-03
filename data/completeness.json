@@ -1,16 +1,19 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-02T22:41:37.893Z",
+  "generated_at": "2026-09-03T00:43:20.743Z",
   "complete": false,
-  "blocking_gap_count": 2,
+  "blocking_gap_count": 5,
   "blocking_gap_ids": [
     "SETU_CURRENT",
+    "POLICE_MISSING_CURRENT",
+    "POLICE_FOUND_CURRENT",
+    "POLICE_DISASTER_BODIES_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 21781,
+    "live_source_records": 7281,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2726,
+    "identity_review_candidates": 235,
     "body_review_candidates": 0
   },
   "checks": [
@@ -23,7 +26,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-09-02T22:36:31.010Z",
+        "retrieved_at": "2026-09-03T00:38:45.443Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -35,7 +38,7 @@
     },
     {
       "id": "POLICE_MISSING_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -43,15 +46,13 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-09-02T22:36:31.057Z",
-          "http_status": 200,
-          "sha256": "c8774cb503a9ab82cdcfe20648df79c32830ff0e34ac78c866a2f531b5346fdd",
-          "bytes": 100467,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-09-03T00:38:45.502Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to udb.nepalpolice.gov.np:443 \ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 7,
@@ -60,7 +61,7 @@
     },
     {
       "id": "POLICE_FOUND_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -68,15 +69,13 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-09-02T22:36:31.058Z",
-          "http_status": 200,
-          "sha256": "929aa92166ef8be94f89d3e76b612df9180a53c2623489bd5ba916c8fc1e5955",
-          "bytes": 94351,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-09-03T00:38:45.504Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8002 ms: Timeout was reached\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 0,
@@ -85,7 +84,7 @@
     },
     {
       "id": "POLICE_DISASTER_BODIES_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -93,15 +92,13 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-09-02T22:36:31.059Z",
-          "http_status": 200,
-          "sha256": "54d52ce1dca894a99d70691f51d6318e15962e1fd3b70017e919e90ffdd332cb",
-          "bytes": 161110,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-09-03T00:38:45.505Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/disaster?count=1000&page=1\ncurl: (28) SSL connection timeout\ncurl: (28) SSL connection timeout\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 20,
@@ -113,7 +110,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 21781
+        "record_count": 7281
       }
     },
     {
@@ -121,7 +118,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2726,
+        "identity_candidates": 235,
         "body_review_candidates": 0
       }
     },
