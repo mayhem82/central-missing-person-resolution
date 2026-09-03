@@ -1,10 +1,10 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "source": "OPMCM_RESCUE_PORTAL",
-  "started_at": "2026-09-03T20:07:50.578Z",
-  "finished_at": "2026-09-03T20:09:16.379Z",
-  "root_http_status": null,
-  "bundle_url": null,
+  "started_at": "2026-09-03T22:33:52.175Z",
+  "finished_at": "2026-09-03T22:38:37.769Z",
+  "root_http_status": 200,
+  "bundle_url": "https://rescue.opmcm.gov.np/assets/index-XBNO4kbX.js",
   "candidate_endpoints": [
     "/api/person-reports",
     "/api/person-reports?limit=100&page=1",
@@ -16,23 +16,39 @@
     "/api/missing-persons",
     "/api/found-persons"
   ],
-  "working_endpoints": [],
+  "working_endpoints": [
+    "/api/person-reports",
+    "/api/person-reports?limit=100&page=1",
+    "/api/person-reports?per_page=100&page=1"
+  ],
   "probe_results": [
     {
       "endpoint": "/api/person-reports",
-      "error": "This operation was aborted"
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
     },
     {
       "endpoint": "/api/person-reports?limit=100&page=1",
-      "error": "This operation was aborted"
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
     },
     {
       "endpoint": "/api/person-reports?per_page=100&page=1",
-      "error": "This operation was aborted"
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 100,
+      "score": 120
     },
     {
       "endpoint": "/api/person-reports?status=missing&limit=100&page=1",
-      "error": "fetch failed"
+      "http_status": 400,
+      "content_type": "application/json; charset=utf-8",
+      "array_count": 0,
+      "score": 0
     },
     {
       "endpoint": "/api/person-reports?status=found&limit=100&page=1",
@@ -70,9 +86,7 @@
       "score": 0
     }
   ],
-  "records_extracted": 0,
-  "preserved_previous_dataset": true,
-  "errors": [
-    "root/bundle: This operation was aborted"
-  ]
+  "records_extracted": 20000,
+  "preserved_previous_dataset": false,
+  "errors": []
 }
