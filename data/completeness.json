@@ -1,6 +1,6 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-03T09:51:07.449Z",
+  "generated_at": "2026-09-03T14:01:55.918Z",
   "complete": false,
   "blocking_gap_count": 2,
   "blocking_gap_ids": [
@@ -8,9 +8,9 @@
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 21777,
+    "live_source_records": 21947,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2721,
+    "identity_review_candidates": 2723,
     "body_review_candidates": 4
   },
   "checks": [
@@ -54,7 +54,7 @@
           "pages": 1,
           "page_failures": []
         },
-        "records": 3,
+        "records": 1,
         "stale": false
       }
     },
@@ -113,7 +113,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 21777
+        "record_count": 21947
       }
     },
     {
@@ -121,7 +121,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2721,
+        "identity_candidates": 2723,
         "body_review_candidates": 4
       }
     },
