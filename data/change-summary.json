@@ -1,468 +1,104 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "dataset_version": "SW-88",
-  "generated_at": "2026-09-05T13:32:52.820Z",
-  "previous_dataset_version": "SW-87",
-  "previous_generated_at": "2026-09-05T10:10:29.534Z",
-  "person_record_change_count": 798,
-  "added_count": 408,
+  "dataset_version": "SW-89",
+  "generated_at": "2026-09-05T16:17:03.343Z",
+  "previous_dataset_version": "SW-88",
+  "previous_generated_at": "2026-09-05T13:32:52.820Z",
+  "person_record_change_count": 796,
+  "added_count": 195,
   "updated_count": 194,
-  "removed_count": 196,
+  "removed_count": 407,
   "source_count_deltas": [
     {
       "source": "OPMCM_RESCUE_PORTAL",
-      "before": 20000,
-      "after": 20212,
-      "delta": 212
+      "before": 20212,
+      "after": 20000,
+      "delta": -212
     }
   ],
   "status_count_deltas": [
     {
       "status": "OUT_OF_CONTACT",
-      "before": 3050,
-      "after": 3243,
-      "delta": 193
+      "before": 3243,
+      "after": 3048,
+      "delta": -195
     },
     {
       "status": "RESCUED",
-      "before": 10089,
-      "after": 10107,
-      "delta": 18
+      "before": 10107,
+      "after": 10089,
+      "delta": -18
     },
     {
       "status": "STATUS_UNKNOWN",
-      "before": 3628,
-      "after": 3629,
+      "before": 3629,
+      "after": 3630,
       "delta": 1
     }
   ],
   "changes": [
     {
       "type": "ADDED",
-      "id": "POLICE_MISSING-36087",
-      "name": "- रोबि राई",
-      "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12bf4adf6b183f7cda07",
+      "id": "OPMCM-6a9c3cff4adf6b183f80829b",
       "name": "Abhishek Tiwari",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18a3",
-      "name": "ajay tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18f9",
-      "name": "Alisha Gurung",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdab9",
+      "id": "OPMCM-6a9c3d024adf6b183f80834a",
       "name": "Alok Kumar Sah",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18ef",
-      "name": "Amar thapa magar",
+      "id": "OPMCM-6a9c2b3def56129c1937847c",
+      "name": "Archana Suresh",
       "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
+      "status": "STATUS_UNKNOWN"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18ad",
-      "name": "Andre Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19ed",
-      "name": "Anil bista from kalikot, Trishuli hyropower 3b",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1935",
-      "name": "Anipal Bista",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb196b",
-      "name": "Anoj pun",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1965",
-      "name": "Ansh giri",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18f7",
-      "name": "Anup Raya",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb187f",
-      "name": "ARKU TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1879",
-      "name": "ARUN KHADKA",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdab7",
+      "id": "OPMCM-6a9c3d024adf6b183f808348",
       "name": "Arun Kumar Sah",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18ab",
-      "name": "ashish tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb191f",
-      "name": "Ashok shrestha",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb196f",
-      "name": "Astha maharjan",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb194b",
-      "name": "Balmukunda Khatiwada",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb188d",
-      "name": "BHU LAKPA",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1945",
-      "name": "Bhupal Magar",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1929",
-      "name": "Bibek Dawadi",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb187b",
-      "name": "BIJAYA GHALE JIBAN TITUNG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1921",
-      "name": "Bimal Neupane",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18c1",
-      "name": "Brother: Prakash Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18eb",
-      "name": "buddha hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1961",
-      "name": "Buddhi Maya Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1883",
-      "name": "BYALGONG TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18b5",
-      "name": "CHANDRA GHALE",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12824adf6b183f7ccea5",
+      "id": "OPMCM-6a9c3cc64adf6b183f80774e",
       "name": "Chandra Shekhar Sharma",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18df",
-      "name": "chheten lama",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18e5",
-      "name": "chhiring buddhi tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18c7",
-      "name": "Daughter: Anisha Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1907",
-      "name": "Dawa Finjo Lopchan",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1893",
-      "name": "dawa mingmar tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1875",
-      "name": "DAWA SONAM TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19eb",
-      "name": "Dilip Tamang, Ashok Tamang and Keshav tamang from Nuwakot. at Ghattekhola",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1951",
-      "name": "Dinesh Deuba",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1905",
-      "name": "Dinesh Poudel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12ac4adf6b183f7cd689",
+      "id": "OPMCM-6a9c3cee4adf6b183f807f71",
       "name": "Dinesh Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdabb",
+      "id": "OPMCM-6a9c3d024adf6b183f80834c",
       "name": "Dipendra Mandal",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1913",
-      "name": "Divya sardana",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccebd",
+      "id": "OPMCM-6a9c3cc64adf6b183f807766",
       "name": "FTHIYA ALZDJALI",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb193b",
-      "name": "Ganesh neupane",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1899",
-      "name": "ghatte khola completely destroyed)",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb190d",
-      "name": "Govinda Saud",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb194f",
-      "name": "Gyanendra pun magar",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1963",
-      "name": "Hari Bansha Dahal",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18b1",
-      "name": "Hemanta Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1897",
-      "name": "Homnath betuwal",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12bf4adf6b183f7cda0a",
+      "id": "OPMCM-6a9c3cff4adf6b183f80829e",
       "name": "Indrajit Kumar",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb188f",
-      "name": "JIBAN TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb189d",
-      "name": "jureli tamang{saili tamang }",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18dd",
-      "name": "jyamju lama",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1919",
-      "name": "Kamana Shrestha",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18e3",
-      "name": "kami tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb186b",
-      "name": "KARSANG TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18fb",
-      "name": "Khesam Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1881",
-      "name": "KOREAN TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb189b",
-      "name": "krishna shrestha",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1943",
-      "name": "kumar mahara",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -477,630 +113,84 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18cb",
-      "name": "lakpa chhewang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18c5",
-      "name": "Lakpa Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb190f",
-      "name": "Lakpa thokar",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1891",
-      "name": "lanjom tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18d9",
-      "name": "lasha hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb189f",
-      "name": "lhazom",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18b7",
-      "name": "Local residents",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18ff",
-      "name": "Mahesh panta",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18f1",
-      "name": "Maiya Dahal Bimali",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19ef",
-      "name": "mankala sanjel, rishi sanjel, sushmita jaishi , from timure, woriking at parking",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb194d",
-      "name": "Maya debi khadka",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18b3",
-      "name": "Menjamaya Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1949",
-      "name": "Milan Kharel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18bf",
-      "name": "Mingma Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb187d",
-      "name": "MLANGCHA BAHINI",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18a9",
-      "name": "mojnath neupane",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1941",
-      "name": "Muna Pakhrin",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1911",
-      "name": "Nal kumar Timilsina",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1947",
-      "name": "Namaraj Nepal",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18ed",
-      "name": "Naresh Datta Joshi",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb188b",
-      "name": "NIMA TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1933",
-      "name": "Nipun Prajapati",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c24adf6b183f7cdac1",
+      "id": "OPMCM-6a9c3d024adf6b183f808352",
       "name": "Niraj Kumar Patel",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1873",
-      "name": "OM KARMA",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18db",
-      "name": "pasang yangjen",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18e9",
-      "name": "peaceful hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18e7",
-      "name": "pelung lama",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18d7",
-      "name": "phur pasang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12824adf6b183f7ccea7",
+      "id": "OPMCM-6a9c3cc64adf6b183f807750",
       "name": "Pintu Kumar",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1885",
-      "name": "PLEMO TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18bb",
-      "name": "Pokchi Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18b9",
-      "name": "pokchi Tamang husband",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18a5",
-      "name": "prakash devkota",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1895",
-      "name": "pratima tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdab5",
+      "id": "OPMCM-6a9c3d024adf6b183f808346",
       "name": "Raj Kumar Tiwari",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1937",
-      "name": "Rajan adhikari",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb191d",
-      "name": "Rajan Sen",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1909",
-      "name": "Rakesh Darji",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb186f",
-      "name": "RAKESH TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb190b",
-      "name": "Ram hari khakda",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb192f",
-      "name": "Ram khadka",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb191b",
-      "name": "Ram Prasad Rijal",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18c9",
-      "name": "Ram Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1955",
-      "name": "Rameshor Lama",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1959",
-      "name": "Renuka Magar",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1889",
-      "name": "RIMA TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c24adf6b183f7cdabe",
+      "id": "OPMCM-6a9c3d024adf6b183f80834f",
       "name": "Saddam Hussein",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18f5",
-      "name": "Sahadev phuyal",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1871",
-      "name": "SAKI TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdaa5",
+      "id": "OPMCM-6a9c3d014adf6b183f808336",
       "name": "Salman Aalam",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1917",
-      "name": "Samragyi bishwokarma",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1887",
-      "name": "SANGA TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12824adf6b183f7ccea3",
+      "id": "OPMCM-6a9c3cc64adf6b183f80774c",
       "name": "Sanjaya Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18af",
-      "name": "Santa Ghale",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1939",
-      "name": "SANTOSH KUMAR THAKUR",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1869",
-      "name": "SANU TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1877",
-      "name": "SARKI BUDDI TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12824adf6b183f7ccea1",
+      "id": "OPMCM-6a9c3cc64adf6b183f80774a",
       "name": "Satya Narayan Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1915",
-      "name": "Satya Raj Timilsina",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18a1",
-      "name": "sekhar tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1925",
-      "name": "SHIV SHANKAR JOSHI",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18d3",
-      "name": "shyam bahadur",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18bd",
-      "name": "Sister-in-law : Muna Gurung",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18e1",
-      "name": "small star hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18c3",
-      "name": "Son: Suresh Tamang",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb193d",
-      "name": "Subhadra Neupane",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18fd",
-      "name": "Subodh Belbase",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb192d",
-      "name": "Sugam giri",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1953",
-      "name": "Sunil man dangol",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18d1",
-      "name": "sunrise hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1903",
-      "name": "Suresh Yadav",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18a7",
-      "name": "sushila pudasaini",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1923",
-      "name": "Susmita jaisi",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1967",
-      "name": "Swornima Pulami",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18cf",
-      "name": "tenjen",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18cd",
-      "name": "tibet hotel",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb195f",
-      "name": "Tila mahatara",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cdab2",
+      "id": "OPMCM-6a9c3d024adf6b183f808343",
       "name": "Tipu Kumarat",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1901",
-      "name": "Tula Thapa Magar",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a34adf6b183f7cd51a",
+      "id": "OPMCM-6a9c3ce64adf6b183f807df8",
       "name": "wang Li tain",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a84adf6b183f7d728c",
-      "name": "wang Li tain",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb186d",
-      "name": "YA BURI TAMANG",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18d5",
-      "name": "yala peak",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9bfbfbef56129c1936ac40",
-      "name": "Yashas Bhand",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "STATUS_UNKNOWN"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb18f3",
-      "name": "Yukesh dangol",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a44adf6b183f7cd52b",
+      "id": "OPMCM-6a9c3ce64adf6b183f807e10",
       "name": "Zhang chu Meng",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a84adf6b183f7d72a1",
-      "name": "Zhang chu Meng",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c34adf6b183f7cdaf9",
+      "id": "OPMCM-6a9c3d034adf6b183f808389",
       "name": "अकिलेश यादव",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19d7",
-      "name": "अच्युत भन्डारी, [contact withheld], बिहान ७ बजेसम्म सम्पर्कमा रहेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12954adf6b183f7cd28c",
+      "id": "OPMCM-6a9c3cd94adf6b183f807bad",
       "name": "अजय तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1129,17 +219,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd370",
+      "id": "OPMCM-6a9c3cdd4adf6b183f807c57",
       "name": "अनिश तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19df",
-      "name": "अन्जय तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -1154,7 +237,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd379",
+      "id": "OPMCM-6a9c3cdd4adf6b183f807c60",
       "name": "अम्मर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1172,49 +255,49 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12bf4adf6b183f7cda29",
+      "id": "OPMCM-6a9c3d004adf6b183f8082bd",
       "name": "अरुप तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b74adf6b183f7cd861",
+      "id": "OPMCM-6a9c3cf84adf6b183f8080f4",
       "name": "अरूशा अधिकारी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda4c",
+      "id": "OPMCM-6a9c3d004adf6b183f8082e0",
       "name": "अर्जुन खत्री",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12ad4adf6b183f7cd6a9",
+      "id": "OPMCM-6a9c3cef4adf6b183f807f8e",
       "name": "अलिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd782",
+      "id": "OPMCM-6a9c3cf44adf6b183f808055",
       "name": "असमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b44adf6b183f7cd814",
+      "id": "OPMCM-6a9c3cf64adf6b183f8080a0",
       "name": "अस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccfb5",
+      "id": "OPMCM-6a9c3cca4adf6b183f8078a4",
       "name": "आइती माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1276,21 +359,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1977",
-      "name": "आमा बुद्धमाया बज्राचार्य मिना पवन सुष्मा श्रीजा घरमा थुनिनुभएको। त्रिसुली बजार नुवाकोट",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2c9",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bf4",
       "name": "आमिस तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd578",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e66",
       "name": "आरोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1308,7 +384,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd581",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e6f",
       "name": "आसुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1326,7 +402,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b64adf6b183f7cd848",
+      "id": "OPMCM-6a9c3cf74adf6b183f8080dc",
       "name": "ईन्द्र कामरी ढकाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1344,7 +420,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd2e2",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c11",
       "name": "ईसान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1362,17 +438,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2d9",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c07",
       "name": "उज्जवल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb198f",
-      "name": "उपर त्रिशुली -1 मा कार्यरत सवओभरसियर जयधन जोशी [contact withheld] सम्पर्क विहिन हुनु भएकोले खोजि गरिदिन आग्रह",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -1420,49 +489,42 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd76e",
+      "id": "OPMCM-6a9c3cf34adf6b183f80803f",
       "name": "एन्जिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd76c",
+      "id": "OPMCM-6a9c3cf34adf6b183f80803d",
       "name": "एन्जी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b74adf6b183f7cd866",
+      "id": "OPMCM-6a9c3cf84adf6b183f8080f9",
       "name": "एलियना पाण्डे",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a44adf6b183f7cd536",
+      "id": "OPMCM-6a9c3ce74adf6b183f807e23",
       "name": "कपिल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a84adf6b183f7d72ae",
-      "name": "कपिल तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12ca4adf6b183f7cdcb6",
+      "id": "OPMCM-6a9c3d0a4adf6b183f808587",
       "name": "कपिल पार्की",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c14adf6b183f7cda84",
+      "id": "OPMCM-6a9c3d014adf6b183f808318",
       "name": "कबि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1491,24 +553,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a84adf6b183f7cd5e9",
+      "id": "OPMCM-6a9c3cea4adf6b183f807ed5",
       "name": "कर्ण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb197d",
-      "name": "कर्मराज जैसी लगायत ३ जना रसुवाको जोखीम क्षेत्रमै बेपत्ता अवस्थामा रहेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb197f",
-      "name": "कर्मा लामा, टिम्मुरे आसपास देखी बिहान 9:15 सम्म सम्पर्कमा रहेको अहिले सम्पर्क विहिन",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -1542,20 +590,6 @@
       "changed_fields": [
         "source_endpoint"
       ]
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19a5",
-      "name": "काठमाडैबाट विहान 3 बजे रसुवाको लागि हिडेको 1486 नम्बरको स्कार्पियो चालक रसुवा नौकुण्ड 4 स्थायी ठेगाना भएका ओशोक तामाङ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19a3",
-      "name": "काठमाडौंबाट गोसाईकुण्ड गएका काठमाडौं स्थायी ठेगाना भएका अमित डंगोल मोबाईल नम्बर [contact withheld]र कपिल शाक्य मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -1614,28 +648,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4c6",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d97",
       "name": "कामीछिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d71f9",
-      "name": "कामीछिरिङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccf9b",
+      "id": "OPMCM-6a9c3cca4adf6b183f80788a",
       "name": "कार्मो तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12724adf6b183f7ccbdc",
+      "id": "OPMCM-6a9c3cb74adf6b183f8074e5",
       "name": "कार्साङ्ग दावा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1653,28 +680,28 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd591",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e7c",
       "name": "कुसाङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12724adf6b183f7ccbe5",
+      "id": "OPMCM-6a9c3cb74adf6b183f8074f3",
       "name": "कृतिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd341",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c2f",
       "name": "कृष्ण प्रसाद लामिछाने",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2c7",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bf2",
       "name": "कृष्ण बहादुर खड्का",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1692,14 +719,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19cb",
-      "name": "केशब विष्ट [contact withheld] लाङटाङ खोला हाइड्रोपावरमा कार्यरत इलेक्ट्रिकल ओभरसियर",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12954adf6b183f7cd27a",
+      "id": "OPMCM-6a9c3cd94adf6b183f807b83",
       "name": "केशम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1717,21 +737,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd4a7",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d78",
       "name": "केसाङ घले",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a54adf6b183f7d71d1",
-      "name": "केसाङ घले",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12844adf6b183f7ccf23",
+      "id": "OPMCM-6a9c3cc84adf6b183f8077ee",
       "name": "केसिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1749,14 +762,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb195b",
-      "name": "खिल बहादुर बुढाथोकी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12be4adf6b183f7cd9d4",
+      "id": "OPMCM-6a9c3cfe4adf6b183f808268",
       "name": "गणेश जोशी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1817,13 +823,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1991",
-      "name": "गौरिगंज-3 निवासी अपर त्रिशुलीमा सुपरभाईजरमा कार्यरत केवल आचार्य [contact withheld] सम्पर्क विहिन भएको हुनाले खोजि गरिदिन आग्रह",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e704adf6b183f0b40bc",
       "name": "ग्यामी",
@@ -1847,7 +846,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a94adf6b183f7cd608",
+      "id": "OPMCM-6a9c3ceb4adf6b183f807ef4",
       "name": "चतुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1865,14 +864,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2dd",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c0c",
       "name": "चन्द्र बहादुर घले",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c129f4adf6b183f7cd44e",
+      "id": "OPMCM-6a9c3ce14adf6b183f807d17",
       "name": "चिक्तु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1890,21 +889,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12784adf6b183f7cccb8",
+      "id": "OPMCM-6a9c3cbc4adf6b183f8075c7",
       "name": "छिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4dd",
-      "name": "छिर्मि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a74adf6b183f7d7214",
+      "id": "OPMCM-6a9c3ce54adf6b183f807dae",
       "name": "छिर्मि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1922,7 +914,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2b7",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bdc",
       "name": "छेवाङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -1984,7 +976,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2b9",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bde",
       "name": "जयराम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2035,7 +1027,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128b4adf6b183f7cd0c8",
+      "id": "OPMCM-6a9c3ccf4adf6b183f8079b7",
       "name": "टाँसी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2052,20 +1044,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19bf",
-      "name": "टिमुरे घट्टेखोलामा सम्पर्क बिहिनः रसुवागढी हाइड्रोको कर्मचारी लाक्पा तामाङ, बेचेन तामाङ, कर्मा तामाङ, ड्राईभरहरू बिजय, खुसाङ-[contact withheld]",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1987",
-      "name": "टिमुरे भन्सारमा ज्यालादारीमा काम गर्ने उजला नेपाली र आरम्भ नेपाली विहान देखि सम्पर्क विहिन भएको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6e4adf6b183f0b3f4f",
       "name": "टेक बशश्रेष्ठ",
@@ -2078,14 +1056,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda7a",
+      "id": "OPMCM-6a9c3d014adf6b183f80830e",
       "name": "टेनजुङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c126d4adf6b183f7ccb47",
+      "id": "OPMCM-6a9c3cb24adf6b183f807425",
       "name": "टोन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2103,14 +1081,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b04adf6b183f7cd738",
+      "id": "OPMCM-6a9c3cf24adf6b183f808009",
       "name": "डोलमा शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12894adf6b183f7cd061",
+      "id": "OPMCM-6a9c3ccd4adf6b183f807950",
       "name": "डोल्मा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2139,17 +1117,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a94adf6b183f7cd601",
+      "id": "OPMCM-6a9c3ceb4adf6b183f807eed",
       "name": "तासि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1989",
-      "name": "तिर्थयात्रामा गएको गाडि वगाएर श्रीमति समेत त्यहि बसमा वगेको तर हामी ५ जना सुर्यगढि गा.पा को भवनमा रहेकोले तत्काल उद्दारको खाँचो रहेकको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -2186,14 +1157,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12954adf6b183f7cd287",
+      "id": "OPMCM-6a9c3cd94adf6b183f807ba6",
       "name": "तेन्जनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccf9e",
+      "id": "OPMCM-6a9c3cca4adf6b183f80788d",
       "name": "तेन्जिन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2222,7 +1193,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccee2",
+      "id": "OPMCM-6a9c3cc74adf6b183f80778c",
       "name": "तेन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2240,21 +1211,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd4a1",
+      "id": "OPMCM-6a9c3ce34adf6b183f807d72",
       "name": "तोयानाथ श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a54adf6b183f7d71c9",
-      "name": "तोयानाथ श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12844adf6b183f7ccefa",
+      "id": "OPMCM-6a9c3cc74adf6b183f8077ac",
       "name": "दानुमाया तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2272,7 +1236,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2d2",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c00",
       "name": "दावा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2290,14 +1254,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a54adf6b183f7cd54e",
-      "name": "दावा सोनम तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a94adf6b183f7d72f2",
+      "id": "OPMCM-6a9c3ce74adf6b183f807e3a",
       "name": "दावा सोनम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2326,7 +1283,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2c0",
+      "id": "OPMCM-6a9c3cda4adf6b183f807be8",
       "name": "दावाफुन्च तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2341,13 +1298,6 @@
       "changed_fields": [
         "source_endpoint"
       ]
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1979",
-      "name": "दिक्षा प्याकुरेलः विदुर नपा बाट सम्पर्क विहिन",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -2384,7 +1334,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2b3",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bd8",
       "name": "दिल कुमार तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2401,20 +1351,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1927",
-      "name": "दिल बहादुर शाही",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19c9",
-      "name": "दिवानन्द सुवेदी [contact withheld] रसुवा काठमाडौ सवारी चालक",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6e4adf6b183f0b3f69",
       "name": "दुर्गा अर्याल",
@@ -2427,24 +1363,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19cd",
-      "name": "दुर्गा भट्टराई लगायत जम्मा १६ जनाको टिम मानसरोवर जाँदै गरेको बिहान 7ः45 पछि सम्पर्क हुन नसकेको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda69",
+      "id": "OPMCM-6a9c3d014adf6b183f8082fd",
       "name": "देन्ती तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb192b",
-      "name": "देबराज सुनुवार ऋचा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -2478,13 +1400,6 @@
       "changed_fields": [
         "source_endpoint"
       ]
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1975",
-      "name": "धनराज जैसी location : timure , gadi load unload मा कार्यरत",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -2554,7 +1469,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd352",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c3c",
       "name": "नारायाण अचार्य",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2572,7 +1487,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12af4adf6b183f7cd710",
+      "id": "OPMCM-6a9c3cf14adf6b183f807fe0",
       "name": "निता थपलिया",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2623,35 +1538,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19c7",
-      "name": "निमा डोल्मा तामाङ, पसङ ठिमो स्याफ्रु, सान्त ठिमो- [contact withheld] टिमुरे",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12844adf6b183f7ccefe",
+      "id": "OPMCM-6a9c3cc74adf6b183f8077b0",
       "name": "निमा तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7cceeb",
+      "id": "OPMCM-6a9c3cc74adf6b183f80779d",
       "name": "निमा दोर्जै तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4c3",
-      "name": "निर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d71f4",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d94",
       "name": "निर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2679,13 +1580,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb199f",
-      "name": "नुवकोट स्थायी ठेगाना भएका चन्चला दुवाल र करण खतिवडा अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e704adf6b183f0b4078",
       "name": "नेवा तामाङ",
@@ -2709,14 +1603,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd322",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c28",
       "name": "पसङ दोर्जे तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12724adf6b183f7ccbe3",
+      "id": "OPMCM-6a9c3cb74adf6b183f8074f1",
       "name": "पाङ् दोर्जे तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2766,13 +1660,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1931",
-      "name": "पुर्ण बहादुर बस्नेत",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6e4adf6b183f0b3fa0",
       "name": "पुर्णीमा तामाङ",
@@ -2785,7 +1672,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd354",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c3e",
       "name": "पुष्पा राज अधिकारी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2869,7 +1756,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128a4adf6b183f7cd0af",
+      "id": "OPMCM-6a9c3cce4adf6b183f80799e",
       "name": "प्रदिप श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2909,42 +1796,28 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda76",
+      "id": "OPMCM-6a9c3d014adf6b183f80830a",
       "name": "प्रविण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd57b",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e69",
       "name": "प्रविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2c5",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bed",
       "name": "प्रविन बोगटी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19e1",
-      "name": "प्रवीण खड्का- केरुङ नाकाको गाडीचालक",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4cd",
-      "name": "प्रित तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d7202",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d9e",
       "name": "प्रित तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2962,21 +1835,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4d2",
+      "id": "OPMCM-6a9c3ce44adf6b183f807da3",
       "name": "प्रेम डोल्मा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d7209",
-      "name": "प्रेम डोल्मा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12964adf6b183f7cd2a7",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bcc",
       "name": "फुर्पा छिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -2994,7 +1860,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12af4adf6b183f7cd700",
+      "id": "OPMCM-6a9c3cf14adf6b183f807fd0",
       "name": "फुलमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3023,7 +1889,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c64adf6b183f7cdbb9",
+      "id": "OPMCM-6a9c3d064adf6b183f808489",
       "name": "बाल कुमार ठाकुर",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3052,17 +1918,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b04adf6b183f7cd722",
+      "id": "OPMCM-6a9c3cf24adf6b183f807ff2",
       "name": "बिमला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19d9",
-      "name": "बुद्ध रत्न घलान,\nसुर्य घलान । सवारी चालक गाडी चाइनामा भएको चालक होटलमा बास बसेको , अन्तिम पटक सम्पर्कः हिजो बेलुका [contact withheld]",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -3077,28 +1936,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12bc4adf6b183f7cd97d",
+      "id": "OPMCM-6a9c3cfd4adf6b183f808210",
       "name": "बुद्धराम थारु",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19bd",
-      "name": "बुद्धि बहादुर गुरुङ सहित अरू ट्रक लगेर १ हप्तादेखी सामान अनलोड गर्न गएको [contact withheld] बिहान 8ः56 सम्म सम्पर्क भएको रसुवा बोर्डरमा फर्किने क्रममा। हाल सम्पर्क बिहिन",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a54adf6b183f7cd550",
-      "name": "बुद्धी मान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a94adf6b183f7d72f6",
+      "id": "OPMCM-6a9c3ce74adf6b183f807e3c",
       "name": "बुद्धी मान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3116,7 +1961,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd330",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c2c",
       "name": "भक्त बहादुर श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3155,13 +2000,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19d5",
-      "name": "भोटेकोशी, तातोपानि स्थायी निवासी पदम बहादुर मगर [contact withheld] १५ दिन देखि बसेको घट्टेखोला\nहिजो बेलुका ९ बजे सम्पर्क भएको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6e4adf6b183f0b3fab",
       "name": "मंगली घले",
@@ -3185,21 +2023,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12764adf6b183f7ccc6f",
+      "id": "OPMCM-6a9c3cbb4adf6b183f80757f",
       "name": "मणि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12904adf6b183f7cd1a6",
+      "id": "OPMCM-6a9c3cd34adf6b183f807a93",
       "name": "मण्जु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd324",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c2a",
       "name": "मन बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3216,20 +2054,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19c5",
-      "name": "मनिकला राना, स्थायी निवासी- अर्घखाँची 974722489/[contact withheld] टिमुरे थकाली होटल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1971",
-      "name": "मनिता कुमारी, सर्लाही ठेगाना भएको रसुवाको स्वास्थ्य केन्द्रमा कार्यरत सम्पर्कमा नरहेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6d4adf6b183f0b3eaf",
       "name": "महिन्द्र डंगोल",
@@ -3242,14 +2066,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19af",
-      "name": "माछापुच्छे बैंक रसुवामा काम गर्ने अनुज नेपाल मोबाईल नम्बर [contact withheld]",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12784adf6b183f7cccb6",
+      "id": "OPMCM-6a9c3cbc4adf6b183f8075c5",
       "name": "मानव तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3267,21 +2084,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a34adf6b183f7cd4f3",
+      "id": "OPMCM-6a9c3ce54adf6b183f807dc8",
       "name": "मिङ्मार शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a74adf6b183f7d725f",
-      "name": "मिङ्मार शेर्पा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccec4",
+      "id": "OPMCM-6a9c3cc64adf6b183f80776d",
       "name": "मिन बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3321,21 +2131,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12904adf6b183f7cd1bb",
+      "id": "OPMCM-6a9c3cd44adf6b183f807aad",
       "name": "मिनि माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c127d4adf6b183f7ccdb4",
+      "id": "OPMCM-6a9c3cc14adf6b183f80768f",
       "name": "मिनिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccfa0",
+      "id": "OPMCM-6a9c3cca4adf6b183f80788f",
       "name": "मिनु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3353,49 +2163,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12884adf6b183f7cd022",
+      "id": "OPMCM-6a9c3ccc4adf6b183f807912",
       "name": "मुना तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1985",
-      "name": "मेरो दाई राजेन्द्र श्रेष्ठ ना ६ ख ४०९३ नम्वरको कन्टेनर सहित टिमुरे भन्सार पास गरेर जाममा छु भनेर कल 8.30 मा कल भएको त्यस पछि सम्पर्क हुन नसकेकोले खोजि कार्य गरिदिन आग्रह",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb198d",
-      "name": "मेरो दाई शिवराम के सी भेन चालक टिमुरे भन्सार वाट विहान देखि सम्पर्क बाहिर रहेकोले खोजि कार्य गरिदिन आग्रह गरिएको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb198b",
-      "name": "मेरो भाई रुपेश वस्नेत 6795 नम्वरको वस रिजर्भ लिएर रसुवा गएको तर विहान देखि सम्पर्कमा नरहेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1993",
-      "name": "मेरोमामा यादव भण्डारी [contact withheld] रसुवा ईमिग्रेसनमा कार्यरत रहनुभएकोमा विहान देखि सम्पर्क विहिन भएकोले खोजि गरिदिन आग्रह",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd364",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c4c",
       "name": "मोहम्द अरहम",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b84adf6b183f7cd8aa",
+      "id": "OPMCM-6a9c3cf94adf6b183f80813c",
       "name": "यब्रोन रिमाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3413,14 +2195,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19db",
-      "name": "यादव भण्डारी अधिकृत- अध्यागमन कार्यालय",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12884adf6b183f7cd035",
+      "id": "OPMCM-6a9c3ccc4adf6b183f807924",
       "name": "यान्जे तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3438,14 +2213,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccee6",
+      "id": "OPMCM-6a9c3cc74adf6b183f807790",
       "name": "युनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2c3",
+      "id": "OPMCM-6a9c3cda4adf6b183f807beb",
       "name": "यूनिश नेपाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3463,7 +2238,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2bd",
+      "id": "OPMCM-6a9c3cda4adf6b183f807be2",
       "name": "यूवराज तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3481,94 +2256,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd780",
+      "id": "OPMCM-6a9c3cf44adf6b183f808053",
       "name": "रसमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1999",
-      "name": "रसुवा जिल्ला टिमुरेमा नुवाकोट स्थायी ठेगाना भएका गाडी चालक ठाकुर अधिकारी मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1981",
-      "name": "रसुवा पहिरोपछि चौतारा साँगाचोकगढी नगरपालिका -२ रमेश ढुंगाना केरुङ नाका आसपासबाट सम्पर्कविहीन हुनुभएको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb199d",
-      "name": "रसुवा स्थायी ठेगाना भएका फूलमाया तामाङ, अन्जली तमाङ, करन तामाङ, आशादिप तमाङ सहित 5 जना रसुवाको फाल्टेबाट बिहानादेखी अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19b1",
-      "name": "रसुवाको अपर त्रिशुल्ली -1 216 काम गर्ने कृष्ण साउद मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1995",
-      "name": "रसुवाको पावर चाईना मा काम गर्ने सल्यान स्थायी ठेगाना भएका भुपेन्द्र रावत र भुपेन्द्र बहादुर के.सी. अहिलेसम्म सम्पर्कमा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1983",
-      "name": "रसुवाको स्याफ्रु वेसिको NIMB बैकको बैंक मेनेजरका रुपमा कार्यरत मेरो वुवा शिव प्रसाद लम्साल [contact withheld] विहान देखि सम्पर्क हुन नसकेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb1997",
-      "name": "रसुवाबाट दोलाखा स्थायी ठेगाना भएका गाडी नम्बर 6795 का गाडी चालक सिताराम श्रेष्ठ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19a9",
-      "name": "रसुवामा ओखलढुङ्गा स्थायी ठेगाना भएका गाडी नम्बर बागमती प्रदेश 01001य 1864 का चालक मिलन बिडारी मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19ad",
-      "name": "रसुवामा नुवाकोट स्थायी ठेगाना भएका हरि खनाल मोबाईल [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19a1",
-      "name": "रसुवामा नौकुण्ड गाउँपालिका वडा नं. 4 स्थायी ठेगाना भएका उग्रेन तामाङ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19a7",
-      "name": "रसुवामा सन्धुपाल्चोक जिल्ला चौतरा स्थायी ठेगाना भएका गाडी नम्बर 6796 चालक राजकुमार पोखरेल मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19ab",
-      "name": "रसुवामा सन्धुपाल्चोक जिल्ला तातोपानी गा.पा. स्थायी ठेगाना भएका गाडी नम्बर ना.5ख 9615 चालक पासाङ लामा अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -3605,56 +2296,35 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd31f",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c25",
       "name": "राज कुमार भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c127b4adf6b183f7ccd2e",
+      "id": "OPMCM-6a9c3cbf4adf6b183f807639",
       "name": "राजकुमार तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19e3",
-      "name": "राजकुमार पराजुली - सिल्क कम्पनी भन्सार एजेन्ट",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12874adf6b183f7ccfea",
+      "id": "OPMCM-6a9c3ccb4adf6b183f8078d8",
       "name": "राजकुमारी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128b4adf6b183f7cd0d6",
+      "id": "OPMCM-6a9c3ccf4adf6b183f8079c5",
       "name": "राजन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19e7",
-      "name": "राजु ओली - इलेक्ट्रिसियन काठमाडौं:",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19c1",
-      "name": "राजु श्रेष्ठ सिन्धुपाल्चोक - टिमुरे [contact withheld]",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccec1",
+      "id": "OPMCM-6a9c3cc64adf6b183f80776a",
       "name": "राजेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3672,21 +2342,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12ca4adf6b183f7cdc9f",
+      "id": "OPMCM-6a9c3d0a4adf6b183f808570",
       "name": "राजेन्द्र कुमार चौधरी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c74adf6b183f7cdbfe",
+      "id": "OPMCM-6a9c3d074adf6b183f8084cd",
       "name": "राजेन्द्र ढुंगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c84adf6b183f7cdc2e",
+      "id": "OPMCM-6a9c3d084adf6b183f8084ff",
       "name": "राजेन्द्र प्रसाद ढुङगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3726,17 +2396,10 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2b5",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bda",
       "name": "राम बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19d1",
-      "name": "राम भट्ट, सुमित्रा भट्ट -[contact withheld] - गोसाईकुन्ड भ्रमणका लागि अर्चले शान्तिबजारबाट निस्किएको\nहाल सम्पर्क बिहीन",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
     },
     {
       "type": "UPDATED",
@@ -3784,21 +2447,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c129c4adf6b183f7cd3e6",
+      "id": "OPMCM-6a9c3cdf4adf6b183f807ca8",
       "name": "रिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccf99",
+      "id": "OPMCM-6a9c3cca4adf6b183f807887",
       "name": "रिन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b84adf6b183f7cd899",
+      "id": "OPMCM-6a9c3cf94adf6b183f80812b",
       "name": "रियान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3827,28 +2490,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd4be",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d8f",
       "name": "रेस्मा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d71ef",
-      "name": "रेस्मा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12844adf6b183f7ccefc",
+      "id": "OPMCM-6a9c3cc74adf6b183f8077ae",
       "name": "रेहन तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c129d4adf6b183f7cd416",
+      "id": "OPMCM-6a9c3ce04adf6b183f807cd9",
       "name": "रोजिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3888,7 +2544,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b44adf6b183f7cd805",
+      "id": "OPMCM-6a9c3cf54adf6b183f808091",
       "name": "रोशनी सुनार",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3905,13 +2561,6 @@
       ]
     },
     {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1973",
-      "name": "लक्ष्मण सापकोटा कमलामाई नपा ११ सिन्धुली। jai jai company रसुवागढि हाइड्रा। सम्पर्क विहिन।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
       "type": "UPDATED",
       "id": "OPMCM-6a937e6e4adf6b183f0b3efc",
       "name": "लक्ष्मी आचार्य नेपाल",
@@ -3924,28 +2573,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd760",
+      "id": "OPMCM-6a9c3cf34adf6b183f808031",
       "name": "लनि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12714adf6b183f7ccbcb",
+      "id": "OPMCM-6a9c3cb64adf6b183f8074ce",
       "name": "लनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a24adf6b183f7cd4d7",
-      "name": "लाक्पा भुटी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d720e",
+      "id": "OPMCM-6a9c3ce54adf6b183f807da8",
       "name": "लाक्पा भुटी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -3963,14 +2605,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12844adf6b183f7ccf1e",
+      "id": "OPMCM-6a9c3cc84adf6b183f8077e9",
       "name": "लालकेश चौलागाई",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12994adf6b183f7cd368",
+      "id": "OPMCM-6a9c3cdc4adf6b183f807c4f",
       "name": "लालमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4032,7 +2674,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128f4adf6b183f7cd184",
+      "id": "OPMCM-6a9c3cd34adf6b183f807a73",
       "name": "विनिशा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4050,21 +2692,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd4aa",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d7b",
       "name": "विनोद कुमार महतो",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d71d4",
-      "name": "विनोद कुमार महतो",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12964adf6b183f7cd2aa",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bcf",
       "name": "विर बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4126,7 +2761,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd2fa",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c18",
       "name": "वीर बहादुर मैनाली",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4155,42 +2790,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd784",
+      "id": "OPMCM-6a9c3cf44adf6b183f808057",
       "name": "शान्ति माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb1957",
-      "name": "शिव लम्साल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb193f",
-      "name": "शुशिल बास्तोला",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19cf",
-      "name": "शोभा घिमिरे -[contact withheld], बेत्रावती, बिहान देखी नै सम्पर्क नभएको\nकौशिला रिजाल घिमिरे- [contact withheld]\nराजु घिमिरे",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb197b",
-      "name": "संगम चौलागाँई स्याफ्रुवेशिबाट सम्पर्क विहिन।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd585",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e73",
       "name": "सगुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4208,21 +2815,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2bb",
+      "id": "OPMCM-6a9c3cda4adf6b183f807be0",
       "name": "संजित तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a74adf6b183f7cd5b8",
+      "id": "OPMCM-6a9c3ce94adf6b183f807ea2",
       "name": "सजित भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b04adf6b183f7cd71f",
+      "id": "OPMCM-6a9c3cf24adf6b183f807fef",
       "name": "सन्तु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4273,63 +2880,28 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b94adf6b183f7cd8d6",
+      "id": "OPMCM-6a9c3cfa4adf6b183f808168",
       "name": "समिरा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19b3",
-      "name": "सम्पर्क बिहिनः देवी पौडेल, उदयपुर, 40 जनाको टिम गोसाइकुण्ड ट्रेकिङको लागि बिहान 4 बजे धुन्चेबाट हिड्ने भनिएकोमा बिहानदेखी सम्पर्क बिहिन।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19b9",
-      "name": "सम्पर्क बिहिनः पदम बहादुर घर्ति मगर, टिमुरे",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19b5",
-      "name": "सम्पर्क बिहिनः राजु श्रेष्ठ, स्याफ्रुबेसी बगरमा पसल संचालन गरी बसेका, बिहान ७ः३० पछि सम्पर्क नभएको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19b7",
-      "name": "सम्पर्क बिहिन सिन्धुपाल्चोक, त्रिपुरासुन्दरीका देवेन्द्र खड्का, शमुन्द्र न्यौपाने बिहान ७ः३० बजे टिमुरेबाट रसुवा 4273 र 8420 नं.को भ्यान लगेर जाँदै गरेको",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19bb",
-      "name": "सम्पर्क बिहीन आयुष खड्का, सल्यान। प्लान्ट क्वारेन्टाइन कार्यालय खरिदार, [contact withheld]",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda74",
+      "id": "OPMCM-6a9c3d014adf6b183f808308",
       "name": "संम्रिका तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12714adf6b183f7ccbc8",
+      "id": "OPMCM-6a9c3cb64adf6b183f8074cb",
       "name": "सयोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12894adf6b183f7cd048",
+      "id": "OPMCM-6a9c3ccd4adf6b183f807937",
       "name": "सयोन तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4347,21 +2919,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7ccef1",
+      "id": "OPMCM-6a9c3cc74adf6b183f8077a3",
       "name": "सरिता तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19c3",
-      "name": "सरिता मल्ल, २ महिनाको बच्चा र बच्चा हेरालु दुर्गा शाही [contact withheld] - अस्पताल कर्मचारी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12b74adf6b183f7cd873",
+      "id": "OPMCM-6a9c3cf84adf6b183f808104",
       "name": "सरू चौलागाई",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4401,14 +2966,14 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12904adf6b183f7cd1bd",
+      "id": "OPMCM-6a9c3cd44adf6b183f807aaf",
       "name": "सर्स्वती न्यौपाने",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b74adf6b183f7cd871",
+      "id": "OPMCM-6a9c3cf84adf6b183f808102",
       "name": "सविधान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4437,7 +3002,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b84adf6b183f7cd8b1",
+      "id": "OPMCM-6a9c3cf94adf6b183f808143",
       "name": "साजन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4455,63 +3020,56 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a64adf6b183f7cd58c",
+      "id": "OPMCM-6a9c3ce84adf6b183f807e7a",
       "name": "सान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12724adf6b183f7ccbd0",
+      "id": "OPMCM-6a9c3cb64adf6b183f8074d3",
       "name": "सानिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12884adf6b183f7cd038",
+      "id": "OPMCM-6a9c3ccc4adf6b183f807927",
       "name": "सानिमाया तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b34adf6b183f7cd790",
+      "id": "OPMCM-6a9c3cf44adf6b183f808063",
       "name": "सानी श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128a4adf6b183f7cd09b",
+      "id": "OPMCM-6a9c3cce4adf6b183f80798a",
       "name": "सानीमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd4ba",
+      "id": "OPMCM-6a9c3ce44adf6b183f807d8b",
       "name": "सानु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a64adf6b183f7d71e9",
-      "name": "सानु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c129e4adf6b183f7cd44a",
+      "id": "OPMCM-6a9c3ce14adf6b183f807d13",
       "name": "सानु माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda66",
+      "id": "OPMCM-6a9c3d014adf6b183f8082fa",
       "name": "सान्ता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4573,28 +3131,28 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda55",
+      "id": "OPMCM-6a9c3d004adf6b183f8082e9",
       "name": "सिमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12ac4adf6b183f7cd691",
+      "id": "OPMCM-6a9c3cee4adf6b183f807f78",
       "name": "सिर्जना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd49b",
+      "id": "OPMCM-6a9c3ce34adf6b183f807d6a",
       "name": "सुक ब. तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2df",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c0e",
       "name": "सुजन आले मगर",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4634,21 +3192,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b14adf6b183f7cd752",
+      "id": "OPMCM-6a9c3cf34adf6b183f808023",
       "name": "सुजाता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b34adf6b183f7cd79e",
+      "id": "OPMCM-6a9c3cf54adf6b183f808071",
       "name": "सुजिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b14adf6b183f7cd750",
+      "id": "OPMCM-6a9c3cf34adf6b183f808021",
       "name": "सुजिता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4677,21 +3235,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c129e4adf6b183f7cd43f",
+      "id": "OPMCM-6a9c3ce14adf6b183f807d08",
       "name": "सुनमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12bf4adf6b183f7cda26",
+      "id": "OPMCM-6a9c3d004adf6b183f8082ba",
       "name": "सुनिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c129c4adf6b183f7cd3ed",
+      "id": "OPMCM-6a9c3cdf4adf6b183f807caf",
       "name": "सुनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4731,63 +3289,42 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19dd",
-      "name": "सुभाष तिमल्सिना",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19e5",
-      "name": "सुभाष तिमल्सिना- काठमाडौँ काँडाघारी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12814adf6b183f7cce85",
+      "id": "OPMCM-6a9c3cc54adf6b183f807731",
       "name": "सुमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c127f4adf6b183f7cce1f",
+      "id": "OPMCM-6a9c3cc34adf6b183f8076de",
       "name": "सुमिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12974adf6b183f7cd2b0",
+      "id": "OPMCM-6a9c3cda4adf6b183f807bd5",
       "name": "सुयान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c04adf6b183f7cda3f",
+      "id": "OPMCM-6a9c3d004adf6b183f8082d3",
       "name": "सुरज खडका",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19d3",
-      "name": "सुरज डङ्गोल र आहाना डङ्गोल\nबेत्रावती [contact withheld] बिहानै देखी सम्पर्क नभएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12c74adf6b183f7cdc11",
+      "id": "OPMCM-6a9c3d074adf6b183f8084e0",
       "name": "सुर्य ब.तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd313",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c1d",
       "name": "सुर्य शर्मा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4816,56 +3353,49 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b84adf6b183f7cd8a2",
+      "id": "OPMCM-6a9c3cf94adf6b183f808134",
       "name": "सुविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a902eb54adf6b183fbb196d",
-      "name": "सुशान्त कार्की",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12954adf6b183f7cd28e",
+      "id": "OPMCM-6a9c3cd94adf6b183f807baf",
       "name": "सुशान्त तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12984adf6b183f7cd302",
+      "id": "OPMCM-6a9c3cdb4adf6b183f807c1b",
       "name": "सुशिल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b24adf6b183f7cd786",
+      "id": "OPMCM-6a9c3cf44adf6b183f808059",
       "name": "सुशिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b74adf6b183f7cd86d",
+      "id": "OPMCM-6a9c3cf84adf6b183f8080ff",
       "name": "सुस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128b4adf6b183f7cd0ed",
+      "id": "OPMCM-6a9c3ccf4adf6b183f8079db",
       "name": "सृजना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c127b4adf6b183f7ccd49",
+      "id": "OPMCM-6a9c3cc04adf6b183f80764e",
       "name": "सृष्टि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4883,7 +3413,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b04adf6b183f7cd72c",
+      "id": "OPMCM-6a9c3cf24adf6b183f807ffe",
       "name": "सोन माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4901,7 +3431,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12834adf6b183f7cced5",
+      "id": "OPMCM-6a9c3cc74adf6b183f80777e",
       "name": "सोनम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4919,21 +3449,21 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd498",
+      "id": "OPMCM-6a9c3ce34adf6b183f807d67",
       "name": "सोनाम थोक्तेल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12864adf6b183f7ccf97",
+      "id": "OPMCM-6a9c3cca4adf6b183f807884",
       "name": "सोनाय तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12ad4adf6b183f7cd69b",
+      "id": "OPMCM-6a9c3cee4adf6b183f807f80",
       "name": "सोनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4951,7 +3481,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c128f4adf6b183f7cd186",
+      "id": "OPMCM-6a9c3cd34adf6b183f807a75",
       "name": "सोम माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4969,7 +3499,7 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12c24adf6b183f7cdae0",
+      "id": "OPMCM-6a9c3d024adf6b183f808371",
       "name": "सोमा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
@@ -4987,1414 +3517,2870 @@
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12b14adf6b183f7cd73d",
+      "id": "OPMCM-6a9c3cf24adf6b183f80800e",
       "name": "सोमो तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c12a44adf6b183f7cd53e",
+      "id": "OPMCM-6a9c3ce74adf6b183f807e2b",
       "name": "सौजन श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "ADDED",
-      "id": "OPMCM-6a9c19a94adf6b183f7d72b8",
-      "name": "सौजन श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb199b",
-      "name": "स्थायी ठेगाना पाल्पा भई लाङटाङ खोला हाईड्रोपावर, रसुवमा काम गर्ने रमेश थापा क्षेत्री मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a902eb64adf6b183fbb19e9",
-      "name": "हरि खड्का - नासु टिमुरे भन्सार कार्यालय",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "OUT_OF_CONTACT"
-    },
-    {
-      "type": "ADDED",
-      "id": "OPMCM-6a9c12a14adf6b183f7cd49f",
+      "id": "OPMCM-6a9c3ce34adf6b183f807d70",
       "name": "हरि गहतराज",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "POLICE_MISSING-35916",
-      "name": "- गोबिन्द बहादुर अधिकारी",
-      "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6a9be86e4adf6b183f7968d1",
+      "id": "OPMCM-6a9c12bf4adf6b183f7cda07",
       "name": "Abhishek Tiwari",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f796980",
+      "id": "OPMCM-6a902eb54adf6b183fbb18a3",
+      "name": "ajay tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18f9",
+      "name": "Alisha Gurung",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdab9",
       "name": "Alok Kumar Sah",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f79697e",
+      "id": "OPMCM-6a902eb54adf6b183fbb18ef",
+      "name": "Amar thapa magar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18ad",
+      "name": "Andre Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19ed",
+      "name": "Anil bista from kalikot, Trishuli hyropower 3b",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1935",
+      "name": "Anipal Bista",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb196b",
+      "name": "Anoj pun",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1965",
+      "name": "Ansh giri",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18f7",
+      "name": "Anup Raya",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb187f",
+      "name": "ARKU TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1879",
+      "name": "ARUN KHADKA",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdab7",
       "name": "Arun Kumar Sah",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d10",
+      "id": "OPMCM-6a902eb54adf6b183fbb18ab",
+      "name": "ashish tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb191f",
+      "name": "Ashok shrestha",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb196f",
+      "name": "Astha maharjan",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb194b",
+      "name": "Balmukunda Khatiwada",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb188d",
+      "name": "BHU LAKPA",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1945",
+      "name": "Bhupal Magar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1929",
+      "name": "Bibek Dawadi",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb187b",
+      "name": "BIJAYA GHALE JIBAN TITUNG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1921",
+      "name": "Bimal Neupane",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18c1",
+      "name": "Brother: Prakash Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18eb",
+      "name": "buddha hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1961",
+      "name": "Buddhi Maya Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1883",
+      "name": "BYALGONG TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18b5",
+      "name": "CHANDRA GHALE",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12824adf6b183f7ccea5",
       "name": "Chandra Shekhar Sharma",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85e4adf6b183f796589",
+      "id": "OPMCM-6a902eb54adf6b183fbb18df",
+      "name": "chheten lama",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18e5",
+      "name": "chhiring buddhi tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18c7",
+      "name": "Daughter: Anisha Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1907",
+      "name": "Dawa Finjo Lopchan",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1893",
+      "name": "dawa mingmar tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1875",
+      "name": "DAWA SONAM TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19eb",
+      "name": "Dilip Tamang, Ashok Tamang and Keshav tamang from Nuwakot. at Ghattekhola",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1951",
+      "name": "Dinesh Deuba",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1905",
+      "name": "Dinesh Poudel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12ac4adf6b183f7cd689",
       "name": "Dinesh Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f796982",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdabb",
       "name": "Dipendra Mandal",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d29",
+      "id": "OPMCM-6a902eb54adf6b183fbb1913",
+      "name": "Divya sardana",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12834adf6b183f7ccebd",
       "name": "FTHIYA ALZDJALI",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86e4adf6b183f7968d4",
+      "id": "OPMCM-6a902eb54adf6b183fbb193b",
+      "name": "Ganesh neupane",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1899",
+      "name": "ghatte khola completely destroyed)",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb190d",
+      "name": "Govinda Saud",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb194f",
+      "name": "Gyanendra pun magar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1963",
+      "name": "Hari Bansha Dahal",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18b1",
+      "name": "Hemanta Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1897",
+      "name": "Homnath betuwal",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12bf4adf6b183f7cda0a",
       "name": "Indrajit Kumar",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8714adf6b183f796988",
+      "id": "OPMCM-6a902eb54adf6b183fbb188f",
+      "name": "JIBAN TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb189d",
+      "name": "jureli tamang{saili tamang }",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18dd",
+      "name": "jyamju lama",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1919",
+      "name": "Kamana Shrestha",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18e3",
+      "name": "kami tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb186b",
+      "name": "KARSANG TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18fb",
+      "name": "Khesam Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1881",
+      "name": "KOREAN TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb189b",
+      "name": "krishna shrestha",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1943",
+      "name": "kumar mahara",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18cb",
+      "name": "lakpa chhewang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18c5",
+      "name": "Lakpa Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb190f",
+      "name": "Lakpa thokar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1891",
+      "name": "lanjom tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18d9",
+      "name": "lasha hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb189f",
+      "name": "lhazom",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18b7",
+      "name": "Local residents",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18ff",
+      "name": "Mahesh panta",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18f1",
+      "name": "Maiya Dahal Bimali",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19ef",
+      "name": "mankala sanjel, rishi sanjel, sushmita jaishi , from timure, woriking at parking",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb194d",
+      "name": "Maya debi khadka",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18b3",
+      "name": "Menjamaya Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1949",
+      "name": "Milan Kharel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18bf",
+      "name": "Mingma Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb187d",
+      "name": "MLANGCHA BAHINI",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18a9",
+      "name": "mojnath neupane",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1941",
+      "name": "Muna Pakhrin",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1911",
+      "name": "Nal kumar Timilsina",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1947",
+      "name": "Namaraj Nepal",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18ed",
+      "name": "Naresh Datta Joshi",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb188b",
+      "name": "NIMA TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1933",
+      "name": "Nipun Prajapati",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c24adf6b183f7cdac1",
       "name": "Niraj Kumar Patel",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d12",
+      "id": "OPMCM-6a902eb54adf6b183fbb1873",
+      "name": "OM KARMA",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18db",
+      "name": "pasang yangjen",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18e9",
+      "name": "peaceful hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18e7",
+      "name": "pelung lama",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1867",
+      "name": "PEMA DEKI GYURMI TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18d7",
+      "name": "phur pasang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12824adf6b183f7ccea7",
       "name": "Pintu Kumar",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f79697c",
+      "id": "OPMCM-6a902eb54adf6b183fbb1885",
+      "name": "PLEMO TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18bb",
+      "name": "Pokchi Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18b9",
+      "name": "pokchi Tamang husband",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18a5",
+      "name": "prakash devkota",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1895",
+      "name": "pratima tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdab5",
       "name": "Raj Kumar Tiwari",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8714adf6b183f796985",
+      "id": "OPMCM-6a902eb54adf6b183fbb1937",
+      "name": "Rajan adhikari",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb191d",
+      "name": "Rajan Sen",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1909",
+      "name": "Rakesh Darji",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb186f",
+      "name": "RAKESH TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb190b",
+      "name": "Ram hari khakda",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb192f",
+      "name": "Ram khadka",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb191b",
+      "name": "Ram Prasad Rijal",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18c9",
+      "name": "Ram Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1955",
+      "name": "Rameshor Lama",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1959",
+      "name": "Renuka Magar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1889",
+      "name": "RIMA TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c24adf6b183f7cdabe",
       "name": "Saddam Hussein",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f79696c",
+      "id": "OPMCM-6a902eb54adf6b183fbb18f5",
+      "name": "Sahadev phuyal",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1871",
+      "name": "SAKI TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdaa5",
       "name": "Salman Aalam",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d0e",
+      "id": "OPMCM-6a902eb54adf6b183fbb1917",
+      "name": "Samragyi bishwokarma",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1887",
+      "name": "SANGA TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12824adf6b183f7ccea3",
       "name": "Sanjaya Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d0c",
+      "id": "OPMCM-6a902eb54adf6b183fbb18af",
+      "name": "Santa Ghale",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1939",
+      "name": "SANTOSH KUMAR THAKUR",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1869",
+      "name": "SANU TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1877",
+      "name": "SARKI BUDDI TAMANG",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12824adf6b183f7ccea1",
       "name": "Satya Narayan Sahani",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f796979",
+      "id": "OPMCM-6a902eb54adf6b183fbb1915",
+      "name": "Satya Raj Timilsina",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18a1",
+      "name": "sekhar tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1925",
+      "name": "SHIV SHANKAR JOSHI",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18d3",
+      "name": "shyam bahadur",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18bd",
+      "name": "Sister-in-law : Muna Gurung",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18e1",
+      "name": "small star hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18c3",
+      "name": "Son: Suresh Tamang",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb193d",
+      "name": "Subhadra Neupane",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18fd",
+      "name": "Subodh Belbase",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb192d",
+      "name": "Sugam giri",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1953",
+      "name": "Sunil man dangol",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18d1",
+      "name": "sunrise hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1903",
+      "name": "Suresh Yadav",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18a7",
+      "name": "sushila pudasaini",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1923",
+      "name": "Susmita jaisi",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1967",
+      "name": "Swornima Pulami",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18cf",
+      "name": "tenjen",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18cd",
+      "name": "tibet hotel",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb195f",
+      "name": "Tila mahatara",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c14adf6b183f7cdab2",
       "name": "Tipu Kumarat",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8574adf6b183f79641f",
+      "id": "OPMCM-6a902eb54adf6b183fbb1901",
+      "name": "Tula Thapa Magar",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a34adf6b183f7cd51a",
       "name": "wang Li tain",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a902eb04adf6b183fbb1001",
-      "name": "Yashas Bhand",
+      "id": "OPMCM-6a9c19a84adf6b183f7d728c",
+      "name": "wang Li tain",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb186d",
+      "name": "YA BURI TAMANG",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "OUT_OF_CONTACT"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8574adf6b183f796430",
+      "id": "OPMCM-6a902eb54adf6b183fbb18d5",
+      "name": "yala peak",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb18f3",
+      "name": "Yukesh dangol",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a44adf6b183f7cd52b",
       "name": "Zhang chu Meng",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8714adf6b183f7969bf",
+      "id": "OPMCM-6a9c19a84adf6b183f7d72a1",
+      "name": "Zhang chu Meng",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c34adf6b183f7cdaf9",
       "name": "अकिलेश यादव",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84b4adf6b183f7961f8",
+      "id": "OPMCM-6a902eb64adf6b183fbb19d7",
+      "name": "अच्युत भन्डारी, [contact withheld], बिहान ७ बजेसम्म सम्पर्कमा रहेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12954adf6b183f7cd28c",
       "name": "अजय तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f796295",
+      "id": "OPMCM-6a9c12994adf6b183f7cd370",
       "name": "अनिश तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84f4adf6b183f79629e",
+      "id": "OPMCM-6a902eb64adf6b183fbb19df",
+      "name": "अन्जय तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12994adf6b183f7cd379",
       "name": "अम्मर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86e4adf6b183f7968f3",
+      "id": "OPMCM-6a9c12bf4adf6b183f7cda29",
       "name": "अरुप तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8674adf6b183f796704",
+      "id": "OPMCM-6a9c12b74adf6b183f7cd861",
       "name": "अरूशा अधिकारी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f796916",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda4c",
       "name": "अर्जुन खत्री",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85f4adf6b183f7965a5",
+      "id": "OPMCM-6a9c12ad4adf6b183f7cd6a9",
       "name": "अलिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f79666c",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd782",
       "name": "असमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8654adf6b183f7966b8",
+      "id": "OPMCM-6a9c12b44adf6b183f7cd814",
       "name": "अस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e3a",
+      "id": "OPMCM-6a9c12864adf6b183f7ccfb5",
       "name": "आइती माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796235",
+      "id": "OPMCM-6a902eb54adf6b183fbb1977",
+      "name": "आमा बुद्धमाया बज्राचार्य मिना पवन सुष्मा श्रीजा घरमा थुनिनुभएको। त्रिसुली बजार नुवाकोट",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2c9",
       "name": "आमिस तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f79647e",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd578",
       "name": "आरोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f796487",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd581",
       "name": "आसुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8664adf6b183f7966ec",
+      "id": "OPMCM-6a9c12b64adf6b183f7cd848",
       "name": "ईन्द्र कामरी ढकाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f79624e",
+      "id": "OPMCM-6a9c12984adf6b183f7cd2e2",
       "name": "ईसान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796245",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2d9",
       "name": "उज्जवल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f796657",
+      "id": "OPMCM-6a902eb64adf6b183fbb198f",
+      "name": "उपर त्रिशुली -1 मा कार्यरत सवओभरसियर जयधन जोशी [contact withheld] सम्पर्क विहिन हुनु भएकोले खोजि गरिदिन आग्रह",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd76e",
       "name": "एन्जिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f796655",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd76c",
       "name": "एन्जी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8674adf6b183f796709",
+      "id": "OPMCM-6a9c12b74adf6b183f7cd866",
       "name": "एलियना पाण्डे",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8574adf6b183f79643d",
+      "id": "OPMCM-6a9c12a44adf6b183f7cd536",
       "name": "कपिल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8784adf6b183f796b83",
+      "id": "OPMCM-6a9c19a84adf6b183f7d72ae",
+      "name": "कपिल तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12ca4adf6b183f7cdcb6",
       "name": "कपिल पार्की",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f79694e",
+      "id": "OPMCM-6a9c12c14adf6b183f7cda84",
       "name": "कबि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85b4adf6b183f7964ed",
+      "id": "OPMCM-6a9c12a84adf6b183f7cd5e9",
       "name": "कर्ण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963ce",
+      "id": "OPMCM-6a902eb54adf6b183fbb197d",
+      "name": "कर्मराज जैसी लगायत ३ जना रसुवाको जोखीम क्षेत्रमै बेपत्ता अवस्थामा रहेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb197f",
+      "name": "कर्मा लामा, टिम्मुरे आसपास देखी बिहान 9:15 सम्म सम्पर्कमा रहेको अहिले सम्पर्क विहिन",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19a5",
+      "name": "काठमाडैबाट विहान 3 बजे रसुवाको लागि हिडेको 1486 नम्बरको स्कार्पियो चालक रसुवा नौकुण्ड 4 स्थायी ठेगाना भएका ओशोक तामाङ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19a3",
+      "name": "काठमाडौंबाट गोसाईकुण्ड गएका काठमाडौं स्थायी ठेगाना भएका अमित डंगोल मोबाईल नम्बर [contact withheld]र कपिल शाक्य मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4c6",
       "name": "कामीछिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e14",
+      "id": "OPMCM-6a9c19a64adf6b183f7d71f9",
+      "name": "कामीछिरिङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12864adf6b183f7ccf9b",
       "name": "कार्मो तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795aac",
+      "id": "OPMCM-6a9c12724adf6b183f7ccbdc",
       "name": "कार्साङ्ग दावा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f796495",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd591",
       "name": "कुसाङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795ab7",
+      "id": "OPMCM-6a9c12724adf6b183f7ccbe5",
       "name": "कृतिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79626e",
+      "id": "OPMCM-6a9c12984adf6b183f7cd341",
       "name": "कृष्ण प्रसाद लामिछाने",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796233",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2c7",
       "name": "कृष्ण बहादुर खड्का",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84b4adf6b183f7961e5",
+      "id": "OPMCM-6a902eb64adf6b183fbb19cb",
+      "name": "केशब विष्ट [contact withheld] लाङटाङ खोला हाइड्रोपावरमा कार्यरत इलेक्ट्रिकल ओभरसियर",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12954adf6b183f7cd27a",
       "name": "केशम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963ad",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd4a7",
       "name": "केसाङ घले",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d90",
+      "id": "OPMCM-6a9c19a54adf6b183f7d71d1",
+      "name": "केसाङ घले",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12844adf6b183f7ccf23",
       "name": "केसिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86d4adf6b183f79689c",
+      "id": "OPMCM-6a902eb54adf6b183fbb195b",
+      "name": "खिल बहादुर बुढाथोकी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12be4adf6b183f7cd9d4",
       "name": "गणेश जोशी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85b4adf6b183f79650c",
+      "id": "OPMCM-6a902eb64adf6b183fbb1991",
+      "name": "गौरिगंज-3 निवासी अपर त्रिशुलीमा सुपरभाईजरमा कार्यरत केवल आचार्य [contact withheld] सम्पर्क विहिन भएको हुनाले खोजि गरिदिन आग्रह",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a94adf6b183f7cd608",
       "name": "चतुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796249",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2dd",
       "name": "चन्द्र बहादुर घले",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8534adf6b183f796355",
+      "id": "OPMCM-6a9c129f4adf6b183f7cd44e",
       "name": "चिक्तु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8324adf6b183f795b8b",
+      "id": "OPMCM-6a9c12784adf6b183f7cccb8",
       "name": "छिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8564adf6b183f7963e5",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4dd",
       "name": "छिर्मि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796223",
+      "id": "OPMCM-6a9c19a74adf6b183f7d7214",
+      "name": "छिर्मि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2b7",
       "name": "छेवाङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796225",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2b9",
       "name": "जयराम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8424adf6b183f795fde",
+      "id": "OPMCM-6a9c128b4adf6b183f7cd0c8",
       "name": "टाँसी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8704adf6b183f796944",
+      "id": "OPMCM-6a902eb64adf6b183fbb19bf",
+      "name": "टिमुरे घट्टेखोलामा सम्पर्क बिहिनः रसुवागढी हाइड्रोको कर्मचारी लाक्पा तामाङ, बेचेन तामाङ, कर्मा तामाङ, ड्राईभरहरू बिजय, खुसाङ-[contact withheld]",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1987",
+      "name": "टिमुरे भन्सारमा ज्यालादारीमा काम गर्ने उजला नेपाली र आरम्भ नेपाली विहान देखि सम्पर्क विहिन भएको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda7a",
       "name": "टेनजुङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8294adf6b183f795a16",
+      "id": "OPMCM-6a9c126d4adf6b183f7ccb47",
       "name": "टोन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8624adf6b183f796621",
+      "id": "OPMCM-6a9c12b04adf6b183f7cd738",
       "name": "डोलमा शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8414adf6b183f795f42",
+      "id": "OPMCM-6a9c12894adf6b183f7cd061",
       "name": "डोल्मा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85b4adf6b183f796505",
+      "id": "OPMCM-6a9c12a94adf6b183f7cd601",
       "name": "तासि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84b4adf6b183f7961f3",
+      "id": "OPMCM-6a902eb64adf6b183fbb1989",
+      "name": "तिर्थयात्रामा गएको गाडि वगाएर श्रीमति समेत त्यहि बसमा वगेको तर हामी ५ जना सुर्यगढि गा.पा को भवनमा रहेकोले तत्काल उद्दारको खाँचो रहेकको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12954adf6b183f7cd287",
       "name": "तेन्जनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e17",
+      "id": "OPMCM-6a9c12864adf6b183f7ccf9e",
       "name": "तेन्जिन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d4e",
+      "id": "OPMCM-6a9c12834adf6b183f7ccee2",
       "name": "तेन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963a7",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd4a1",
       "name": "तोयानाथ श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d67",
+      "id": "OPMCM-6a9c19a54adf6b183f7d71c9",
+      "name": "तोयानाथ श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12844adf6b183f7ccefa",
       "name": "दानुमाया तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f79623e",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2d2",
       "name": "दावा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8584adf6b183f796454",
+      "id": "OPMCM-6a9c12a54adf6b183f7cd54e",
       "name": "दावा सोनम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f79622c",
+      "id": "OPMCM-6a9c19a94adf6b183f7d72f2",
+      "name": "दावा सोनम तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2c0",
       "name": "दावाफुन्च तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f79621f",
+      "id": "OPMCM-6a902eb54adf6b183fbb1979",
+      "name": "दिक्षा प्याकुरेलः विदुर नपा बाट सम्पर्क विहिन",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2b3",
       "name": "दिल कुमार तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f796933",
+      "id": "OPMCM-6a902eb54adf6b183fbb1927",
+      "name": "दिल बहादुर शाही",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19c9",
+      "name": "दिवानन्द सुवेदी [contact withheld] रसुवा काठमाडौ सवारी चालक",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19cd",
+      "name": "दुर्गा भट्टराई लगायत जम्मा १६ जनाको टिम मानसरोवर जाँदै गरेको बिहान 7ः45 पछि सम्पर्क हुन नसकेको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda69",
       "name": "देन्ती तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79627a",
+      "id": "OPMCM-6a902eb54adf6b183fbb192b",
+      "name": "देबराज सुनुवार ऋचा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1975",
+      "name": "धनराज जैसी location : timure , gadi load unload मा कार्यरत",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12994adf6b183f7cd352",
       "name": "नारायाण अचार्य",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8614adf6b183f7965f8",
+      "id": "OPMCM-6a9c12af4adf6b183f7cd710",
       "name": "निता थपलिया",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d6b",
+      "id": "OPMCM-6a902eb64adf6b183fbb19c7",
+      "name": "निमा डोल्मा तामाङ, पसङ ठिमो स्याफ्रु, सान्त ठिमो- [contact withheld] टिमुरे",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12844adf6b183f7ccefe",
       "name": "निमा तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d57",
+      "id": "OPMCM-6a9c12834adf6b183f7cceeb",
       "name": "निमा दोर्जै तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963ca",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4c3",
       "name": "निर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f796267",
+      "id": "OPMCM-6a9c19a64adf6b183f7d71f4",
+      "name": "निर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb199f",
+      "name": "नुवकोट स्थायी ठेगाना भएका चन्चला दुवाल र करण खतिवडा अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12984adf6b183f7cd322",
       "name": "पसङ दोर्जे तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795ab4",
+      "id": "OPMCM-6a9c12724adf6b183f7ccbe3",
       "name": "पाङ् दोर्जे तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79627c",
+      "id": "OPMCM-6a902eb54adf6b183fbb1931",
+      "name": "पुर्ण बहादुर बस्नेत",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12994adf6b183f7cd354",
       "name": "पुष्पा राज अधिकारी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8424adf6b183f795fb9",
+      "id": "OPMCM-6a9c128a4adf6b183f7cd0af",
       "name": "प्रदिप श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f796940",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda76",
       "name": "प्रविण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f796481",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd57b",
       "name": "प्रविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796231",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2c5",
       "name": "प्रविन बोगटी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963d5",
+      "id": "OPMCM-6a902eb64adf6b183fbb19e1",
+      "name": "प्रवीण खड्का- केरुङ नाकाको गाडीचालक",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4cd",
       "name": "प्रित तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8564adf6b183f7963da",
+      "id": "OPMCM-6a9c19a64adf6b183f7d7202",
+      "name": "प्रित तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4d2",
       "name": "प्रेम डोल्मा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796213",
+      "id": "OPMCM-6a9c19a64adf6b183f7d7209",
+      "name": "प्रेम डोल्मा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12964adf6b183f7cd2a7",
       "name": "फुर्पा छिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8604adf6b183f7965e8",
+      "id": "OPMCM-6a9c12af4adf6b183f7cd700",
       "name": "फुलमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8744adf6b183f796a83",
+      "id": "OPMCM-6a9c12c64adf6b183f7cdbb9",
       "name": "बाल कुमार ठाकुर",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8614adf6b183f79660a",
+      "id": "OPMCM-6a9c12b04adf6b183f7cd722",
       "name": "बिमला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86b4adf6b183f796846",
+      "id": "OPMCM-6a902eb64adf6b183fbb19d9",
+      "name": "बुद्ध रत्न घलान,\nसुर्य घलान । सवारी चालक गाडी चाइनामा भएको चालक होटलमा बास बसेको , अन्तिम पटक सम्पर्कः हिजो बेलुका [contact withheld]",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12bc4adf6b183f7cd97d",
       "name": "बुद्धराम थारु",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8584adf6b183f796456",
+      "id": "OPMCM-6a902eb64adf6b183fbb19bd",
+      "name": "बुद्धि बहादुर गुरुङ सहित अरू ट्रक लगेर १ हप्तादेखी सामान अनलोड गर्न गएको [contact withheld] बिहान 8ः56 सम्म सम्पर्क भएको रसुवा बोर्डरमा फर्किने क्रममा। हाल सम्पर्क बिहिन",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a54adf6b183f7cd550",
       "name": "बुद्धी मान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79626b",
+      "id": "OPMCM-6a9c19a94adf6b183f7d72f6",
+      "name": "बुद्धी मान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12984adf6b183f7cd330",
       "name": "भक्त बहादुर श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8304adf6b183f795b41",
+      "id": "OPMCM-6a902eb64adf6b183fbb19d5",
+      "name": "भोटेकोशी, तातोपानि स्थायी निवासी पदम बहादुर मगर [contact withheld] १५ दिन देखि बसेको घट्टेखोला\nहिजो बेलुका ९ बजे सम्पर्क भएको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12764adf6b183f7ccc6f",
       "name": "मणि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8464adf6b183f79612a",
+      "id": "OPMCM-6a9c12904adf6b183f7cd1a6",
       "name": "मण्जु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f796269",
+      "id": "OPMCM-6a9c12984adf6b183f7cd324",
       "name": "मन बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8324adf6b183f795b89",
+      "id": "OPMCM-6a902eb64adf6b183fbb19c5",
+      "name": "मनिकला राना, स्थायी निवासी- अर्घखाँची 974722489/[contact withheld] टिमुरे थकाली होटल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1971",
+      "name": "मनिता कुमारी, सर्लाही ठेगाना भएको रसुवाको स्वास्थ्य केन्द्रमा कार्यरत सम्पर्कमा नरहेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19af",
+      "name": "माछापुच्छे बैंक रसुवामा काम गर्ने अनुज नेपाल मोबाईल नम्बर [contact withheld]",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12784adf6b183f7cccb6",
       "name": "मानव तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8564adf6b183f7963fb",
+      "id": "OPMCM-6a9c12a34adf6b183f7cd4f3",
       "name": "मिङ्मार शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d30",
+      "id": "OPMCM-6a9c19a74adf6b183f7d725f",
+      "name": "मिङ्मार शेर्पा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12834adf6b183f7ccec4",
       "name": "मिन बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8474adf6b183f79613f",
+      "id": "OPMCM-6a9c12904adf6b183f7cd1bb",
       "name": "मिनि माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8364adf6b183f795c4f",
+      "id": "OPMCM-6a9c127d4adf6b183f7ccdb4",
       "name": "मिनिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e1b",
+      "id": "OPMCM-6a9c12864adf6b183f7ccfa0",
       "name": "मिनु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8404adf6b183f795ede",
+      "id": "OPMCM-6a9c12884adf6b183f7cd022",
       "name": "मुना तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79628a",
+      "id": "OPMCM-6a902eb54adf6b183fbb1985",
+      "name": "मेरो दाई राजेन्द्र श्रेष्ठ ना ६ ख ४०९३ नम्वरको कन्टेनर सहित टिमुरे भन्सार पास गरेर जाममा छु भनेर कल 8.30 मा कल भएको त्यस पछि सम्पर्क हुन नसकेकोले खोजि कार्य गरिदिन आग्रह",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb198d",
+      "name": "मेरो दाई शिवराम के सी भेन चालक टिमुरे भन्सार वाट विहान देखि सम्पर्क बाहिर रहेकोले खोजि कार्य गरिदिन आग्रह गरिएको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb198b",
+      "name": "मेरो भाई रुपेश वस्नेत 6795 नम्वरको वस रिजर्भ लिएर रसुवा गएको तर विहान देखि सम्पर्कमा नरहेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb1993",
+      "name": "मेरोमामा यादव भण्डारी [contact withheld] रसुवा ईमिग्रेसनमा कार्यरत रहनुभएकोमा विहान देखि सम्पर्क विहिन भएकोले खोजि गरिदिन आग्रह",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12994adf6b183f7cd364",
       "name": "मोहम्द अरहम",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8684adf6b183f79674b",
+      "id": "OPMCM-6a9c12b84adf6b183f7cd8aa",
       "name": "यब्रोन रिमाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8404adf6b183f795efe",
+      "id": "OPMCM-6a902eb64adf6b183fbb19db",
+      "name": "यादव भण्डारी अधिकृत- अध्यागमन कार्यालय",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12884adf6b183f7cd035",
       "name": "यान्जे तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d52",
+      "id": "OPMCM-6a9c12834adf6b183f7ccee6",
       "name": "युनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f79622f",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2c3",
       "name": "यूनिश नेपाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796229",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2bd",
       "name": "यूवराज तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f79666a",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd780",
       "name": "रसमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796264",
+      "id": "OPMCM-6a902eb64adf6b183fbb1999",
+      "name": "रसुवा जिल्ला टिमुरेमा नुवाकोट स्थायी ठेगाना भएका गाडी चालक ठाकुर अधिकारी मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1981",
+      "name": "रसुवा पहिरोपछि चौतारा साँगाचोकगढी नगरपालिका -२ रमेश ढुंगाना केरुङ नाका आसपासबाट सम्पर्कविहीन हुनुभएको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb199d",
+      "name": "रसुवा स्थायी ठेगाना भएका फूलमाया तामाङ, अन्जली तमाङ, करन तामाङ, आशादिप तमाङ सहित 5 जना रसुवाको फाल्टेबाट बिहानादेखी अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19b1",
+      "name": "रसुवाको अपर त्रिशुल्ली -1 216 काम गर्ने कृष्ण साउद मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb1995",
+      "name": "रसुवाको पावर चाईना मा काम गर्ने सल्यान स्थायी ठेगाना भएका भुपेन्द्र रावत र भुपेन्द्र बहादुर के.सी. अहिलेसम्म सम्पर्कमा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb1983",
+      "name": "रसुवाको स्याफ्रु वेसिको NIMB बैकको बैंक मेनेजरका रुपमा कार्यरत मेरो वुवा शिव प्रसाद लम्साल [contact withheld] विहान देखि सम्पर्क हुन नसकेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb1997",
+      "name": "रसुवाबाट दोलाखा स्थायी ठेगाना भएका गाडी नम्बर 6795 का गाडी चालक सिताराम श्रेष्ठ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19a9",
+      "name": "रसुवामा ओखलढुङ्गा स्थायी ठेगाना भएका गाडी नम्बर बागमती प्रदेश 01001य 1864 का चालक मिलन बिडारी मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19ad",
+      "name": "रसुवामा नुवाकोट स्थायी ठेगाना भएका हरि खनाल मोबाईल [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19a1",
+      "name": "रसुवामा नौकुण्ड गाउँपालिका वडा नं. 4 स्थायी ठेगाना भएका उग्रेन तामाङ मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19a7",
+      "name": "रसुवामा सन्धुपाल्चोक जिल्ला चौतरा स्थायी ठेगाना भएका गाडी नम्बर 6796 चालक राजकुमार पोखरेल मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19ab",
+      "name": "रसुवामा सन्धुपाल्चोक जिल्ला तातोपानी गा.पा. स्थायी ठेगाना भएका गाडी नम्बर ना.5ख 9615 चालक पासाङ लामा अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12984adf6b183f7cd31f",
       "name": "राज कुमार भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8344adf6b183f795bfb",
+      "id": "OPMCM-6a9c127b4adf6b183f7ccd2e",
       "name": "राजकुमार तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83f4adf6b183f795e81",
+      "id": "OPMCM-6a902eb64adf6b183fbb19e3",
+      "name": "राजकुमार पराजुली - सिल्क कम्पनी भन्सार एजेन्ट",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12874adf6b183f7ccfea",
       "name": "राजकुमारी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8424adf6b183f795ff2",
+      "id": "OPMCM-6a9c128b4adf6b183f7cd0d6",
       "name": "राजन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d2d",
+      "id": "OPMCM-6a902eb64adf6b183fbb19e7",
+      "name": "राजु ओली - इलेक्ट्रिसियन काठमाडौं:",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19c1",
+      "name": "राजु श्रेष्ठ सिन्धुपाल्चोक - टिमुरे [contact withheld]",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12834adf6b183f7ccec1",
       "name": "राजेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8784adf6b183f796b6b",
+      "id": "OPMCM-6a9c12ca4adf6b183f7cdc9f",
       "name": "राजेन्द्र कुमार चौधरी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8754adf6b183f796ac7",
+      "id": "OPMCM-6a9c12c74adf6b183f7cdbfe",
       "name": "राजेन्द्र ढुंगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8764adf6b183f796af9",
+      "id": "OPMCM-6a9c12c84adf6b183f7cdc2e",
       "name": "राजेन्द्र प्रसाद ढुङगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796221",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2b5",
       "name": "राम बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8504adf6b183f7962e6",
+      "id": "OPMCM-6a902eb64adf6b183fbb19d1",
+      "name": "राम भट्ट, सुमित्रा भट्ट -[contact withheld] - गोसाईकुन्ड भ्रमणका लागि अर्चले शान्तिबजारबाट निस्किएको\nहाल सम्पर्क बिहीन",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c129c4adf6b183f7cd3e6",
       "name": "रिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e12",
+      "id": "OPMCM-6a9c12864adf6b183f7ccf99",
       "name": "रिन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8684adf6b183f79673a",
+      "id": "OPMCM-6a9c12b84adf6b183f7cd899",
       "name": "रियान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963c4",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd4be",
       "name": "रेस्मा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d69",
+      "id": "OPMCM-6a9c19a64adf6b183f7d71ef",
+      "name": "रेस्मा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12844adf6b183f7ccefc",
       "name": "रेहन तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8514adf6b183f796319",
+      "id": "OPMCM-6a9c129d4adf6b183f7cd416",
       "name": "रोजिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8654adf6b183f7966a9",
+      "id": "OPMCM-6a9c12b44adf6b183f7cd805",
       "name": "रोशनी सुनार",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f796649",
+      "id": "OPMCM-6a902eb54adf6b183fbb1973",
+      "name": "लक्ष्मण सापकोटा कमलामाई नपा ११ सिन्धुली। jai jai company रसुवागढि हाइड्रा। सम्पर्क विहिन।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd760",
       "name": "लनि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795a9b",
+      "id": "OPMCM-6a9c12714adf6b183f7ccbcb",
       "name": "लनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8564adf6b183f7963df",
+      "id": "OPMCM-6a9c12a24adf6b183f7cd4d7",
       "name": "लाक्पा भुटी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d8b",
+      "id": "OPMCM-6a9c19a64adf6b183f7d720e",
+      "name": "लाक्पा भुटी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12844adf6b183f7ccf1e",
       "name": "लालकेश चौलागाई",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84e4adf6b183f79628d",
+      "id": "OPMCM-6a9c12994adf6b183f7cd368",
       "name": "लालमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8464adf6b183f7960fa",
+      "id": "OPMCM-6a9c128f4adf6b183f7cd184",
       "name": "विनिशा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963b0",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd4aa",
       "name": "विनोद कुमार महतो",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796216",
+      "id": "OPMCM-6a9c19a64adf6b183f7d71d4",
+      "name": "विनोद कुमार महतो",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12964adf6b183f7cd2aa",
       "name": "विर बहादुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f796255",
+      "id": "OPMCM-6a9c12984adf6b183f7cd2fa",
       "name": "वीर बहादुर मैनाली",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f79666e",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd784",
       "name": "शान्ति माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f79648b",
+      "id": "OPMCM-6a902eb54adf6b183fbb1957",
+      "name": "शिव लम्साल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb193f",
+      "name": "शुशिल बास्तोला",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19cf",
+      "name": "शोभा घिमिरे -[contact withheld], बेत्रावती, बिहान देखी नै सम्पर्क नभएको\nकौशिला रिजाल घिमिरे- [contact withheld]\nराजु घिमिरे",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb54adf6b183fbb197b",
+      "name": "संगम चौलागाँई स्याफ्रुवेशिबाट सम्पर्क विहिन।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd585",
       "name": "सगुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f796227",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2bb",
       "name": "संजित तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85a4adf6b183f7964bb",
+      "id": "OPMCM-6a9c12a74adf6b183f7cd5b8",
       "name": "सजित भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8614adf6b183f796607",
+      "id": "OPMCM-6a9c12b04adf6b183f7cd71f",
       "name": "सन्तु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8694adf6b183f796776",
+      "id": "OPMCM-6a9c12b94adf6b183f7cd8d6",
       "name": "समिरा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f79693e",
+      "id": "OPMCM-6a902eb64adf6b183fbb19b3",
+      "name": "सम्पर्क बिहिनः देवी पौडेल, उदयपुर, 40 जनाको टिम गोसाइकुण्ड ट्रेकिङको लागि बिहान 4 बजे धुन्चेबाट हिड्ने भनिएकोमा बिहानदेखी सम्पर्क बिहिन।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19b9",
+      "name": "सम्पर्क बिहिनः पदम बहादुर घर्ति मगर, टिमुरे",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19b5",
+      "name": "सम्पर्क बिहिनः राजु श्रेष्ठ, स्याफ्रुबेसी बगरमा पसल संचालन गरी बसेका, बिहान ७ः३० पछि सम्पर्क नभएको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19b7",
+      "name": "सम्पर्क बिहिन सिन्धुपाल्चोक, त्रिपुरासुन्दरीका देवेन्द्र खड्का, शमुन्द्र न्यौपाने बिहान ७ः३० बजे टिमुरेबाट रसुवा 4273 र 8420 नं.को भ्यान लगेर जाँदै गरेको",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19bb",
+      "name": "सम्पर्क बिहीन आयुष खड्का, सल्यान। प्लान्ट क्वारेन्टाइन कार्यालय खरिदार, [contact withheld]",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda74",
       "name": "संम्रिका तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795a98",
+      "id": "OPMCM-6a9c12714adf6b183f7ccbc8",
       "name": "सयोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8404adf6b183f795f1c",
+      "id": "OPMCM-6a9c12894adf6b183f7cd048",
       "name": "सयोन तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83c4adf6b183f795d5d",
+      "id": "OPMCM-6a9c12834adf6b183f7ccef1",
       "name": "सरिता तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8674adf6b183f796714",
+      "id": "OPMCM-6a902eb64adf6b183fbb19c3",
+      "name": "सरिता मल्ल, २ महिनाको बच्चा र बच्चा हेरालु दुर्गा शाही [contact withheld] - अस्पताल कर्मचारी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12b74adf6b183f7cd873",
       "name": "सरू चौलागाई",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8474adf6b183f796141",
+      "id": "OPMCM-6a9c12904adf6b183f7cd1bd",
       "name": "सर्स्वती न्यौपाने",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8674adf6b183f796712",
+      "id": "OPMCM-6a9c12b74adf6b183f7cd871",
       "name": "सविधान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8684adf6b183f796752",
+      "id": "OPMCM-6a9c12b84adf6b183f7cd8b1",
       "name": "साजन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8594adf6b183f796492",
+      "id": "OPMCM-6a9c12a64adf6b183f7cd58c",
       "name": "सान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be82d4adf6b183f795aa0",
+      "id": "OPMCM-6a9c12724adf6b183f7ccbd0",
       "name": "सानिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8404adf6b183f795f04",
+      "id": "OPMCM-6a9c12884adf6b183f7cd038",
       "name": "सानिमाया तामाङ्ग",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8644adf6b183f79667a",
+      "id": "OPMCM-6a9c12b34adf6b183f7cd790",
       "name": "सानी श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8414adf6b183f795f9b",
+      "id": "OPMCM-6a9c128a4adf6b183f7cd09b",
       "name": "सानीमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963c0",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd4ba",
       "name": "सानु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8534adf6b183f796351",
+      "id": "OPMCM-6a9c19a64adf6b183f7d71e9",
+      "name": "सानु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c129e4adf6b183f7cd44a",
       "name": "सानु माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f796930",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda66",
       "name": "सान्ता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f79691f",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda55",
       "name": "सिमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85e4adf6b183f796590",
+      "id": "OPMCM-6a9c12ac4adf6b183f7cd691",
       "name": "सिर्जना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963a1",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd49b",
       "name": "सुक ब. तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f79624b",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2df",
       "name": "सुजन आले मगर",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8624adf6b183f79663b",
+      "id": "OPMCM-6a9c12b14adf6b183f7cd752",
       "name": "सुजाता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8644adf6b183f796689",
+      "id": "OPMCM-6a9c12b34adf6b183f7cd79e",
       "name": "सुजिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8624adf6b183f796639",
+      "id": "OPMCM-6a9c12b14adf6b183f7cd750",
       "name": "सुजिता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8524adf6b183f796346",
+      "id": "OPMCM-6a9c129e4adf6b183f7cd43f",
       "name": "सुनमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86e4adf6b183f7968f0",
+      "id": "OPMCM-6a9c12bf4adf6b183f7cda26",
       "name": "सुनिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8504adf6b183f7962ed",
+      "id": "OPMCM-6a9c129c4adf6b183f7cd3ed",
       "name": "सुनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83a4adf6b183f795cf3",
+      "id": "OPMCM-6a902eb64adf6b183fbb19dd",
+      "name": "सुभाष तिमल्सिना",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19e5",
+      "name": "सुभाष तिमल्सिना- काठमाडौँ काँडाघारी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12814adf6b183f7cce85",
       "name": "सुमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8384adf6b183f795c9e",
+      "id": "OPMCM-6a9c127f4adf6b183f7cce1f",
       "name": "सुमिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84c4adf6b183f79621c",
+      "id": "OPMCM-6a9c12974adf6b183f7cd2b0",
       "name": "सुयान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be86f4adf6b183f796909",
+      "id": "OPMCM-6a9c12c04adf6b183f7cda3f",
       "name": "सुरज खडका",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8754adf6b183f796adc",
+      "id": "OPMCM-6a902eb64adf6b183fbb19d3",
+      "name": "सुरज डङ्गोल र आहाना डङ्गोल\nबेत्रावती [contact withheld] बिहानै देखी सम्पर्क नभएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12c74adf6b183f7cdc11",
       "name": "सुर्य ब.तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f79625c",
+      "id": "OPMCM-6a9c12984adf6b183f7cd313",
       "name": "सुर्य शर्मा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8684adf6b183f796743",
+      "id": "OPMCM-6a9c12b84adf6b183f7cd8a2",
       "name": "सुविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84b4adf6b183f7961fa",
+      "id": "OPMCM-6a902eb54adf6b183fbb196d",
+      "name": "सुशान्त कार्की",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12954adf6b183f7cd28e",
       "name": "सुशान्त तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be84d4adf6b183f79625a",
+      "id": "OPMCM-6a9c12984adf6b183f7cd302",
       "name": "सुशिल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8634adf6b183f796670",
+      "id": "OPMCM-6a9c12b24adf6b183f7cd786",
       "name": "सुशिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8674adf6b183f79670f",
+      "id": "OPMCM-6a9c12b74adf6b183f7cd86d",
       "name": "सुस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8424adf6b183f79600f",
+      "id": "OPMCM-6a9c128b4adf6b183f7cd0ed",
       "name": "सृजना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8354adf6b183f795c0e",
+      "id": "OPMCM-6a9c127b4adf6b183f7ccd49",
       "name": "सृष्टि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8614adf6b183f796616",
+      "id": "OPMCM-6a9c12b04adf6b183f7cd72c",
       "name": "सोन माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83b4adf6b183f795d41",
+      "id": "OPMCM-6a9c12834adf6b183f7cced5",
       "name": "सोनम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8544adf6b183f79639e",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd498",
       "name": "सोनाम थोक्तेल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be83e4adf6b183f795e10",
+      "id": "OPMCM-6a9c12864adf6b183f7ccf97",
       "name": "सोनाय तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be85f4adf6b183f796598",
+      "id": "OPMCM-6a9c12ad4adf6b183f7cd69b",
       "name": "सोनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8464adf6b183f7960ff",
+      "id": "OPMCM-6a9c128f4adf6b183f7cd186",
       "name": "सोम माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8714adf6b183f7969a7",
+      "id": "OPMCM-6a9c12c24adf6b183f7cdae0",
       "name": "सोमा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8624adf6b183f796626",
+      "id": "OPMCM-6a9c12b14adf6b183f7cd73d",
       "name": "सोमो तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8584adf6b183f796445",
+      "id": "OPMCM-6a9c12a44adf6b183f7cd53e",
       "name": "सौजन श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
       "type": "REMOVED",
-      "id": "OPMCM-6a9be8554adf6b183f7963a5",
+      "id": "OPMCM-6a9c19a94adf6b183f7d72b8",
+      "name": "सौजन श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb199b",
+      "name": "स्थायी ठेगाना पाल्पा भई लाङटाङ खोला हाईड्रोपावर, रसुवमा काम गर्ने रमेश थापा क्षेत्री मोबाईल नम्बर [contact withheld] अहिलेसम्म सम्पर्कमा नआएको।",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a902eb64adf6b183fbb19e9",
+      "name": "हरि खड्का - नासु टिमुरे भन्सार कार्यालय",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "OUT_OF_CONTACT"
+    },
+    {
+      "type": "REMOVED",
+      "id": "OPMCM-6a9c12a14adf6b183f7cd49f",
       "name": "हरि गहतराज",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
