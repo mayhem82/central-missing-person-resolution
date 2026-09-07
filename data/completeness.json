@@ -1,10 +1,11 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-07T06:08:35.142Z",
+  "generated_at": "2026-09-07T12:28:43.150Z",
   "complete": false,
-  "blocking_gap_count": 2,
+  "blocking_gap_count": 3,
   "blocking_gap_ids": [
     "SETU_CURRENT",
+    "POLICE_MISSING_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
@@ -35,7 +36,7 @@
     },
     {
       "id": "POLICE_MISSING_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -55,7 +56,7 @@
           "page_failures": []
         },
         "records": 1,
-        "stale": false
+        "stale": true
       }
     },
     {
