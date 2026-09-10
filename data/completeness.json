@@ -1,18 +1,18 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-09-10T11:50:36.419Z",
+  "generated_at": "2026-09-10T15:21:47.604Z",
   "complete": false,
   "blocking_gap_count": 3,
   "blocking_gap_ids": [
     "SETU_CURRENT",
-    "POLICE_FOUND_CURRENT",
+    "POLICE_MISSING_CURRENT",
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
     "live_source_records": 21777,
     "unidentified_body_records": 20,
     "identity_review_candidates": 2619,
-    "body_review_candidates": 31
+    "body_review_candidates": 25
   },
   "checks": [
     {
@@ -24,7 +24,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-09-10T11:43:51.912Z",
+        "retrieved_at": "2026-09-10T15:13:14.235Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -36,7 +36,7 @@
     },
     {
       "id": "POLICE_MISSING_CURRENT",
-      "pass": true,
+      "pass": false,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -44,15 +44,13 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-09-10T11:43:51.972Z",
-          "http_status": 200,
-          "sha256": "f4d7ffed70336b76c7a5410bd97cbd883d1fc6badbdfa65ebd0f694060cee2ef",
-          "bytes": 101883,
-          "changed": true,
-          "error": null,
-          "transport": "curl-insecure-fallback",
-          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
-          "pages": 1,
+          "retrieved_at": "2026-09-10T15:13:14.283Z",
+          "http_status": 0,
+          "sha256": null,
+          "bytes": 0,
+          "changed": false,
+          "error": "Error: AbortError: This operation was aborted; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/missing?count=1000&page=1\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8002 ms: Timeout was reached\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8002 ms: Timeout was reached\n",
+          "pages": 0,
           "page_failures": []
         },
         "records": 3,
@@ -61,7 +59,7 @@
     },
     {
       "id": "POLICE_FOUND_CURRENT",
-      "pass": false,
+      "pass": true,
       "blocking": true,
       "detail": {
         "snapshot": {
@@ -69,13 +67,15 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-09-10T11:43:51.973Z",
-          "http_status": 0,
-          "sha256": null,
-          "bytes": 0,
-          "changed": false,
-          "error": "Error: TypeError: fetch failed; curl verified: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\ncurl: (60) SSL certificate problem: unable to get local issuer certificate\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n; curl insecure fallback: Command failed: curl -fsSL --retry 1 --retry-all-errors --connect-timeout 8 --max-time 20 -A central-missing-person-resolution/1.4 evidence-snapshot -k https://udb.nepalpolice.gov.np/found?count=1000&page=1\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8000 ms: Timeout was reached\ncurl: (28) Failed to connect to udb.nepalpolice.gov.np port 443 after 8002 ms: Timeout was reached\n",
-          "pages": 0,
+          "retrieved_at": "2026-09-10T15:13:14.284Z",
+          "http_status": 200,
+          "sha256": "b80a836fcb0b94e7e58362225ce7b378c3916c5abf9675df57936f30e432ccfb",
+          "bytes": 94351,
+          "changed": true,
+          "error": null,
+          "transport": "curl-insecure-fallback",
+          "tls_verification": "BYPASSED_AFTER_VERIFIED_TLS_FAILURE",
+          "pages": 1,
           "page_failures": []
         },
         "records": 0,
@@ -92,10 +92,10 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-09-10T11:43:51.975Z",
+          "retrieved_at": "2026-09-10T15:13:14.285Z",
           "http_status": 200,
-          "sha256": "e8375ca14ddd71c23be1070febe26f6e666154eb156dfa8cbefefde63070500c",
-          "bytes": 165577,
+          "sha256": "1dbb60b23031e253610cb4789d86dd3d1915508194562b2d9a7bf93bd2dfb3b9",
+          "bytes": 163844,
           "changed": true,
           "error": null,
           "transport": "curl-insecure-fallback",
@@ -121,7 +121,7 @@
       "blocking": true,
       "detail": {
         "identity_candidates": 2619,
-        "body_review_candidates": 31
+        "body_review_candidates": 25
       }
     },
     {
