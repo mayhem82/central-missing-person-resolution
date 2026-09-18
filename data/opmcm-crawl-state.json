@@ -1,8 +1,8 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "source": "OPMCM_RESCUE_PORTAL",
-  "started_at": "2026-09-18T19:43:47.130Z",
-  "finished_at": "2026-09-18T19:47:48.290Z",
+  "started_at": "2026-09-18T21:56:52.262Z",
+  "finished_at": "2026-09-18T22:03:42.284Z",
   "root_http_status": 200,
   "bundle_url": "https://rescue.opmcm.gov.np/assets/index-BdxcraJm.js",
   "candidate_endpoints": [
@@ -86,7 +86,10 @@
       "score": 0
     }
   ],
-  "records_extracted": 20000,
+  "records_extracted": 20179,
   "preserved_previous_dataset": false,
-  "errors": []
+  "errors": [
+    "page 195 /api/person-reports: This operation was aborted",
+    "page 155 /api/person-reports?limit=100&page=1: This operation was aborted"
+  ]
 }
