@@ -1,10 +1,10 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
   "source": "OPMCM_RESCUE_PORTAL",
-  "started_at": "2026-09-23T22:54:40.413Z",
-  "finished_at": "2026-09-23T22:58:55.099Z",
-  "root_http_status": 200,
-  "bundle_url": "https://rescue.opmcm.gov.np/assets/index-CfuKvz9k.js",
+  "started_at": "2026-09-24T01:11:30.963Z",
+  "finished_at": "2026-09-24T01:13:01.324Z",
+  "root_http_status": null,
+  "bundle_url": null,
   "candidate_endpoints": [
     "/api/person-reports",
     "/api/person-reports?limit=100&page=1",
@@ -16,60 +16,35 @@
     "/api/missing-persons",
     "/api/found-persons"
   ],
-  "working_endpoints": [
-    "/api/person-reports",
-    "/api/person-reports?limit=100&page=1",
-    "/api/person-reports?per_page=100&page=1"
-  ],
+  "working_endpoints": [],
   "probe_results": [
     {
       "endpoint": "/api/person-reports",
-      "http_status": 200,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 100,
-      "score": 120
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/person-reports?limit=100&page=1",
-      "http_status": 200,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 100,
-      "score": 120
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/person-reports?per_page=100&page=1",
-      "http_status": 200,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 100,
-      "score": 120
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/person-reports?status=missing&limit=100&page=1",
-      "http_status": 400,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 0,
-      "score": 0
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/person-reports?status=found&limit=100&page=1",
-      "http_status": 400,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 0,
-      "score": 0
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/person-lost-found",
-      "http_status": 404,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 0,
-      "score": 0
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/persons",
-      "http_status": 404,
-      "content_type": "application/json; charset=utf-8",
-      "array_count": 0,
-      "score": 0
+      "error": "fetch failed"
     },
     {
       "endpoint": "/api/missing-persons",
@@ -86,7 +61,9 @@
       "score": 0
     }
   ],
-  "records_extracted": 20000,
-  "preserved_previous_dataset": false,
-  "errors": []
+  "records_extracted": 0,
+  "preserved_previous_dataset": true,
+  "errors": [
+    "root/bundle: fetch failed"
+  ]
 }
