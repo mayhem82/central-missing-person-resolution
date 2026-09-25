@@ -1,1943 +1,1955 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "dataset_version": "SW-222",
-  "generated_at": "2026-09-25T06:41:09.662Z",
-  "previous_dataset_version": "SW-221",
-  "previous_generated_at": "2026-09-25T01:42:46.270Z",
+  "dataset_version": "SW-223",
+  "generated_at": "2026-09-25T12:17:48.638Z",
+  "previous_dataset_version": "SW-222",
+  "previous_generated_at": "2026-09-25T06:41:09.662Z",
   "person_record_change_count": 272,
-  "added_count": 92,
-  "updated_count": 0,
-  "removed_count": 180,
+  "added_count": 180,
+  "updated_count": 3,
+  "removed_count": 89,
   "source_count_deltas": [
     {
       "source": "NEPAL_POLICE_MISSING",
-      "before": 1,
-      "after": 3,
-      "delta": 2
+      "before": 3,
+      "after": 4,
+      "delta": 1
     },
     {
       "source": "OPMCM_RESCUE_PORTAL",
-      "before": 20000,
-      "after": 19910,
-      "delta": -90
+      "before": 19910,
+      "after": 20000,
+      "delta": 90
     }
   ],
   "status_count_deltas": [
     {
       "status": "MISSING",
-      "before": 3884,
-      "after": 3886,
-      "delta": 2
+      "before": 3886,
+      "after": 3887,
+      "delta": 1
     },
     {
       "status": "RESCUED",
-      "before": 10264,
-      "after": 10174,
-      "delta": -90
+      "before": 10174,
+      "after": 10264,
+      "delta": 90
     }
   ],
   "changes": [
     {
       "type": "ADDED",
+      "id": "POLICE_MISSING-37271",
+      "name": "- चुड्का टुडु",
+      "source": "NEPAL_POLICE_MISSING",
+      "status": "MISSING"
+    },
+    {
+      "type": "UPDATED",
       "id": "POLICE_MISSING-37234",
       "name": "- धनश्याम भट्टराई",
       "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
+      "from_status": "MISSING",
+      "to_status": "MISSING",
+      "changed_fields": [
+        "raw_text"
+      ]
     },
     {
-      "type": "ADDED",
+      "type": "UPDATED",
       "id": "POLICE_MISSING-37235",
       "name": "- भक्त बहादुर राई",
       "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
+      "from_status": "MISSING",
+      "to_status": "MISSING",
+      "changed_fields": [
+        "raw_text"
+      ]
     },
     {
-      "type": "ADDED",
+      "type": "UPDATED",
       "id": "POLICE_MISSING-37236",
       "name": "- मोन्त्री बासुमतारी",
       "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
+      "from_status": "MISSING",
+      "to_status": "MISSING",
+      "changed_fields": [
+        "raw_text"
+      ]
     },
     {
       "type": "ADDED",
+      "id": "OPMCM-6ab663e04adf6b183f74d675",
+      "name": "BALI NATHOGI",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663dc4adf6b183f74d5d0",
+      "name": "Saddham Husein",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663db4adf6b183f74d5ba",
+      "name": "SHIVA KUMAR",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e67b",
+      "name": "अकिलेश यादव",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640a4adf6b183f74df78",
+      "name": "अजय तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74e01d",
+      "name": "अनिश तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74e029",
+      "name": "अम्मर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664274adf6b183f74e5f2",
+      "name": "अरुप तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e44d",
+      "name": "अरूशा अधिकारी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664274adf6b183f74e615",
+      "name": "अर्जुन खत्री",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641a4adf6b183f74e2d5",
+      "name": "अलिना तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e3aa",
+      "name": "असमि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664204adf6b183f74e3fc",
+      "name": "अस्मिता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663ff4adf6b183f74dcbc",
+      "name": "आइती माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfba",
+      "name": "आमिस तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664154adf6b183f74e1da",
+      "name": "आरोन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664164adf6b183f74e1e3",
+      "name": "आसुन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664214adf6b183f74e435",
+      "name": "ईन्द्र कामरी ढकाल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfd5",
+      "name": "ईसान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfcc",
+      "name": "उज्जवल तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e395",
+      "name": "एन्जिला तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e393",
+      "name": "एन्जी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e452",
+      "name": "एलियना पाण्डे",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e194",
+      "name": "कपिल तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642e4adf6b183f74e844",
+      "name": "कपिल पार्की",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e64e",
+      "name": "कबि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664174adf6b183f74e24e",
+      "name": "कर्ण तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e154",
+      "name": "कामीछिरिङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fe4adf6b183f74dca0",
+      "name": "कार्मो तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f14adf6b183f74d971",
+      "name": "कार्साङ्ग दावा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664164adf6b183f74e1f2",
+      "name": "कुसाङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f14adf6b183f74d978",
+      "name": "कृतिमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dff3",
+      "name": "कृष्ण प्रसाद लामिछाने",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfb8",
+      "name": "कृष्ण बहादुर खड्का",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640a4adf6b183f74df67",
+      "name": "केशम तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e135",
+      "name": "केसाङ घले",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dc2d",
+      "name": "केसिङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664264adf6b183f74e5cb",
+      "name": "गणेश जोशी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664184adf6b183f74e26d",
+      "name": "चतुर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfd0",
+      "name": "चन्द्र बहादुर घले",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664114adf6b183f74e0d8",
+      "name": "चिक्तु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f44adf6b183f74da31",
+      "name": "छिरिङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e171",
+      "name": "छिर्मि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfa8",
+      "name": "छेवाङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfaa",
+      "name": "जयराम तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664024adf6b183f74ddd3",
+      "name": "टाँसी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e644",
+      "name": "टेनजुङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663ed4adf6b183f74d8e4",
+      "name": "टोन्जेन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641c4adf6b183f74e358",
+      "name": "डोलमा शेर्पा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664014adf6b183f74dd65",
+      "name": "डोल्मा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664184adf6b183f74e266",
+      "name": "तासि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640a4adf6b183f74df73",
+      "name": "तेन्जनी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fe4adf6b183f74dca3",
+      "name": "तेन्जिन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dbf0",
+      "name": "तेन्जेन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e12f",
+      "name": "तोयानाथ श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dc08",
+      "name": "दानुमाया तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfc3",
+      "name": "दावा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664154adf6b183f74e1ab",
+      "name": "दावा सोनम तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfb1",
+      "name": "दावाफुन्च तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfa4",
+      "name": "दिल कुमार तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e632",
+      "name": "देन्ती तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74dfff",
+      "name": "नारायाण अचार्य",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641c4adf6b183f74e32c",
+      "name": "निता थपलिया",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dc0c",
+      "name": "निमा तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dbf9",
+      "name": "निमा दोर्जै तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e151",
+      "name": "निर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfec",
+      "name": "पसङ दोर्जे तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f14adf6b183f74d976",
+      "name": "पाङ् दोर्जे तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74e001",
+      "name": "पुष्पा राज अधिकारी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664024adf6b183f74ddb8",
+      "name": "प्रदिप श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e640",
+      "name": "प्रविण तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664154adf6b183f74e1dd",
+      "name": "प्रविन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfb6",
+      "name": "प्रविन बोगटी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e160",
+      "name": "प्रित तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e165",
+      "name": "प्रेम डोल्मा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74df95",
+      "name": "फुर्पा छिरिङ तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641b4adf6b183f74e31b",
+      "name": "फुलमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642b4adf6b183f74e742",
+      "name": "बाल कुमार ठाकुर",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641c4adf6b183f74e343",
+      "name": "बिमला तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664254adf6b183f74e575",
+      "name": "बुद्धराम थारु",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664154adf6b183f74e1ad",
+      "name": "बुद्धी मान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dff0",
+      "name": "भक्त बहादुर श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f34adf6b183f74d9e3",
+      "name": "मणि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664054adf6b183f74de9f",
+      "name": "मण्जु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfee",
+      "name": "मन बहादुर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f44adf6b183f74da2f",
+      "name": "मानव तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e186",
+      "name": "मिङ्मार शेर्पा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fc4adf6b183f74dbd5",
+      "name": "मिन बहादुर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664064adf6b183f74deb4",
+      "name": "मिनि माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f84adf6b183f74db04",
+      "name": "मिनिमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663ff4adf6b183f74dca5",
+      "name": "मिनु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664004adf6b183f74dd29",
+      "name": "मुना तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74e00f",
+      "name": "मोहम्द अरहम",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664234adf6b183f74e499",
+      "name": "यब्रोन रिमाल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664004adf6b183f74dd3b",
+      "name": "यान्जे तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dbf4",
+      "name": "युनी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfb4",
+      "name": "यूनिश नेपाल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfae",
+      "name": "यूवराज तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e3a8",
+      "name": "रसमि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfe9",
+      "name": "राज कुमार भुजेल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f74adf6b183f74daa9",
+      "name": "राजकुमार तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663ff4adf6b183f74dced",
+      "name": "राजकुमारी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664024adf6b183f74dddd",
+      "name": "राजन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fc4adf6b183f74dbd2",
+      "name": "राजेन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642e4adf6b183f74e82d",
+      "name": "राजेन्द्र कुमार चौधरी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642c4adf6b183f74e78c",
+      "name": "राजेन्द्र ढुंगाना",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642c4adf6b183f74e7bc",
+      "name": "राजेन्द्र प्रसाद ढुङगाना",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfa6",
+      "name": "राम बहादुर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640f4adf6b183f74e06f",
+      "name": "रिना तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fe4adf6b183f74dc9e",
+      "name": "रिन्जेन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e488",
+      "name": "रियान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e14c",
+      "name": "रेस्मा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dc0a",
+      "name": "रेहन तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664104adf6b183f74e09e",
+      "name": "रोजिना तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641f4adf6b183f74e3eb",
+      "name": "रोशनी सुनार",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641d4adf6b183f74e384",
+      "name": "लनि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f04adf6b183f74d960",
+      "name": "लनी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e16a",
+      "name": "लाक्पा भुटी",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dc28",
+      "name": "लालकेश चौलागाई",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640d4adf6b183f74e012",
+      "name": "लालमन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664054adf6b183f74de7f",
+      "name": "विनिशा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e138",
+      "name": "विनोद कुमार महतो",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74df9b",
+      "name": "विर बहादुर तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfdc",
+      "name": "वीर बहादुर मैनाली",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e3ac",
+      "name": "शान्ति माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664164adf6b183f74e1e8",
+      "name": "सगुन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfac",
+      "name": "संजित तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664164adf6b183f74e218",
+      "name": "सजित भुजेल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641c4adf6b183f74e340",
+      "name": "सन्तु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664234adf6b183f74e4c3",
+      "name": "समिरा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e63e",
+      "name": "संम्रिका तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f04adf6b183f74d95d",
+      "name": "सयोन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664004adf6b183f74dd4e",
+      "name": "सयोन तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fd4adf6b183f74dbff",
+      "name": "सरिता तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e45d",
+      "name": "सरू चौलागाई",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664064adf6b183f74deb6",
+      "name": "सर्स्वती न्यौपाने",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e45b",
+      "name": "सविधान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664234adf6b183f74e4a0",
+      "name": "साजन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664164adf6b183f74e1f0",
+      "name": "सान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f04adf6b183f74d965",
+      "name": "सानिमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664004adf6b183f74dd3e",
+      "name": "सानिमाया तामाङ्ग",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e3b8",
+      "name": "सानी श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664014adf6b183f74dda4",
+      "name": "सानीमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e148",
+      "name": "सानु तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664114adf6b183f74e0d2",
+      "name": "सानु माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e62f",
+      "name": "सान्ता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664274adf6b183f74e61e",
+      "name": "सिमन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664194adf6b183f74e2c0",
+      "name": "सिर्जना तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e128",
+      "name": "सुक ब. तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfd2",
+      "name": "सुजन आले मगर",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641d4adf6b183f74e374",
+      "name": "सुजाता भुजेल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641f4adf6b183f74e3c6",
+      "name": "सुजिता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641d4adf6b183f74e372",
+      "name": "सुजिता भुजेल",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664114adf6b183f74e0c7",
+      "name": "सुनमाया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664274adf6b183f74e5ef",
+      "name": "सुनिता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640f4adf6b183f74e076",
+      "name": "सुनी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fc4adf6b183f74dbae",
+      "name": "सुमन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fa4adf6b183f74db56",
+      "name": "सुमिता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640b4adf6b183f74dfa1",
+      "name": "सुयान तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664274adf6b183f74e608",
+      "name": "सुरज खडका",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6642c4adf6b183f74e79f",
+      "name": "सुर्य ब.तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfe1",
+      "name": "सुर्य शर्मा",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664234adf6b183f74e491",
+      "name": "सुविन तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640a4adf6b183f74df7a",
+      "name": "सुशान्त तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6640c4adf6b183f74dfdf",
+      "name": "सुशिल तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641e4adf6b183f74e3ae",
+      "name": "सुशिला तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664224adf6b183f74e458",
+      "name": "सुस्मिता तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664024adf6b183f74ddf1",
+      "name": "सृजना तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663f74adf6b183f74dabc",
+      "name": "सृष्टि तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641c4adf6b183f74e34d",
+      "name": "सोन माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fc4adf6b183f74dbe5",
+      "name": "सोनम तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e125",
+      "name": "सोनाम थोक्तेल तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab663fe4adf6b183f74dc9c",
+      "name": "सोनाय तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664194adf6b183f74e2c8",
+      "name": "सोनी तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664054adf6b183f74de81",
+      "name": "सोम माया तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664284adf6b183f74e661",
+      "name": "सोमा तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab6641d4adf6b183f74e35d",
+      "name": "सोमो तामाङ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664144adf6b183f74e19c",
+      "name": "सौजन श्रेष्ठ",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "ADDED",
+      "id": "OPMCM-6ab664134adf6b183f74e12c",
+      "name": "हरि गहतराज",
+      "source": "OPMCM_RESCUE_PORTAL",
+      "status": "RESCUED"
+    },
+    {
+      "type": "REMOVED",
       "id": "OPMCM-6ab6165f4adf6b183f6f4f38",
       "name": "BALI NATHOGI",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6165b4adf6b183f6f4e92",
       "name": "Saddham Husein",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6165b4adf6b183f6f4e7c",
       "name": "SHIVA KUMAR",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a94adf6b183f6f60ba",
       "name": "अकिलेश यादव",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a74adf6b183f6f601e",
       "name": "अरुप तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e4b",
       "name": "अरूशा अधिकारी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6045",
       "name": "अर्जुन खत्री",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169a4adf6b183f6f5c9d",
       "name": "अलिना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5d84",
       "name": "असमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a04adf6b183f6f5de9",
       "name": "अस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b7d",
       "name": "आरोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b8b",
       "name": "आसुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e2f",
       "name": "ईन्द्र कामरी ढकाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169e4adf6b183f6f5d6c",
       "name": "एन्जिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169e4adf6b183f6f5d6a",
       "name": "एन्जी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e50",
       "name": "एलियना पाण्डे",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616954adf6b183f6f5b29",
       "name": "कपिल तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616af4adf6b183f6f62c5",
       "name": "कपिल पार्की",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6085",
       "name": "कबि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616984adf6b183f6f5c05",
       "name": "कर्ण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616934adf6b183f6f5ae7",
       "name": "कामीछिरिङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616704adf6b183f6f51c4",
       "name": "कार्साङ्ग दावा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b98",
       "name": "कुसाङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616714adf6b183f6f51cb",
       "name": "कृतिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a74adf6b183f6f5ffa",
       "name": "गणेश जोशी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616984adf6b183f6f5c2a",
       "name": "चतुर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616944adf6b183f6f5b02",
       "name": "छिर्मि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6077",
       "name": "टेनजुङ तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6166d4adf6b183f6f5133",
       "name": "टोन्जेन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169d4adf6b183f6f5d30",
       "name": "डोलमा शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616984adf6b183f6f5c21",
       "name": "तासि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616954adf6b183f6f5b4a",
       "name": "दावा सोनम तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6066",
       "name": "देन्ती तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169c4adf6b183f6f5cfc",
       "name": "निता थपलिया",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616934adf6b183f6f5ae4",
       "name": "निर तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616704adf6b183f6f51c9",
       "name": "पाङ् दोर्जे तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6073",
       "name": "प्रविण तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b80",
       "name": "प्रविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616944adf6b183f6f5aee",
       "name": "प्रित तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616944adf6b183f6f5af3",
       "name": "प्रेम डोल्मा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169c4adf6b183f6f5cec",
       "name": "फुलमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616ac4adf6b183f6f619d",
       "name": "बाल कुमार ठाकुर",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169d4adf6b183f6f5d12",
       "name": "बिमला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a64adf6b183f6f5f93",
       "name": "बुद्धराम थारु",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616954adf6b183f6f5b4d",
       "name": "बुद्धी मान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616944adf6b183f6f5b19",
       "name": "मिङ्मार शेर्पा",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a34adf6b183f6f5ea3",
       "name": "यब्रोन रिमाल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5d82",
       "name": "रसमि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616af4adf6b183f6f62a9",
       "name": "राजेन्द्र कुमार चौधरी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616ac4adf6b183f6f61ee",
       "name": "राजेन्द्र ढुंगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616ad4adf6b183f6f6222",
       "name": "राजेन्द्र प्रसाद ढुङगाना",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a34adf6b183f6f5e8e",
       "name": "रियान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616934adf6b183f6f5ad8",
       "name": "रेस्मा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a04adf6b183f6f5dd6",
       "name": "रोशनी सुनार",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169e4adf6b183f6f5d5c",
       "name": "लनि तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616704adf6b183f6f51b3",
       "name": "लनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616944adf6b183f6f5afa",
       "name": "लाक्पा भुटी",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616934adf6b183f6f5ac0",
       "name": "विनोद कुमार महतो",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5d88",
       "name": "शान्ति माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b8f",
       "name": "सगुन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616974adf6b183f6f5bcc",
       "name": "सजित भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169d4adf6b183f6f5d0f",
       "name": "सन्तु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a44adf6b183f6f5ed7",
       "name": "समिरा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6071",
       "name": "संम्रिका तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616704adf6b183f6f51b0",
       "name": "सयोन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e64",
       "name": "सरू चौलागाई",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e62",
       "name": "सविधान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a34adf6b183f6f5eaa",
       "name": "साजन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616964adf6b183f6f5b96",
       "name": "सान तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616704adf6b183f6f51b8",
       "name": "सानिमाया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5d96",
       "name": "सानी श्रेष्ठ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616934adf6b183f6f5ad2",
       "name": "सानु तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6063",
       "name": "सान्ता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f604e",
       "name": "सिमन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169a4adf6b183f6f5c84",
       "name": "सिर्जना तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169e4adf6b183f6f5d4e",
       "name": "सुजाता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5dad",
       "name": "सुजिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169e4adf6b183f6f5d4a",
       "name": "सुजिता भुजेल",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a74adf6b183f6f601b",
       "name": "सुनिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a84adf6b183f6f6038",
       "name": "सुरज खडका",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616ad4adf6b183f6f6201",
       "name": "सुर्य ब.तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a34adf6b183f6f5e97",
       "name": "सुविन तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169f4adf6b183f6f5d8a",
       "name": "सुशिला तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a24adf6b183f6f5e5d",
       "name": "सुस्मिता तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169d4adf6b183f6f5d1c",
       "name": "सोन माया तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169a4adf6b183f6f5c8c",
       "name": "सोनी तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616a94adf6b183f6f6098",
       "name": "सोमा तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab6169d4adf6b183f6f5d35",
       "name": "सोमो तामाङ",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     },
     {
-      "type": "ADDED",
+      "type": "REMOVED",
       "id": "OPMCM-6ab616954adf6b183f6f5b33",
       "name": "सौजन श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "POLICE_MISSING-37044",
-      "name": "- तुलसी माया लो",
-      "source": "NEPAL_POLICE_MISSING",
-      "status": "MISSING"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cfe94adf6b183f6a2f3e",
-      "name": "BALI NATHOGI",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cfe64adf6b183f6a2e98",
-      "name": "Saddham Husein",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cfe64adf6b183f6a2e82",
-      "name": "SHIVA KUMAR",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02a4adf6b183f6a3e2e",
-      "name": "अकिलेश यादव",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a377f",
-      "name": "अजय तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0114adf6b183f6a381c",
-      "name": "अनिश तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0114adf6b183f6a3825",
-      "name": "अम्मर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0284adf6b183f6a3da5",
-      "name": "अरुप तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3c16",
-      "name": "अरूशा अधिकारी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3dc8",
-      "name": "अर्जुन खत्री",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01c4adf6b183f6a3ab8",
-      "name": "अलिना तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b7b",
-      "name": "असमि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0214adf6b183f6a3bc9",
-      "name": "अस्मिता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34e6",
-      "name": "आइती माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37bd",
-      "name": "आमिस तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39c7",
-      "name": "आरोन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39d0",
-      "name": "आसुन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3bfe",
-      "name": "ईन्द्र कामरी ढकाल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37d6",
-      "name": "ईसान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37cd",
-      "name": "उज्जवल तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b66",
-      "name": "एन्जिला तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01f4adf6b183f6a3b64",
-      "name": "एन्जी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3c1b",
-      "name": "एलियना पाण्डे",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0174adf6b183f6a3985",
-      "name": "कपिल तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02f4adf6b183f6a3fed",
-      "name": "कपिल पार्की",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02a4adf6b183f6a3e00",
-      "name": "कबि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01a4adf6b183f6a3a35",
-      "name": "कर्ण तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a394b",
-      "name": "कामीछिरिङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34cc",
-      "name": "कार्मो तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31c0",
-      "name": "कार्साङ्ग दावा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39dd",
-      "name": "कुसाङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31c7",
-      "name": "कृतिमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37f5",
-      "name": "कृष्ण प्रसाद लामिछाने",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37bb",
-      "name": "कृष्ण बहादुर खड्का",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00d4adf6b183f6a376e",
-      "name": "केशम तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3929",
-      "name": "केसाङ घले",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0034adf6b183f6a345e",
-      "name": "केसिङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0284adf6b183f6a3d85",
-      "name": "गणेश जोशी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01a4adf6b183f6a3a55",
-      "name": "चतुर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37d1",
-      "name": "चन्द्र बहादुर घले",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0144adf6b183f6a38d2",
-      "name": "चिक्तु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cffb4adf6b183f6a3277",
-      "name": "छिरिङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3962",
-      "name": "छिर्मि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37ab",
-      "name": "छेवाङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37ad",
-      "name": "जयराम तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0074adf6b183f6a35f2",
-      "name": "टाँसी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3df6",
-      "name": "टेनजुङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff54adf6b183f6a3137",
-      "name": "टोन्जेन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b30",
-      "name": "डोलमा शेर्पा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0064adf6b183f6a358a",
-      "name": "डोल्मा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01a4adf6b183f6a3a4e",
-      "name": "तासि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a377a",
-      "name": "तेन्जनी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34cf",
-      "name": "तेन्जिन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3421",
-      "name": "तेन्जेन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3923",
-      "name": "तोयानाथ श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3439",
-      "name": "दानुमाया तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37c6",
-      "name": "दावा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0174adf6b183f6a399d",
-      "name": "दावा सोनम तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37b4",
-      "name": "दावाफुन्च तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a37a7",
-      "name": "दिल कुमार तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3de5",
-      "name": "देन्ती तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a3801",
-      "name": "नारायाण अचार्य",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b09",
-      "name": "निता थपलिया",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0034adf6b183f6a343d",
-      "name": "निमा तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a342a",
-      "name": "निमा दोर्जै तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3948",
-      "name": "निर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37ed",
-      "name": "पसङ दोर्जे तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31c5",
-      "name": "पाङ् दोर्जे तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a3803",
-      "name": "पुष्पा राज अधिकारी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0074adf6b183f6a35d9",
-      "name": "प्रदिप श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3df2",
-      "name": "प्रविण तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39ca",
-      "name": "प्रविन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37b9",
-      "name": "प्रविन बोगटी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3952",
-      "name": "प्रित तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3957",
-      "name": "प्रेम डोल्मा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a379a",
-      "name": "फुर्पा छिरिङ तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01d4adf6b183f6a3af9",
-      "name": "फुलमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02c4adf6b183f6a3eec",
-      "name": "बाल कुमार ठाकुर",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b1b",
-      "name": "बिमला तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0274adf6b183f6a3d2f",
-      "name": "बुद्धराम थारु",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0174adf6b183f6a399f",
-      "name": "बुद्धी मान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37f2",
-      "name": "भक्त बहादुर श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cffa4adf6b183f6a322e",
-      "name": "मणि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00a4adf6b183f6a36af",
-      "name": "मण्जु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37ef",
-      "name": "मन बहादुर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cffb4adf6b183f6a3275",
-      "name": "मानव तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0174adf6b183f6a3977",
-      "name": "मिङ्मार शेर्पा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3406",
-      "name": "मिन बहादुर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00a4adf6b183f6a36c4",
-      "name": "मिनि माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cfff4adf6b183f6a333c",
-      "name": "मिनिमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34d1",
-      "name": "मिनु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0054adf6b183f6a354e",
-      "name": "मुना तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a3811",
-      "name": "मोहम्द अरहम",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0244adf6b183f6a3c5e",
-      "name": "यब्रोन रिमाल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0054adf6b183f6a3560",
-      "name": "यान्जे तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3425",
-      "name": "युनी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37b7",
-      "name": "यूनिश नेपाल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37b1",
-      "name": "यूवराज तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b79",
-      "name": "रसमि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37ea",
-      "name": "राज कुमार भुजेल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cffd4adf6b183f6a32e8",
-      "name": "राजकुमार तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0054adf6b183f6a3518",
-      "name": "राजकुमारी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0074adf6b183f6a35fc",
-      "name": "राजन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3401",
-      "name": "राजेन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02f4adf6b183f6a3fd3",
-      "name": "राजेन्द्र कुमार चौधरी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02d4adf6b183f6a3f31",
-      "name": "राजेन्द्र ढुंगाना",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02e4adf6b183f6a3f61",
-      "name": "राजेन्द्र प्रसाद ढुङगाना",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37a9",
-      "name": "राम बहादुर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0124adf6b183f6a386b",
-      "name": "रिना तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34ca",
-      "name": "रिन्जेन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0244adf6b183f6a3c4c",
-      "name": "रियान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3943",
-      "name": "रेस्मा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0034adf6b183f6a343b",
-      "name": "रेहन तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0134adf6b183f6a389a",
-      "name": "रोजिना तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0214adf6b183f6a3bba",
-      "name": "रोशनी सुनार",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01f4adf6b183f6a3b58",
-      "name": "लनि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31ad",
-      "name": "लनी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a395c",
-      "name": "लाक्पा भुटी",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0034adf6b183f6a3459",
-      "name": "लालकेश चौलागाई",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0114adf6b183f6a3814",
-      "name": "लालमन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0094adf6b183f6a368f",
-      "name": "विनिशा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a392c",
-      "name": "विनोद कुमार महतो",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a379d",
-      "name": "विर बहादुर तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37dd",
-      "name": "वीर बहादुर मैनाली",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b7e",
-      "name": "शान्ति माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39d4",
-      "name": "सगुन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37af",
-      "name": "संजित तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0194adf6b183f6a3a04",
-      "name": "सजित भुजेल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b18",
-      "name": "सन्तु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0254adf6b183f6a3c88",
-      "name": "समिरा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3df0",
-      "name": "संम्रिका तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31aa",
-      "name": "सयोन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0054adf6b183f6a3573",
-      "name": "सयोन तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3430",
-      "name": "सरिता तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3c26",
-      "name": "सरू चौलागाई",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00a4adf6b183f6a36c6",
-      "name": "सर्स्वती न्यौपाने",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3c24",
-      "name": "सविधान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0244adf6b183f6a3c65",
-      "name": "साजन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0184adf6b183f6a39db",
-      "name": "सान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cff84adf6b183f6a31b4",
-      "name": "सानिमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0054adf6b183f6a3563",
-      "name": "सानिमाया तामाङ्ग",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b8b",
-      "name": "सानी श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0064adf6b183f6a35c5",
-      "name": "सानीमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a393d",
-      "name": "सानु तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0144adf6b183f6a38ce",
-      "name": "सानु माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3de2",
-      "name": "सान्ता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3dd1",
-      "name": "सिमन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01b4adf6b183f6a3aa3",
-      "name": "सिर्जना तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a391d",
-      "name": "सुक ब. तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37d3",
-      "name": "सुजन आले मगर",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01f4adf6b183f6a3b4a",
-      "name": "सुजाता भुजेल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b99",
-      "name": "सुजिता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01f4adf6b183f6a3b48",
-      "name": "सुजिता भुजेल",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0144adf6b183f6a38c3",
-      "name": "सुनमाया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0284adf6b183f6a3da2",
-      "name": "सुनिता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0124adf6b183f6a3872",
-      "name": "सुनी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0014adf6b183f6a33dc",
-      "name": "सुमन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0004adf6b183f6a3389",
-      "name": "सुमिता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a37a3",
-      "name": "सुयान तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0294adf6b183f6a3dbb",
-      "name": "सुरज खडका",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02d4adf6b183f6a3f44",
-      "name": "सुर्य ब.तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0104adf6b183f6a37e2",
-      "name": "सुर्य शर्मा",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0244adf6b183f6a3c56",
-      "name": "सुविन तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00e4adf6b183f6a3781",
-      "name": "सुशान्त तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d00f4adf6b183f6a37e0",
-      "name": "सुशिल तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0204adf6b183f6a3b81",
-      "name": "सुशिला तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0234adf6b183f6a3c21",
-      "name": "सुस्मिता तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0074adf6b183f6a360e",
-      "name": "सृजना तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5cffe4adf6b183f6a32fb",
-      "name": "सृष्टि तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b25",
-      "name": "सोन माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0024adf6b183f6a3416",
-      "name": "सोनम तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0154adf6b183f6a391a",
-      "name": "सोनाम थोक्तेल तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0044adf6b183f6a34c8",
-      "name": "सोनाय तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01b4adf6b183f6a3aab",
-      "name": "सोनी तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0094adf6b183f6a3691",
-      "name": "सोम माया तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d02a4adf6b183f6a3e13",
-      "name": "सोमा तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d01e4adf6b183f6a3b35",
-      "name": "सोमो तामाङ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0174adf6b183f6a398d",
-      "name": "सौजन श्रेष्ठ",
-      "source": "OPMCM_RESCUE_PORTAL",
-      "status": "RESCUED"
-    },
-    {
-      "type": "REMOVED",
-      "id": "OPMCM-6ab5d0164adf6b183f6a3921",
-      "name": "हरि गहतराज",
       "source": "OPMCM_RESCUE_PORTAL",
       "status": "RESCUED"
     }
