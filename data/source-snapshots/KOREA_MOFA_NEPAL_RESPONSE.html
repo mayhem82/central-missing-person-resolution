@@ -47,6 +47,9 @@
 
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -74,41 +77,43 @@
 <link rel="apple-touch-icon-precomposed" href="/images/www/mofa_icon.png">
 <link rel="shortcut icon" href="/images/www/mofa_icon.png">
 
-<!-- <link rel="stylesheet" href="/css/www/reset.css" type="text/css"> -->
-<!-- <link rel="stylesheet" href="/css/www/common.css" type="text/css"> -->
-
-<link rel="stylesheet" href="/www-new/css/default.css?v=20260427">
-<link rel="stylesheet" href="/www-new/css/slick.css">
+<!-- css -->
 <link rel="stylesheet" href="/www-new/css/jquery-ui.min.css" />
-
+<link rel="stylesheet" href="/www-new/css/slick.css">
+<link rel="stylesheet" href="/www-new/css/aos.css" type="text/css" >
+<link rel="stylesheet" href="/www-new/resources/css/plugin/swiper-bundle.min.css" type="text/css" >
+<link rel="stylesheet" href="/www-new/css/default.css?v=1790939510000">
 <link rel="stylesheet" href="/www-new/css/custom.css">
 
-
-<!-- <link rel="stylesheet" href="/css/www/style.css" type="text/css"> -->
-
-<!-- <script type="text/javascript" src="/js/www/jquery-1.12.4.min.js"></script> -->
+<!-- script -->
+<!-- 스크립트 : 라이브러리 -->
 <script type="text/javascript" src="/www-new/js/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="/www-new/js/jquery-migrate-1.4.1.min.js"></script>
+<!--script type="text/javascript" src="/www-new/js/jquery-migrate-1.4.1.min.js"></script-->
+<script type="text/javascript" src="/www-new/js/prefixfree.min.js"></script>
+<script type="text/javascript" src="/www-new/resources/js/pattern/jquery.min.js"></script>
+
+<!-- 스크립트 : 패턴 페이지 -->
 <script type="text/javascript" src="/www-new/js/slick.js"></script>
-<!-- <script type="text/javascript" src="/js/www/slick.min.js"></script> -->
+<script type="text/javascript" src="/www-new/js/aos.js"></script>
+<script type="text/javascript" src="/www-new/js/common.js?v=2026100201"></script>
+<script type="text/javascript" src="/www-new/js/custom.js?v=2026100201"></script> 
 <script type="text/javascript" src="/js/www/masonry.pkgd.min.js"></script>
-<!-- <script type="text/javascript" src="/js/www/common.js"></script> -->
-<script type="text/javascript" src="/www-new/js/common.js?v=2024071901"></script>
-	<script type="text/javascript" src="/www-new/js/custom.js?v=2026042701""></script> 
+<script type="text/javascript" src="/www-new/resources/js/plugin/swiper-bundle.min.js"></script>
+<script type="text/javascript" defer="defer" src="/www-new/resources/js/component/ui-script.js"></script>
+<script type="text/javascript" defer="defer" src="/www-new/resources/menuJs/wwwTop.js?v=1790941077000"></script>
+<script type="text/javascript" defer="defer" src="/www-new/resources/menuJs/wwwTopAll.js?v=1790941077000"></script>
+<script type="text/javascript" defer="defer" src="/www-new/resources/menuJs/renderer.js"></script>
+
 
 
 <!-- 서브만 사용 -->
-	<script type="text/javascript" src="/js/www/calendar.js"></script>
+	<!--script type="text/javascript" src="/js/www/calendar.js"></script-->
+	<script type="text/javascript" src="/js/www/krds-calendar.js"></script>
 	<script type="text/javascript" src="/js/printThis.js"></script>
 	<script type="text/javascript" src="/js/miya_validator.js"></script>
 	<script type="text/javascript" src="/js/dev-cmmn.js"></script>
-	
-
-	<script src="/www-new/js/prefixfree.min.js"></script>
-	
-	<!-- <script type="text/javascript" src="/www-new/js/common.js"></script> --> 
 	<script src="/www-new/js/jquery-ui.min.js"></script>
-	<script src="/www-new/js/datepicker-ko.js"></script>
+	<!--script src="/www-new/js/datepicker-ko.js"></script-->
 	
 	
 	
@@ -165,7 +170,7 @@ $(function() {
 <script type="text/javascript">
 $( function (){
 		//프린트
-		$("#btnPrint").click(function() {$("#content").printThis();});
+		$("#btnPrint").click(function() {$("#contents").printThis();});
 		
 		$("#search_btn").click(function() {// respon 통합검색PC
 			if($("form[name=wise_sub] input[name=query]").val() != "" && $("form[name=wise_sub] input[name=query]").val().replace(/\s/gi,"") != "" ){
@@ -201,6 +206,9 @@ $(document).ready(function() {
 	});
 	
 });
+
+</script>
+<!-- <script type="text/javascript">
 var nowZoom = 100;
 
 function zoomIn() {
@@ -252,1260 +260,306 @@ function zooms() {
 </head>
 <!-- <body> -->
 <body>
-	<div id="wrapper" class="">
-    <!-- 스킵내비게이션 -->
-    <div class="skip_navi">
-      <strong class="hide">바로가기 메뉴</strong>
-      
-      <a href="#contents">본문 바로가기</a>
-      <a href="#gnb">주메뉴 바로가기</a>
-    </div>
-    <!--//스킵내비게이션 -->
-    <!-- 헤더 -->
-    <header class="header">
-
-			<div class="top_menu container">
-				<div id="masthead" class="gov-info">
-					<div class="toggle-wrap">
-						<div class="toggle-head">
-							<div class="inner">
-								<span class="nuri-txt"><b class="hide">태극기</b>이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
-								<!--  <button type="button" class="btn btn-txt ico-arr-down toggle-btn xsm fc_blue4">
-									공식 누리집 확인방법<span class="hide sr-only">열기</span>
-								</button> -->
-							</div>
-						</div>
-						<div class="toggle-body">
-							<div class="inner">
-								<dl class="dl nuri">
-									<dt class="dt">공식 누리집 주소 확인하기</dt>
-									<dd class="dd">
-										go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다.<br class="br">이밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요
-									</dd>
-									<dd class="dd">
-										<a href="javascript:window.open('https://uiux.egovframe.go.kr/search.do?query='+window.location.host,'_blank');" class="lk2 btn btn-txt ico-go xsm" title="'정부기관 공식누리집 검색' 새창열림">운영중인 공식 누리집보기</a>
-									</dd>
-								</dl>
-							</div>
-						</div>
+	<!-- 닫는 태그는 bottom에 있음. -->
+	
+	
+		<div id="wrap"  class="g-wrap typeSub">
+	
+    <!-- 본문 바로가기 영역  -->
+		<div id="krds-skip-link">
+			<a href="#container">본문 바로가기</a>
+			<a href="#main-gnb">주메뉴 바로가기</a>
+			<a href="#krds-footer">푸터 바로가기</a>
+		</div>
+		<!-- //본문 바로가기 영역  -->
+		
+		<!-- 상단 배너영역  -->
+		<div id="krds-masthead">
+			<div class="toggle-wrap">
+				<div class="toggle-head">
+					<div class="inner">
+						<span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
 					</div>
 				</div>
-				<ol>
-					 <li>
-        		<div class="zoom-wrap">
-            	<div class="zoom-tit">
-                <span>화면크기</span>
-            	</div>
-           		<div class="zoom-btn">
-                <button class="zoomIn" onclick="zoomIn();" title="화면 확대">화면 확대</button>
-                <button class="zoomOut" onclick="zoomOut();" title="화면 축소">화면 축소</button>
-                <button class="zoomReset" onclick="zoomReset();" title="화면 초기화">초기화</button>
- 	           	</div>
-        		</div>
-    			</li>
-					<li><a class="national_symbol" href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" target="_blank" title="새창열림">국가상징</a></li>
-					<li><a href="/teenager/index.do" target="_blank" title="새창열림">어린이·청소년</a></li>
-					<!-- <li><a href="https://www.knda.go.kr" target="_blank" title="새창으로">국립외교원</a></li> -->
-					<li><a href="/www/wpge/m_20347/contents.do" title="바로가기">RSS</a></li>
-					<!-- <li><a href="http://www.president.go.kr/" target="blank" title="새창에서 열림">대통령실</a></li> -->
-					<li><a href="/eng/index.do" target="_blank" title="새창열림">ENGLISH</a></li>
-					<li class="btn_sitemap_wrap">
-						<button type="button" class="btn_sitemap_open">
-							전체 메뉴
-						</button>
-					</li>
-				</ol>
 			</div>
+		</div>
+		<!-- //상단 배너영역  -->
+		
+		<!-- 헤더 영역 -->
+		<header id="krds-header">
+			<!-- 헤더 컨텐츠 영역 -->
+			<div class="header-in">
+				<!-- 헤더 상단 기타메뉴 -->
+				<div class="header-container">
+					<div class="inner">
 
-			<div class="head container">
+						<div class="header-utility">
+							<ul class="utility-list">
+								<!-- 국가상징 -->
+								<!-- <li>
+									<a href="/html/eng/index.html" target="_blank" title="새 창 열림">
+										<button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+											<i class="svg-icon ico-flag"></i>&nbsp;국가상징&nbsp;<i class="svg-icon ico-go"></i>
+										</button>
+									</a>
+								</li> -->
+								<li>
+									<a href="/teenager/index.do" class="krds-btn small text drop-btn" target="_blank" title="새 창 열림">
+										어린이&middot;청소년&nbsp;<i class="svg-icon ico-go"></i>
+									</a>
+								</li>
+								<li>
 
-        <h1 class="logo">
-             <a href="/www/main.do">
-                 <span class="hide">외교부</span>
-             </a>
-        </h1>
+									<!-- 언어설정: 언어전환 -->
+									<div class="krds-drop-wrap krds-language">
+										<!-- <button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+											<i class="svg-icon ico-global"></i>
+											Language
+											<i class="svg-icon ico-toggle"></i>
+										</button>
+										<div class="drop-menu" style="display: none;">
+											<div class="drop-in">
+												<ul class="drop-list">
+													<li><a href="#" class="item-link active" lang="ko">한국어<span class="sr-only">선택됨</span></a></li>
+													<li><a href="/html/eng/index.html" class="item-link" lang="en">English (영어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="zh">中文 (중국어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="ja">日本語 (일본어)<span class="sr-only"></span></a></li>
+													<li><a href="#" class="item-link" lang="fr">français (프랑스어)<span class="sr-only"></span></a></li>
+												</ul>
+											</div>
+										</div> -->
+										<a href="/eng/index.do" class="krds-btn small text drop-btn" target="_blank" title="새 창 열림">
+											<i class="svg-icon ico-global"></i>&nbsp;English&nbsp;<i class="svg-icon ico-go"></i>
+										</a>
+									</div>
+									<!-- 언어설정: 언어전환 -->
 
-       <!-- <div class="goverment-link">
-           <a href="https://www.president.go.kr/" target="_blank" title="대한민국 대통령실 새창 열림">
-               <img src="/www-new/images/common/slogan.png" alt="다시 대한민국! 새로운 국민의 나라">
-           </a>
-       </div> -->
+								</li>
+								<li>
+									<div class="krds-drop-wrap">
+										<button type="button" class="krds-btn small text drop-btn">
+											지원&nbsp;<i class="svg-icon ico-toggle"></i>
+										</button>
+										<div class="drop-menu wide">
+											<div class="drop-in">
+												<ul class="drop-list">
+													<li><a class="item-link" href="/www/wpge/m_20347/contents.do" title="바로가기">RSS</a></li>
+													<li><a class="item-link" href="/www/wpge/m_4184/contents.do" title="바로가기">누리집 이용안내</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<button type="button" class="krds-btn small text open-modal" data-target="modal_adjust_display" tabindex="0">
+										<i class="svg-icon ico-view-mode"></i>&nbsp;글자·화면 설정
+									</button>
+								</li>
+							</ul>
+						</div>
 
-         <!-- 
-         <a href="https://www.innogov.go.kr/ucms/bbs/B0000023/view.do?nttId=1361&menuNo=300040&pageIndex=1" title="새창열림" target="_blank" class="slogan">
-             <img src="/www-new/images/common/slogan.jpg" alt="정부혁신 보다나은 정부">
-         </a>
-         -->
-         <nav id="gnb">
-           <ul class="dep1">
-					 
+						<div class="header-branding">
+							<h2 class="logo mofa">
+								<a href="/www/main.do">
+									<span class="sr-only">외교부</span>
+									<!-- <img src="/www-new/images/common/mofa_logo.svg" alt="외교부"> -->
+								</a>
+							</h2>
+							<div class="header-actions">
+								<!-- <div class="sch-input">
+									<input type="text" id="searchWrd-total" class="krds-input small w" placeholder="검색어를 입력해 주세요." title="검색어를 입력해 주세요.">
+									<button type="button" class="krds-btn medium icon ico-search btn-exec" id="btn-search-total">
+										<span class="sr-only">검색</span>
+										<i class="svg-icon ico-sch"></i>
+									</button>
+								</div> -->
+								<button type="button" class="btn-navi navi-row sch open-modal" title="통합검색 레이어" data-target="popTotalSch">통합검색</button>
+								<!-- <a href="#" class="btn-navi login">로그인</a>
+								<button type="button" class="btn-navi join">회원가입</button> -->
+								<!-- <div class="krds-drop-wrap my-drop">
+									<button type="button" class="btn-navi my drop-btn" aria-expanded="false">나의 GOV</button>
+									<div class="drop-menu" style="display: none;">
+										<div class="drop-in">
+											<div class="drop-top">
+												<p class="my-name">홍길동님</p>
+												<dl class="my-time">
+													<dt>로그아웃까지 남은 시간</dt>
+													<dd>
+													<span class="time">12:00</span>
+													<button type="button" class="krds-btn small text h-auto">시간 연장</button>
+													</dd>
+												</dl>
+											</div>
+											<ul class="drop-list">
+												<li><a href="#" class="item-link">나의 GOV 홈<span class="sr-only"></span></a></li>
+												<li><a href="#" class="item-link">나의 신청내역<span class="sr-only"></span></a></li>
+												<li><a href="#" class="item-link">나의 생활정보<span class="sr-only"></span></a></li>
+												<li><a href="#" class="item-link">나의 정보관리<span class="sr-only"></span></a></li>
+											</ul>
+											<div class="drop-bottom">
+												<button type="button" class="krds-btn medium text">
+													<i class="svg-icon ico-logout"></i> 로그아웃
+												</button>
+											</div>
+										</div>
+									</div>
+								</div> -->
+								<button type="button" class="btn-navi navi-row all" aria-controls="mobile-nav">전체메뉴</button>
+							</div>
+						</div>
 
+					</div>
+				</div>
 
+				<!-- 메인메뉴 : 데스크탑 -->
+				<nav class="krds-main-menu" id="main-gnb">
+					<div class="inner">
+						<ul class="gnb-menu" aria-label="메인 메뉴">
 
+							<!-- const initGnb -->
+							
+						</ul>
+					</div>
+				</nav>
+				<!-- //메인메뉴 : 데스크탑 -->
 
+				<!-- //헤더 상단 기타메뉴 -->
+			</div>
+			<!-- //헤더 컨텐츠 영역 -->
 
+			<!-- 메인메뉴 : 모바일 -->
+			<nav id="mobile-nav" class="krds-main-menu-mobile" style="display: none;">
+				<div class="gnb-wrap">
 
+					<!-- gnb-wrap-inner -->
+					<div class="gnb-wrap-inner">
+						<!-- gnb-header -->
+						<div class="gnb-header">
+							<!-- gnb-utils -->
+							<div class="gnb-utils">
+								<ul class="utility-list">
+									<li>
+										<a href="/teenager/index.do" class="krds-btn small text drop-btn" target="_blank" title="새 창 열림">
+											어린이&middot;청소년&nbsp;<i class="svg-icon ico-go"></i>
+										</a>
+									</li>
+									<li>
+										<a href="/eng/index.do" class="krds-btn small text drop-btn" target="_blank" title="새 창 열림">
+											<i class="svg-icon ico-global"></i>&nbsp;English&nbsp;<i class="svg-icon ico-go"></i>
+										</a>
+									</li>
+									<li>
+										<!-- SNS -->
+										<div class="krds-drop-wrap snsWrap">
+											<button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
+												SNS<i class="svg-icon ico-toggle"></i>
+											</button>
+											<div class="drop-menu wide" style="display: none;">
+												<div class="drop-in">
+													<ul class="drop-list">
+														<li>
+															<a href="https://www.facebook.com/mofakr.kr" class="item-link" target="_blank" title="새 창 열림">
+																<i class="svg-icon ico-facebook color"></i>페이스북<span class="sr-only"></span><i class="svg-icon ico-go"></i>
+															</a>
+														</li>
+														<li>
+															<a href="https://www.instagram.com/mofa_kr/" class="item-link" target="_blank" title="새 창 열림">
+																<i class="svg-icon ico-instagram color"></i>인스타그램<span class="sr-only"></span><i class="svg-icon ico-go"></i>
+															</a>
+														</li>
+														<li>
+															<a href="https://www.youtube.com/user/MOFAKorea" class="item-link" target="_blank" title="새 창 열림">
+																<i class="svg-icon ico-youtube color"></i>유튜브<span class="sr-only"></span><i class="svg-icon ico-go"></i>
+															</a>
+														</li>
+														<li>
+															<a href="https://twitter.com/mofa_kr" class="item-link" target="_blank" title="새 창 열림">
+																<i class="svg-icon ico-sns-x color"></i>엑스(X)<span class="sr-only"></span><i class="svg-icon ico-go"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- SNS -->
+									</li>
+								</ul>
+							</div>
+							<!-- //gnb-utils -->
+						</div>
+						<!-- //gnb-header -->
 
+						<!-- gnb-body -->
+						<div class="gnb-body">
+							<!-- gnb-menu -->
+							<div class="gnb-menu">
+								
+								<div class="menu-wrap">
+									<ul>
 
+									</ul>
+								</div>
+								<div class="submenu-wrap">
 
+								</div>
 
+							</div>
+							<!-- //gnb-menu -->
+							<!-- gnb-bottom -->
+							<!-- <div class="gnb-bottom">
+								<a href="#" class="krds-btn medium text">인증 센터</a>
+								<a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기"> 어린이 정부포털 <i class="svg-icon ico-go"></i> </a>
+							</div> -->
+							<!-- //gnb-bottom -->
+						</div>
+						<!-- //gnb-body -->
 
+						<!-- gnb-close -->
+						<button type="button" class="krds-btn medium icon" id="close-nav">
+							<span class="sr-only">전체메뉴 닫기</span>
+							<i class="svg-icon ico-popup-close"></i>
+						</button>
+						<!-- //gnb-close -->
+					</div>
+					<!-- //gnb-wrap-inner -->
+				</div>
+			</nav>
 
-
-
-<li><a href="/www/brd/m_29514/list.do">주요 외교활동</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>주요 외교활동</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
+			<!-- //메인메뉴 : 모바일 -->
+		</header>
+		<!-- //헤더 영역 -->
 		
-			<li class="col2">
-				<a href="/www/brd/m_29514/list.do" >정상 외교활동</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/minister/brd/m_28687/list.do"  target="_blank" title="새창열림">장관 외교활동</a>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/wpge/m_3435/contents.do">영사·국가/지역</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>영사·국가/지역</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_3435/contents.do" >여행·해외체류정보</a>
-				
-				<ol>
-					<li><a href="http://www.0404.go.kr/"  target="_blank" title="새창열림">해외안전여행</a></li>
-				
-				
-				
-					<li><a href="https://www.0404.go.kr/bbs/contsPst/MST0000000000118/18/detail"  target="_blank" title="새창열림">영사조력 법령정보</a></li>
-				
-				
-				
-					<li><a href="https://www.g4k.go.kr/biz/main/main.do"  target="_blank" title="새창열림">재외동포 365민원포털</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3435/contents.do" >영사관련민원안내</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3437/contents.do" >영사관련이용방법</a></li>
-				
-				
-				
-					<li><a href="http://www.passport.go.kr/"  target="_blank" title="새창열림">여권</a></li>
-				
-				
-				
-					<li><a href="https://www.0404.go.kr/bbs/contsPst/MST0000000000113/13/detail"  target="_blank" title="새창열림">해외입국 안내(비자)</a></li>
-				
-				
-				
-					<li><a href="https://www.apostille.go.kr/index.do"  target="_blank" title="새창열림">아포스티유·영사확인</a></li>
-				
-				
-				
-					<li><a href="https://www.oka.go.kr/web/content.do?menu_cd=000080"  target="_blank" title="새창열림">해외이주</a></li>
-				
-				
-				
-					<li><a href="https://www.oka.go.kr/web/content.do?menu_cd=000050"  target="_blank" title="새창열림">재외국민등록</a></li>
-				
-				
-				
-					<li><a href="https://www.oka.go.kr/web/content.do?menu_cd=000101"  target="_blank" title="새창열림">재외동포 현황</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_21511/contents.do" >재외동포 정책</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3456/contents.do" >해외진출 우리국민 편익증진</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_24315/contents.do" >재외국민보호정책</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/nation/m_3458/list.do" >국가/지역 정보</a>
-				
-				<ol>
-					<li><a href="/www/nation/m_3458/list.do" >국가/지역 검색</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3459/contents.do" >동북아시아</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_24316/contents.do" >동남아시아</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3483/contents.do" >서남아시아태평양</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3528/contents.do" >북미</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20273/contents.do" >중남미</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_21617/contents.do" >러시아·중앙아시아</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3550/contents.do" >유럽</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3553/contents.do" >중동</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3551/contents.do" >아프리카</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="https://www.0404.go.kr/bbs/safetyNtc/list"  target="_blank" title="새창열림">해외안전여행 공지</a>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/wpge/m_24963/contents.do">외교정책</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>외교정책</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_24963/contents.do" >국정과제</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_24963/contents.do" >국가비전 및 국정목표</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_24964/contents.do" >외교정책 목표</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_3972/contents.do" >한반도</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_3972/contents.do" >북한 핵문제</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_25834/contents.do" >대북 독자제재</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_25605/list.do" >북한 사이버 위협 대응</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3982/contents.do" >한반도 평화체제</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_29680/contents.do" >인공지능(AI)</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_29684/contents.do" >우리나라 AI 정책</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_29690/contents.do" >글로벌 AI 정책 동향</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_29683/list.do" >보도자료·주요활동</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_24251/contents.do" >조약·국제법</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_24251/contents.do" >조약</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_29587/contents.do" >국제법</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3836/contents.do" >영토·해양이슈</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_24252/contents.do" >개발협력</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_24252/contents.do" >개발협력</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_21373/contents.do" >개발협력정책 및 현황</a></li>
-				
-				
-				
-					<li><a href="http://www.odakorea.go.kr/"  target="_blank" title="새창열림">ODA 통합 홈페이지</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_3873/contents.do" >국제기구·지역협력체</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_3873/contents.do" >국제연합(UN)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3887/contents.do" >경제협력개발기구(OECD)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3890/contents.do" >세계무역기구(WTO)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_23764/contents.do" >국제원자력기구(IAEA)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3901/contents.do" >아시아태평양경제협력체(APEC)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3921/contents.do" >아세안(ASEAN)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3933/contents.do" >아시아-유럽정상회의(ASEM)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3854/contents.do" >유럽연합(EU)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3943/contents.do" >동아시아 · 라틴아메리카 협력포럼(FEALAC)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3952/contents.do" >주요20개국(G20) 정상회의</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3959/contents.do" >유엔 아시아·태평양 경제사회위원회(ESCAP)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3961/contents.do" >주요7개국(G7) 정상회의</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20171/contents.do" >믹타(MIKTA)</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3963/contents.do" >한 · 일 · 중 3국 협력</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_3860/list.do" >중남미지역기구</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20056/contents.do" >한-카리브 고위급 포럼</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_23296/contents.do" >아프리카연합</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_23299/contents.do" >한-아프리카 포럼</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_26873/contents.do" >유엔교육과학문화기구(UNESCO)</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_3861/list.do" >기타기구정보</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_3988/list.do" >안보</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_3988/list.do" >군축·비확산</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3991/contents.do" >글로벌 안보협력</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_3994/contents.do" >인권</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_3994/contents.do" >인권외교활동</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3995/contents.do" >북한인권문제</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_27675/contents.do" >민주주의증진외교</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3996/contents.do" >국제인권규범</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_3997/contents.do" >국제인권관련기구</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_24968/list.do" >주요동향 및 자료</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20149/contents.do" >환경</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_20149/contents.do" >기후변화·환경</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4000/contents.do" >청정에너지</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4005/contents.do" >남극</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4045/contents.do" >북극</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_24254/contents.do" >경제</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_24254/contents.do" >경제</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4049/list.do" >국제경제동향</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4058/contents.do" >경제협정</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_26799/list.do" >경제안보외교센터</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4052/list.do" >해외입찰정보</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_25830/contents.do" >해외진출기업 활동지원</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4053/list.do" >박람회·전시회정보</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_24255/contents.do" >의전</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_24255/contents.do" >의전</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4061/contents.do" >의전과의례</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4068/contents.do" >국가의전</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4063/contents.do" >국가상훈</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4064/list.do" >해외순방·외빈방한</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4072/list.do" >주한공관</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4066/list.do" >재미있는의전</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_28838/list.do" >신임장 사본 제출</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4067/contents.do" >자주묻는질문</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_26884/contents.do" >공공외교</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_26884/contents.do" >우리 공공외교 소개 및 정책</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_22755/contents.do" >공공외교 사업개요</a></li>
-				</ol>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/brd/m_4075/list.do">뉴스·공지</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>뉴스·공지</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4075/list.do" >공지사항</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4076/list.do" >뉴포커스</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_29514/list.do" >정상 외교활동</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_29514/list.do" >2026년 정상 외교활동</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_28650/list.do" >2025년 정상 외교활동</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/pgm/m_24259/mainHpMSchedule/show.do" >외교일정</a>
-				
-				<ol>
-					<li><a href="/www/pgm/m_24259/mainHpMSchedule/show.do" >국제관계 주요일정</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_24261/mainDiplomancySchedule/show.do" >월간외교일지</a></li>
-				
-				
-				
-					<li><a href="https://www.mofa.go.kr/minister/brd/m_28687/list.do"  target="_blank" title="새창열림">장관 외교활동</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4078/list.do" >외교부 브리핑</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4079/list.do" >채용정보</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4080/list.do" >보도자료</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_4080/list.do" >보도자료</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_24815/list.do" >보도참고 및 설명자료</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_20140/list.do" >연설·기고·인터뷰</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_20140/list.do" >연설</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4095/list.do" >기고·인터뷰</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4089/list.do" >외교부 소식지</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_29591/contents.do" >쉽게 보는 주요 외교 성과</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_24465/contents.do" >외교부 쇼츠</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4089/list.do" >뉴스레터(정기)</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4090/list.do" >정책메일(비정기)</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_4091/uss/news/newsSbscrb.do" >가입신청</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4105/list.do" >자료실</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_4105/list.do" >외교백서</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4098/contents.do" >한국외교60년</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4099/list.do" >외교간행물</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4100/contents.do" >외교안보연구소발간자료</a></li>
-				
-				
-				
-					<li><a href="http://diplomaticarchives.mofa.go.kr/dev/chronology_new.go"  target="_blank" title="새창열림">대한민국외교연표</a></li>
-				
-				
-				
-					<li><a href="http://diplomaticarchives.mofa.go.kr/dev/open_document_list.go"  target="_blank" title="새창열림">외교문서공개목록</a></li>
-				
-				
-				
-					<li><a href="https://diplomaticarchives.mofa.go.kr/new/publish/docus.jsp"  target="_blank" title="새창열림">외교문서원문요약</a></li>
-				</ol>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/wpge/m_4123/contents.do">국민참여</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>국민참여</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4123/contents.do" >대화의 장</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_4123/contents.do" >장관과의 대화</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4124/list.do" >자유게시판</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20674/contents.do" >국민생각함</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4128/contents.do" >국민정책제안</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_29712/list.do" >외교 분야 정상화 과제 제안</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4126/contents.do" >전자공청회</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_22861/contents.do" >규제개혁</a>
-				
-				<ol>
-					<li><a href="https://www.sinmungo.go.kr/sz2.prpsl.main.laf"  target="_blank" title="새창열림">규제개혁신문고</a></li>
-				
-				
-				
-					<li><a href="https://www.better.go.kr"  target="_blank" title="새창열림">규제정보포털</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_22861/contents.do" >규제입증요청</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_21572/contents.do" >적극행정</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_21572/contents.do" >적극행정 제도소개</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_22852/list.do" >적극행정 알림/소식</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_22855/contents.do" >적극행정 국민참여</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4111/contents.do" >신고센터</a>
-				
-				<ol>
-					<li><a href="https://www.epeople.go.kr/nep/crtf/userLogn.npaid?returnUrl=%2Fnep%2FbdgtWst%2FselectBdgtWstRqstPage.paid"  target="_blank" title="새창열림">예산낭비 신고</a></li>
-				
-				
-				
-					<li><a href="https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=1262000"  target="_blank" title="새창열림">부패·공익 신고</a></li>
-				
-				
-				
-					<li><a href="https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=1262000"  target="_blank" title="새창열림">보조금 신고</a></li>
-				
-				
-				
-					<li><a href="https://www.safetyreport.go.kr/api?apiKey=126200000RIT6SJUZ0TTF3T2FD9"  target="_blank" title="새창열림">안전신문고</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4132/contents.do" >민원접수</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_4132/contents.do" >일반민원신청</a></li>
-				
-				
-				
-					<li><a href="https://110.go.kr/consult/chat.do"  target="_blank" title="새창열림">110 채팅/카카오톡 상담</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_4112/list.do" >칭찬합니다</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_25760/contents.do" >견학·방문</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_25760/contents.do" >견학 안내</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_19837/list.do" >견학 공지사항</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_4136/uss/visit/visit.do" >견학신청</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4141/contents.do" >전국 학교 방문(강연) 안내</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_25761/uss/visitlecture/sign.do" >학교방문강연 신청(신청조회)</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="http://www.coop.go.kr/COOP/skllCnrs/usr/newDisclosureArchiveList.do?reqstId=1262000"  target="_blank" title="새창열림">협동조합 경영공시 조회</a>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/wpge/m_20526/contents.do">정보공개</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>정보공개</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20526/contents.do" >정보공개제도</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_20526/contents.do" >제도소개</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20527/contents.do" >비공개기준</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/pgm/m_20518/uss/open/openApiList.do" >정보목록</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="http://www.open.go.kr/"  target="_blank" title="새창열림">정보공개청구</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/pgm/m_20528/uss/beffat/beffatInfoPublic.do" >사전정보공표</a>
-				
-				<ol>
-					<li><a href="https://www.mofa.go.kr/minister/pgm/m_20032/uss/schedule/schedule.do"  target="_blank" title="새창열림">장관 일정</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_20528/uss/beffat/beffatInfoPublic.do" >사전정보공표목록</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_20530/list.do" >감사·평가/반부패 및 청렴/수의계약/점자문서</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_20534/uss/anlrveexptr/mnbyLev.do" >세입세출예산운용상황</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_20536/list.do" >업무추진비</a></li>
-				
-				
-				
-					<li><a href="https://www.prism.go.kr/"  target="_blank" title="새창열림">정책연구</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_20537/list.do" >국회관련 정책자료</a>
-				
-				<ol>
-					<li><a href="/www/brd/m_20537/list.do" >예산</a></li>
-				
-				
-				
-					<li><a href="https://uft.na.go.kr:444/uft/index.do?extendedParam=site_id=uft"  target="_blank" title="새창열림">외교통일위원회</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20540/contents.do" >정책실명제</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_20540/contents.do" >정책실명제/국민신청실명제 안내</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_20541/list.do" >정책실명제대상사업현황</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20542/contents.do" >법령정보</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_20542/contents.do" >법령</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_20543/contents.do" >행정규칙</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_20544/uss/lawmk/openLawList.do" >입법예고</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_26598/list.do" >행정예고</a></li>
-				
-				
-				
-					<li><a href="http://www.law.go.kr/main.html"  target="_blank" title="새창열림">국가법령정보센터</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20525/contents.do" >공공데이터개방</a>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
-
-<li><a href="/www/wpge/m_4172/contents.do">외교부 소개</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>외교부 소개</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4172/contents.do" >외교부 소개</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_4172/contents.do" >외교부 소개</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4173/contents.do" >올해의 예산</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_24965/contents.do" >외교정책 목표</a></li>
-				
-				
-				
-					<li><a href="/www/brd/m_4175/list.do" >연도별 업무계획</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_4276/uss/org/orgcht.do?type=list" >조직도·업무 검색</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/minister/wpge/m_20035/contents.do" >장차관 소개</a>
-				
-				<ol>
-					<li><a href="/minister/wpge/m_20035/contents.do"  target="_blank" title="새창열림">장관</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4168/contents.do" >제1차관</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4169/contents.do" >제2차관</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4171/contents.do" >역대외교부차관</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4178/contents.do" >재외공관</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_4178/contents.do" >재외공관설치현황</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_4179/uss/emblgbd/emblgbdAdres.do" >재외공관정보</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4181/contents.do" >외교관계수립현황</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4341/contents.do" >주재관제도및선발</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4186/contents.do" >관련 누리집</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4166/contents.do" >찾아오시는 길</a>
-				
-			</li>
-		
-		</ul>
-		
-	</div>
-</li>
 
 
-<!-- 홈페이지 도우미 -->
+<!-- 컨테이너 영역 -->
+<div id="container" class="container">
 
-<li class="all_mn" style="display:none;"><a href="/www/wpge/m_4184/contents.do">누리집 도우미</a>
-<div class="dep2_wrap">
-	<div>
-		<strong>누리집 도우미</strong>
-		<!-- <span>국민을 보호하고 국민을 신뢰하는 외교부입니다.</span> -->
-	</div>	
-		<ul>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4187/contents.do" >뷰어프로그램 다운로드</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4184/contents.do" >누리집 이용안내</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4186/contents.do" >관련 누리집</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/upload/sns/mofa_sns.html"  target="_blank" title="새창열림">누리소통망(SNS)</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4188/contents.do" >장애인 이용안내</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4194/contents.do" >개인정보처리방침</a>
-				
-				<ol>
-					<li><a href="/www/wpge/m_4194/contents.do" >개인정보처리방침</a></li>
-				
-				
-				
-					<li><a href="/www/wpge/m_4195/contents.do" >영상정보처리기기 운영관리방침</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/brd/m_20156/list.do" >개인정보 목적 외 이용·제3자 제공 현황</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_4190/contents.do" >저작권정책</a>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="" >배너모음</a>
-				
-				<ol>
-					<li><a href="/www/pgm/m_26699/uss/mainImage.do" >메인배너모음</a></li>
-				
-				
-				
-					<li><a href="/www/pgm/m_26700/uss/banner.do" >하단배너모음</a></li>
-				</ol>
-				
-			</li>
-		
-			<li class="col2">
-				<a href="/www/wpge/m_20162/contents.do" >이메일 무단 수집 거부</a>
-				
-			</li>
-		
-		</ul>
-	</div>
-</li>
+	<!-- 서브 탑영역 - 서브만 사용 -->
+	<!-- 서브만 사용 -->	
+	  <div class="page_spot">
+	  	<h2>뉴포커스</h2>
+	  </div>	  
+  
+  <!-- //서브 탑영역 - 서브만 사용 -->
 
-           </ul>
-         </nav>
-
-
-         <div class="util">
-         
-            <!-- /* 22-11-16 이전 GNB 버튼 */ -->
-            <button type="button" class="btn_sitemap_open"><span class="hide">사이트맵 열기</span></button> 
-
-
-            <div class="sitemap">
-                <a href="/eng/index.do" class="lang" title="영문페이지">ENGLISH</a>
-
-                <div class="container">
-                    <ol>
-                    		<li><a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" target="_blank" title="새창 열림">국가상징</a></li>
-                        <li><a href="/teenager/index.do" target="_blank" title="새창 열림">어린이·청소년</a></li>
-                        <li><a href="https://www.knda.go.kr" target="_blank" title="새창 열림">국립외교원</a></li>
-                        
-                        <li><a href="http://www.president.go.kr/" target="blank" title="새창에서 열림">청와대</a></li>
-                    </ol>
-                    <ul class="sns">
-                        <li><a href="https://www.facebook.com/mofakr.kr" target="_blank" title="새창에서 열림" class="facebook">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/mofa_kr/" target="_blank" title="새창에서 열림" class="insta">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/user/MOFAKorea" target="_blank" title="새창에서 열림" class="youtube">Youtube</a></li>
-                        <li><a href="https://twitter.com/mofa_kr" target="_blank" title="새창에서 열림" class="twitter">X (Twitter)</a></li>                    
-                        <!-- <li><a href="http://blog.naver.com/mofakr" target="_blank" title="새창에서 열림" class="blog">Blog</a></li> -->
-                    </ul>
-                <!-- gnb clone -->
-                </div>
-
-                <button type="button" class="btn_sitemap_close"><span class="hide">사이트맵 닫기</span></button>
-            </div>
-            
-            <!-- 22-11-16 검색박스 변경 -->
-            <div class="new_search_box">
-                <form name="wise_sub" action="https://search.mofa.go.kr/search/search_new.do" target="_blank" method="post">
-                    <input type="hidden" name="siteId" value="www">
-                    <input type="hidden" name="searchField" id="searchField" value="TITLE">
-                    <fieldset>
-                        <legend>검색 입력 폼</legend>
-                        <!-- <span class="tit">SEARCH</span> -->
-                        <div class="search">
-                            <input type="text" name="query" value="" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요." autocomplete="off">
-                            <button type="button" id="search_btn"><span class="hide">검색</span></button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <!-- // 22-11-16 검색박스 변경 -->
-           
-            
-            <button type="button" class="btn_search_open" title="검색창 열기"><span class="hide">검색창 열기</span></button>
-
-            <div class="search_box">
-                    <form name="wise_sub2" action="https://search.mofa.go.kr/search/search_new.do" target="_blank" method="post">
-                        <input type="hidden" name="siteId" value="www">
-                        <input type="hidden" name="searchField" id="searchField" value="TITLE">
-                        <fieldset>
-                            <legend>검색 입력 폼</legend>
-                            <span class="tit">SEARCH</span>
-                            <div class="search">
-                                <input type="text" name="query" value="" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요." autocomplete="off">
-                                <button type="button" id="search_btn2"><span class="hide">검색</span></button>
-                            </div>
-                        </fieldset>
-                    </form>
-            </div>  
-           
-         </div>
-
-    </div>
-
-</header>
-    
-    <!-- //헤더 -->
-    <!-- 서브만 사용 -->
-	    <!-- 서브 탑영역 -->
-	    <div class="page_spot">
-	      <h2>뉴포커스</h2>
-	    </div>
-	    <!-- //서브 탑영역 -->
-    
-    <!-- 컨테이너 -->
-
-
-<!-- <div class="container sub"> -->
-<div class="sub container">
+	<div class="inner in-between">
 	
+		<!-- 사이드 메뉴 -->
+		<nav class="krds-side-navigation">
+			<h2 class="lnb-tit">
+			<!-- depth 1 메뉴명 -->
+			</h2>
+
+			<!-- lnb-list -->
+			<ul class="lnb-list"></ul>
+			<!-- // lnb-list -->
+		</nav>
+		<!-- // krds-side-navigation -->
+		<!-- // 사이드 메뉴 -->
+	
+		<div id="contents" class="contents sub">
+		
+			
 
 
 
@@ -1545,351 +599,84 @@ function zooms() {
       
 	      
 	      
-	      <!-- 로컬내비게이션 --> 
-	      <!-- <div class="lnb"> -->
-	      <div class="lnb_wrap">
-	        <strong>뉴스·공지</strong>
-	        <ul class="lnb">
-	          
-	          
-	          
-							<li  >
-								<a href="/www/brd/m_4075/list.do" >
-										공지사항
-									</a>
-								
-								
-							</li>
-						
-							<li  class="selected" >
-								<a href="/www/brd/m_4076/list.do" >
-										뉴포커스
-									</a>
-								
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_29514/list.do" >
-										정상 외교활동
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/brd/m_29514/list.do"	 >
-													2026년 정상 외교활동
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_28650/list.do"	 >
-													2025년 정상 외교활동
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-							<li  >
-								<a href="/www/pgm/m_24259/mainHpMSchedule/show.do" >
-										외교일정
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/pgm/m_24259/mainHpMSchedule/show.do"	 >
-													국제관계 주요일정
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/pgm/m_24261/mainDiplomancySchedule/show.do"	 >
-													월간외교일지
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="https://www.mofa.go.kr/minister/brd/m_28687/list.do"	target="_blank" title="새창열림" >
-													장관 외교활동
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_4078/list.do" >
-										외교부 브리핑
-									</a>
-								
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_4079/list.do" >
-										채용정보
-									</a>
-								
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_4080/list.do" >
-										보도자료
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/brd/m_4080/list.do"	 >
-													보도자료
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_24815/list.do"	 >
-													보도참고 및 설명자료
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_20140/list.do" >
-										연설·기고·인터뷰
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/brd/m_20140/list.do"	 >
-													연설
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_4095/list.do"	 >
-													기고·인터뷰
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_4089/list.do" >
-										외교부 소식지
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/wpge/m_29591/contents.do"	 >
-													쉽게 보는 주요 외교 성과
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/wpge/m_24465/contents.do"	 >
-													외교부 쇼츠
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_4089/list.do"	 >
-													뉴스레터(정기)
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_4090/list.do"	 >
-													정책메일(비정기)
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/pgm/m_4091/uss/news/newsSbscrb.do"	 >
-													가입신청
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-							<li  >
-								<a href="/www/brd/m_4105/list.do" >
-										자료실
-									</a>
-								
-								
-									
-										
-											<ol>
-										
-											<li>
-												 <a href="/www/brd/m_4105/list.do"	 >
-													외교백서
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/wpge/m_4098/contents.do"	 >
-													한국외교60년
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/brd/m_4099/list.do"	 >
-													외교간행물
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="/www/wpge/m_4100/contents.do"	 >
-													외교안보연구소발간자료
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="http://diplomaticarchives.mofa.go.kr/dev/chronology_new.go"	target="_blank" title="새창열림" >
-													대한민국외교연표
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="http://diplomaticarchives.mofa.go.kr/dev/open_document_list.go"	target="_blank" title="새창열림" >
-													외교문서공개목록
-												</a>
-											</li>
-										
-									
-										
-											<li>
-												 <a href="https://diplomaticarchives.mofa.go.kr/new/publish/docus.jsp"	target="_blank" title="새창열림" >
-													외교문서원문요약
-												</a>
-											</li>
-										
-											</ol>
-										
-									
-								
-							</li>
-						
-	        </ul>
-	        
-	        <!-- breadcrumb & sns & print -->
-			    <div class="sub_top">
-			      <ol>
-			        <li>
-							    <a href="/www/main.do" title="홈으로 이동">
-							    	<span>홈으로 이동</span>
-							      <img src="/www-new/images/common/icon_bc_home.png" alt="홈으로 이동">
-							    </a>
-							</li>
-			        
-								<li><a href="/www/brd/m_4075/list.do">뉴스·공지</a></li>
-							
-								<li><a href="/www/brd/m_4076/list.do">뉴포커스</a></li>
-							
-			      </ol>
+	      <!-- breadcrumb -->
+				<nav id="breadcrumb" class="krds-breadcrumb-wrap" aria-label="현재 경로">
+        	<ol class="breadcrumb">
+        		<li>
+							<a href="/www/main.do" title="홈으로 이동">
+								<span>홈으로 이동</span>
+							  <img src="/www-new/images/common/icon_bc_home.png" alt="홈으로 이동">
+							</a>
+						</li>
 			      
-			      	
-				      <div class="fs_btn">
-				         <strong>글자크기</strong>
-				         <button type="button" class="fs_up"><span class="hide">글자확대</span></button>
-				         <button type="button" class="fs_down"><span class="hide">글자축소</span></button>
-				       </div>
-				       
-			      
-			      <ul>
-			        <li class="share"><button type="button" title="sns목록 닫힘"><span class="hide">SNS 공유</span></button>
-			          <div>
-			            <a href="#facebook" onclick="sendSns('facebook','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" target="_blank" title="새창에서 열림" ><img src="/www-new/images/common/icon_sub_facebook.png" alt="현재 페이지 페이스북 공유하기"></a>
-			            <a href="#twitter" onclick="sendSns('twitter','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" target="_blank" title="새창에서 열림"><img src="/www-new/images/common/icon_sub_twitter.png" alt="현재 페이지 X(트위터) 공유하기"></a>
-			            <a href="#band" onclick="sendSns('band','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" title="네이버 밴드"><img src="/www-new/images/common/icon_sub_blog.png" alt="현재 페이지 밴드 공유하기(새창열림)"></a>
-			            
-			           <a href="#none" id="kakaotalk" target="_blank" title="새 창 열림">
-			            <img src="/www-new/images/common/icon_sub_kakao.png" alt="현재 페이지 카카오톡 공유하기">
-			            </a>
+							<li><a href="/www/brd/m_4078/list.do">뉴스룸</a></li>
+						
+							<li><a href="/www/brd/m_4076/list.do">뉴포커스</a></li>
+						
+        	</ol>
+        	<!-- 프린트 및 공유 버튼 -->
+					<div class="implement">
+						<ul class="implement-list">
+						
+							<li class="share">
+								<div class="krds-drop-wrap">
+									<button type="button" class="krds-btn icon border xlarge drop-btn" title="sns목록 닫힘">
+										<i class="svg-icon ico-share"></i>
+										<span class="sr-only">SNS 현재 페이지 공유 목록</span>
+									</button>
+									<div class="drop-menu wide" style="display: none;">
+										<div class="drop-in">
+											<ul class="drop-list">
+												<li>
+													<a class="item-link" href="#facebook" onclick="sendSns('facebook','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" target="_blank" title="새창에서 열림">
+														<i class="svg-icon ico-share-facebook"></i>
+														<span>페이스북 공유하기</span>
+													</a>
+												</li>
+												<li>
+													<a class="item-link" href="#twitter" onclick="sendSns('twitter','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" target="_blank" title="새창에서 열림">
+														<i class="svg-icon ico-share-sns-x"></i>
+														<span>X(엑스) 공유하기</span>
+													</a>
+												</li>
+												<li>
+													<a class="item-link" href="#band" onclick="sendSns('band','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" title="네이버 밴드">
+														<i class="svg-icon ico-blog"></i>
+														<span>네이버밴드 공유하기</span>
+													</a>
+												</li>
+												<li>
+													<a class="item-link" href="#kakaotalk" id="kakaotalk" onclick="sendSns('kakaotalk','http://www.mofa.go.kr/www/brd/m_4076/list.do','외교부, 조현 장관 주재 네팔 홍수 관련 재외국민보호대책본부 회의 개최 상세보기|뉴포커스 | 외교부');return false;" title="새 창에서 열림">
+														<i class="svg-icon ico-share-kakao"></i>
+														<span>카카오톡 공유하기</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-			        </li>
-			        <li class="print">
-			          <button type="button" onclick="contentPrint();"><span class="hide">인쇄하기</span></button>
-			        </li>
-			      </ul>
-			    </div>
-			    <!-- // breadcrumb & sns & print -->
-			    
-			    
-			    
-      	</div>
-      <!-- //로컬내비게이션 -->
+							</li>
+							<li class="print">
+								<button class="krds-btn icon border xlarge" type="button" onclick="contentPrint();">
+									<i class="svg-icon ico-print"></i>
+									<span class="sr-only">인쇄하기</span>
+								</button>
+							</li>				
+						</ul>
+					</div>
+					<!-- // 프린트 및 공유 버튼 -->
+        </nav>
+        <!-- // breadcrumb -->
+               		       
+        
       
 		
-	<div id="contents">
-		
+			
+			<!-- class="conts-area"가 게시판은 다르게 들어가는 경우가 있기 때문에, 게시판 쪽은 어쩔 수 없이 스킨 쪽에 하나하나 별도 적용하였음. -->
+			
+				<div class="conts-area">
+						
+				
 
 
 
@@ -1957,7 +744,7 @@ function zooms() {
 					<!--  게시글 수정일 추가 -->
 					
           <dt> 조회수</dt>
-          <dd><em>1132</em></dd>
+          <dd><em>1133</em></dd>
         </dl>
       </div>
       
@@ -2001,7 +788,11 @@ function zooms() {
 			<a href="./list.do?page=1&amp;srchFr=&amp;srchTo=&amp;srchWord=&amp;srchTp=&amp;multi_itm_seq=0&amp;itm_seq_1=0&amp;itm_seq_2=0&amp;company_cd=&amp;company_nm=&amp;titleNm=" >목록</a>
 		</div>
 		<!-- <iframe name="_h_blank" frameborder="0" height="0" width="0" title="내용없음" style="display:none;"></iframe> --><!-- 웹접근성 수정 -->
-		
+			
+				</div>
+			
+			
+			
 
 
 
@@ -2133,6 +924,7 @@ function zooms() {
 	
 					
 
+		</div>
 	</div>
 </div>
 
@@ -2147,145 +939,628 @@ function zooms() {
 
 
 
-		<!-- 푸터 --> 
-    <div class="footer">
-    	<div class="container">
-      	<div class="fnb">
-      		<span class="hide">외교부</span>
-          <ul>
-            <li><a href="/www/wpge/m_4184/contents.do">누리집 이용안내</a></li>
-            <li><a class="private" href="/www/wpge/m_4194/contents.do">개인정보처리방침</a></li>
-          </ul>
-          <ol class="acodian2">
-            <li>
-              <button type="button" title="열기">외청 및 산하기관 바로가기 </button>
-              <ul>
-              	
-								<li><a href="http://www.oka.go.kr" target="_blank" title="재외동포청 새창열림">재외동포청 </a></li>
-              	<li><a href="http://www.koica.go.kr" target="_blank" title="한국국제협력단 새창열림">한국국제협력단</a></li>
-								<li><a href="http://www.kf.or.kr" target="_blank" title="한국국제교류재단 새창열림">한국국제교류재단</a></li>
-								<li><a href="http://k-af.or.kr" target="_blank" title="한·아프리카재단 새창열림">한·아프리카재단</a></li>
-							</ul>
-            </li>
-            <li>
-              <button type="button" title="열기">정부기관 바로가기</button>
-              <ul>
-									
-								<li><a href="http://www.korea.go.kr/" target="_blank" title="새창열림">대한민국 정부포털</a></li>
-								<li><a href="http://www.president.go.kr" target="_blank" title="새창열림">청와대</a></li>
-								<li><a href="http://www.bai.go.kr" target="_blank" title="새창열림">감사원</a></li>
-								<li><a href="http://www.nis.go.kr" target="_blank" title="새창열림">국가정보원</a></li>
-								<li><a href="http://www.kcc.go.kr" target="_blank" title="새창열림">방송미디어통신위원회</a></li>
-								<li><a href="http://www.cio.go.kr" target="_blank" title="새창열림">고위공직자범죄수사처</a></li>
-								<li><a href="http://www.humanrights.go.kr" target="_blank" title="새창열림">국가인권위원회</a></li>
-								<li><a href="http://www.opm.go.kr" target="_blank" title="새창열림">국무총리실</a></li>
-								<li><a href="http://www.mpb.go.kr" target="_blank" title="새창열림">기획예산처</a></li>
-								<li><a href="http://www.mpm.go.kr" target="_blank" title="새창열림">인사혁신처</a></li>
-								<li><a href="http://www.moleg.go.kr" target="_blank" title="새창열림">법제처</a></li>
-								<li><a href="http://www.mfds.go.kr" target="_blank" title="새창열림">식품의약품안전처</a></li>
-								<li><a href="http://www.kostat.go.kr" target="_blank" title="새창열림">국가데이터처</a></li>
-								<li><a href="http://www.kipo.go.kr" target="_blank" title="새창열림">지식재산처</a></li>
-								<li><a href="http://www.ftc.go.kr" target="_blank" title="새창열림">공정거래위원회</a></li>
-								<li><a href="http://www.acrc.go.kr" target="_blank" title="새창열림">국민권익위원회</a></li>
-								<li><a href="http://www.fsc.go.kr" target="_blank" title="새창열림">금융위원회</a></li>
-								<li><a href="http://www.pipc.go.kr" target="_blank" title="새창열림">개인정보보호위원회</a></li>
-								<li><a href="http://www.nssc.go.kr" target="_blank" title="새창열림">원자력안전위원회</a></li>
-								<li><a href="http://www.moef.go.kr" target="_blank" title="새창열림">재정경제부</a></li>							
-								<li><a href="http://www.nts.go.kr" target="_blank" title="새창열림">- 국세청</a></li>
-								<li><a href="http://www.customs.go.kr" target="_blank" title="새창열림">- 관세청</a></li>
-								<li><a href="http://www.pps.go.kr" target="_blank" title="새창열림">- 조달청</a></li>								
-								<li><a href="http://www.moe.go.kr" target="_blank" title="새창열림">교육부</a></li>
-								<li><a href="http://www.msit.go.kr" target="_blank" title="새창열림">과학기술정보통신부</a></li>
-								<li><a href="http://www.kasa.go.kr" target="_blank" title="새창열림">- 우주항공청</a></li>
-								<li><a href="http://www.mofa.go.kr" target="_blank" title="새창열림">외교부</a></li>
-								<li><a href="http://www.oka.go.kr" target="_blank" title="새창열림">- 재외동포청</a></li>
-								<li><a href="http://www.unikorea.go.kr" target="_blank" title="새창열림">통일부</a></li>
-								<li><a href="http://www.moj.go.kr" target="_blank" title="새창열림">법무부</a></li>
-								<li><a href="http://www.spo.go.kr" target="_blank" title="새창열림">- 검찰청</a></li>
-								<li><a href="http://www.mnd.go.kr" target="_blank" title="새창열림">국방부</a></li>
-								<li><a href="http://www.mma.go.kr" target="_blank" title="새창열림">- 병무청</a></li>
-								<li><a href="http://www.dapa.go.kr" target="_blank" title="새창열림">- 방위사업청</a></li>
-								<li><a href="http://www.mois.go.kr" target="_blank" title="새창열림">행정안전부</a></li>
-								<li><a href="http://www.police.go.kr" target="_blank" title="새창열림">- 경찰청</a></li>
-								<li><a href="http://www.nfa.go.kr" target="_blank" title="새창열림">- 소방청</a></li>
-								<li><a href="http://www.mpva.go.kr" target="_blank" title="새창열림">국가보훈부</a></li>
-								<li><a href="http://www.mcst.go.kr" target="_blank" title="새창열림">문화체육관광부</a></li>
-								<li><a href="http://www.cha.go.kr" target="_blank" title="새창열림">- 국가유산청</a></li>
-								<li><a href="http://www.mafra.go.kr" target="_blank" title="새창열림">농림축산식품부</a></li>
-								<li><a href="http://www.rda.go.kr" target="_blank" title="새창열림">- 농촌진흥청</a></li>
-								<li><a href="http://www.forest.go.kr" target="_blank" title="새창열림">- 산림청</a></li>
-								<li><a href="http://www.motie.go.kr" target="_blank" title="새창열림">산업통상부</a></li>							
-								<li><a href="http://www.mohw.go.kr" target="_blank" title="새창열림">보건복지부</a></li>
-								<li><a href="http://www.kdca.go.kr" target="_blank" title="새창열림">- 질병관리청</a></li>
-								<li><a href="http://www.me.go.kr" target="_blank" title="새창열림">기후에너지환경부</a></li>
-								<li><a href="http://www.kma.go.kr" target="_blank" title="새창열림">- 기상청</a></li>
-								<li><a href="http://www.moel.go.kr" target="_blank" title="새창열림">고용노동부</a></li>
-								<li><a href="http://www.mogef.go.kr" target="_blank" title="새창열림">성평등가족부</a></li>
-								<li><a href="http://www.molit.go.kr" target="_blank" title="새창열림">국토교통부</a></li>
-								<li><a href="http://www.naacc.go.kr" target="_blank" title="새창열림">- 행정중심복합도시건설청</a></li>
-								<li><a href="http://www.saemangeum.go.kr" target="_blank" title="새창열림">- 새만금개발청</a></li>
-								<li><a href="http://www.mof.go.kr" target="_blank" title="새창열림">해양수산부</a></li>
-								<li><a href="http://www.kcg.go.kr" target="_blank" title="새창열림">- 해양경찰청</a></li>
-								<li><a href="http://www.smba.go.kr" target="_blank" title="새창열림">중소벤처기업부</a></li>
-              </ul>
-            </li>
-          </ol>
-      	</div>
-	     	
-	      <div class="addr">
-            <ul>
-                <li>주소 : 03172 서울특별시 종로구 사직로8길 60 | (여권민원실) 서울특별시 서초구 남부순환로 2558 외교타운 1층</li>
-                <li>외교일반업무 부서안내&nbsp;
-                    <a href="/www/pgm/m_4276/uss/org/orgcht.do?type=list" class="rd_1">바로가기☞</a>
-                </li>
-                <li>영사민원업무 : <a href="tel:02-3210-0404">02-3210-0404(영사안전콜센터, 24시간)</a></li>
-                <li>팩스 : 02-2100-7998</li>
-            </ul>
-            <span>본 누리집의 모든 권리는 외교부에 귀속됩니다.&nbsp;&nbsp;<br class="br">Copyright ⓒ  MOFA. All Rights Reserved.</span>
-        </div>  
-	      <a href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank" title="새창열기" class="mk_wa">
-	      	<img src="/www-new/images/common/logo_wa_2026.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)" width="100" height="69">
-	      </a>
-        <!-- 
-        <div>
-          <ol>
-            <li><a href="https://www.facebook.com/mofakr.kr" target="_blank" title="새창"><img src="/www-new/images/common/icon_facebook.png"
-                  alt="페이스북"></a></li>
-            <li><a href="https://twitter.com/mofa_kr" target="_blank" title="새창"><img src="/www-new/images/common/icon_twitter.png"
-                  alt="트위터"></a>
-            </li>
-            <li><a href="https://www.youtube.com/user/MOFAKorea" target="_blank" title="새창"><img src="/www-new/images/common/icon_youtube.png"
-                  alt="유튜브"></a>
-            </li>
-            <li><a href="http://blog.naver.com/mofakr" target="_blank" title="새창"><img src="/www-new/images/common/icon_blog.png" alt="블로그"></a>
-            </li>
-            <li><a href="https://www.instagram.com/mofa_kr/" target="_blank" title="새창"><img src="/www-new/images/common/icon_insta.png"
-                  alt="인스타그램"></a>
-            </li>
-          </ol>
-          <ul>
-            <li><a href="#" target="_blank" title="새창"><img src="/www-new/images/common/mark_wa.jpg" alt="웹접근성 인증"></a>
-            </li>
-            <li><a href="#" target="_blank" title="새창"><img src="/www-new/images/common/mark_open.jpg"
-                  alt="공공누리 인증"></a></li>
-          </ul>
-        </div>
-        -->
-      </div>
-    </div>
-    <!-- //푸터 -->
 
 
+
+		<!-- 푸터 영역 -->
+		<footer id="krds-footer">
+			<!-- foot-quick -->
+			<div class="foot-quick">
+				<div class="inner">
+					<button type="button" class="link open-modal" title="재외공관 누리집 팝업 열림" data-target="embassyLink" tabindex="0">
+						재외공관 누리집
+					</button>
+					<button type="button" class="link open-modal" title="외청 및 산하기관 누리집 팝업 열림" data-target="popFootLink1">
+						외청 및 산하기관 누리집
+					</button>
+					<button type="button" class="link open-modal" title="정부기관 누리집 팝업 열림" data-target="popFootLink2">
+						정부기관 누리집
+					</button>
+				</div>
+			</div>
+			<!-- // foot-quick -->
+			
+			
+			<!-- inner -->
+			<div class="inner">
+				<div class="f-logo mofa">
+					<span class="sr-only">외교부</span>
+				</div>
+				<div class="f-cnt">
+					<div class="f-info">
+						<p class="info-addr">
+							(03172) 서울특별시 종로구 사직로8길 60
+							<br>
+							(여권민원실) 서울특별시 서초구 남부순환로 2558 외교타운 1층
+						</p>
+						<ul class="info-cs">
+							<li>
+								<strong class="key-info">
+									영사민원업무
+									<a class="krds-btn medium text" href="tel:02-3210-0404"><span>02-3210-0404</span></a>
+								</strong>
+								<span class="more-info">(영사안전콜센터, 24시간)</span>
+								<span class="more-info">팩스 02-2100-7998</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="f-link">
+						<div class="link-go">
+							<a href="/www/wpge/m_4166/contents.do" class="krds-btn text">
+								찾아오시는 길 <i class="svg-icon ico-angle right"></i>
+							</a>
+							<a href="/www/pgm/m_4277/uss/org/orgcht.do" class="krds-btn text">
+								외교일반업무 부서안내 <i class="svg-icon ico-angle right"></i>
+							</a>
+							<!-- <a href="/www/wpge/m_4184/contents.do" class="krds-btn text">
+								누리집 이용안내 <i class="svg-icon ico-angle right"></i>
+							</a> -->
+						</div>
+						<div class="link-sns">
+							<a href="https://www.facebook.com/mofakr.kr" class="krds-btn xlarge icon border" target="_blank" title="페이스북 새 창 열림">
+								<span class="sr-only">페이스북</span>
+								<i class="svg-icon ico-facebook"></i>
+							</a>
+							<a href="https://www.instagram.com/mofa_kr/" class="krds-btn xlarge icon border" target="_blank" title="인스타그램 새 창 열림">
+								<span class="sr-only">인스타그램</span>
+								<i class="svg-icon ico-instagram"></i>
+							</a>
+							<a href="https://www.youtube.com/user/MOFAKorea" class="krds-btn xlarge icon border" target="_blank" title="유튜브 새 창 열림">
+								<span class="sr-only">유튜브</span>
+								<i class="svg-icon ico-youtube"></i>
+							</a>
+							<a href="https://x.com/mofa_kr" class="krds-btn xlarge icon border" target="_blank" title="X 새 창 열림">
+								<span class="sr-only">X</span>
+								<i class="svg-icon ico-sns-x"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="f-btm">
+
+					<div class="f-btm-text">
+						<div class="f-menu">
+							<a class="krds-btn small text" href="/www/wpge/m_4194/contents.do">
+								<strong class="text-point-primary underline">개인정보처리방침</strong>
+							</a>
+							<a class="krds-btn small text" href="/www/wpge/m_4190/contents.do">
+								저작권 정책
+							</a>
+							<a class="krds-btn small text" href="/www/wpge/m_4184/contents.do">
+								누리집 이용안내
+							</a>
+						</div>
+
+						<p class="f-copy">© Ministry of Foreign Affairs. All rights reserved.</p>
+
+						<div class="f-mark">
+							<div class="logo-wrap">
+								<a class="mk_ma" href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank" title="새 창 열림">
+									<!-- <img src="/www-new/images/common/logo_wa_2025.png" alt="웹 접근성 품질마크 내용보기" width="68" height="47"> -->
+									<img src="/www-new/images/common/logo_wa_2025.png" alt="웹 접근성 품질마크 내용보기" width="68" height="47">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- identifier -->
+					<div class="krds-identifier">
+						<span class="logo mofa">
+							<span class="sr-only">외교부</span>
+						</span>
+						<span class="ban-txt">이 누리집은 외교부 누리집입니다.</span>
+					</div>
+					<!-- //identifier -->
+
+				</div>
+
+			</div>
+			<!-- //inner -->
+
+		</footer>
+		<!-- //푸터 영역 -->
 		
+						
+	</div><!-- top에서 열린 id="wrapper" 닫힘 태그 -->
+	
+	<!-- modal-wrap -->
+	<div class="modal-wrap">
+		<!-- 모달 : 통합 검색 -->
+		<div id="popTotalSch" class="krds-modal fade" data-type="full">
+			<!-- modal-dialog -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- modal title -->
+					<div class="modal-header sr-only">
+						<h3 class="modal-title">통합검색</h3>
+					</div>
+					<!-- //modal title -->
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<!-- 통합검색 -->
+						<div class="pop-total-serch-wrap">
+							<!-- 통합검색 정보입력 영역 -->
+							<div class="search-total-top">
+								<!-- 검색어 타이틀 -->
+								<div class="search-tit">
+									<label for="searchKeyWord">검색어를 입력해주세요</label>
+									<!--<a href="#" class="krds-btn medium text">검색에 어려움이 있으신가요? <i class="svg-icon ico-login-go"></i></a>-->
+								</div>
+								<!-- //검색어 타이틀 -->
 
-  </div>
+								<!-- 검색어 입력 폼 -->
+								<form name="topTotalSearchFrm" method="post" action="https://search.mofa.go.kr/search/search_new.do">
+									<fieldset>
+										<input type="hidden" name="cmd" value="brief-total-kor">
+										<input type="hidden" name="siteId" value="www">
+										<input type="hidden" name="siteNm" value="외교부">
+									</fieldset>	
+									<div class="sch-form-wrap vert">
+										<div class="sch-input">
+											<input type="text" class="krds-input xlarge" name="query" value="" id="searchKeyWord" style="IME-MODE:active" placeholder="검색어를 입력해주세요.">
+											<div class="two_btn">
+												<!-- <button type="button" class="krds-btn icon xlarge ico-del hidden">
+													<span class="sr-only">삭제</span>
+													<i class="svg-icon ico-del"></i>
+												</button> -->
+												<button type="submit" class="krds-btn icon xlarge ico-search">
+													<span class="sr-only">검색</span>
+													<i class="svg-icon ico-sch"></i>
+												</button>
+											</div>
+										</div>
+										<!--<button type="button" class="krds-btn medium text"><i class="svg-icon ico-sch-plus"></i>고급검색</button> -->
+									</div>
+								</form>
+								<!-- //검색어 입력 폼 -->
+							</div>
+							<!-- //통합검색 정보입력 영역 -->
+
+							<!-- 검색어 리스트 -->
+							<!-- <div class="search-text">
+								
+								<ul class="sch-info-list">
+									<li class="sch-info-item word-popular">
+										
+										<h4 class="tit">인기 검색어</h4>
+										<ol class="search-list">
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('문화');return false;"><span class="ranking-txt">문화</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('독서문화진흥');return false;"><span class="ranking-txt">독서문화진흥</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('문화도시');return false;"><span class="ranking-txt">문화도시</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('평가');return false;"><span class="ranking-txt">평가</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('디자인');return false;"><span class="ranking-txt">디자인</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('계획');return false;"><span class="ranking-txt">계획</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('지역관광개발사업');return false;"><span class="ranking-txt">지역관광개발사업</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('카지노');return false;"><span class="ranking-txt">카지노</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('지원');return false;"><span class="ranking-txt">지원</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+											<li><a href="/site/search/search.jsp" onclick="goSearch('영화');return false;"><span class="ranking-txt">영화</span></a>
+											<span class="ranking-state same"><em class="sr-only">same</em></span>
+											</li>
+										
+										</ol>
+									</li>
+									<li class="sch-info-item word-lately">
+									
+										<h4 class="tit">최근 검색어</h4>
+										<ul class="search-list" id="recentSearchList" aria-live="polite">
+										
+											<li>최근 검색어가 없습니다.</li>
+										
+										</ul>
+										
+										<button type="button" id="delckAll" class="krds-btn medium text">최근 검색어 전체 삭제 <i class="svg-icon ico-delete-fill"></i></button>
+										
+									
+									</li>
+								</ul>
+								
+							</div> -->
+							<!-- //검색어 리스트 -->
+						</div>
+						<!-- //통합검색 -->
+					</div>
+					<!-- //modal contents -->
+					<!-- close button -->
+					<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+						<span class="sr-only">닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //close button -->
+				</div>
+			</div>
+			<!-- //modal-dialog -->
+			<div class="modal-back"></div>
+		</div>
+		<!-- //모달 : 통합 검색 -->
+		<!-- 모달 : 글자·화면 표시 설정 -->
+		<section id="modal_adjust_display" class="krds-modal fade" aria-labelledby="tit_modal_adjust_display">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- modal title -->
+					<div class="modal-header">
+						<h2 id="tit_modal_adjust_display" class="modal-title">
+							글자·화면 표시 설정
+						</h2>
+					</div>
+					<!-- //modal title -->
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<div class="conts-area">
+
+							<!-- adjust_display -->
+							<div class="adjust_display">
+								<!-- 글자 / 화면 표시 설정 -->
+								<div class="fieldset adjust_scale">
+									<div class="form-group scale-options">
+										<h3>글자·화면 표시 설정</h3>
+										<div class="form-conts">
+											<div class="krds-check-area chk-column">
+												<div class="krds-form-check">
+													<input type="radio" name="scale_level" id="scale_level_small" value="small">
+													<label for="scale_level_small">작게</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="scale_level" id="scale_level_medium" value="medium" checked="">
+													<label for="scale_level_medium">보통</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="scale_level" id="scale_level_large" value="large">
+													<label for="scale_level_large">조금 크게</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="scale_level" id="scale_level_xlarge" value="xlarge">
+													<label for="scale_level_xlarge">크게</label>
+												</div>
+												<div class="krds-form-check">
+													<input type="radio" name="scale_level" id="scale_level_xxlarge" value="xxlarge">
+													<label for="scale_level_xxlarge">가장 크게</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 화면 표시 모드 -->
+								<div class="fieldset">
+									<div class="form-group view-mode-options">
+										<h3>화면 표시 모드</h3>
+										<div class="form-conts">
+											<div class="krds-check-area chk-column">
+												<div class="krds-form-check view-mode-light">
+													<input type="radio" name="view_mode" id="view_mode_light" value="light" checked="">
+													<label for="view_mode_light">기본 (밝은 배경)</label>
+												</div>
+												<div class="krds-form-check view-mode-dark">
+													<input type="radio" name="view_mode" id="view_mode_dark" value="high-contrast">
+													<label for="view_mode_dark">선명하게 (어두운 배경)</label>
+												</div>
+												<div class="krds-form-check view-mode-default">
+													<input type="radio" name="view_mode" id="view_mode_default" value="theme">
+													<label for="view_mode_default">시스템 설정</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //adjust_display -->
+
+						</div>
+					</div>
+					<!-- //modal contents -->
+					<!-- modal btn -->
+					<div class="modal-btn btn-wrap">
+						<button type="button" class="krds-btn medium tertiary close-modal" id="reset_display">초기화</button>
+						<button type="button" class="krds-btn medium primary close-modal">닫기</button>
+					</div>
+					<!-- //modal btn -->
+					<!-- close button -->
+					<button type="button" class="krds-btn medium icon btn-close close-modal">
+						<span class="sr-only">닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //close button -->
+				</div>
+			</div>
+			<div class="modal-back in" style="background-color: transparent;"></div>
+		</section>
+		<!-- //모달 : 글자·화면 표시 설정 -->
+		
+		<!-- 모달 : 재외공관 누리집 -->
+		<section id="embassyLink" class="popFootLink krds-modal fade" data-type="full">
+			<!-- modal-dialog -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- modal title -->
+					<div class="modal-header">
+						<h3 class="modal-title">재외공관</h3>
+						<ul class="modal-conts-tablist">
+							<li>
+								<a class="krds-btn large" href="#continent-all">
+									전체보기
+								</a>
+							</li>
+							<!-- 대륙리스트 - 스크립트에서 생성. -->
+						</ul>
+						<!-- // modal-conts-tablist  -->
+					</div>
+					<!-- // modal title -->
+					
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<!-- 재외공관 리스트 - 스크립트에서 생성. -->
+					</div>
+					<!-- // modal contents -->
+					
+					<!-- close button -->
+					<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+						<span class="sr-only">닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //close button -->
+					
+				</div>
+				<!-- //modal-content  -->
+			</div> 
+			<!-- // modal-dialog  -->
+			<div class="modal-back"></div>
+		</section>
+		<!-- // 모달 : 재외공관 누리집 -->
+		
+		<!-- 모달 : 외청 및 산하기관 누리집 -->
+		<section id="popFootLink1" class="popFootLink krds-modal fade" data-type="full">
+			<!-- modal-dialog -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- modal title -->
+					<div class="modal-header">
+						<h3 class="modal-title">외청 및 산하기관</h3>
+					</div>
+					<!-- //modal title -->
+
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<ul class="pop-foot-links">
+							<li><a class="krds-btn text" href="http://www.oka.go.kr" target="_blank" title="재외동포청 새 창 열림">재외동포청 </a></li>
+							<li><a class="krds-btn text" href="http://www.koica.go.kr" target="_blank" title="한국국제협력단 새 창 열림">한국국제협력단</a></li>
+							<li><a class="krds-btn text" href="http://www.kf.or.kr" target="_blank" title="한국국제교류재단 새 창 열림">한국국제교류재단</a></li>
+							<li><a class="krds-btn text" href="http://k-af.or.kr" target="_blank" title="한·아프리카재단 새 창 열림">한·아프리카재단</a></li>
+						</ul>
+					</div>
+					<!-- //modal contents -->
+
+					<!-- close button -->
+					<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+						<span class="sr-only">닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //close button -->
+				</div>
+			</div>
+			<!-- //modal-dialog -->
+			<div class="modal-back"></div>
+		</section>
+		<!-- //모달 : 외청 및 산하기관 누리집 -->
+		<!-- 모달 : 정부기관 누리집 -->
+		<section id="popFootLink2" class="popFootLink krds-modal fade" data-type="full">
+			<!-- modal-dialog -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- modal title -->
+					<div class="modal-header">
+						<h3 class="modal-title">정부기관</h3>
+					</div>
+					<!-- //modal title -->
+
+					<!-- modal contents -->
+					<div class="modal-conts">
+						<!-- 관련기관 링크 -->
+						<ul class="pop-foot-links">
+							<li><a class="krds-btn text" href="http://www.korea.go.kr/" target="_blank" title="새 창 열림">대한민국 정부포털</a></li>
+							<li><a class="krds-btn text" href="http://www.president.go.kr" target="_blank" title="새 창 열림">청와대</a></li>
+							<li><a class="krds-btn text" href="http://www.bai.go.kr" target="_blank" title="새 창 열림">감사원</a></li>
+							<li><a class="krds-btn text" href="http://www.nis.go.kr" target="_blank" title="새 창 열림">국가정보원</a></li>
+							<li><a class="krds-btn text" href="http://www.kcc.go.kr" target="_blank" title="새 창 열림">방송미디어통신위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.cio.go.kr" target="_blank" title="새 창 열림">고위공직자범죄수사처</a></li>
+							<li><a class="krds-btn text" href="http://www.humanrights.go.kr" target="_blank" title="새 창 열림">국가인권위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.opm.go.kr" target="_blank" title="새 창 열림">국무총리실</a></li>
+							<li><a class="krds-btn text" href="http://www.mpb.go.kr" target="_blank" title="새 창 열림">기획예산처</a></li>
+							<li><a class="krds-btn text" href="http://www.mpm.go.kr" target="_blank" title="새 창 열림">인사혁신처</a></li>
+							<li><a class="krds-btn text" href="http://www.moleg.go.kr" target="_blank" title="새 창 열림">법제처</a></li>
+							<li><a class="krds-btn text" href="http://www.mfds.go.kr" target="_blank" title="새 창 열림">식품의약품안전처</a></li>
+							<li><a class="krds-btn text" href="http://www.kostat.go.kr" target="_blank" title="새 창 열림">국가데이터처</a></li>
+							<li><a class="krds-btn text" href="http://www.kipo.go.kr" target="_blank" title="새 창 열림">지식재산처</a></li>
+							<li><a class="krds-btn text" href="http://www.ftc.go.kr" target="_blank" title="새 창 열림">공정거래위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.acrc.go.kr" target="_blank" title="새 창 열림">국민권익위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.fsc.go.kr" target="_blank" title="새 창 열림">금융위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.pipc.go.kr" target="_blank" title="새 창 열림">개인정보보호위원회</a></li>
+							<li><a class="krds-btn text" href="http://www.nssc.go.kr" target="_blank" title="새 창 열림">원자력안전위원회</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.moef.go.kr" target="_blank" title="새 창 열림">재정경제부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.nts.go.kr" target="_blank" title="새 창 열림">국세청</a></li>
+									<li><a class="krds-btn text" href="http://www.customs.go.kr" target="_blank" title="새 창 열림">관세청</a></li>
+									<li><a class="krds-btn text" href="http://www.pps.go.kr" target="_blank" title="새 창 열림">조달청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.moe.go.kr" target="_blank" title="새 창 열림">교육부</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.msit.go.kr" target="_blank" title="새 창 열림">과학기술정보통신부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.kasa.go.kr" target="_blank" title="새 창 열림">우주항공청</a></li>	
+								</ul>
+							</li>							
+							<li>
+								<a class="krds-btn text" href="http://www.mofa.go.kr" target="_blank" title="새 창 열림">외교부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.oka.go.kr" target="_blank" title="새 창 열림">재외동포청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.unikorea.go.kr" target="_blank" title="새 창 열림">통일부</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.moj.go.kr" target="_blank" title="새 창 열림">법무부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.spo.go.kr" target="_blank" title="새 창 열림">검찰청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="krds-btn text" href="http://www.mnd.go.kr" target="_blank" title="새 창 열림">국방부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.mma.go.kr" target="_blank" title="새 창 열림">병무청</a></li>
+									<li><a class="krds-btn text" href="http://www.dapa.go.kr" target="_blank" title="새 창 열림">방위사업청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="krds-btn text" href="http://www.mois.go.kr" target="_blank" title="새 창 열림">행정안전부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.police.go.kr" target="_blank" title="새 창 열림">경찰청</a></li>
+									<li><a class="krds-btn text" href="http://www.nfa.go.kr" target="_blank" title="새 창 열림">소방청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.mpva.go.kr" target="_blank" title="새 창 열림">국가보훈부</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.mcst.go.kr" target="_blank" title="새 창 열림">문화체육관광부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.cha.go.kr" target="_blank" title="새 창 열림">국가유산청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="krds-btn text" href="http://www.mafra.go.kr" target="_blank" title="새 창 열림">농림축산식품부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.rda.go.kr" target="_blank" title="새 창 열림">농촌진흥청</a></li>
+									<li><a class="krds-btn text" href="http://www.forest.go.kr" target="_blank" title="새 창 열림">산림청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.motie.go.kr" target="_blank" title="새 창 열림">산업통상부</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.mohw.go.kr" target="_blank" title="새 창 열림">보건복지부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.kdca.go.kr" target="_blank" title="새 창 열림">질병관리청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="krds-btn text" href="http://www.me.go.kr" target="_blank" title="새 창 열림">기후에너지환경부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.kma.go.kr" target="_blank" title="새 창 열림">기상청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.moel.go.kr" target="_blank" title="새 창 열림">고용노동부</a></li>
+							<li><a class="krds-btn text" href="http://www.mogef.go.kr" target="_blank" title="새 창 열림">성평등가족부</a></li>
+							<li>
+								<a class="krds-btn text" href="http://www.molit.go.kr" target="_blank" title="새 창 열림">국토교통부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.naacc.go.kr" target="_blank" title="새 창 열림">행정중심복합도시건설청</a></li>
+									<li><a class="krds-btn text" href="http://www.saemangeum.go.kr" target="_blank" title="새 창 열림">새만금개발청</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="krds-btn text" href="http://www.mof.go.kr" target="_blank" title="새 창 열림">해양수산부</a>
+								<ul>
+									<li><a class="krds-btn text" href="http://www.kcg.go.kr" target="_blank" title="새 창 열림">해양경찰청</a></li>
+								</ul>
+							</li>
+							<li><a class="krds-btn text" href="http://www.smba.go.kr" target="_blank" title="새 창 열림">중소벤처기업부</a></li>
+						</ul>
+						<p class="c-btn ac">
+							<a class="krds-btn medium tertiary" href="https://www.gov.kr/portal/orgInfo?Mcode=11180" target="_blank" title="정부기관 누리집 더보기 새 창 열림">
+								더보기<i class="svg-icon ico-go"></i>
+							</a>
+						</p>
+						<!-- //관련기관 링크 -->
+					</div>
+					<!-- //modal contents -->
+
+					<!-- close button -->
+					<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+						<span class="sr-only">닫기</span>
+						<i class="svg-icon ico-popup-close"></i>
+					</button>
+					<!-- //close button -->
+				</div>
+			</div>
+			<!-- //modal-dialog -->
+			<div class="modal-back"></div>
+		</section>
+		<!-- //모달 : 정부기관 누리집 -->
+	</div>
+	<!-- <script type="module">
+		import TotalSearchControl from '/www-new/resources/js/controls/total-search-control.js';
+		new TotalSearchControl('.modal-wrap');
+	</script> -->
+	<!-- //modal-wrap -->
+
+	<!-- modal : main-popup -->
+	<section id="main-popup" class="krds-modal fade no-close" role="dialog" aria-labelledby="tit_main_layer_sample">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_main_layer_sample" class="modal-title">
+						TITLE
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="conts-area">
+						<div class="banner-img">
+							<img src="" alt="">
+						</div>
+						<div class="conts">
+
+						</div>
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap multi-conts">
+					<div class="krds-form-check">
+						<input type="checkbox" name="chk_cookie" id="not-today">
+						<label for="not-today">오늘 하루 보지 않기</label>
+					</div>
+					<button type="button" class="krds-btn medium tertiary -btn-close">닫기</button>
+				</div>
+				<!-- //modal btn -->
+			</div>
+		</div>
+		<div class="modal-back"></div>
+	</section>
+	<!-- //modal -->
   
   <script type="text/javascript" src="/js/weblog/mofa.js" ></script>
-	<noscript><img src="http://log.mofa.go.kr/tracker.1.tsp?u=1001&js=N" width="0" height="0" alt=""/></noscript>
-	
-<!-- 메인만 사용 -->
-	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-	<script type ="text/javascript">
+  <noscript><img src="http://log.mofa.go.kr/tracker.1.tsp?u=1001&js=N" width="0" height="0" alt=""/></noscript>
+  
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script type ="text/javascript">
 	
 	Kakao.init('1eb73651f9041197c35a858272a868f6');
 	$('a#kakaotalk').on('click', function(){
@@ -2314,7 +1589,98 @@ function zooms() {
 				 return false;
 	       
 	});
-	</script>
+	
+	$(document).ready(function(){
+		//재외공관 리스트 호출.
+		getOpenAbroadList($('#cntt').val());		
+	});
+	
+	//대륙 리스트
+	function getOpenAbroadList(_cntt){
+		//재외공관한글명바로가기 abroadKo
+		$.post("/cmmn/abroadKoSelectBox.do",{cntt : _cntt},setOpenAbroadList, "json");
+	}
+	
+	//공관 리스트
+	function setOpenAbroadList(data, status){
+		if ( 'success' != status || null == data ) { alert("조회하지 못하였습니다."); return; }
+	
+		var obj1 = $('#embassyLink .modal-header ul').eq(0);
+		
+		var innerHtml1="";
+		var innerHtml2="";
+		for(var i =0; i < data.vo.length; i++){
+			innerHtml1 += "<li>";
+			innerHtml1 += "	<a class=\"krds-btn large\" href=\"#continent-" + (i+1) + "\">";
+			innerHtml1 += 		data.vo[i].description
+			innerHtml1 += "	</a>";
+			innerHtml1 += "</li>";
+			
+			innerHtml2 += "<div class=\"conts-area\" id=\"continent-" + (i+1) + "\">";
+			innerHtml2 += "	<h4 class=\"tit\">";
+			innerHtml2 += "		<i class=\"svg-icon ico-explore-nearby\"></i>"
+			innerHtml2 += 		data.vo[i].description
+			innerHtml2 += "	</h4>";
+			innerHtml2 += "	<ul class=\"pop-foot-links\" data-initial=\"" + data.vo[i].code + "\">";
+			innerHtml2 += "	</ul>";
+			innerHtml2 += "</div>";
+			
+		}
+		
+		obj1.append(innerHtml1);		
+		var obj2 = $('#embassyLink .modal-conts').eq(0);				
+		obj2.append(innerHtml2);		
+		
+		document.querySelectorAll('#embassyLink .pop-foot-links').forEach(function(ul){
+	
+			const initial = ul.dataset.initial;
+			getEmblgbdDt(initial, ul);
+			
+		});
+		
+		const allTab = document.querySelector(
+			'.modal-conts-tablist a[href="#continent-all"]'		
+		);
+		
+		if(allTab){
+			allTab.click();
+		}
+	}
+		
+		
+	//재외공관 바로가기(공통)
+	function getEmblgbdDt(seq, target) {
+		var appd  = '';
+		
+		//공통 코드 상세조회
+		$.post("mainUssJson.do", {type: 'cmmnCode', cateId:"CNTT", pItmSeq: seq}
+		,function(result){
+			var agrs = result.codeDt;
+			for(var i = 0; i < agrs.length; i++) {
+				appd += '<li><a class="krds-btn text" target="_blank" title="새 창 열림" href="' + agrs[i].deptNm + '">' + agrs[i].itmNm + '</a></li>';
+			}
+			
+			target.innerHTML = appd;
+			
+		});	
+		
+	}
+	
+  </script>
+  
+  <script>
+		const chatID = '9cdbe411-5ded-48ec-9d23-72b61b63fa12';
+		const chatBotName = '';
+		const chatURL = 'https://mofa.han.kr';
+		(function() {
+			const s = document.createElement('script');
+			s.src = chatURL + '/chat/js/user_chaticon-last.js';
+			s.async = true;
+			document.head.appendChild(s);
+		})();
+  </script>
+
+  <div class="gnb-backdrop"></div>
 
 </body>
 
