@@ -1,6 +1,6 @@
 {
   "incident_id": "NEPAL-2026-08-26-FLOOD",
-  "generated_at": "2026-10-09T21:17:43.215Z",
+  "generated_at": "2026-10-10T01:04:20.242Z",
   "complete": false,
   "blocking_gap_count": 2,
   "blocking_gap_ids": [
@@ -8,9 +8,9 @@
     "MAKWANPUR_BHADRA13_PERSON_LEVEL_EXTRACTED"
   ],
   "counts": {
-    "live_source_records": 21852,
+    "live_source_records": 21776,
     "unidentified_body_records": 20,
-    "identity_review_candidates": 2620,
+    "identity_review_candidates": 2617,
     "body_review_candidates": 31
   },
   "checks": [
@@ -23,7 +23,7 @@
         "critical": true,
         "role": "affected-person register",
         "url": "https://setu.ndrrma.gov.np/admin/recordlist.php",
-        "retrieved_at": "2026-10-09T16:30:12.821Z",
+        "retrieved_at": "2026-10-10T00:58:33.304Z",
         "http_status": 0,
         "sha256": null,
         "bytes": 0,
@@ -43,9 +43,9 @@
           "critical": true,
           "role": "missing-person register",
           "url": "https://udb.nepalpolice.gov.np/missing?count=1000&page=1",
-          "retrieved_at": "2026-10-09T16:30:12.881Z",
+          "retrieved_at": "2026-10-10T00:58:33.344Z",
           "http_status": 200,
-          "sha256": "ee6248997e7d01f265db72071e7f6c430c59bd741cc1e1cfea916ccfef62db61",
+          "sha256": "e6e294a5cb718991bf4d97e436c1f89226f8207fabe3a1f1e8ec49d33e8fe166",
           "bytes": 102273,
           "changed": true,
           "error": null,
@@ -68,9 +68,9 @@
           "critical": true,
           "role": "found-person register",
           "url": "https://udb.nepalpolice.gov.np/found?count=1000&page=1",
-          "retrieved_at": "2026-10-09T16:30:12.882Z",
+          "retrieved_at": "2026-10-10T00:58:33.345Z",
           "http_status": 200,
-          "sha256": "bb0639d48ebbbb2e6bc86c96319253c6176cf585d9322cc105679a331a62df0f",
+          "sha256": "c47e7aee7e80a2ed809697dd7c5a2c434c98411eef435732fdbb672fe235743d",
           "bytes": 94351,
           "changed": true,
           "error": null,
@@ -93,9 +93,9 @@
           "critical": true,
           "role": "disaster unidentified-body register",
           "url": "https://udb.nepalpolice.gov.np/disaster?count=1000&page=1",
-          "retrieved_at": "2026-10-09T16:30:12.884Z",
+          "retrieved_at": "2026-10-10T00:58:33.346Z",
           "http_status": 200,
-          "sha256": "ad252140eee7c0accdacb84514b84705d0e826247cebb993003b8ea2701b6070",
+          "sha256": "dd7780b979b67a185f7d059e01e699819c09e501efc0da7553a76eb8b0b55e34",
           "bytes": 164664,
           "changed": true,
           "error": null,
@@ -113,7 +113,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "record_count": 21852
+        "record_count": 21776
       }
     },
     {
@@ -121,7 +121,7 @@
       "pass": true,
       "blocking": true,
       "detail": {
-        "identity_candidates": 2620,
+        "identity_candidates": 2617,
         "body_review_candidates": 31
       }
     },
