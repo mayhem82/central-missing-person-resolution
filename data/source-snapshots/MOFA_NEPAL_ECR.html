@@ -2706,8 +2706,8 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1839/concluding-remarks-by-hon--mr-shisir-khanal/">
-                      Concluding Remarks by Hon. Mr Shisir Khanal Minister for Foreign Affairs at the Fifth Edition of the Professor Yadu Nath Khanal Lecture Series
+                    <a href="/content/1838/welcome-remarks-by-foreign-secretary-mr--amrit/">
+                      Welcome Remarks by Foreign Secretary Mr. Amrit Bahadur Rai at the Fifth Edition of Professor Yadu Nath Khanal Lecture Series
                     </a>
                   </h3>
                 </div>
@@ -2718,8 +2718,8 @@
               <div class="slider__item">
                 <div class="item__details">
                   <h3 class="item__title">
-                    <a href="/content/1838/welcome-remarks-by-foreign-secretary-mr--amrit/">
-                      Welcome Remarks by Foreign Secretary Mr. Amrit Bahadur Rai at the Fifth Edition of Professor Yadu Nath Khanal Lecture Series
+                    <a href="/content/1839/concluding-remarks-by-hon--mr-shisir-khanal/">
+                      Concluding Remarks by Hon. Mr Shisir Khanal Minister for Foreign Affairs at the Fifth Edition of the Professor Yadu Nath Khanal Lecture Series
                     </a>
                   </h3>
                 </div>
@@ -3751,10 +3751,13 @@
 
         <div class="flag__info">
           <div class="date">
-            <p>
-              A.D.:
+                  <p> 
+               A.D.:
               <span> <b id="nepaliDateBs"> </b> </span>
-            </p>
+             
+
+ </p>
+               
             <p>
               Nepal Samvat:
               <span> <b>  1147 KACHHALAGA TARITIYA - 18 </b> </span>
@@ -6350,33 +6353,33 @@
             let nepaliDate = calendarFunctions.getBsDateByAdDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
             //here i forcefull adjust for 31
 
-            if (nepaliDate.bsYear === 2082) {
-                    const monthLengths2082 = [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30];
-                    
-                    const monthStartDates2082 = [
-                        new Date(2025, 3, 14),  // Baisakh 1 = April 14, 2025
-                        new Date(2025, 4, 15),   // Jestha 1 = May 15
-                        new Date(2025, 5, 15),   // Ashad 1 = June 15
-                        new Date(2025, 6, 17),   // Shrawan 1 = July 17
-                        new Date(2025, 7, 17),   // Bhadra 1 = August 17
-                        new Date(2025, 8, 17),   // Ashwin 1 = September 17
-                        new Date(2025, 9, 18),   // Kartik 1 = October 18
-                        new Date(2025, 10, 17),  // Mangsir 1 = November 17
-                        new Date(2025, 11, 16),  // Poush 1 = December 16
-                        new Date(2026, 0, 15),   // Magh 1 = January 15, 2026
-                        new Date(2026, 1, 13),   // Falgun 1 = February 13
-                        new Date(2026, 2, 15)    // Chaitra 1 = March 15
-                    ];
+            if (nepaliDate.bsYear === 2083) {
+        const monthLengths2083 = [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30];
+        
+        const monthStartDates2083 = [
+            new Date(2026, 3, 14),  // Baisakh 1 = April 14, 2026
+            new Date(2026, 4, 15),   // Jestha 1 = May 15
+            new Date(2026, 5, 15),   // Ashad 1 = June 15
+            new Date(2026, 6, 17),   // Shrawan 1 = July 17
+            new Date(2026, 7, 17),   // Bhadra 1 = August 17
+            new Date(2026, 8, 17),   // Ashwin 1 = September 17
+            new Date(2026, 9, 18),   // Kartik 1 = October 18
+            new Date(2026, 10, 17),  // Mangsir 1 = November 17
+            new Date(2026, 11, 16),  // Poush 1 = December 16
+            new Date(2027, 0, 15),   // Magh 1 = January 15, 2027
+            new Date(2027, 1, 13),   // Falgun 1 = February 13
+            new Date(2027, 2, 15)    // Chaitra 1 = March 15
+        ];
 
-                    for (let month = 0; month < monthStartDates2082.length; month++) {
-                        if (date >= monthStartDates2082[month] && 
-                            (month === monthStartDates2082.length - 1 || date < monthStartDates2082[month + 1])) {
-                            nepaliDate.bsMonth = month + 1;
-                            nepaliDate.bsDate = Math.floor((date - monthStartDates2082[month]) / (1000 * 60 * 60 * 24)) + 1;
-                            break;
-                        }
-                    }
-                }
+        for (let month = 0; month < monthStartDates2083.length; month++) {
+            if (date >= monthStartDates2083[month] && 
+                (month === monthStartDates2083.length - 1 || date < monthStartDates2083[month + 1])) {
+                nepaliDate.bsMonth = month + 1;
+                nepaliDate.bsDate = Math.floor((date - monthStartDates2083[month]) / (1000 * 60 * 60 * 24)) + 1;
+                break;
+            }
+        }
+    }
 
             let dayOfWeek = nepaliWeekdays[date.getDay()];
             let formattedDate = calendarFunctions.bsDateFormat("%y %M %d गते %D", nepaliDate.bsYear, nepaliDate.bsMonth, nepaliDate.bsDate);
